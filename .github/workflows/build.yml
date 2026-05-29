@@ -12,6 +12,7 @@ jobs:
   build-windows:
     name: Build Windows EXE
     runs-on: windows-latest
+    timeout-minutes: 120
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,15 +22,25 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Cache Nuitka
+        uses: actions/cache@v4
+        with:
+          path: ~\AppData\Local\Nuitka\Nuitka\Cache
+          key: nuitka-windows-${{ hashFiles('src/**') }}
+          restore-keys: nuitka-windows-
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~\AppData\Local\pip\Cache
+          key: pip-windows-${{ hashFiles('requirements.txt') }}
+          restore-keys: pip-windows-
+
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install nuitka zstandard ordered-set pwinput winotify
+        run: pip install -r requirements.txt nuitka zstandard ordered-set pwinput winotify
 
       - name: Build with Nuitka
-        run: |
-          cd src
-          python -m nuitka --standalone --onefile --windows-console-mode=attach --output-filename=yac.exe --output-dir=../dist --assume-yes-for-downloads --include-package=anthropic --include-package=openai --include-package=google.genai --include-package=keyring --include-package=keyring.backends --include-package=rich --include-package=watchdog --include-package=colorama --include-package=httpx --include-package=httpcore --include-package=anyio --include-package=sniffio --include-package=certifi --include-package=pydantic --include-package=pydantic_core --include-package=typing_extensions --include-package=tenacity --include-package=tqdm --include-package=zstandard --include-package=ordered_set --nofollow-import-to=tkinter --nofollow-import-to=matplotlib --nofollow-import-to=numpy --nofollow-import-to=pandas --nofollow-import-to=scipy --nofollow-import-to=PIL --nofollow-import-to=torch --nofollow-import-to=tensorflow --nofollow-import-to=sklearn --nofollow-import-to=PyQt5 --nofollow-import-to=PyQt6 --nofollow-import-to=PySide2 --nofollow-import-to=PySide6 --nofollow-import-to=IPython --nofollow-import-to=pytest --nofollow-import-to=sphinx --nofollow-import-to=docutils --nofollow-import-to=django --nofollow-import-to=flask --nofollow-import-to=fastapi --nofollow-import-to=sqlalchemy --nofollow-import-to=boto3 --nofollow-import-to=botocore --nofollow-import-to=azure --nofollow-import-to=gi --nofollow-import-to=wx --nofollow-import-to=setuptools --nofollow-import-to=distutils --nofollow-import-to=unittest --nofollow-import-to=test --nofollow-import-to=idlelib --nofollow-import-to=lib2to3 --nofollow-import-to=ensurepip --nofollow-import-to=venv --nofollow-import-to=turtle --nofollow-import-to=turtledemo yac.py
+        run: cd src && python -m nuitka --standalone --onefile --windows-console-mode=attach --output-filename=yac.exe --output-dir=../dist --assume-yes-for-downloads --jobs=4 --include-package=anthropic --include-package=openai --include-package=google.genai --include-package=keyring --include-package=keyring.backends --include-package=rich --include-package=watchdog --include-package=colorama --include-package=httpx --include-package=httpcore --include-package=anyio --include-package=sniffio --include-package=certifi --include-package=pydantic --include-package=pydantic_core --include-package=typing_extensions --include-package=tenacity --include-package=tqdm --include-package=zstandard --include-package=ordered_set --nofollow-import-to=tkinter --nofollow-import-to=matplotlib --nofollow-import-to=numpy --nofollow-import-to=pandas --nofollow-import-to=scipy --nofollow-import-to=PIL --nofollow-import-to=torch --nofollow-import-to=tensorflow --nofollow-import-to=sklearn --nofollow-import-to=PyQt5 --nofollow-import-to=PyQt6 --nofollow-import-to=PySide2 --nofollow-import-to=PySide6 --nofollow-import-to=IPython --nofollow-import-to=pytest --nofollow-import-to=sphinx --nofollow-import-to=docutils --nofollow-import-to=django --nofollow-import-to=flask --nofollow-import-to=fastapi --nofollow-import-to=sqlalchemy --nofollow-import-to=boto3 --nofollow-import-to=botocore --nofollow-import-to=azure --nofollow-import-to=gi --nofollow-import-to=wx --nofollow-import-to=setuptools --nofollow-import-to=distutils --nofollow-import-to=unittest --nofollow-import-to=test --nofollow-import-to=idlelib --nofollow-import-to=lib2to3 --nofollow-import-to=ensurepip --nofollow-import-to=venv --nofollow-import-to=turtle --nofollow-import-to=turtledemo yac.py
 
       - name: Upload Windows artifact
         uses: actions/upload-artifact@v4
@@ -41,6 +52,7 @@ jobs:
   build-linux:
     name: Build Linux Binary
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -50,20 +62,28 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Cache Nuitka
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/nuitka
+          key: nuitka-linux-${{ hashFiles('src/**') }}
+          restore-keys: nuitka-linux-
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-linux-${{ hashFiles('requirements.txt') }}
+          restore-keys: pip-linux-
+
       - name: Install system dependencies
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y patchelf ccache libsecret-1-dev
+        run: sudo apt-get update -qq && sudo apt-get install -y patchelf ccache libsecret-1-dev
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install nuitka zstandard ordered-set pwinput winotify
+        run: pip install -r requirements.txt nuitka zstandard ordered-set pwinput
 
       - name: Build with Nuitka
-        run: |
-          cd src
-          python -m nuitka --standalone --onefile --output-filename=yac --output-dir=../dist --assume-yes-for-downloads --include-package=anthropic --include-package=openai --include-package=google.genai --include-package=keyring --include-package=keyring.backends --include-package=rich --include-package=watchdog --include-package=colorama --include-package=httpx --include-package=httpcore --include-package=anyio --include-package=sniffio --include-package=certifi --include-package=pydantic --include-package=pydantic_core --include-package=typing_extensions --include-package=tenacity --include-package=tqdm --include-package=zstandard --include-package=ordered_set --nofollow-import-to=tkinter --nofollow-import-to=matplotlib --nofollow-import-to=numpy --nofollow-import-to=pandas --nofollow-import-to=scipy --nofollow-import-to=PIL --nofollow-import-to=torch --nofollow-import-to=tensorflow --nofollow-import-to=sklearn --nofollow-import-to=PyQt5 --nofollow-import-to=PyQt6 --nofollow-import-to=PySide2 --nofollow-import-to=PySide6 --nofollow-import-to=IPython --nofollow-import-to=pytest --nofollow-import-to=sphinx --nofollow-import-to=docutils --nofollow-import-to=django --nofollow-import-to=flask --nofollow-import-to=fastapi --nofollow-import-to=sqlalchemy --nofollow-import-to=boto3 --nofollow-import-to=botocore --nofollow-import-to=azure --nofollow-import-to=gi --nofollow-import-to=wx --nofollow-import-to=setuptools --nofollow-import-to=distutils --nofollow-import-to=unittest --nofollow-import-to=test --nofollow-import-to=idlelib --nofollow-import-to=lib2to3 --nofollow-import-to=ensurepip --nofollow-import-to=venv --nofollow-import-to=turtle --nofollow-import-to=turtledemo yac.py
+        run: cd src && python -m nuitka --standalone --onefile --output-filename=yac --output-dir=../dist --assume-yes-for-downloads --jobs=4 --include-package=anthropic --include-package=openai --include-package=google.genai --include-package=keyring --include-package=keyring.backends --include-package=rich --include-package=watchdog --include-package=colorama --include-package=httpx --include-package=httpcore --include-package=anyio --include-package=sniffio --include-package=certifi --include-package=pydantic --include-package=pydantic_core --include-package=typing_extensions --include-package=tenacity --include-package=tqdm --include-package=zstandard --include-package=ordered_set --nofollow-import-to=tkinter --nofollow-import-to=matplotlib --nofollow-import-to=numpy --nofollow-import-to=pandas --nofollow-import-to=scipy --nofollow-import-to=PIL --nofollow-import-to=torch --nofollow-import-to=tensorflow --nofollow-import-to=sklearn --nofollow-import-to=PyQt5 --nofollow-import-to=PyQt6 --nofollow-import-to=PySide2 --nofollow-import-to=PySide6 --nofollow-import-to=IPython --nofollow-import-to=pytest --nofollow-import-to=sphinx --nofollow-import-to=docutils --nofollow-import-to=django --nofollow-import-to=flask --nofollow-import-to=fastapi --nofollow-import-to=sqlalchemy --nofollow-import-to=boto3 --nofollow-import-to=botocore --nofollow-import-to=azure --nofollow-import-to=gi --nofollow-import-to=wx --nofollow-import-to=setuptools --nofollow-import-to=distutils --nofollow-import-to=unittest --nofollow-import-to=test --nofollow-import-to=idlelib --nofollow-import-to=lib2to3 --nofollow-import-to=ensurepip --nofollow-import-to=venv --nofollow-import-to=turtle --nofollow-import-to=turtledemo yac.py
 
       - name: Upload Linux artifact
         uses: actions/upload-artifact@v4
@@ -97,13 +117,10 @@ jobs:
           name: YourAssistantCoder v${{ github.event.inputs.version }}
           body: |
             ## YourAssistantCoder v${{ github.event.inputs.version }}
-
             Sandboxed, tracked, multi-model AI coding agent.
-
             ### Downloads
             - `yac.exe` - Windows (no Python needed)
             - `yac` - Linux (no Python needed)
-
             ### Usage
             ```bash
             yac init myproject --path ./myproject --model gpt
