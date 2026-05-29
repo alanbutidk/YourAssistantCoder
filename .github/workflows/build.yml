@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install nuitka zstandard ordered-set
+          pip install nuitka zstandard ordered-set pwinput winotify
 
       - name: Build with Nuitka
         run: |
@@ -58,7 +58,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install nuitka zstandard ordered-set
+          pip install nuitka zstandard ordered-set pwinput winotify
 
       - name: Build with Nuitka
         run: |
