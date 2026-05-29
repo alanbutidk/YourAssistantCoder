@@ -180,12 +180,12 @@ class PFPS:
             real = resolved
         if not str(real).startswith(str(self.root)):
             raise SandboxViolation(f"[SANDBOX] Escape attempt blocked: {path!r} resolves outside sandbox")
-        # Hidden file policy
-        for part in resolved.relative_to(self.root).parts:
-            if part.startswith(".") and part not in [".PFPS"]:
-                ignore = self.config.get("ignore", [])
-                if any(part == ig or part.startswith(ig) for ig in ignore):
-                    raise SandboxViolation(f"[SANDBOX] Access to ignored path: {path!r}")
+        # Only block explicitly ignored paths, never block normal files
+        ignore = self.config.get("ignore", [])
+        rel = str(resolved.relative_to(self.root))
+        for ig in ignore:
+            if ig in rel:
+                raise SandboxViolation(f"[SANDBOX] Access to ignored path: {path!r}")
         return resolved
 
     def AMSLocation(self, subdir: str = ".ams") -> Path:
@@ -202,7 +202,7 @@ class PFPS:
             raise TokenInvalid("Token has been revoked")
         if not token.can_use_tool(tool):
             raise PermissionError_(f"[DENIED] Token level {token.level!r} cannot use {tool!r}")
-        if not token.can_touch_file(filename):
+        if filename != "*" and not token.can_touch_file(filename):
             raise PermissionError_(f"[DENIED] Token scope does not include {filename!r}")
 
     # --- Chunking ------------------------------------------------------------

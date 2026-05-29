@@ -13,8 +13,8 @@ from typing import Optional
 
 class RoleExpiry:
     Owner  = None   # User manually deactivates
-    Editor = 90     # 1.5 minutes
-    Viewer = 60     # 1 minute
+    Editor = 600    # 10 minutes - GPT/Gemini can be slow
+    Viewer = 300    # 5 minutes
 
 
 # --- Permission Levels ------------------------------------------------------
