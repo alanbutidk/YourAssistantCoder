@@ -36,7 +36,7 @@ jobs:
             --output-filename=yac.exe `
             --output-dir=../dist `
             --assume-yes-for-downloads `
-            --onefile-compression=zstandard `
+
             --company-name="YourAssistantCoder" `
             --product-name="yac" `
             --file-version="1.0.0.0" `
@@ -140,7 +140,7 @@ jobs:
             --output-filename=yac \
             --output-dir=../dist \
             --assume-yes-for-downloads \
-            --onefile-compression=zstandard \
+
             --company-name="YourAssistantCoder" \
             --product-name="yac" \
             --file-version="1.0.0.0" \
