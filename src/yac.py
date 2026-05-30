@@ -1,3 +1,6 @@
+import bootstrap
+bootstrap.ensure_deps()
+
 """
 YourAssistantCoder (yac) - yac.py
 CLI entry point.
