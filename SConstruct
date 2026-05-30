@@ -21,7 +21,6 @@ cmd = [
     '--output-filename=yac.exe',
     '--output-dir=../dist',
     '--assume-yes-for-downloads',
-    '--clang',
     '--nofollow-import-to=grpc',
     '--nofollow-import-to=google.protobuf',
     '--nofollow-import-to=google.api_core',
