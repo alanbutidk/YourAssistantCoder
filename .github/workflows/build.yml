@@ -4,74 +4,55 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      version:
-        description: "Version tag (e.g. 1.0.0)"
-        required: false
-        default: "dev"
 
 jobs:
-  build-windows:
-    name: Windows
-    runs-on: windows-latest
-    timeout-minutes: 60
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-      - uses: actions/cache@v4
-        with:
-          path: ~\AppData\Local\Nuitka\Nuitka\Cache
-          key: nuitka-win-${{ hashFiles('src/**') }}
-          restore-keys: nuitka-win-
-      - uses: actions/cache@v4
-        with:
-          path: ~\AppData\Local\pip\Cache
-          key: pip-win-${{ hashFiles('requirements.txt') }}
-          restore-keys: pip-win-
-      - name: Setup Zig
-        uses: goto-bus-stop/setup-zig@v2
-        with:
-          version: 0.13.0
-      - run: pip install nuitka zstandard ordered-set
-      - name: Build
-        run: cd src && python -m nuitka --standalone --onefile --windows-console-mode=attach --output-filename=yac.exe --output-dir=../dist --assume-yes-for-downloads --jobs=4 --lto=no --clang --nofollow-import-to=anthropic --nofollow-import-to=openai --nofollow-import-to=google --nofollow-import-to=keyring --nofollow-import-to=rich --nofollow-import-to=watchdog --nofollow-import-to=pwinput --nofollow-import-to=winotify --nofollow-import-to=colorama --nofollow-import-to=httpx --nofollow-import-to=httpcore --nofollow-import-to=anyio --nofollow-import-to=certifi --nofollow-import-to=pydantic --nofollow-import-to=tenacity --nofollow-import-to=tqdm --nofollow-import-to=tkinter --nofollow-import-to=grpc --nofollow-import-to=torch --nofollow-import-to=tensorflow --nofollow-import-to=numpy --nofollow-import-to=pandas --nofollow-import-to=matplotlib --nofollow-import-to=PyQt5 --nofollow-import-to=PyQt6 --nofollow-import-to=django --nofollow-import-to=flask --nofollow-import-to=pytest --nofollow-import-to=setuptools --nofollow-import-to=distutils --nofollow-import-to=unittest --nofollow-import-to=idlelib --nofollow-import-to=turtle --include-module=bootstrap --include-module=agent --include-module=ams --include-module=pfps --include-module=permissions --include-module=notify --include-module=console --include-module=error_execution --include-module=model_router yac.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: yac-windows-${{ github.event.inputs.version || 'dev' }}
-          path: dist/yac.exe
-          retention-days: 30
-
-  build-linux:
-    name: Linux
+  transpile:
+    name: Transpile to C
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache/nuitka
-          key: nuitka-linux-${{ hashFiles('src/**') }}
-          restore-keys: nuitka-linux-
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: pip-linux-${{ hashFiles('requirements.txt') }}
-          restore-keys: pip-linux-
-      - name: Setup Zig
-        uses: goto-bus-stop/setup-zig@v2
-        with:
-          version: 0.13.0
-      - run: sudo apt-get update -qq && sudo apt-get install -y patchelf libsecret-1-dev
-      - run: pip install nuitka zstandard ordered-set
-      - name: Build
-        run: cd src && python -m nuitka --standalone --onefile --output-filename=yac --output-dir=../dist --assume-yes-for-downloads --jobs=4 --lto=no --clang --nofollow-import-to=anthropic --nofollow-import-to=openai --nofollow-import-to=google --nofollow-import-to=keyring --nofollow-import-to=rich --nofollow-import-to=watchdog --nofollow-import-to=pwinput --nofollow-import-to=colorama --nofollow-import-to=httpx --nofollow-import-to=httpcore --nofollow-import-to=anyio --nofollow-import-to=certifi --nofollow-import-to=pydantic --nofollow-import-to=tenacity --nofollow-import-to=tqdm --nofollow-import-to=tkinter --nofollow-import-to=grpc --nofollow-import-to=torch --nofollow-import-to=tensorflow --nofollow-import-to=numpy --nofollow-import-to=pandas --nofollow-import-to=matplotlib --nofollow-import-to=PyQt5 --nofollow-import-to=PyQt6 --nofollow-import-to=django --nofollow-import-to=flask --nofollow-import-to=pytest --nofollow-import-to=setuptools --nofollow-import-to=distutils --nofollow-import-to=unittest --nofollow-import-to=idlelib --nofollow-import-to=turtle --include-module=bootstrap --include-module=agent --include-module=ams --include-module=pfps --include-module=permissions --include-module=notify --include-module=console --include-module=error_execution --include-module=model_router yac.py
+      - run: pip install nuitka ordered-set zstandard
+      - name: Transpile
+        run: |
+          cd src
+          python -m nuitka --generate-c-only \
+            --output-dir=../c_build \
+            --nofollow-import-to=anthropic \
+            --nofollow-import-to=openai \
+            --nofollow-import-to=google \
+            --nofollow-import-to=keyring \
+            --nofollow-import-to=rich \
+            --nofollow-import-to=watchdog \
+            --nofollow-import-to=pwinput \
+            --nofollow-import-to=colorama \
+            --nofollow-import-to=httpx \
+            --nofollow-import-to=pydantic \
+            --nofollow-import-to=tenacity \
+            --nofollow-import-to=tkinter \
+            --nofollow-import-to=grpc \
+            --nofollow-import-to=torch \
+            --nofollow-import-to=numpy \
+            --nofollow-import-to=pandas \
+            --nofollow-import-to=matplotlib \
+            --nofollow-import-to=PyQt5 \
+            --nofollow-import-to=PyQt6 \
+            --nofollow-import-to=django \
+            --nofollow-import-to=flask \
+            --nofollow-import-to=pytest \
+            --nofollow-import-to=setuptools \
+            --nofollow-import-to=distutils \
+            --nofollow-import-to=unittest \
+            --nofollow-import-to=idlelib \
+            --nofollow-import-to=turtle \
+            yac.py
+      - name: Zip C files
+        run: zip -r yac-c-src.zip c_build/
       - uses: actions/upload-artifact@v4
         with:
-          name: yac-linux-${{ github.event.inputs.version || 'dev' }}
-          path: dist/yac
-          retention-days: 30
+          name: yac-c-src
+          path: yac-c-src.zip
+          retention-days: 90
