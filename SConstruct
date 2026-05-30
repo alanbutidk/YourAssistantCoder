@@ -1,11 +1,19 @@
 import os
 import glob
+import subprocess
+
+# Find zig path
+zig = subprocess.run(['where', 'zig'], capture_output=True, text=True).stdout.strip().split('\n')[0].strip()
+if not zig:
+    zig = 'zig'
 
 env = Environment(
-    CC='zig cc',
-    CXX='zig c++',
-    CCFLAGS=['-O3', '-march=native', '-ffast-math', '-funroll-loops', '-fomit-frame-pointer'],
+    CC=f'{zig} cc',
+    CXX=f'{zig} c++',
+    CCFLAGS=['-O3', '-march=native', '-ffast-math', '-funroll-loops'],
     LINKFLAGS=['-O3'],
+    CCCOM='$CC $CCFLAGS -c -o $TARGET $SOURCE',
+    LINKCOM='$CC $LINKFLAGS -o $TARGET $SOURCES',
 )
 
 c_files = list(set(glob.glob('*.c') + glob.glob('**/*.c', recursive=True)))
