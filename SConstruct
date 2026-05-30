@@ -21,7 +21,7 @@ cmd = [
     '--output-filename=yac.exe',
     '--output-dir=../dist',
     '--assume-yes-for-downloads',
-    f'--clang',
+    '--clang',
     '--nofollow-import-to=grpc',
     '--nofollow-import-to=google.protobuf',
     '--nofollow-import-to=google.api_core',
@@ -105,8 +105,8 @@ cmd = [
 
 print("Running Nuitka...")
 env_copy = os.environ.copy()
-env_copy['CC'] = f'{zig} cc'
-env_copy['CXX'] = f'{zig} c++'
+env_copy['CC'] = zig
+env_copy['CXX'] = zig
 
 result = subprocess.run(cmd, cwd='src', env=env_copy)
 if result.returncode != 0:
