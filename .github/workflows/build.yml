@@ -19,8 +19,15 @@ jobs:
       - name: Transpile
         run: |
           cd src
-          python -m nuitka --generate-c-only \
-            --output-dir=../c_build \
+          python -m nuitka --generate-c-only --standalone \
+            --include-module=agent \
+            --include-module=ams \
+            --include-module=pfps \
+            --include-module=permissions \
+            --include-module=notify \
+            --include-module=console \
+            --include-module=error_execution \
+            --include-module=model_router \
             --nofollow-import-to=anthropic \
             --nofollow-import-to=openai \
             --nofollow-import-to=google \
@@ -49,8 +56,10 @@ jobs:
             --nofollow-import-to=idlelib \
             --nofollow-import-to=turtle \
             yac.py
-      - name: Zip C files
-        run: zip -r yac-c-src.zip c_build/
+      - name: Copy SConstruct into build dir
+        run: cp SConstruct src/yac.build/yac.onefile-build/SConstruct 2>/dev/null || cp SConstruct src/yac.build/SConstruct
+      - name: Zip C files + headers + SConstruct
+        run: zip -r yac-c-src.zip src/yac.build/
       - uses: actions/upload-artifact@v4
         with:
           name: yac-c-src
