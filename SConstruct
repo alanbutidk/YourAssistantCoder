@@ -2,17 +2,13 @@ import os
 import glob
 
 env = Environment(
-    CC='gcc',
+    CC='zig cc',
+    CXX='zig c++',
     CCFLAGS=['-O3', '-march=native', '-ffast-math', '-funroll-loops', '-fomit-frame-pointer'],
     LINKFLAGS=['-O3'],
 )
 
-c_files = (
-    glob.glob('*.c') +
-    glob.glob('**/*.c', recursive=True)
-)
-
-c_files = list(set(c_files))
+c_files = list(set(glob.glob('*.c') + glob.glob('**/*.c', recursive=True)))
 
 if not c_files:
     import sys
