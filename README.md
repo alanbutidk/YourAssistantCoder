@@ -78,7 +78,8 @@ If you open a file the agent is editing, the agent pauses automatically and wait
 ## Build from source
 
 > Note: AutoBuild is a build system, you have to get it from github.
-Link: (AutoBuild)[https://github.com/alanbutidk/AutoBuild]
+Link: [AutoBuild](https://github.com/alanbutidk/AutoBuild)
+
 
 **Windows:**
 ```bat
