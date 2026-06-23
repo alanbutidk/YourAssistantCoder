@@ -77,6 +77,9 @@ If you open a file the agent is editing, the agent pauses automatically and wait
 
 ## Build from source
 
+> Note: AutoBuild is a build system, you have to get it from github.
+Link: (https://github.com/alanbutidk/AutoBuild)[AutoBuild]
+
 **Windows:**
 ```bat
 autobuild pyibuild/nuitkabuild
