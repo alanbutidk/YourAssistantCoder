@@ -17,6 +17,9 @@ Or download the prebuilt `yac.exe` (Windows) / `yac` (Linux/Mac) from Releases.
 ## Quickstart
 
 ```bash
+# Use the new TUI interface
+yac
+
 # Register your project
 yac init myproject --path C:\myproject --model gpt
 
@@ -53,9 +56,9 @@ API keys are stored securely in your system keyring - never in plain text.
 Every project runs inside a sandbox. The agent cannot read or write files outside the project root. All file operations go through permission tokens with role-based expiry.
 
 ```
-Owner  → no expiry, you manually stop it
-Editor → token expires after 90 seconds
-Viewer → token expires after 60 seconds
+Owner  -> no expiry, you manually stop it
+Editor -> token expires after 90 seconds
+Viewer -> token expires after 60 seconds
 ```
 
 ### AMS (Action Monitoring System)
@@ -76,20 +79,22 @@ If you open a file the agent is editing, the agent pauses automatically and wait
 
 **Windows:**
 ```bat
-build.bat
+autobuild pyibuild/nuitkabuild
 ```
 
 **Linux / Mac:**
 ```bash
-chmod +x build.sh && ./build.sh
+autobuild pyibuild/nuitkabuild
 ```
 
 Produces a single `dist/yac.exe` (or `dist/yac`) with no Python dependency.
 
-Requires a C compiler:
-- Windows: [MSVC Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools) or [MinGW](https://winlibs.com)
-- Linux: `sudo apt install gcc`
-- Mac: `xcode-select --install`
+Requires a PyInstaller/Nuitka install:
+
+- Pyinstaller (```pip install pyinstaller```)
+- Nuitka (```pip install nuitka```)
+
+> Linux users notice: For nuitka, you'll need patchelf.
 
 ---
 
@@ -115,4 +120,4 @@ YourAssistantCoder/
 
 ## License
 
-MIT - build whatever you want with it.
+GPLv3 - build whatever you want with it, but keep it open-source.

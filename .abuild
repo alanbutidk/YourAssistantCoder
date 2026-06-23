@@ -1,0 +1,37 @@
+# This file is ran by autobuild, a make like build system.
+# Please get it on github, make it with make, needs Nuitka to build (autobuild).
+
+get OS
+
+if OS==Windows_NT then
+  let PYNAME = python
+  let executable = .exe
+  let RM = rd /s /q
+elif OS==linux then
+  let PYNAME = python3
+  let executable = 
+  let RM = rm -rf
+else then
+  let PYNAME = python3
+  let executable =
+  let RM = rm -rf
+done
+
+let APP = yac
+let NUITKA_PYFLAGS = --standalone --onefile --output-dir=Release -o=(APP) --remove-output --lto=no --nofollow-import-to=html,email,kivy,tkinter,bs4,torch,mypy --nofollow-import-to=IPython,pygments,pytest,unittest,mock,ipykernel,jupyter_core,nbformat,setuptools,pip,pyqt6 --noinclude-pytest-mode=nofollow --noinclude-setuptools-mode=nofollow
+let PYI_PYFLAGS = --onefile
+let SRC = src/yac.py
+
+recipe nuitkaclean
+recipe nuitkabuild
+recipe pyibuild
+recipe pyiclean
+
+nuitkabuild:
+  (PYNAME) -m nuitka (NUITKA_PYFLAGS) (SRC)
+nuitkaclean:
+  (RM) (APP)(executable) Release\(APP).build Release\(APP).dist Release\(APP).onefile-build
+pyibuild:
+  pyinstaller (PYI_PYFLAGS) (SRC)
+pyiclean:
+  (RM) Dist Build (APP)(executable) (APP).spec

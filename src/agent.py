@@ -1,6 +1,6 @@
 """
 YourAssistantCoder (yac) - agent.py
-Model-agnostic agent loop. Claude, GPT, or Gemini via ModelRouter.
+Model-agnostic agent loop.
 """
 
 import json
@@ -17,89 +17,75 @@ from model_router import get_adapter, AgentResponse
 
 KEYRING_SERVICE = "YourAssistantCoder"
 
-# --- Unified tool definitions (Anthropic format - router converts as needed) -
-
 CLAUDE_TOOLS = [
     {
-        "name": "CheckOut",
-        "description": "Request a permission token before any file operation. Always call this first.",
+        "name": "checkout",
+        "description": "Get a permission token. Call this before any file operation.",
         "input_schema": {
             "type": "object",
             "properties": {
-                "permission_level": {
-                    "type": "string",
-                    "enum": ["Read", "Read+Write", "Read+Write+Delete", "SpecialUse"],
-                },
-                "files": {"type": "array", "items": {"type": "string"}},
+                "level": {"type": "string", "enum": ["read", "write", "delete"]},
             },
-            "required": ["permission_level"],
+            "required": ["level"],
         },
     },
     {
-        "name": "UseTool",
-        "description": "Execute a sandboxed file operation. Requires a valid token from CheckOut.",
+        "name": "list_files",
+        "description": "List all files in the project.",
+        "input_schema": {"type": "object", "properties": {}},
+    },
+    {
+        "name": "read_file",
+        "description": "Read a file. Returns the full content.",
         "input_schema": {
             "type": "object",
             "properties": {
-                "toolname": {
-                    "type": "string",
-                    "enum": ["read_chunk","write_chunk","append_chunk","create_file","delete_file","list_files"],
-                },
-                "filename":  {"type": "string"},
-                "chunk_key": {"type": "string"},
-                "content":   {"type": "string"},
-                "subpath":   {"type": "string"},
+                "filename": {"type": "string", "description": "Path to file e.g. auth.py"},
             },
-            "required": ["toolname"],
+            "required": ["filename"],
         },
     },
     {
-        "name": "ErrorExecution",
-        "description": "Execute Python code inside the sandbox. Output and errors feed back to you.",
+        "name": "write_file",
+        "description": "Write content to a file, replacing it entirely.",
         "input_schema": {
             "type": "object",
             "properties": {
-                "code": {"type": "string"},
+                "filename": {"type": "string"},
+                "content":  {"type": "string"},
             },
-            "required": ["code"],
+            "required": ["filename", "content"],
         },
     },
     {
-        "name": "SpecialUse",
-        "description": "Execute an operation outside normal tools. Use sparingly.",
+        "name": "create_file",
+        "description": "Create a new file.",
         "input_schema": {
             "type": "object",
             "properties": {
-                "String":      {"type": "string"},
-                "ask_confirm": {"type": "boolean"},
+                "filename": {"type": "string"},
+                "content":  {"type": "string"},
             },
-            "required": ["String"],
+            "required": ["filename", "content"],
         },
     },
     {
-        "name": "Working",
-        "description": "Announce the start of a task to the terminal.",
+        "name": "working",
+        "description": "Announce what you are about to do.",
         "input_schema": {
             "type": "object",
-            "properties": {
-                "Yes":     {"type": "boolean"},
-                "message": {"type": "string"},
-            },
-            "required": ["Yes", "message"],
+            "properties": {"message": {"type": "string"}},
+            "required": ["message"],
         },
     },
     {
-        "name": "WorkingStop",
-        "description": "Signal graceful completion of the task.",
-        "input_schema": {
-            "type": "object",
-            "properties": {"Yes": {"type": "boolean"}},
-            "required": ["Yes"],
-        },
+        "name": "done",
+        "description": "Signal you have finished all tasks.",
+        "input_schema": {"type": "object", "properties": {}},
     },
     {
-        "name": "printtoconsole",
-        "description": "Print a message to the Rich terminal. Your only output channel.",
+        "name": "say",
+        "description": "Print a message to the user.",
         "input_schema": {
             "type": "object",
             "properties": {"message": {"type": "string"}},
@@ -109,45 +95,88 @@ CLAUDE_TOOLS = [
 ]
 
 
-# --- Tool dispatcher ----------------------------------------------------------
+def _ensure_token(token_store, ams, level="read"):
+    """Auto-checkout if no token yet."""
+    if not token_store.get("current"):
+        level_map = {"read": "Read", "write": "Read+Write", "delete": "Read+Write+Delete"}
+        token = ams.CheckOut(level_map.get(level, "Read+Write"))
+        token_store["current"] = token
+    return token_store["current"]
+
 
 def dispatch_tool(name: str, inputs: dict, ams: AMS, token_store: dict, error_exec: ErrorExecution) -> str:
     try:
-        if name == "CheckOut":
-            token = ams.CheckOut(
-                inputs["permission_level"],
-                files=inputs.get("files"),
-            )
+        if name == "checkout":
+            level_map = {"read": "Read", "write": "Read+Write", "delete": "Read+Write+Delete"}
+            token = ams.CheckOut(level_map.get(inputs.get("level", "write"), "Read+Write"))
             token_store["current"] = token
-            return json.dumps({"status": "ok", "role": token.role, "level": token.level})
-
-        if name == "Working":
-            ams.Working(Yes=inputs.get("Yes", True), message=inputs.get("message", ""))
             return "ok"
 
-        if name == "WorkingStop":
-            ams.WorkingStop(Yes=inputs.get("Yes", True))
+        if name == "list_files":
+            token = _ensure_token(token_store, ams, "read")
+            files = ams.UseTool("list_files", token)
+            return json.dumps(files) if isinstance(files, list) else str(files)
+
+        if name == "read_file":
+            token = _ensure_token(token_store, ams, "read")
+            filename = inputs["filename"]
+            # Read all chunks and join
+            from pfps import PFPS
+            pfps = ams.pfps
+            pfps.BuildVarFile(filename)
+            chunks = pfps.ReadChunkVar(filename)
+            full = "".join(v[1] for v in chunks.values())
+            return full
+
+        if name == "write_file":
+            token = _ensure_token(token_store, ams, "write")
+            filename = inputs["filename"]
+            content  = inputs["content"]
+            pfps = ams.pfps
+            filepath = pfps.SandboxPath(filename)
+            with open(filepath, "w", encoding="utf-8") as f:
+                f.write(content)
+            pfps.BuildVarFile(filename)
             return "ok"
 
-        if name == "printtoconsole":
+        if name == "create_file":
+            token = _ensure_token(token_store, ams, "write")
+            return str(ams.UseTool("create_file", token,
+                filename=inputs["filename"],
+                content=inputs.get("content", "")))
+
+        if name == "working":
+            ams.Working(Yes=True, message=inputs.get("message", ""))
+            return "ok"
+
+        if name == "done":
+            ams.WorkingStop(Yes=True)
+            return "ok"
+
+        if name == "say":
             ams.printtoconsole(inputs["message"])
             return "ok"
 
-        if name == "SpecialUse":
-            return ams.SpecialUse(
-                String=inputs["String"],
-                ask_confirm=inputs.get("ask_confirm", False),
-            )
+        # Legacy fallbacks
+        if name == "CheckOut":
+            token = ams.CheckOut(inputs.get("permission_level", "Read+Write"))
+            token_store["current"] = token
+            return "ok"
 
-        if name == "ErrorExecution":
-            g = ams.build_globals()
-            g["ErrorExecution"] = error_exec.Run
-            return error_exec.Run(inputs["code"], g)
+        if name == "Working":
+            ams.Working(Yes=True, message=inputs.get("message", ""))
+            return "ok"
+
+        if name == "WorkingStop":
+            ams.WorkingStop(Yes=True)
+            return "ok"
+
+        if name == "printtoconsole":
+            ams.printtoconsole(inputs.get("message", ""))
+            return "ok"
 
         if name == "UseTool":
-            token = token_store.get("current")
-            if not token:
-                return "ERROR: No token - call CheckOut first"
+            token = _ensure_token(token_store, ams, "write")
             result = ams.UseTool(inputs["toolname"], token, **{
                 k: v for k, v in inputs.items() if k != "toolname"
             })
@@ -159,9 +188,7 @@ def dispatch_tool(name: str, inputs: dict, ams: AMS, token_store: dict, error_ex
         return f"ERROR: {e}"
 
 
-# --- Keyring helper -----------------------------------------------------------
-
-def clear_api_key(provider: str = "anthropic"):
+def clear_api_key(provider: str = "claude"):
     key_map = {"claude": "anthropic_key", "gpt": "openai_key", "gemini": "gemini_key"}
     key_name = key_map.get(provider, "anthropic_key")
     try:
@@ -171,19 +198,9 @@ def clear_api_key(provider: str = "anthropic"):
         console.print(f"[dim]No {provider} key found in keyring - nothing to clear.[/dim]")
 
 
-# --- Agent loop ---------------------------------------------------------------
-
 def run_agent(prompt: str, pfps: PFPS, role: str = "Editor", model: str = "claude"):
     adapter    = get_adapter(model)
-
-    # Prompt for API key immediately before anything else
-    adapter.get_key({
-        "claude": "anthropic_key",
-        "gpt":    "openai_key",
-        "gemini": "gemini_key",
-    }[model])
-
-    session_id  = uuid.uuid4().hex[:8]
+    session_id = uuid.uuid4().hex[:8]
     token_store: dict = {}
 
     pfps.start_session(session_id)
@@ -204,10 +221,9 @@ def run_agent(prompt: str, pfps: PFPS, role: str = "Editor", model: str = "claud
     print_session_start(session_id, pfps.config.get("name", "unknown"), role)
     console.print(f"[dim]Model:[/dim]  [bold magenta]{model}[/bold magenta] ({adapter.MODEL if hasattr(adapter, 'MODEL') else ''})\n")
 
-    # Seed file list
     viewer_token = ams.CheckOut(Permissions.Read)
     file_list    = pfps.ListFiles(viewer_token)
-    files_str    = "\n".join(f"  - {f}" for f in file_list)
+    files_str    = "\n".join(f"  - {f}" for f in file_list) or "  (no files yet)"
 
     system_prompt = f"""You are YourAssistantCoder (yac), a sandboxed coding agent.
 Sandbox root: {pfps.root}
@@ -216,16 +232,27 @@ Project files:
 {files_str}
 
 RULES:
-1. Call Working() before starting any task.
-2. Call CheckOut() before any file operation to get a token.
-3. Use UseTool() for all file operations.
-4. Use ErrorExecution() to test code - output feeds back to you automatically.
-5. Use printtoconsole() to communicate with the user.
-6. Call WorkingStop() when fully done.
-7. Always ReadChunk before WriteChunk on the same file.
-8. You cannot leave the sandbox.
+1. Call working() before starting any task.
+2. You already have Read+Write permission - no need to call checkout.
+3. Use read_file/write_file/create_file directly.
+4. Call done() when finished.
+5. You are sandboxed - NO shell commands, NO pip, NO internet.
+6. Only use the tools provided.
 
-Token levels: Read | Read+Write | Read+Write+Delete | SpecialUse
+OUTPUT FORMAT:
+- A Markdown engine is rendering your output in the terminal.
+- Use **bold**, `code`, ```code blocks```, bullet lists, headers freely.
+- Use say() to send markdown responses to the user.
+- Keep responses clear and well-formatted.
+
+TOOLS:
+- working(message)         announce what you are doing
+- list_files()             list project files
+- read_file(filename)      read a file
+- write_file(filename, content)   overwrite a file entirely
+- create_file(filename, content)  create a new file
+- say(message)             send markdown output to user
+- done()                   signal completion
 """
 
     messages = agent_ref.messages
@@ -247,29 +274,24 @@ Token levels: Read | Read+Write | Read+Write+Delete | SpecialUse
                 delay = re.search(r'retry in (\d+)', err, re.IGNORECASE)
                 delay_str = f" Retry in {delay.group(1)}s." if delay else ""
                 console.print(f"\n[bold red]✗  Token is finished[/bold red] [dim]- API quota exhausted.{delay_str}[/dim]")
-                if model == "gemini":
-                    console.print(f"[dim]Get a new key at:[/dim] [cyan]https://aistudio.google.com/apikey[/cyan]")
-                elif model == "gpt":
-                    console.print(f"[dim]Get a new key at:[/dim] [cyan]https://platform.openai.com/api-keys[/cyan]")
-                elif model == "claude":
-                    console.print(f"[dim]Get a new key at:[/dim] [cyan]https://console.anthropic.com[/cyan]")
+                key_urls = {"gemini": "https://aistudio.google.com/apikey", "gpt": "https://platform.openai.com/api-keys", "claude": "https://console.anthropic.com"}
+                console.print(f"[dim]Get a new key at:[/dim] [cyan]{key_urls.get(model, '')}[/cyan]")
                 console.print(f"[dim]Then run:[/dim] [cyan]yac key-clear --provider {model}[/cyan]")
-            elif "401" in err or "authentication" in err.lower() or "api_key" in err.lower() or "AuthenticationError" in type(e).__name__:
-                console.print(f"\n[bold red]✗  Invalid API key[/bold red] [dim]- authentication failed.[/dim]")
-                console.print(f"[dim]Run:[/dim] [cyan]yac key-clear --provider {model}[/cyan]")
+            elif "billing" in err.lower() or "credit" in err.lower() or "payment" in err.lower():
+                console.print(f"\n[bold red]✗  No credits[/bold red] [dim]- add billing at platform.openai.com/settings/billing[/dim]")
+            elif "401" in err or "authentication" in err.lower() or "AuthenticationError" in type(e).__name__:
+                console.print(f"\n[bold red]✗  Invalid API key[/bold red] [dim]- run: yac key-clear --provider {model}[/dim]")
             elif "timeout" in err.lower():
                 console.print(f"\n[bold yellow]⚠  Request timed out[/bold yellow] [dim]- try again.[/dim]")
             else:
-                console.print(f"\n[bold red]✗  API error ({type(e).__name__}):[/bold red] [dim]{err[:200]}[/dim]")
+                console.print(f"\n[bold red]✗  API error ({type(e).__name__}):[/bold red]\n[dim]{err}[/dim]")
             break
 
-        # Adapters return (AgentResponse, raw) or just AgentResponse
         if isinstance(result, tuple):
             response, raw = result
         else:
             response, raw = result, None
 
-        # Append assistant turn
         if raw is not None:
             messages.append(adapter.format_assistant_message(response, raw))
         else:
@@ -280,14 +302,13 @@ Token levels: Read | Read+Write | Read+Write+Delete | SpecialUse
                 console.print(f"\n[dim]{response.text}[/dim]")
             break
 
-        # Process tool calls
         tool_results = []
         done         = False
 
         for tc in response.tool_calls:
             res = dispatch_tool(tc.name, tc.inputs, ams, token_store, error_exec)
             tool_results.append(adapter.format_tool_result(tc.id, res))
-            if tc.name == "WorkingStop":
+            if tc.name in ("WorkingStop", "done"):
                 done = True
                 break
 
@@ -296,4 +317,5 @@ Token levels: Read | Read+Write | Read+Write+Delete | SpecialUse
         if done or ams.should_stop:
             break
 
-    ams.WorkingStop(Yes=True)
+    if not ams._working is False:
+        ams.WorkingStop(Yes=True)

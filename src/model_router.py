@@ -124,29 +124,25 @@ class GPTAdapter(BaseAdapter):
                 input_messages.append({"role": m["role"], "content": m["content"]})
             elif isinstance(m["content"], list):
                 for block in m["content"]:
-                    if isinstance(block, dict) and block.get("type") == "tool_result":
-                        input_messages.append({
-                            "type":   "function_call_output",
-                            "call_id": block["tool_use_id"],
-                            "output": block["content"],
-                        })
-                    elif isinstance(block, dict) and block.get("type") == "tool_use":
-                        input_messages.append({
-                            "type":      "function_call",
-                            "call_id":   block["id"],
-                            "name":      block["name"],
-                            "arguments": json.dumps(block.get("input", {})),
-                        })
-                    elif hasattr(block, "type"):
-                        if block.type == "tool_use":
+                    if isinstance(block, dict):
+                        t = block.get("type", "")
+                        if t == "tool_result":
+                            # Tool result back to model
+                            input_messages.append({
+                                "type":    "function_call_output",
+                                "call_id": block["tool_use_id"],
+                                "output":  str(block["content"]),
+                            })
+                        elif t == "tool_use":
+                            # Assistant tool call
                             input_messages.append({
                                 "type":      "function_call",
-                                "call_id":   block.id,
-                                "name":      block.name,
-                                "arguments": json.dumps(block.input),
+                                "call_id":   block.get("id", block.get("call_id", "")),
+                                "name":      block["name"],
+                                "arguments": json.dumps(block.get("input", {})),
                             })
-                        elif block.type == "text" and block.text:
-                            input_messages.append({"role": "assistant", "content": block.text})
+                        elif t == "text" and block.get("text"):
+                            input_messages.append({"role": "assistant", "content": block["text"]})
 
         resp = client.responses.create(
             model  = self.MODEL,
