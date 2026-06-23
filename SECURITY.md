@@ -2,7 +2,7 @@
 If you wish to report a security vulnerability but not in a public issue. Thank you! We ask that you follow the following process.
 
 Please report security vulnerability by filling out the template:
-+ PROJECT: A URL to project's repository (https://github.com/alanbutidk/YourAssistantCoder/)
++ PROJECT: A URL to YAC's repository (https://github.com/alanbutidk/YourAssistantCoder/)
 + PUBLIC: Let us know if this vulnerability has been made/discussed publicly already and if so, let us know where.
 + DESCRIPTION: Provide accurate/precise description of the vulnerability along with information you may have got (As much as you are able/will to provide)
 
