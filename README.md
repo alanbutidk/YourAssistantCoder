@@ -128,6 +128,12 @@ YourAssistantCoder/
 
 Heres a reference image to see the TUI in action.
 
+<img width="1366" height="727" alt="InitTime" src="https://github.com/user-attachments/assets/a6a1a005-f1aa-412e-a59f-9cd8c44f6833" />
+
+<img width="1366" height="728" alt="InitSelect" src="https://github.com/user-attachments/assets/b1869668-5586-4563-96f1-bfaf9439a8b0" />
+
+<img width="1366" height="727" alt="TalkInterface" src="https://github.com/user-attachments/assets/950d4590-96a2-422b-ba41-e10b3924f187" />
+
 ## License
 
 GPLv3 - build whatever you want with it, but keep it open-source.
