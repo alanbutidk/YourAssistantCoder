@@ -17,6 +17,7 @@ else then
   let RM = rm -rf
 done
 
+let VERSION = v1.1.0
 let APP = yac
 let NUITKA_PYFLAGS = --standalone --onefile --output-dir=Release -o=(APP) --remove-output --lto=no --nofollow-import-to=html,email,kivy,tkinter,bs4,torch,mypy --nofollow-import-to=IPython,pygments,pytest,unittest,mock,ipykernel,jupyter_core,nbformat,setuptools,pip,pyqt6 --noinclude-pytest-mode=nofollow --noinclude-setuptools-mode=nofollow
 let PYI_PYFLAGS = --onefile
@@ -32,6 +33,6 @@ nuitkabuild:
 nuitkaclean:
   (RM) (APP)(executable) Release\(APP).build Release\(APP).dist Release\(APP).onefile-build
 pyibuild:
-  pyinstaller (PYI_PYFLAGS) (SRC)
+  pyinstaller (PYI_PYFLAGS) (SRC) && cd dist && (COPYNAME) (APP)(executable) Release\(VERSION)\(APP)(executable)
 pyiclean:
   (RM) Dist Build (APP)(executable) (APP).spec

@@ -126,7 +126,7 @@ YourAssistantCoder/
 
 ```YourAssistantCoder``` has a TUI interface made with ```Textual```. Init a project, talk with your agent like a chatbot interface.
 
-Heres a reference image to see the TUI in action.
+Heres some reference images to see the TUI in action:
 
 <img width="1366" height="727" alt="InitTime" src="https://github.com/user-attachments/assets/a6a1a005-f1aa-412e-a59f-9cd8c44f6833" />
 
