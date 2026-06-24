@@ -85,11 +85,34 @@ CLAUDE_TOOLS = [
     },
     {
         "name": "say",
-        "description": "Print a message to the user.",
+        "description": "Print a message to the user. Use markdown formatting.",
         "input_schema": {
             "type": "object",
             "properties": {"message": {"type": "string"}},
             "required": ["message"],
+        },
+    },
+    {
+        "name": "shell",
+        "description": "Run a shell command in the project root. User must approve before it runs.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "cmd":    {"type": "string", "description": "The shell command to run e.g. git clone https://..."},
+                "reason": {"type": "string", "description": "Why you need to run this command"},
+            },
+            "required": ["cmd"],
+        },
+    },
+    {
+        "name": "web_search",
+        "description": "Search the web for information. Use when you need current docs, package info, or anything you don't know.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "query": {"type": "string", "description": "Search query"},
+            },
+            "required": ["query"],
         },
     },
 ]
@@ -182,6 +205,27 @@ def dispatch_tool(name: str, inputs: dict, ams: AMS, token_store: dict, error_ex
             })
             return json.dumps(result) if isinstance(result, (list, dict)) else str(result)
 
+        if name == "shell":
+            from shell_exec import ShellExecutor
+            executor = getattr(dispatch_tool, "_shell_exec", None)
+            if executor is None:
+                executor = ShellExecutor(str(ams.pfps.root))
+                dispatch_tool._shell_exec = executor
+            cmd    = inputs.get("cmd", "")
+            reason = inputs.get("reason", "")
+            ams.logger.write("SHELL", f"requested: {cmd}")
+            result = executor.run(cmd, reason)
+            ams.logger.write("SHELL", f"result: {result[:80]}")
+            return result
+
+        if name == "web_search":
+            from web_search import search
+            query  = inputs.get("query", "")
+            ams.logger.write("WEBSEARCH", query)
+            result = search(query)
+            ams.logger.write("WEBSEARCH", f"got {len(result)} chars")
+            return result
+
         return f"ERROR: Unknown tool {name!r}"
 
     except Exception as e:
@@ -236,7 +280,7 @@ RULES:
 2. You already have Read+Write permission - no need to call checkout.
 3. Use read_file/write_file/create_file directly.
 4. Call done() when finished.
-5. You are sandboxed - NO shell commands, NO pip, NO internet.
+5. Use shell() for system commands - user will approve each one. Use web_search() for internet access.
 6. Only use the tools provided.
 
 OUTPUT FORMAT:
@@ -246,13 +290,18 @@ OUTPUT FORMAT:
 - Keep responses clear and well-formatted.
 
 TOOLS:
-- working(message)         announce what you are doing
-- list_files()             list project files
-- read_file(filename)      read a file
-- write_file(filename, content)   overwrite a file entirely
-- create_file(filename, content)  create a new file
-- say(message)             send markdown output to user
-- done()                   signal completion
+- working(message)                    announce what you are doing
+- list_files()                        list project files
+- read_file(filename)                 read a file
+- write_file(filename, content)       overwrite a file entirely
+- create_file(filename, content)      create a new file
+- shell(cmd, reason)                  run a shell command (user must approve)
+- web_search(query)                   search the web for docs/info
+- say(message)                        send markdown output to user
+- done()                              signal completion
+
+Use shell() for: git clone, npm install, pip install, running tests, etc.
+Use web_search() when you need current docs, package versions, or anything uncertain.
 """
 
     messages = agent_ref.messages

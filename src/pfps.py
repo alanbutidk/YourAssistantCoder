@@ -287,15 +287,18 @@ class PFPS:
 
     def _snapshot_all(self):
         import fnmatch
-        patterns = self.config.get("track_files", ["*.py"])
-        ignore   = self.config.get("ignore", [])
+        patterns = self.config.get("track_files", ["*"])
+        ignore   = self.config.get("ignore", ["__pycache__", ".git"])
         for f in self.root.rglob("*"):
             if not f.is_file():
                 continue
             rel = str(f.relative_to(self.root))
+            if ".PFPS" in rel:
+                continue
             if any(ig in rel for ig in ignore):
                 continue
-            if any(fnmatch.fnmatch(f.name, p) for p in patterns):
+            track_all = "*" in patterns
+            if track_all or any(fnmatch.fnmatch(f.name, p) for p in patterns):
                 self._write_head(rel, f)
 
     def _write_head(self, filename: str, filepath: Path):

@@ -17,7 +17,7 @@ Or download the prebuilt `yac.exe` (Windows) / `yac` (Linux/Mac) from Releases.
 ## Quickstart
 
 ```bash
-# Use the new TUI interface
+# Use the TUI interface
 yac
 
 # Register your project
@@ -121,6 +121,12 @@ YourAssistantCoder/
 ```
 
 ---
+
+## TUI
+
+```YourAssistantCoder``` has a TUI interface made with ```Textual```. Init a project, talk with your agent like a chatbot interface.
+
+Heres a reference image to see the TUI in action.
 
 ## License
 
