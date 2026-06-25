@@ -34,7 +34,7 @@ jobs:
           echo "PYINC=$pydir\include" >> $env:GITHUB_OUTPUT
           echo "PYLIB=$pydir\libs" >> $env:GITHUB_OUTPUT
 
-      - name: Build with Make -j4
+      - name: Build with Make -j2
         shell: msys2 {0}
         env:
           PYINC: ${{ steps.pypath.outputs.PYINC }}
@@ -61,7 +61,7 @@ jobs:
           	gcc \$(OBJS) -o ../yac.exe -L${PYLIB_U} -lpython313 -static-libgcc
           MAKE
 
-          make -j4
+          make -j2
           echo "Build done."
 
       - uses: actions/upload-artifact@v4
