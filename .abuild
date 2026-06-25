@@ -19,7 +19,7 @@ done
 
 let VERSION = v1.1.0
 let APP = yac
-let NUITKA_PYFLAGS = --standalone --onefile --output-dir=Release -o=(APP) --remove-output --lto=no --nofollow-import-to=html,email,kivy,tkinter,bs4,torch,mypy --nofollow-import-to=IPython,pygments,pytest,unittest,mock,ipykernel,jupyter_core,nbformat,setuptools,pip,pyqt6 --noinclude-pytest-mode=nofollow --noinclude-setuptools-mode=nofollow
+let NUITKA_PYFLAGS = --standalone --output-dir=Release -o=(APP) --remove-output --lto=no --nofollow-import-to=html,email,kivy,tkinter,bs4,torch,mypy --nofollow-import-to=IPython,pygments,pytest,unittest,mock,ipykernel,jupyter_core,nbformat,setuptools,pip,pyqt6 --noinclude-pytest-mode=nofollow --noinclude-setuptools-mode=nofollow
 let PYI_PYFLAGS = --onefile
 let SRC = src/yac.py
 

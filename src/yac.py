@@ -104,6 +104,21 @@ def cmd_rollback(args):
     console.print(f"[bold green]✓[/bold green] Rolled back [cyan]{args.file}[/cyan]")
 
 
+def cmd_edit_role(args):
+    import json
+    root     = find_project_root(args.path if args.path != "." else str(Path.cwd()))
+    cfg_path = Path(root) / ".PFPS" / "sandbox.json"
+    if not cfg_path.exists():
+        print("No PFPS project found.")
+        return
+    cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+    cfg["model"] = args.model
+    cfg["role"]  = args.role
+    cfg_path.write_text(json.dumps(cfg, indent=2), encoding="utf-8")
+    from console import console
+    console.print(f"[green]✓[/green] model=[magenta]{args.model}[/magenta] role=[cyan]{args.role}[/cyan]")
+
+
 def cmd_key_clear(args):
     from agent import clear_api_key
     clear_api_key(args.provider)
@@ -125,13 +140,13 @@ def main():
     p_init.add_argument("name")
     p_init.add_argument("--path",        default=None)
     p_init.add_argument("--role",        default="Editor", choices=["Viewer","Editor","Owner"])
-    p_init.add_argument("--model",       default="gpt",    choices=["claude","gpt","gemini"])
+    p_init.add_argument("--model",       default="gpt",    choices=["claude","gpt","gemini","ollama","deepseek","mistral"])
     p_init.add_argument("--allow-print", action="store_true")
 
     p_run = sub.add_parser("run")
     p_run.add_argument("prompt")
     p_run.add_argument("--path",  default=".")
-    p_run.add_argument("--model", default=None, choices=["claude","gpt","gemini"])
+    p_run.add_argument("--model", default=None, choices=["claude","gpt","gemini","ollama","deepseek","mistral"])
 
     p_log = sub.add_parser("log")
     p_log.add_argument("--path", default=".")
@@ -144,7 +159,13 @@ def main():
     p_rb.add_argument("--path", default=".")
 
     p_kc = sub.add_parser("key-clear")
-    p_kc.add_argument("--provider", default="gpt", choices=["claude","gpt","gemini"])
+    p_kc.add_argument("--provider", default="gpt", choices=["claude","gpt","gemini","ollama","deepseek","mistral"])
+
+    # edit-role MODEL ROLE  (strict positional index)
+    p_er = sub.add_parser("edit-role", help="Change model and role: edit-role MODEL ROLE")
+    p_er.add_argument("model", choices=["claude","gpt","gemini","ollama","deepseek","mistral"])
+    p_er.add_argument("role",  choices=["Viewer","Editor","Owner"])
+    p_er.add_argument("--path", default=".")
 
     args = parser.parse_args()
     dispatch = {
@@ -154,6 +175,7 @@ def main():
         "status":    cmd_status,
         "rollback":  cmd_rollback,
         "key-clear": cmd_key_clear,
+        "edit-role":  cmd_edit_role,
     }
 
     if args.command in dispatch:

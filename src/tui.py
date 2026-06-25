@@ -1,4 +1,5 @@
 """
+
 YourAssistantCoder (yac) - tui.py
 
 """
@@ -112,6 +113,7 @@ InitScreen       { align: center middle; }
 RollbackScreen   { align: center middle; }
 EnvWarnScreen    { align: center middle; }
 ShellConfirmScreen { align: center middle; }
+OllamaScreen       { align: center middle; }
 
 #confirm-box, #apikey-box, #init-box, #rollback-box, #envwarn-box {
     background: $bg2;
@@ -288,6 +290,110 @@ class ApiKeyScreen(ModalScreen):
         self._on_save(key)
 
 
+# ── Ollama model picker ───────────────────────────────────────────────────────
+
+class OllamaScreen(ModalScreen):
+    """
+    Shows locally available Ollama coding models.
+    If none found, offers to pull one.
+    """
+    def __init__(self, on_select):
+        super().__init__()
+        self._on_select = on_select
+        self._host      = "http://localhost:11434"
+
+    def compose(self) -> ComposeResult:
+        with Container(id="init-box"):
+            yield Label("  Ollama - Local Model", classes="modal-title cyan")
+            yield Label("", id="ollama-status", classes="modal-msg")
+            yield Label("Select or type a model name:", classes="modal-label")
+            yield Select([], id="ollama-select")
+            yield Input(placeholder="or type: qwen2.5-coder:7b", id="ollama-custom", classes="modal-input")
+            yield Label("", id="ollama-err", classes="modal-err")
+            with Horizontal(classes="modal-btns"):
+                yield Button("Cancel", classes="cancel-k", id="btn-cancel-ol")
+                yield Button("Pull & Use", classes="save",  id="btn-pull-ol")
+                yield Button("Use",        classes="yes",   id="btn-use-ol")
+
+    def on_mount(self):
+        self._refresh_models()
+
+    def _refresh_models(self):
+        from model_router import OllamaAdapter
+        if not OllamaAdapter.is_running(self._host):
+            self.query_one("#ollama-status").update(
+                "[red]Ollama not running.[/red] Start it with: [cyan]ollama serve[/cyan]"
+            )
+            return
+
+        local = OllamaAdapter.list_local_models(self._host)
+        coding = [m for m in local if any(
+            kw in m.lower() for kw in [
+                "code","coder","starcoder","deepseek","qwen","wizard",
+                "phind","granite","magic","llama","gemma"
+            ]
+        )]
+        all_models = coding or local
+
+        if all_models:
+            self.query_one("#ollama-status").update(
+                f"[green]{len(all_models)} model(s) available locally.[/green]"
+            )
+            opts = [(m, m) for m in all_models]
+            sel  = self.query_one("#ollama-select", Select)
+            sel._options = opts
+            sel.set_options(opts)
+        else:
+            self.query_one("#ollama-status").update(
+                "[yellow]No models pulled yet.[/yellow] Type a model name and click Pull & Use."
+            )
+
+    def _get_chosen(self) -> str:
+        custom = self.query_one("#ollama-custom").value.strip()
+        if custom:
+            return custom
+        try:
+            val = self.query_one("#ollama-select", Select).value
+            return str(val) if val else ""
+        except Exception:
+            return ""
+
+    @on(Button.Pressed, "#btn-use-ol")
+    def on_use(self):
+        model = self._get_chosen()
+        if not model:
+            self.query_one("#ollama-err").update("Select or type a model.")
+            return
+        self.dismiss()
+        self._on_select(f"ollama:{model}")
+
+    @on(Button.Pressed, "#btn-pull-ol")
+    def on_pull(self):
+        model = self._get_chosen()
+        if not model:
+            self.query_one("#ollama-err").update("Type a model name to pull.")
+            return
+        self.query_one("#ollama-err").update(f"[yellow]Pulling {model}... (may take a while)[/yellow]")
+        self._pull_and_use(model)
+
+    @work(thread=True)
+    def _pull_and_use(self, model: str):
+        from model_router import OllamaAdapter
+        ok = OllamaAdapter.pull_model(model, self._host)
+        if ok:
+            self.app.call_from_thread(self.dismiss)
+            self.app.call_from_thread(lambda: self._on_select(f"ollama:{model}"))
+        else:
+            self.app.call_from_thread(
+                lambda: self.query_one("#ollama-err").update(
+                    f"[red]Pull failed. Is Ollama running and model name correct?[/red]"
+                )
+            )
+
+    @on(Button.Pressed, "#btn-cancel-ol")
+    def on_cancel(self): self.dismiss()
+
+
 # ── Init popup ────────────────────────────────────────────────────────────────
 
 class InitScreen(ModalScreen):
@@ -305,7 +411,14 @@ class InitScreen(ModalScreen):
             yield Input(value=name, id="init-name", classes="modal-input")
             yield Label("Model:", classes="modal-label")
             yield Select(
-                [("GPT (OpenAI)", "gpt"), ("Claude (Anthropic)", "claude"), ("Gemini (Google)", "gemini")],
+                [
+                    ("GPT (OpenAI)",          "gpt"),
+                    ("Claude (Anthropic)",    "claude"),
+                    ("Gemini (Google)",       "gemini"),
+                    ("Ollama (Local)",        "ollama"),
+                    ("DeepSeek (Coder V3)",  "deepseek"),
+                    ("Mistral (Codestral)",  "mistral"),
+                ],
                 value="gpt",
                 id="init-model",
             )
@@ -331,8 +444,15 @@ class InitScreen(ModalScreen):
         if not name:
             self.query_one("#init-err").update("Name cannot be empty.")
             return
-        self.dismiss()
-        self._on_init(name, model, role)
+        if model == "ollama":
+            # Show Ollama picker before dismissing
+            def on_ollama_selected(ollama_model: str):
+                self.dismiss()
+                self._on_init(name, ollama_model, role)
+            self.app.push_screen(OllamaScreen(on_ollama_selected))
+        else:
+            self.dismiss()
+            self._on_init(name, model, role)
 
     @on(Button.Pressed, "#btn-cancel-init")
     def on_cancel(self): self.dismiss()
@@ -397,6 +517,26 @@ class BrowserView(Widget):
     @on(DirectoryTree.DirectorySelected)
     def on_dir(self, event: DirectoryTree.DirectorySelected):
         self.app._selected_dir = str(event.path)
+        # Update welcome to show selected path
+        try:
+            self.query_one("#welcome").update(
+                f"""[bold cyan]YourAssistantCoder[/bold cyan]  [dim](yac)[/dim]
+
+"""
+                f"""Selected: [yellow]{event.path}[/yellow]
+
+"""
+                f"""Press [yellow]I[/yellow] to init project here,
+"""
+                f"or navigate into an existing yac project."
+            )
+        except Exception:
+            pass
+
+    @on(DirectoryTree.FileSelected)
+    def on_file(self, event: DirectoryTree.FileSelected):
+        # Select the parent directory when a file is clicked
+        self.app._selected_dir = str(event.path.parent)
 
 
 # ── Chat view ─────────────────────────────────────────────────────────────────
@@ -683,7 +823,14 @@ class EditRoleScreen(ModalScreen):
             yield Label("  Edit Model & Role", classes="modal-title green")
             yield Label("Model:", classes="modal-label")
             yield Select(
-                [("GPT (OpenAI)", "gpt"), ("Claude (Anthropic)", "claude"), ("Gemini (Google)", "gemini")],
+                [
+                    ("GPT (OpenAI)",         "gpt"),
+                    ("Claude (Anthropic)",   "claude"),
+                    ("Gemini (Google)",      "gemini"),
+                    ("Ollama (Local)",       "ollama"),
+                    ("DeepSeek (Coder V3)", "deepseek"),
+                    ("Mistral (Codestral)", "mistral"),
+                ],
                 value=self._config.get("model", "gpt"),
                 id="er-model",
             )
@@ -701,8 +848,14 @@ class EditRoleScreen(ModalScreen):
     def on_save(self):
         model = self.query_one("#er-model").value
         role  = self.query_one("#er-role").value
-        self.dismiss()
-        self._on_save(model, role)
+        if model == "ollama":
+            def on_ollama_selected(ollama_model: str):
+                self.dismiss()
+                self._on_save(ollama_model, role)
+            self.app.push_screen(OllamaScreen(on_ollama_selected))
+        else:
+            self.dismiss()
+            self._on_save(model, role)
 
     @on(Button.Pressed, "#btn-cancel-er")
     def on_cancel(self): self.dismiss()
@@ -762,7 +915,10 @@ class YACApp(App):
             pass
 
     def action_init_project(self):
-        target = self._selected_dir or str(Path.cwd())
+        target = self._selected_dir or str(Path.cwd() / "project")
+        # If target == cwd, we haven't selected anything in tree yet
+        if Path(target).resolve() == Path.cwd().resolve():
+            target = str(Path.cwd() / "new_project")
 
         def do_init(name, model, role):
             from pfps import PFPS

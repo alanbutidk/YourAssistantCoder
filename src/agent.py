@@ -233,7 +233,7 @@ def dispatch_tool(name: str, inputs: dict, ams: AMS, token_store: dict, error_ex
 
 
 def clear_api_key(provider: str = "claude"):
-    key_map = {"claude": "anthropic_key", "gpt": "openai_key", "gemini": "gemini_key"}
+    key_map = {"claude": "anthropic_key", "gpt": "openai_key", "gemini": "gemini_key", "deepseek": "deepseek_key", "mistral": "mistral_key"}
     key_name = key_map.get(provider, "anthropic_key")
     try:
         keyring.delete_password(KEYRING_SERVICE, key_name)

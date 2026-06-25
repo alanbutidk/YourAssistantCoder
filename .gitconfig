@@ -1,0 +1,4 @@
+git config core.preloadindex true
+git config core.fscache true
+git config gc.auto 256
+

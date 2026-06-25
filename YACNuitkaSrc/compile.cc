@@ -1,0 +1,1 @@
+gcc -Os --param ggc-min-expand=0 --param ggc-min-heapsize=4096 *.c nuitka/helper/*.c -o yac.exe -I. -IE:\Python3.13\include -LE:\Python3.13\libs -lpython313

@@ -276,16 +276,367 @@ class GeminiAdapter(BaseAdapter):
         return {"role": "model", "content": [p for p in raw.candidates[0].content.parts]}
 
 
+
+
+# --- Ollama adapter (local models) -------------------------------------------
+# Supports any model running in Ollama: codellama, deepseek-coder, qwen2.5-coder, etc.
+# Install: https://ollama.ai  then: ollama pull codellama
+
+class OllamaAdapter(BaseAdapter):
+    name  = "ollama"
+    MODEL = "codellama"   # change to any ollama model you have pulled
+
+    # Well-known coding models - used to populate the picker
+    CODING_MODELS = [
+        "codellama", "codellama:7b", "codellama:13b", "codellama:34b",
+        "deepseek-coder", "deepseek-coder:6.7b", "deepseek-coder:33b",
+        "deepseek-coder-v2", "deepseek-coder-v2:16b",
+        "qwen2.5-coder", "qwen2.5-coder:7b", "qwen2.5-coder:14b", "qwen2.5-coder:32b",
+        "codegemma", "codegemma:7b",
+        "starcoder2", "starcoder2:3b", "starcoder2:7b", "starcoder2:15b",
+        "magicoder", "wizard-coder",
+        "phind-codellama", "phind-codellama:34b",
+        "granite-code", "granite-code:8b", "granite-code:20b",
+    ]
+
+    def __init__(self, model: str = None, host: str = "http://localhost:11434"):
+        self.MODEL = model or self.__class__.MODEL
+        self.host  = host
+
+    def get_key(self, key_name: str) -> str:
+        return ""   # no key needed for local
+
+    @classmethod
+    def list_local_models(cls, host: str = "http://localhost:11434") -> list[str]:
+        """Fetch models currently pulled in Ollama."""
+        import urllib.request
+        try:
+            with urllib.request.urlopen(f"{host}/api/tags", timeout=5) as resp:
+                data = json.loads(resp.read().decode())
+            return [m["name"] for m in data.get("models", [])]
+        except Exception:
+            return []
+
+    @classmethod
+    def is_running(cls, host: str = "http://localhost:11434") -> bool:
+        import urllib.request
+        try:
+            urllib.request.urlopen(f"{host}/api/tags", timeout=3)
+            return True
+        except Exception:
+            return False
+
+    @classmethod
+    def pull_model(cls, model: str, host: str = "http://localhost:11434") -> bool:
+        """Pull a model from Ollama registry. Returns True on success."""
+        import urllib.request
+        payload = json.dumps({"name": model, "stream": False}).encode()
+        req = urllib.request.Request(
+            f"{host}/api/pull",
+            data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=300) as resp:
+                data = json.loads(resp.read().decode())
+            return data.get("status") == "success"
+        except Exception:
+            return False
+
+    def _oai_tools(self, tools: list) -> list:
+        return [{
+            "type": "function",
+            "function": {
+                "name":        t["name"],
+                "description": t.get("description", ""),
+                "parameters":  t.get("input_schema", {"type": "object", "properties": {}}),
+            }
+        } for t in tools]
+
+    def _build_messages(self, system: str, messages: list) -> list:
+        out = [{"role": "system", "content": system}]
+        for m in messages:
+            if isinstance(m["content"], str):
+                out.append({"role": m["role"], "content": m["content"]})
+            elif isinstance(m["content"], list):
+                for block in m["content"]:
+                    if isinstance(block, dict):
+                        t = block.get("type", "")
+                        if t == "tool_result":
+                            out.append({
+                                "role":         "tool",
+                                "tool_call_id": block["tool_use_id"],
+                                "content":      str(block["content"]),
+                            })
+                        elif t == "tool_use":
+                            out.append({
+                                "role":    "assistant",
+                                "content": None,
+                                "tool_calls": [{
+                                    "id":       block.get("id",""),
+                                    "type":     "function",
+                                    "function": {
+                                        "name":      block["name"],
+                                        "arguments": json.dumps(block.get("input", {})),
+                                    }
+                                }],
+                            })
+                        elif t == "text" and block.get("text"):
+                            out.append({"role": "assistant", "content": block["text"]})
+        return out
+
+    def complete(self, system, messages, tools) -> AgentResponse:
+        import urllib.request
+        msgs    = self._build_messages(system, messages)
+        payload = json.dumps({
+            "model":    self.MODEL,
+            "messages": msgs,
+            "tools":    self._oai_tools(tools),
+            "stream":   False,
+        }).encode()
+
+        req  = urllib.request.Request(
+            f"{self.host}/api/chat",
+            data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                data = json.loads(resp.read().decode())
+        except Exception as e:
+            raise RuntimeError(f"Ollama error: {e}. Is Ollama running? Try: ollama serve")
+
+        msg        = data.get("message", {})
+        text       = msg.get("content", "") or ""
+        tool_calls = []
+
+        for tc in msg.get("tool_calls", []):
+            fn = tc.get("function", {})
+            try:
+                args = fn.get("arguments", {})
+                if isinstance(args, str):
+                    args = json.loads(args)
+            except Exception:
+                args = {}
+            call_id = tc.get("id", fn.get("name", "call"))
+            tool_calls.append(ToolCall(id=call_id, name=fn.get("name",""), inputs=args))
+
+        stop = "tool_use" if tool_calls else "end_turn"
+        return AgentResponse(text, tool_calls, stop), data
+
+    def format_tool_result(self, tool_call_id: str, content: str) -> dict:
+        return {"type": "tool_result", "tool_use_id": tool_call_id, "content": content}
+
+    def format_assistant_message(self, response: AgentResponse, raw) -> dict:
+        msg  = raw.get("message", {})
+        text = msg.get("content", "")
+        tcs  = []
+        for tc in msg.get("tool_calls", []):
+            fn = tc.get("function", {})
+            tcs.append({"type": "tool_use", "id": tc.get("id", fn.get("name","")),
+                        "name": fn.get("name",""), "input": fn.get("arguments", {})})
+        parts = []
+        if text: parts.append({"type": "text", "text": text})
+        parts.extend(tcs)
+        return {"role": "assistant", "content": parts}
+
+
+# --- DeepSeek adapter --------------------------------------------------------
+# DeepSeek-Coder V3 — extremely strong at coding, cheap API
+# Get key: https://platform.deepseek.com
+
+class DeepSeekAdapter(BaseAdapter):
+    name  = "deepseek"
+    MODEL = "deepseek-chat"   # deepseek-chat = DeepSeek-V3, deepseek-reasoner = R1
+
+    def _oai_tools(self, tools: list) -> list:
+        return [{
+            "type": "function",
+            "function": {
+                "name":        t["name"],
+                "description": t.get("description", ""),
+                "parameters":  t.get("input_schema", {"type": "object", "properties": {}}),
+            }
+        } for t in tools]
+
+    def _build_messages(self, system: str, messages: list) -> list:
+        out = [{"role": "system", "content": system}]
+        for m in messages:
+            if isinstance(m["content"], str):
+                out.append({"role": m["role"], "content": m["content"]})
+            elif isinstance(m["content"], list):
+                for block in m["content"]:
+                    if isinstance(block, dict):
+                        t = block.get("type", "")
+                        if t == "tool_result":
+                            out.append({
+                                "role":         "tool",
+                                "tool_call_id": block["tool_use_id"],
+                                "content":      str(block["content"]),
+                            })
+                        elif t == "tool_use":
+                            out.append({
+                                "role": "assistant", "content": None,
+                                "tool_calls": [{
+                                    "id": block.get("id",""), "type": "function",
+                                    "function": {"name": block["name"],
+                                                 "arguments": json.dumps(block.get("input",{}))},
+                                }],
+                            })
+                        elif t == "text" and block.get("text"):
+                            out.append({"role": "assistant", "content": block["text"]})
+        return out
+
+    def complete(self, system, messages, tools) -> AgentResponse:
+        from openai import OpenAI
+        client = OpenAI(
+            api_key  = self.get_key("deepseek_key"),
+            base_url = "https://api.deepseek.com",
+        )
+        resp = client.chat.completions.create(
+            model    = self.MODEL,
+            messages = self._build_messages(system, messages),
+            tools    = self._oai_tools(tools),
+        )
+        msg        = resp.choices[0].message
+        text       = msg.content or ""
+        tool_calls = []
+        for tc in (msg.tool_calls or []):
+            try: inputs = json.loads(tc.function.arguments)
+            except Exception: inputs = {}
+            tool_calls.append(ToolCall(id=tc.id, name=tc.function.name, inputs=inputs))
+
+        stop = "tool_use" if tool_calls else "end_turn"
+        return AgentResponse(text, tool_calls, stop), resp
+
+    def format_tool_result(self, tool_call_id: str, content: str) -> dict:
+        return {"type": "tool_result", "tool_use_id": tool_call_id, "content": content}
+
+    def format_assistant_message(self, response: AgentResponse, raw) -> dict:
+        msg  = raw.choices[0].message
+        text = msg.content or ""
+        parts = []
+        if text: parts.append({"type": "text", "text": text})
+        for tc in (msg.tool_calls or []):
+            try: inp = json.loads(tc.function.arguments)
+            except Exception: inp = {}
+            parts.append({"type":"tool_use","id":tc.id,"name":tc.function.name,"input":inp})
+        return {"role": "assistant", "content": parts}
+
+
+# --- Mistral adapter ---------------------------------------------------------
+# Mistral Codestral — purpose-built code model, fast and cheap
+# Get key: https://console.mistral.ai
+
+class MistralAdapter(BaseAdapter):
+    name  = "mistral"
+    MODEL = "codestral-latest"   # or mistral-large-latest
+
+    def _oai_tools(self, tools: list) -> list:
+        return [{
+            "type": "function",
+            "function": {
+                "name":        t["name"],
+                "description": t.get("description", ""),
+                "parameters":  t.get("input_schema", {"type": "object", "properties": {}}),
+            }
+        } for t in tools]
+
+    def _build_messages(self, system: str, messages: list) -> list:
+        out = [{"role": "system", "content": system}]
+        for m in messages:
+            if isinstance(m["content"], str):
+                out.append({"role": m["role"], "content": m["content"]})
+            elif isinstance(m["content"], list):
+                for block in m["content"]:
+                    if isinstance(block, dict):
+                        t = block.get("type", "")
+                        if t == "tool_result":
+                            out.append({
+                                "role": "tool",
+                                "tool_call_id": block["tool_use_id"],
+                                "content": str(block["content"]),
+                                "name": block.get("tool_use_id", "tool"),
+                            })
+                        elif t == "tool_use":
+                            out.append({
+                                "role": "assistant", "content": None,
+                                "tool_calls": [{
+                                    "id": block.get("id",""), "type": "function",
+                                    "function": {"name": block["name"],
+                                                 "arguments": json.dumps(block.get("input",{}))},
+                                }],
+                            })
+                        elif t == "text" and block.get("text"):
+                            out.append({"role": "assistant", "content": block["text"]})
+        return out
+
+    def complete(self, system, messages, tools) -> AgentResponse:
+        import urllib.request
+        payload = json.dumps({
+            "model":    self.MODEL,
+            "messages": self._build_messages(system, messages),
+            "tools":    self._oai_tools(tools),
+        }).encode()
+
+        req = urllib.request.Request(
+            "https://api.mistral.ai/v1/chat/completions",
+            data=payload,
+            headers={
+                "Content-Type":  "application/json",
+                "Authorization": f"Bearer {self.get_key('mistral_key')}",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            data = json.loads(resp.read().decode())
+
+        msg        = data["choices"][0]["message"]
+        text       = msg.get("content", "") or ""
+        tool_calls = []
+        for tc in msg.get("tool_calls", []):
+            fn = tc.get("function", {})
+            try: inputs = json.loads(fn.get("arguments","{}"))
+            except Exception: inputs = {}
+            tool_calls.append(ToolCall(id=tc.get("id",""), name=fn.get("name",""), inputs=inputs))
+
+        stop = "tool_use" if tool_calls else "end_turn"
+        return AgentResponse(text, tool_calls, stop), data
+
+    def format_tool_result(self, tool_call_id: str, content: str) -> dict:
+        return {"type": "tool_result", "tool_use_id": tool_call_id, "content": content}
+
+    def format_assistant_message(self, response: AgentResponse, raw) -> dict:
+        msg  = raw["choices"][0]["message"]
+        text = msg.get("content","") or ""
+        parts = []
+        if text: parts.append({"type":"text","text":text})
+        for tc in msg.get("tool_calls",[]):
+            fn = tc.get("function",{})
+            try: inp = json.loads(fn.get("arguments","{}"))
+            except Exception: inp = {}
+            parts.append({"type":"tool_use","id":tc.get("id",""),"name":fn.get("name",""),"input":inp})
+        return {"role": "assistant", "content": parts}
+
 # --- Router ------------------------------------------------------------------
 
 ADAPTERS = {
-    "claude": ClaudeAdapter,
-    "gpt":    GPTAdapter,
-    "gemini": GeminiAdapter,
+    "claude":   ClaudeAdapter,
+    "gpt":      GPTAdapter,
+    "gemini":   GeminiAdapter,
+    "ollama":   OllamaAdapter,
+    "deepseek": DeepSeekAdapter,
+    "mistral":  MistralAdapter,
 }
 
 def get_adapter(model: str) -> BaseAdapter:
     key = model.lower()
+    # Support ollama:modelname syntax e.g. ollama:deepseek-coder
+    if key.startswith("ollama:"):
+        model_name = key.split(":", 1)[1]
+        return OllamaAdapter(model=model_name)
     if key not in ADAPTERS:
         raise ValueError(f"Unknown model {model!r}. Choose: {', '.join(ADAPTERS)}")
     return ADAPTERS[key]()

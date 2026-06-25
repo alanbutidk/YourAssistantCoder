@@ -1,0 +1,10213 @@
+/* Generated code for Python module 'openai$types$responses'
+ * created by Nuitka version 4.0.8
+ *
+ * This code is in part copyright 2025 Kay Hayen.
+ *
+ * Licensed under the GNU Affero General Public License, Version 3 (the "License");
+ * you may not use this file except in compliance with the License.
+ *
+ * You may obtain a copy of the License in "LICENSE.txt" and the runtime
+ * exception granted in "LICENSE-RUNTIME.txt" from Nuitka source code. For
+ * deploying the generated code it is intended to not restrict distributing
+ * created binaries.
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include "nuitka/prelude.h"
+
+#include "nuitka/unfreezing.h"
+
+#include "__helpers.h"
+
+
+
+/* The "module_openai$types$responses" is a Python object pointer of module type.
+ *
+ * Note: For full compatibility with CPython, every module variable access
+ * needs to go through it except for cases where the module cannot possibly
+ * have changed in the mean time.
+ */
+
+PyObject *module_openai$types$responses;
+PyDictObject *moduledict_openai$types$responses;
+
+/* The declarations of module constants used, if any. */
+static struct ModuleConstants {
+PyObject *const_str_plain_join;
+PyObject *const_str_plain_environ;
+PyObject *const_tuple_c0760630ed38e8aa80130ab81decf450_tuple;
+PyObject *const_str_digest_07774d594059f023d150ae04ff063bcc;
+PyObject *const_tuple_9cd5bc076fd1ee60f6c29e9b75c3c5d6_tuple;
+PyObject *const_str_plain_responses;
+PyObject *const_tuple_347f0ce0ca6518bc4bef4f2750bc4576_tuple;
+PyObject *const_str_plain_origin;
+PyObject *const_str_plain_has_location;
+PyObject *const_str_plain_submodule_search_locations;
+PyObject *const_str_plain_annotations;
+PyObject *const_str_plain_tool;
+PyObject *const_tuple_str_plain_Tool_tuple;
+PyObject *const_str_plain_Tool;
+PyObject *const_str_plain_response;
+PyObject *const_tuple_str_plain_Response_tuple;
+PyObject *const_str_plain_Response;
+PyObject *const_str_plain_tool_param;
+PyObject *const_tuple_str_plain_ToolParam_tuple;
+PyObject *const_str_plain_ToolParam;
+PyObject *const_str_plain_custom_tool;
+PyObject *const_tuple_str_plain_CustomTool_tuple;
+PyObject *const_str_plain_CustomTool;
+PyObject *const_str_plain_computer_tool;
+PyObject *const_tuple_str_plain_ComputerTool_tuple;
+PyObject *const_str_plain_ComputerTool;
+PyObject *const_str_plain_function_tool;
+PyObject *const_tuple_str_plain_FunctionTool_tuple;
+PyObject *const_str_plain_FunctionTool;
+PyObject *const_str_plain_response_item;
+PyObject *const_tuple_str_plain_ResponseItem_tuple;
+PyObject *const_str_plain_ResponseItem;
+PyObject *const_str_plain_response_error;
+PyObject *const_tuple_str_plain_ResponseError_tuple;
+PyObject *const_str_plain_ResponseError;
+PyObject *const_str_plain_response_usage;
+PyObject *const_tuple_str_plain_ResponseUsage_tuple;
+PyObject *const_str_plain_ResponseUsage;
+PyObject *const_str_plain_parsed_response;
+PyObject *const_tuple_7bec7691ed8008cbd5789349a8365d14_tuple;
+PyObject *const_str_plain_ParsedContent;
+PyObject *const_str_plain_ParsedResponse;
+PyObject *const_str_plain_ParsedResponseOutputItem;
+PyObject *const_str_plain_ParsedResponseOutputText;
+PyObject *const_str_plain_ParsedResponseOutputMessage;
+PyObject *const_str_plain_ParsedResponseFunctionToolCall;
+PyObject *const_str_plain_response_prompt;
+PyObject *const_tuple_str_plain_ResponsePrompt_tuple;
+PyObject *const_str_plain_ResponsePrompt;
+PyObject *const_str_plain_response_status;
+PyObject *const_tuple_str_plain_ResponseStatus_tuple;
+PyObject *const_str_plain_ResponseStatus;
+PyObject *const_str_plain_tool_choice_mcp;
+PyObject *const_tuple_str_plain_ToolChoiceMcp_tuple;
+PyObject *const_str_plain_ToolChoiceMcp;
+PyObject *const_str_plain_web_search_tool;
+PyObject *const_tuple_str_plain_WebSearchTool_tuple;
+PyObject *const_str_plain_WebSearchTool;
+PyObject *const_str_plain_file_search_tool;
+PyObject *const_tuple_str_plain_FileSearchTool_tuple;
+PyObject *const_str_plain_FileSearchTool;
+PyObject *const_str_plain_custom_tool_param;
+PyObject *const_tuple_str_plain_CustomToolParam_tuple;
+PyObject *const_str_plain_CustomToolParam;
+PyObject *const_str_plain_tool_choice_types;
+PyObject *const_tuple_str_plain_ToolChoiceTypes_tuple;
+PyObject *const_str_plain_ToolChoiceTypes;
+PyObject *const_str_plain_easy_input_message;
+PyObject *const_tuple_str_plain_EasyInputMessage_tuple;
+PyObject *const_str_plain_EasyInputMessage;
+PyObject *const_str_plain_response_item_list;
+PyObject *const_tuple_str_plain_ResponseItemList_tuple;
+PyObject *const_str_plain_ResponseItemList;
+PyObject *const_str_plain_tool_choice_custom;
+PyObject *const_tuple_str_plain_ToolChoiceCustom_tuple;
+PyObject *const_str_plain_ToolChoiceCustom;
+PyObject *const_str_plain_computer_tool_param;
+PyObject *const_tuple_str_plain_ComputerToolParam_tuple;
+PyObject *const_str_plain_ComputerToolParam;
+PyObject *const_str_plain_function_tool_param;
+PyObject *const_tuple_str_plain_FunctionToolParam_tuple;
+PyObject *const_str_plain_FunctionToolParam;
+PyObject *const_str_plain_response_includable;
+PyObject *const_tuple_str_plain_ResponseIncludable_tuple;
+PyObject *const_str_plain_ResponseIncludable;
+PyObject *const_str_plain_response_input_file;
+PyObject *const_tuple_str_plain_ResponseInputFile_tuple;
+PyObject *const_str_plain_ResponseInputFile;
+PyObject *const_str_plain_response_input_item;
+PyObject *const_tuple_str_plain_ResponseInputItem_tuple;
+PyObject *const_str_plain_ResponseInputItem;
+PyObject *const_str_plain_response_input_text;
+PyObject *const_tuple_str_plain_ResponseInputText_tuple;
+PyObject *const_str_plain_ResponseInputText;
+PyObject *const_str_plain_tool_choice_allowed;
+PyObject *const_tuple_str_plain_ToolChoiceAllowed_tuple;
+PyObject *const_str_plain_ToolChoiceAllowed;
+PyObject *const_str_plain_tool_choice_options;
+PyObject *const_tuple_str_plain_ToolChoiceOptions_tuple;
+PyObject *const_str_plain_ToolChoiceOptions;
+PyObject *const_str_plain_response_error_event;
+PyObject *const_tuple_str_plain_ResponseErrorEvent_tuple;
+PyObject *const_str_plain_ResponseErrorEvent;
+PyObject *const_str_plain_response_input_image;
+PyObject *const_tuple_str_plain_ResponseInputImage_tuple;
+PyObject *const_str_plain_ResponseInputImage;
+PyObject *const_str_plain_response_input_param;
+PyObject *const_tuple_str_plain_ResponseInputParam_tuple;
+PyObject *const_str_plain_ResponseInputParam;
+PyObject *const_str_plain_response_output_item;
+PyObject *const_tuple_str_plain_ResponseOutputItem_tuple;
+PyObject *const_str_plain_ResponseOutputItem;
+PyObject *const_str_plain_response_output_text;
+PyObject *const_tuple_str_plain_ResponseOutputText_tuple;
+PyObject *const_str_plain_ResponseOutputText;
+PyObject *const_str_plain_response_text_config;
+PyObject *const_tuple_str_plain_ResponseTextConfig_tuple;
+PyObject *const_str_plain_ResponseTextConfig;
+PyObject *const_str_plain_tool_choice_function;
+PyObject *const_tuple_str_plain_ToolChoiceFunction_tuple;
+PyObject *const_str_plain_ToolChoiceFunction;
+PyObject *const_str_plain_response_failed_event;
+PyObject *const_tuple_str_plain_ResponseFailedEvent_tuple;
+PyObject *const_str_plain_ResponseFailedEvent;
+PyObject *const_str_plain_response_prompt_param;
+PyObject *const_tuple_str_plain_ResponsePromptParam_tuple;
+PyObject *const_str_plain_ResponsePromptParam;
+PyObject *const_str_plain_response_queued_event;
+PyObject *const_tuple_str_plain_ResponseQueuedEvent_tuple;
+PyObject *const_str_plain_ResponseQueuedEvent;
+PyObject *const_str_plain_response_stream_event;
+PyObject *const_tuple_str_plain_ResponseStreamEvent_tuple;
+PyObject *const_str_plain_ResponseStreamEvent;
+PyObject *const_str_plain_tool_choice_mcp_param;
+PyObject *const_tuple_str_plain_ToolChoiceMcpParam_tuple;
+PyObject *const_str_plain_ToolChoiceMcpParam;
+PyObject *const_str_plain_web_search_tool_param;
+PyObject *const_tuple_str_plain_WebSearchToolParam_tuple;
+PyObject *const_str_plain_WebSearchToolParam;
+PyObject *const_str_plain_file_search_tool_param;
+PyObject *const_tuple_str_plain_FileSearchToolParam_tuple;
+PyObject *const_str_plain_FileSearchToolParam;
+PyObject *const_str_plain_input_item_list_params;
+PyObject *const_tuple_str_plain_InputItemListParams_tuple;
+PyObject *const_str_plain_InputItemListParams;
+PyObject *const_str_plain_response_create_params;
+PyObject *const_tuple_str_plain_ResponseCreateParams_tuple;
+PyObject *const_str_plain_ResponseCreateParams;
+PyObject *const_str_plain_response_created_event;
+PyObject *const_tuple_str_plain_ResponseCreatedEvent_tuple;
+PyObject *const_str_plain_ResponseCreatedEvent;
+PyObject *const_str_plain_response_input_content;
+PyObject *const_tuple_str_plain_ResponseInputContent_tuple;
+PyObject *const_str_plain_ResponseInputContent;
+PyObject *const_str_plain_response_output_message;
+PyObject *const_tuple_str_plain_ResponseOutputMessage_tuple;
+PyObject *const_str_plain_ResponseOutputMessage;
+PyObject *const_str_plain_response_output_refusal;
+PyObject *const_tuple_str_plain_ResponseOutputRefusal_tuple;
+PyObject *const_str_plain_ResponseOutputRefusal;
+PyObject *const_str_plain_response_reasoning_item;
+PyObject *const_tuple_str_plain_ResponseReasoningItem_tuple;
+PyObject *const_str_plain_ResponseReasoningItem;
+PyObject *const_str_plain_tool_choice_types_param;
+PyObject *const_tuple_str_plain_ToolChoiceTypesParam_tuple;
+PyObject *const_str_plain_ToolChoiceTypesParam;
+PyObject *const_str_plain_easy_input_message_param;
+PyObject *const_tuple_str_plain_EasyInputMessageParam_tuple;
+PyObject *const_str_plain_EasyInputMessageParam;
+PyObject *const_str_plain_response_completed_event;
+PyObject *const_tuple_str_plain_ResponseCompletedEvent_tuple;
+PyObject *const_str_plain_ResponseCompletedEvent;
+PyObject *const_str_plain_response_retrieve_params;
+PyObject *const_tuple_str_plain_ResponseRetrieveParams_tuple;
+PyObject *const_str_plain_ResponseRetrieveParams;
+PyObject *const_str_plain_response_text_done_event;
+PyObject *const_tuple_str_plain_ResponseTextDoneEvent_tuple;
+PyObject *const_str_plain_ResponseTextDoneEvent;
+PyObject *const_str_plain_tool_choice_custom_param;
+PyObject *const_tuple_str_plain_ToolChoiceCustomParam_tuple;
+PyObject *const_str_plain_ToolChoiceCustomParam;
+PyObject *const_str_plain_response_audio_done_event;
+PyObject *const_tuple_str_plain_ResponseAudioDoneEvent_tuple;
+PyObject *const_str_plain_ResponseAudioDoneEvent;
+PyObject *const_str_plain_response_custom_tool_call;
+PyObject *const_tuple_str_plain_ResponseCustomToolCall_tuple;
+PyObject *const_str_plain_ResponseCustomToolCall;
+PyObject *const_str_plain_response_incomplete_event;
+PyObject *const_tuple_str_plain_ResponseIncompleteEvent_tuple;
+PyObject *const_str_plain_ResponseIncompleteEvent;
+PyObject *const_str_plain_response_input_file_param;
+PyObject *const_tuple_str_plain_ResponseInputFileParam_tuple;
+PyObject *const_str_plain_ResponseInputFileParam;
+PyObject *const_str_plain_response_input_item_param;
+PyObject *const_tuple_str_plain_ResponseInputItemParam_tuple;
+PyObject *const_str_plain_ResponseInputItemParam;
+PyObject *const_str_plain_response_input_text_param;
+PyObject *const_tuple_str_plain_ResponseInputTextParam_tuple;
+PyObject *const_str_plain_ResponseInputTextParam;
+PyObject *const_str_plain_response_text_delta_event;
+PyObject *const_tuple_str_plain_ResponseTextDeltaEvent_tuple;
+PyObject *const_str_plain_ResponseTextDeltaEvent;
+PyObject *const_str_plain_tool_choice_allowed_param;
+PyObject *const_tuple_str_plain_ToolChoiceAllowedParam_tuple;
+PyObject *const_str_plain_ToolChoiceAllowedParam;
+PyObject *const_str_plain_response_audio_delta_event;
+PyObject *const_tuple_str_plain_ResponseAudioDeltaEvent_tuple;
+PyObject *const_str_plain_ResponseAudioDeltaEvent;
+PyObject *const_str_plain_response_in_progress_event;
+PyObject *const_tuple_str_plain_ResponseInProgressEvent_tuple;
+PyObject *const_str_plain_ResponseInProgressEvent;
+PyObject *const_str_plain_response_input_image_param;
+PyObject *const_tuple_str_plain_ResponseInputImageParam_tuple;
+PyObject *const_str_plain_ResponseInputImageParam;
+PyObject *const_str_plain_response_output_text_param;
+PyObject *const_tuple_str_plain_ResponseOutputTextParam_tuple;
+PyObject *const_str_plain_ResponseOutputTextParam;
+PyObject *const_str_plain_response_text_config_param;
+PyObject *const_tuple_str_plain_ResponseTextConfigParam_tuple;
+PyObject *const_str_plain_ResponseTextConfigParam;
+PyObject *const_str_plain_tool_choice_function_param;
+PyObject *const_tuple_str_plain_ToolChoiceFunctionParam_tuple;
+PyObject *const_str_plain_ToolChoiceFunctionParam;
+PyObject *const_str_plain_response_computer_tool_call;
+PyObject *const_tuple_str_plain_ResponseComputerToolCall_tuple;
+PyObject *const_str_plain_ResponseComputerToolCall;
+PyObject *const_str_plain_response_conversation_param;
+PyObject *const_tuple_str_plain_ResponseConversationParam_tuple;
+PyObject *const_str_plain_ResponseConversationParam;
+PyObject *const_str_plain_response_format_text_config;
+PyObject *const_tuple_str_plain_ResponseFormatTextConfig_tuple;
+PyObject *const_str_plain_ResponseFormatTextConfig;
+PyObject *const_str_plain_response_function_tool_call;
+PyObject *const_tuple_str_plain_ResponseFunctionToolCall_tuple;
+PyObject *const_str_plain_ResponseFunctionToolCall;
+PyObject *const_str_plain_response_input_message_item;
+PyObject *const_tuple_str_plain_ResponseInputMessageItem_tuple;
+PyObject *const_str_plain_ResponseInputMessageItem;
+PyObject *const_str_plain_response_refusal_done_event;
+PyObject *const_tuple_str_plain_ResponseRefusalDoneEvent_tuple;
+PyObject *const_str_plain_ResponseRefusalDoneEvent;
+PyObject *const_str_plain_response_function_web_search;
+PyObject *const_tuple_str_plain_ResponseFunctionWebSearch_tuple;
+PyObject *const_str_plain_ResponseFunctionWebSearch;
+PyObject *const_str_plain_response_input_content_param;
+PyObject *const_tuple_str_plain_ResponseInputContentParam_tuple;
+PyObject *const_str_plain_ResponseInputContentParam;
+PyObject *const_str_plain_response_refusal_delta_event;
+PyObject *const_tuple_str_plain_ResponseRefusalDeltaEvent_tuple;
+PyObject *const_str_plain_ResponseRefusalDeltaEvent;
+PyObject *const_str_plain_response_output_message_param;
+PyObject *const_tuple_str_plain_ResponseOutputMessageParam_tuple;
+PyObject *const_str_plain_ResponseOutputMessageParam;
+PyObject *const_str_plain_response_output_refusal_param;
+PyObject *const_tuple_str_plain_ResponseOutputRefusalParam_tuple;
+PyObject *const_str_plain_ResponseOutputRefusalParam;
+PyObject *const_str_plain_response_reasoning_item_param;
+PyObject *const_tuple_str_plain_ResponseReasoningItemParam_tuple;
+PyObject *const_str_plain_ResponseReasoningItemParam;
+PyObject *const_str_plain_response_file_search_tool_call;
+PyObject *const_tuple_str_plain_ResponseFileSearchToolCall_tuple;
+PyObject *const_str_plain_ResponseFileSearchToolCall;
+PyObject *const_str_plain_response_mcp_call_failed_event;
+PyObject *const_tuple_str_plain_ResponseMcpCallFailedEvent_tuple;
+PyObject *const_str_plain_ResponseMcpCallFailedEvent;
+PyObject *const_str_plain_response_custom_tool_call_param;
+PyObject *const_tuple_str_plain_ResponseCustomToolCallParam_tuple;
+PyObject *const_str_plain_ResponseCustomToolCallParam;
+PyObject *const_str_plain_response_output_item_done_event;
+PyObject *const_tuple_str_plain_ResponseOutputItemDoneEvent_tuple;
+PyObject *const_str_plain_ResponseOutputItemDoneEvent;
+PyObject *const_str_plain_response_content_part_done_event;
+PyObject *const_tuple_str_plain_ResponseContentPartDoneEvent_tuple;
+PyObject *const_str_plain_ResponseContentPartDoneEvent;
+PyObject *const_str_plain_response_custom_tool_call_output;
+PyObject *const_tuple_str_plain_ResponseCustomToolCallOutput_tuple;
+PyObject *const_str_plain_ResponseCustomToolCallOutput;
+PyObject *const_str_plain_response_function_tool_call_item;
+PyObject *const_tuple_str_plain_ResponseFunctionToolCallItem_tuple;
+PyObject *const_str_plain_ResponseFunctionToolCallItem;
+PyObject *const_str_plain_response_output_item_added_event;
+PyObject *const_tuple_str_plain_ResponseOutputItemAddedEvent_tuple;
+PyObject *const_str_plain_ResponseOutputItemAddedEvent;
+PyObject *const_str_plain_response_computer_tool_call_param;
+PyObject *const_tuple_str_plain_ResponseComputerToolCallParam_tuple;
+PyObject *const_str_plain_ResponseComputerToolCallParam;
+PyObject *const_str_plain_response_content_part_added_event;
+PyObject *const_tuple_str_plain_ResponseContentPartAddedEvent_tuple;
+PyObject *const_str_plain_ResponseContentPartAddedEvent;
+PyObject *const_str_plain_response_format_text_config_param;
+PyObject *const_tuple_str_plain_ResponseFormatTextConfigParam_tuple;
+PyObject *const_str_plain_ResponseFormatTextConfigParam;
+PyObject *const_str_plain_response_function_tool_call_param;
+PyObject *const_tuple_str_plain_ResponseFunctionToolCallParam_tuple;
+PyObject *const_str_plain_ResponseFunctionToolCallParam;
+PyObject *const_str_plain_response_mcp_call_completed_event;
+PyObject *const_tuple_str_plain_ResponseMcpCallCompletedEvent_tuple;
+PyObject *const_str_plain_ResponseMcpCallCompletedEvent;
+PyObject *const_str_plain_response_function_web_search_param;
+PyObject *const_tuple_str_plain_ResponseFunctionWebSearchParam_tuple;
+PyObject *const_str_plain_ResponseFunctionWebSearchParam;
+PyObject *const_str_plain_response_reasoning_text_done_event;
+PyObject *const_tuple_str_plain_ResponseReasoningTextDoneEvent_tuple;
+PyObject *const_str_plain_ResponseReasoningTextDoneEvent;
+PyObject *const_str_plain_response_code_interpreter_tool_call;
+PyObject *const_tuple_str_plain_ResponseCodeInterpreterToolCall_tuple;
+PyObject *const_str_plain_ResponseCodeInterpreterToolCall;
+PyObject *const_str_plain_response_input_message_content_list;
+PyObject *const_tuple_str_plain_ResponseInputMessageContentList_tuple;
+PyObject *const_str_plain_ResponseInputMessageContentList;
+PyObject *const_str_plain_response_mcp_call_in_progress_event;
+PyObject *const_tuple_str_plain_ResponseMcpCallInProgressEvent_tuple;
+PyObject *const_str_plain_ResponseMcpCallInProgressEvent;
+PyObject *const_str_plain_response_reasoning_text_delta_event;
+PyObject *const_tuple_str_plain_ResponseReasoningTextDeltaEvent_tuple;
+PyObject *const_str_plain_ResponseReasoningTextDeltaEvent;
+PyObject *const_str_plain_response_audio_transcript_done_event;
+PyObject *const_tuple_str_plain_ResponseAudioTranscriptDoneEvent_tuple;
+PyObject *const_str_plain_ResponseAudioTranscriptDoneEvent;
+PyObject *const_str_plain_response_file_search_tool_call_param;
+PyObject *const_tuple_str_plain_ResponseFileSearchToolCallParam_tuple;
+PyObject *const_str_plain_ResponseFileSearchToolCallParam;
+PyObject *const_str_plain_response_mcp_list_tools_failed_event;
+PyObject *const_tuple_str_plain_ResponseMcpListToolsFailedEvent_tuple;
+PyObject *const_str_plain_ResponseMcpListToolsFailedEvent;
+PyObject *const_str_plain_response_audio_transcript_delta_event;
+PyObject *const_tuple_str_plain_ResponseAudioTranscriptDeltaEvent_tuple;
+PyObject *const_str_plain_ResponseAudioTranscriptDeltaEvent;
+PyObject *const_str_plain_response_custom_tool_call_output_param;
+PyObject *const_tuple_str_plain_ResponseCustomToolCallOutputParam_tuple;
+PyObject *const_str_plain_ResponseCustomToolCallOutputParam;
+PyObject *const_str_plain_response_mcp_call_arguments_done_event;
+PyObject *const_tuple_str_plain_ResponseMcpCallArgumentsDoneEvent_tuple;
+PyObject *const_str_plain_ResponseMcpCallArgumentsDoneEvent;
+PyObject *const_str_plain_response_computer_tool_call_output_item;
+PyObject *const_tuple_str_plain_ResponseComputerToolCallOutputItem_tuple;
+PyObject *const_str_plain_ResponseComputerToolCallOutputItem;
+PyObject *const_str_plain_response_format_text_json_schema_config;
+PyObject *const_tuple_str_plain_ResponseFormatTextJSONSchemaConfig_tuple;
+PyObject *const_str_plain_ResponseFormatTextJSONSchemaConfig;
+PyObject *const_str_plain_response_function_tool_call_output_item;
+PyObject *const_tuple_str_plain_ResponseFunctionToolCallOutputItem_tuple;
+PyObject *const_str_plain_ResponseFunctionToolCallOutputItem;
+PyObject *const_str_plain_response_image_gen_call_completed_event;
+PyObject *const_tuple_str_plain_ResponseImageGenCallCompletedEvent_tuple;
+PyObject *const_str_plain_ResponseImageGenCallCompletedEvent;
+PyObject *const_str_plain_response_mcp_call_arguments_delta_event;
+PyObject *const_tuple_str_plain_ResponseMcpCallArgumentsDeltaEvent_tuple;
+PyObject *const_str_plain_ResponseMcpCallArgumentsDeltaEvent;
+PyObject *const_str_plain_response_mcp_list_tools_completed_event;
+PyObject *const_tuple_str_plain_ResponseMcpListToolsCompletedEvent_tuple;
+PyObject *const_str_plain_ResponseMcpListToolsCompletedEvent;
+PyObject *const_str_plain_response_image_gen_call_generating_event;
+PyObject *const_tuple_str_plain_ResponseImageGenCallGeneratingEvent_tuple;
+PyObject *const_str_plain_ResponseImageGenCallGeneratingEvent;
+PyObject *const_str_plain_response_web_search_call_completed_event;
+PyObject *const_tuple_str_plain_ResponseWebSearchCallCompletedEvent_tuple;
+PyObject *const_str_plain_ResponseWebSearchCallCompletedEvent;
+PyObject *const_str_plain_response_web_search_call_searching_event;
+PyObject *const_tuple_str_plain_ResponseWebSearchCallSearchingEvent_tuple;
+PyObject *const_str_plain_ResponseWebSearchCallSearchingEvent;
+PyObject *const_str_digest_cf0ac869c09d72e03bebf5dd0a47d092;
+PyObject *const_tuple_str_plain_ResponseCodeInterpreterToolCallParam_tuple;
+PyObject *const_str_plain_ResponseCodeInterpreterToolCallParam;
+PyObject *const_str_digest_db1bace0cfc001e14745ea641f153b87;
+PyObject *const_tuple_str_plain_ResponseFileSearchCallCompletedEvent_tuple;
+PyObject *const_str_plain_ResponseFileSearchCallCompletedEvent;
+PyObject *const_str_digest_da8cde4e5f8007b27a16ee8a8d34c7ca;
+PyObject *const_tuple_str_plain_ResponseFileSearchCallSearchingEvent_tuple;
+PyObject *const_str_plain_ResponseFileSearchCallSearchingEvent;
+PyObject *const_str_digest_a63d6aee411731207dfca54d4a08c6f1;
+PyObject *const_tuple_str_plain_ResponseImageGenCallInProgressEvent_tuple;
+PyObject *const_str_plain_ResponseImageGenCallInProgressEvent;
+PyObject *const_str_digest_ffd1258fd1207a7b77c1a482070cc0ee;
+PyObject *const_tuple_str_plain_ResponseInputMessageContentListParam_tuple;
+PyObject *const_str_plain_ResponseInputMessageContentListParam;
+PyObject *const_str_digest_3869a7d21bb2ab690675f2d75edd2c53;
+PyObject *const_tuple_str_plain_ResponseMcpListToolsInProgressEvent_tuple;
+PyObject *const_str_plain_ResponseMcpListToolsInProgressEvent;
+PyObject *const_str_digest_ec2c427f706e801bddb56836cfb686e8;
+PyObject *const_tuple_str_plain_ResponseCustomToolCallInputDoneEvent_tuple;
+PyObject *const_str_plain_ResponseCustomToolCallInputDoneEvent;
+PyObject *const_str_digest_551ec177d3a0f514071918ba435a1323;
+PyObject *const_tuple_str_plain_ResponseReasoningSummaryPartDoneEvent_tuple;
+PyObject *const_str_plain_ResponseReasoningSummaryPartDoneEvent;
+PyObject *const_str_digest_5b54bc56c455a9546f6cd46ecf7a137b;
+PyObject *const_tuple_str_plain_ResponseReasoningSummaryTextDoneEvent_tuple;
+PyObject *const_str_plain_ResponseReasoningSummaryTextDoneEvent;
+PyObject *const_str_digest_2326235548c09cdeef136c4cd9a9900b;
+PyObject *const_tuple_str_plain_ResponseWebSearchCallInProgressEvent_tuple;
+PyObject *const_str_plain_ResponseWebSearchCallInProgressEvent;
+PyObject *const_str_digest_bdd4cad3bd3111b78b89983f965fecd7;
+PyObject *const_tuple_str_plain_ResponseCustomToolCallInputDeltaEvent_tuple;
+PyObject *const_str_plain_ResponseCustomToolCallInputDeltaEvent;
+PyObject *const_str_digest_b74a486e6f8d3c2cf5b64509f1e008f4;
+PyObject *const_tuple_str_plain_ResponseFileSearchCallInProgressEvent_tuple;
+PyObject *const_str_plain_ResponseFileSearchCallInProgressEvent;
+PyObject *const_str_digest_7ca10734868c9e71eef094920fbc18a5;
+PyObject *const_tuple_str_plain_ResponseFunctionCallArgumentsDoneEvent_tuple;
+PyObject *const_str_plain_ResponseFunctionCallArgumentsDoneEvent;
+PyObject *const_str_digest_4fa49b8f51a2b5d603c1b21bd5cb88b6;
+PyObject *const_tuple_str_plain_ResponseImageGenCallPartialImageEvent_tuple;
+PyObject *const_str_plain_ResponseImageGenCallPartialImageEvent;
+PyObject *const_str_digest_62938c320d5ab37778c49561bb557de0;
+PyObject *const_tuple_str_plain_ResponseOutputTextAnnotationAddedEvent_tuple;
+PyObject *const_str_plain_ResponseOutputTextAnnotationAddedEvent;
+PyObject *const_str_digest_8720385bdd3f7a58c4a047ef1be427a4;
+PyObject *const_tuple_str_plain_ResponseReasoningSummaryPartAddedEvent_tuple;
+PyObject *const_str_plain_ResponseReasoningSummaryPartAddedEvent;
+PyObject *const_str_digest_48d62ccaac3f5a5eb113b4830ef94bcb;
+PyObject *const_tuple_str_plain_ResponseReasoningSummaryTextDeltaEvent_tuple;
+PyObject *const_str_plain_ResponseReasoningSummaryTextDeltaEvent;
+PyObject *const_str_digest_4b1771f20cc66dbc0ca5aadc0c0b9ccb;
+PyObject *const_tuple_str_plain_ResponseFunctionCallArgumentsDeltaEvent_tuple;
+PyObject *const_str_plain_ResponseFunctionCallArgumentsDeltaEvent;
+PyObject *const_str_digest_8a0a6b88cd5c993e6bfc9450a762f162;
+PyObject *const_tuple_str_plain_ResponseComputerToolCallOutputScreenshot_tuple;
+PyObject *const_str_plain_ResponseComputerToolCallOutputScreenshot;
+PyObject *const_str_digest_7f3597d608c3b98aab9e4a5cb005dbb2;
+PyObject *const_tuple_str_plain_ResponseFormatTextJSONSchemaConfigParam_tuple;
+PyObject *const_str_plain_ResponseFormatTextJSONSchemaConfigParam;
+PyObject *const_str_digest_521998f9296b55ef22e849661f075a12;
+PyObject *const_tuple_str_plain_ResponseCodeInterpreterCallCodeDoneEvent_tuple;
+PyObject *const_str_plain_ResponseCodeInterpreterCallCodeDoneEvent;
+PyObject *const_str_digest_291fe7aa115dc7c5ac497c2d549b5773;
+PyObject *const_tuple_str_digest_68535af65629c55f4de9600af2406536_tuple;
+PyObject *const_str_digest_68535af65629c55f4de9600af2406536;
+PyObject *const_str_digest_b1da21444fe18c8d5313ba42083fd806;
+PyObject *const_tuple_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d_tuple;
+PyObject *const_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d;
+PyObject *const_str_digest_93bdb945b11c5dda48cf9c17f581f0ed;
+PyObject *const_tuple_str_digest_b4c0b7e4d7f31b62249d4cb49c670354_tuple;
+PyObject *const_str_digest_b4c0b7e4d7f31b62249d4cb49c670354;
+PyObject *const_str_digest_a7d474822c33e65637a1faa6ac18c93d;
+PyObject *const_tuple_str_digest_1cde74e27f144331f01fe360fd360faf_tuple;
+PyObject *const_str_digest_1cde74e27f144331f01fe360fd360faf;
+PyObject *const_str_digest_d52db91d4d6d7b9765f76f30e806055b;
+PyObject *const_tuple_str_digest_b25895db7f7c396591ceff47b4b28b76_tuple;
+PyObject *const_str_digest_b25895db7f7c396591ceff47b4b28b76;
+PyObject *const_str_digest_9d326b13d68914a103eaf898def824da;
+PyObject *const_str_digest_3e8d08c54d6542a1f3d570a50471843e;
+} mod_consts;
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[441];
+#endif
+
+static PyObject *module_filename_obj = NULL;
+
+/* Indicator if this modules private constants were created yet. */
+static bool constants_created = false;
+
+/* Function to create module private constants. */
+static void createModuleConstants(PyThreadState *tstate) {
+    if (constants_created == false) {
+        loadConstantsBlob(tstate, (PyObject **)&mod_consts, UN_TRANSLATE("openai.types.responses"));
+        constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+mod_consts_hash[0] = DEEP_HASH(tstate, mod_consts.const_str_plain_join);
+mod_consts_hash[1] = DEEP_HASH(tstate, mod_consts.const_str_plain_environ);
+mod_consts_hash[2] = DEEP_HASH(tstate, mod_consts.const_tuple_c0760630ed38e8aa80130ab81decf450_tuple);
+mod_consts_hash[3] = DEEP_HASH(tstate, mod_consts.const_str_digest_07774d594059f023d150ae04ff063bcc);
+mod_consts_hash[4] = DEEP_HASH(tstate, mod_consts.const_tuple_9cd5bc076fd1ee60f6c29e9b75c3c5d6_tuple);
+mod_consts_hash[5] = DEEP_HASH(tstate, mod_consts.const_str_plain_responses);
+mod_consts_hash[6] = DEEP_HASH(tstate, mod_consts.const_tuple_347f0ce0ca6518bc4bef4f2750bc4576_tuple);
+mod_consts_hash[7] = DEEP_HASH(tstate, mod_consts.const_str_plain_origin);
+mod_consts_hash[8] = DEEP_HASH(tstate, mod_consts.const_str_plain_has_location);
+mod_consts_hash[9] = DEEP_HASH(tstate, mod_consts.const_str_plain_submodule_search_locations);
+mod_consts_hash[10] = DEEP_HASH(tstate, mod_consts.const_str_plain_annotations);
+mod_consts_hash[11] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool);
+mod_consts_hash[12] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_Tool_tuple);
+mod_consts_hash[13] = DEEP_HASH(tstate, mod_consts.const_str_plain_Tool);
+mod_consts_hash[14] = DEEP_HASH(tstate, mod_consts.const_str_plain_response);
+mod_consts_hash[15] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_Response_tuple);
+mod_consts_hash[16] = DEEP_HASH(tstate, mod_consts.const_str_plain_Response);
+mod_consts_hash[17] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_param);
+mod_consts_hash[18] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolParam_tuple);
+mod_consts_hash[19] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolParam);
+mod_consts_hash[20] = DEEP_HASH(tstate, mod_consts.const_str_plain_custom_tool);
+mod_consts_hash[21] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_CustomTool_tuple);
+mod_consts_hash[22] = DEEP_HASH(tstate, mod_consts.const_str_plain_CustomTool);
+mod_consts_hash[23] = DEEP_HASH(tstate, mod_consts.const_str_plain_computer_tool);
+mod_consts_hash[24] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ComputerTool_tuple);
+mod_consts_hash[25] = DEEP_HASH(tstate, mod_consts.const_str_plain_ComputerTool);
+mod_consts_hash[26] = DEEP_HASH(tstate, mod_consts.const_str_plain_function_tool);
+mod_consts_hash[27] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_FunctionTool_tuple);
+mod_consts_hash[28] = DEEP_HASH(tstate, mod_consts.const_str_plain_FunctionTool);
+mod_consts_hash[29] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_item);
+mod_consts_hash[30] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseItem_tuple);
+mod_consts_hash[31] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseItem);
+mod_consts_hash[32] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_error);
+mod_consts_hash[33] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseError_tuple);
+mod_consts_hash[34] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseError);
+mod_consts_hash[35] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_usage);
+mod_consts_hash[36] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseUsage_tuple);
+mod_consts_hash[37] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseUsage);
+mod_consts_hash[38] = DEEP_HASH(tstate, mod_consts.const_str_plain_parsed_response);
+mod_consts_hash[39] = DEEP_HASH(tstate, mod_consts.const_tuple_7bec7691ed8008cbd5789349a8365d14_tuple);
+mod_consts_hash[40] = DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedContent);
+mod_consts_hash[41] = DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedResponse);
+mod_consts_hash[42] = DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedResponseOutputItem);
+mod_consts_hash[43] = DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedResponseOutputText);
+mod_consts_hash[44] = DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedResponseOutputMessage);
+mod_consts_hash[45] = DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedResponseFunctionToolCall);
+mod_consts_hash[46] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_prompt);
+mod_consts_hash[47] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponsePrompt_tuple);
+mod_consts_hash[48] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponsePrompt);
+mod_consts_hash[49] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_status);
+mod_consts_hash[50] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseStatus_tuple);
+mod_consts_hash[51] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseStatus);
+mod_consts_hash[52] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_mcp);
+mod_consts_hash[53] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceMcp_tuple);
+mod_consts_hash[54] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceMcp);
+mod_consts_hash[55] = DEEP_HASH(tstate, mod_consts.const_str_plain_web_search_tool);
+mod_consts_hash[56] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_WebSearchTool_tuple);
+mod_consts_hash[57] = DEEP_HASH(tstate, mod_consts.const_str_plain_WebSearchTool);
+mod_consts_hash[58] = DEEP_HASH(tstate, mod_consts.const_str_plain_file_search_tool);
+mod_consts_hash[59] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_FileSearchTool_tuple);
+mod_consts_hash[60] = DEEP_HASH(tstate, mod_consts.const_str_plain_FileSearchTool);
+mod_consts_hash[61] = DEEP_HASH(tstate, mod_consts.const_str_plain_custom_tool_param);
+mod_consts_hash[62] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_CustomToolParam_tuple);
+mod_consts_hash[63] = DEEP_HASH(tstate, mod_consts.const_str_plain_CustomToolParam);
+mod_consts_hash[64] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_types);
+mod_consts_hash[65] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceTypes_tuple);
+mod_consts_hash[66] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceTypes);
+mod_consts_hash[67] = DEEP_HASH(tstate, mod_consts.const_str_plain_easy_input_message);
+mod_consts_hash[68] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_EasyInputMessage_tuple);
+mod_consts_hash[69] = DEEP_HASH(tstate, mod_consts.const_str_plain_EasyInputMessage);
+mod_consts_hash[70] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_item_list);
+mod_consts_hash[71] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseItemList_tuple);
+mod_consts_hash[72] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseItemList);
+mod_consts_hash[73] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_custom);
+mod_consts_hash[74] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceCustom_tuple);
+mod_consts_hash[75] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceCustom);
+mod_consts_hash[76] = DEEP_HASH(tstate, mod_consts.const_str_plain_computer_tool_param);
+mod_consts_hash[77] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ComputerToolParam_tuple);
+mod_consts_hash[78] = DEEP_HASH(tstate, mod_consts.const_str_plain_ComputerToolParam);
+mod_consts_hash[79] = DEEP_HASH(tstate, mod_consts.const_str_plain_function_tool_param);
+mod_consts_hash[80] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_FunctionToolParam_tuple);
+mod_consts_hash[81] = DEEP_HASH(tstate, mod_consts.const_str_plain_FunctionToolParam);
+mod_consts_hash[82] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_includable);
+mod_consts_hash[83] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseIncludable_tuple);
+mod_consts_hash[84] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseIncludable);
+mod_consts_hash[85] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_file);
+mod_consts_hash[86] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputFile_tuple);
+mod_consts_hash[87] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputFile);
+mod_consts_hash[88] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_item);
+mod_consts_hash[89] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputItem_tuple);
+mod_consts_hash[90] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputItem);
+mod_consts_hash[91] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_text);
+mod_consts_hash[92] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputText_tuple);
+mod_consts_hash[93] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputText);
+mod_consts_hash[94] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_allowed);
+mod_consts_hash[95] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceAllowed_tuple);
+mod_consts_hash[96] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceAllowed);
+mod_consts_hash[97] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_options);
+mod_consts_hash[98] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceOptions_tuple);
+mod_consts_hash[99] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceOptions);
+mod_consts_hash[100] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_error_event);
+mod_consts_hash[101] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseErrorEvent_tuple);
+mod_consts_hash[102] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseErrorEvent);
+mod_consts_hash[103] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_image);
+mod_consts_hash[104] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputImage_tuple);
+mod_consts_hash[105] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputImage);
+mod_consts_hash[106] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_param);
+mod_consts_hash[107] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputParam_tuple);
+mod_consts_hash[108] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputParam);
+mod_consts_hash[109] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_item);
+mod_consts_hash[110] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputItem_tuple);
+mod_consts_hash[111] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputItem);
+mod_consts_hash[112] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_text);
+mod_consts_hash[113] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputText_tuple);
+mod_consts_hash[114] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputText);
+mod_consts_hash[115] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_text_config);
+mod_consts_hash[116] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseTextConfig_tuple);
+mod_consts_hash[117] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseTextConfig);
+mod_consts_hash[118] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_function);
+mod_consts_hash[119] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceFunction_tuple);
+mod_consts_hash[120] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceFunction);
+mod_consts_hash[121] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_failed_event);
+mod_consts_hash[122] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFailedEvent_tuple);
+mod_consts_hash[123] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFailedEvent);
+mod_consts_hash[124] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_prompt_param);
+mod_consts_hash[125] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponsePromptParam_tuple);
+mod_consts_hash[126] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponsePromptParam);
+mod_consts_hash[127] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_queued_event);
+mod_consts_hash[128] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseQueuedEvent_tuple);
+mod_consts_hash[129] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseQueuedEvent);
+mod_consts_hash[130] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_stream_event);
+mod_consts_hash[131] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseStreamEvent_tuple);
+mod_consts_hash[132] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseStreamEvent);
+mod_consts_hash[133] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_mcp_param);
+mod_consts_hash[134] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceMcpParam_tuple);
+mod_consts_hash[135] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceMcpParam);
+mod_consts_hash[136] = DEEP_HASH(tstate, mod_consts.const_str_plain_web_search_tool_param);
+mod_consts_hash[137] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_WebSearchToolParam_tuple);
+mod_consts_hash[138] = DEEP_HASH(tstate, mod_consts.const_str_plain_WebSearchToolParam);
+mod_consts_hash[139] = DEEP_HASH(tstate, mod_consts.const_str_plain_file_search_tool_param);
+mod_consts_hash[140] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_FileSearchToolParam_tuple);
+mod_consts_hash[141] = DEEP_HASH(tstate, mod_consts.const_str_plain_FileSearchToolParam);
+mod_consts_hash[142] = DEEP_HASH(tstate, mod_consts.const_str_plain_input_item_list_params);
+mod_consts_hash[143] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_InputItemListParams_tuple);
+mod_consts_hash[144] = DEEP_HASH(tstate, mod_consts.const_str_plain_InputItemListParams);
+mod_consts_hash[145] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_create_params);
+mod_consts_hash[146] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCreateParams_tuple);
+mod_consts_hash[147] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCreateParams);
+mod_consts_hash[148] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_created_event);
+mod_consts_hash[149] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCreatedEvent_tuple);
+mod_consts_hash[150] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCreatedEvent);
+mod_consts_hash[151] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_content);
+mod_consts_hash[152] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputContent_tuple);
+mod_consts_hash[153] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputContent);
+mod_consts_hash[154] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_message);
+mod_consts_hash[155] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputMessage_tuple);
+mod_consts_hash[156] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputMessage);
+mod_consts_hash[157] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_refusal);
+mod_consts_hash[158] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputRefusal_tuple);
+mod_consts_hash[159] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputRefusal);
+mod_consts_hash[160] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_reasoning_item);
+mod_consts_hash[161] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningItem_tuple);
+mod_consts_hash[162] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningItem);
+mod_consts_hash[163] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_types_param);
+mod_consts_hash[164] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceTypesParam_tuple);
+mod_consts_hash[165] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceTypesParam);
+mod_consts_hash[166] = DEEP_HASH(tstate, mod_consts.const_str_plain_easy_input_message_param);
+mod_consts_hash[167] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_EasyInputMessageParam_tuple);
+mod_consts_hash[168] = DEEP_HASH(tstate, mod_consts.const_str_plain_EasyInputMessageParam);
+mod_consts_hash[169] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_completed_event);
+mod_consts_hash[170] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCompletedEvent_tuple);
+mod_consts_hash[171] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCompletedEvent);
+mod_consts_hash[172] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_retrieve_params);
+mod_consts_hash[173] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseRetrieveParams_tuple);
+mod_consts_hash[174] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseRetrieveParams);
+mod_consts_hash[175] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_text_done_event);
+mod_consts_hash[176] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseTextDoneEvent_tuple);
+mod_consts_hash[177] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseTextDoneEvent);
+mod_consts_hash[178] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_custom_param);
+mod_consts_hash[179] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceCustomParam_tuple);
+mod_consts_hash[180] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceCustomParam);
+mod_consts_hash[181] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_audio_done_event);
+mod_consts_hash[182] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseAudioDoneEvent_tuple);
+mod_consts_hash[183] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseAudioDoneEvent);
+mod_consts_hash[184] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_custom_tool_call);
+mod_consts_hash[185] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCall_tuple);
+mod_consts_hash[186] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCall);
+mod_consts_hash[187] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_incomplete_event);
+mod_consts_hash[188] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseIncompleteEvent_tuple);
+mod_consts_hash[189] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseIncompleteEvent);
+mod_consts_hash[190] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_file_param);
+mod_consts_hash[191] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputFileParam_tuple);
+mod_consts_hash[192] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputFileParam);
+mod_consts_hash[193] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_item_param);
+mod_consts_hash[194] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputItemParam_tuple);
+mod_consts_hash[195] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputItemParam);
+mod_consts_hash[196] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_text_param);
+mod_consts_hash[197] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputTextParam_tuple);
+mod_consts_hash[198] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputTextParam);
+mod_consts_hash[199] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_text_delta_event);
+mod_consts_hash[200] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseTextDeltaEvent_tuple);
+mod_consts_hash[201] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseTextDeltaEvent);
+mod_consts_hash[202] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_allowed_param);
+mod_consts_hash[203] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceAllowedParam_tuple);
+mod_consts_hash[204] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceAllowedParam);
+mod_consts_hash[205] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_audio_delta_event);
+mod_consts_hash[206] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseAudioDeltaEvent_tuple);
+mod_consts_hash[207] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseAudioDeltaEvent);
+mod_consts_hash[208] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_in_progress_event);
+mod_consts_hash[209] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInProgressEvent_tuple);
+mod_consts_hash[210] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInProgressEvent);
+mod_consts_hash[211] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_image_param);
+mod_consts_hash[212] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputImageParam_tuple);
+mod_consts_hash[213] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputImageParam);
+mod_consts_hash[214] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_text_param);
+mod_consts_hash[215] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputTextParam_tuple);
+mod_consts_hash[216] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputTextParam);
+mod_consts_hash[217] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_text_config_param);
+mod_consts_hash[218] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseTextConfigParam_tuple);
+mod_consts_hash[219] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseTextConfigParam);
+mod_consts_hash[220] = DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_function_param);
+mod_consts_hash[221] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceFunctionParam_tuple);
+mod_consts_hash[222] = DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceFunctionParam);
+mod_consts_hash[223] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_computer_tool_call);
+mod_consts_hash[224] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseComputerToolCall_tuple);
+mod_consts_hash[225] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseComputerToolCall);
+mod_consts_hash[226] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_conversation_param);
+mod_consts_hash[227] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseConversationParam_tuple);
+mod_consts_hash[228] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseConversationParam);
+mod_consts_hash[229] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_format_text_config);
+mod_consts_hash[230] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFormatTextConfig_tuple);
+mod_consts_hash[231] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFormatTextConfig);
+mod_consts_hash[232] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_tool_call);
+mod_consts_hash[233] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionToolCall_tuple);
+mod_consts_hash[234] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionToolCall);
+mod_consts_hash[235] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_message_item);
+mod_consts_hash[236] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputMessageItem_tuple);
+mod_consts_hash[237] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputMessageItem);
+mod_consts_hash[238] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_refusal_done_event);
+mod_consts_hash[239] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseRefusalDoneEvent_tuple);
+mod_consts_hash[240] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseRefusalDoneEvent);
+mod_consts_hash[241] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_web_search);
+mod_consts_hash[242] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionWebSearch_tuple);
+mod_consts_hash[243] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionWebSearch);
+mod_consts_hash[244] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_content_param);
+mod_consts_hash[245] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputContentParam_tuple);
+mod_consts_hash[246] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputContentParam);
+mod_consts_hash[247] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_refusal_delta_event);
+mod_consts_hash[248] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseRefusalDeltaEvent_tuple);
+mod_consts_hash[249] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseRefusalDeltaEvent);
+mod_consts_hash[250] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_message_param);
+mod_consts_hash[251] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputMessageParam_tuple);
+mod_consts_hash[252] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputMessageParam);
+mod_consts_hash[253] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_refusal_param);
+mod_consts_hash[254] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputRefusalParam_tuple);
+mod_consts_hash[255] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputRefusalParam);
+mod_consts_hash[256] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_reasoning_item_param);
+mod_consts_hash[257] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningItemParam_tuple);
+mod_consts_hash[258] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningItemParam);
+mod_consts_hash[259] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_file_search_tool_call);
+mod_consts_hash[260] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFileSearchToolCall_tuple);
+mod_consts_hash[261] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFileSearchToolCall);
+mod_consts_hash[262] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_call_failed_event);
+mod_consts_hash[263] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpCallFailedEvent_tuple);
+mod_consts_hash[264] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpCallFailedEvent);
+mod_consts_hash[265] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_custom_tool_call_param);
+mod_consts_hash[266] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCallParam_tuple);
+mod_consts_hash[267] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCallParam);
+mod_consts_hash[268] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_item_done_event);
+mod_consts_hash[269] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputItemDoneEvent_tuple);
+mod_consts_hash[270] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputItemDoneEvent);
+mod_consts_hash[271] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_content_part_done_event);
+mod_consts_hash[272] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseContentPartDoneEvent_tuple);
+mod_consts_hash[273] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseContentPartDoneEvent);
+mod_consts_hash[274] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_custom_tool_call_output);
+mod_consts_hash[275] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCallOutput_tuple);
+mod_consts_hash[276] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCallOutput);
+mod_consts_hash[277] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_tool_call_item);
+mod_consts_hash[278] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionToolCallItem_tuple);
+mod_consts_hash[279] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionToolCallItem);
+mod_consts_hash[280] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_item_added_event);
+mod_consts_hash[281] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputItemAddedEvent_tuple);
+mod_consts_hash[282] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputItemAddedEvent);
+mod_consts_hash[283] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_computer_tool_call_param);
+mod_consts_hash[284] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseComputerToolCallParam_tuple);
+mod_consts_hash[285] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseComputerToolCallParam);
+mod_consts_hash[286] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_content_part_added_event);
+mod_consts_hash[287] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseContentPartAddedEvent_tuple);
+mod_consts_hash[288] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseContentPartAddedEvent);
+mod_consts_hash[289] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_format_text_config_param);
+mod_consts_hash[290] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFormatTextConfigParam_tuple);
+mod_consts_hash[291] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFormatTextConfigParam);
+mod_consts_hash[292] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_tool_call_param);
+mod_consts_hash[293] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionToolCallParam_tuple);
+mod_consts_hash[294] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionToolCallParam);
+mod_consts_hash[295] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_call_completed_event);
+mod_consts_hash[296] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpCallCompletedEvent_tuple);
+mod_consts_hash[297] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpCallCompletedEvent);
+mod_consts_hash[298] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_web_search_param);
+mod_consts_hash[299] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionWebSearchParam_tuple);
+mod_consts_hash[300] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionWebSearchParam);
+mod_consts_hash[301] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_reasoning_text_done_event);
+mod_consts_hash[302] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningTextDoneEvent_tuple);
+mod_consts_hash[303] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningTextDoneEvent);
+mod_consts_hash[304] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_code_interpreter_tool_call);
+mod_consts_hash[305] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCodeInterpreterToolCall_tuple);
+mod_consts_hash[306] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCodeInterpreterToolCall);
+mod_consts_hash[307] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_message_content_list);
+mod_consts_hash[308] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputMessageContentList_tuple);
+mod_consts_hash[309] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputMessageContentList);
+mod_consts_hash[310] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_call_in_progress_event);
+mod_consts_hash[311] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpCallInProgressEvent_tuple);
+mod_consts_hash[312] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpCallInProgressEvent);
+mod_consts_hash[313] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_reasoning_text_delta_event);
+mod_consts_hash[314] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningTextDeltaEvent_tuple);
+mod_consts_hash[315] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningTextDeltaEvent);
+mod_consts_hash[316] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_audio_transcript_done_event);
+mod_consts_hash[317] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseAudioTranscriptDoneEvent_tuple);
+mod_consts_hash[318] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseAudioTranscriptDoneEvent);
+mod_consts_hash[319] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_file_search_tool_call_param);
+mod_consts_hash[320] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFileSearchToolCallParam_tuple);
+mod_consts_hash[321] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFileSearchToolCallParam);
+mod_consts_hash[322] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_list_tools_failed_event);
+mod_consts_hash[323] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpListToolsFailedEvent_tuple);
+mod_consts_hash[324] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpListToolsFailedEvent);
+mod_consts_hash[325] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_audio_transcript_delta_event);
+mod_consts_hash[326] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseAudioTranscriptDeltaEvent_tuple);
+mod_consts_hash[327] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseAudioTranscriptDeltaEvent);
+mod_consts_hash[328] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_custom_tool_call_output_param);
+mod_consts_hash[329] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCallOutputParam_tuple);
+mod_consts_hash[330] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCallOutputParam);
+mod_consts_hash[331] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_call_arguments_done_event);
+mod_consts_hash[332] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpCallArgumentsDoneEvent_tuple);
+mod_consts_hash[333] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpCallArgumentsDoneEvent);
+mod_consts_hash[334] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_computer_tool_call_output_item);
+mod_consts_hash[335] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseComputerToolCallOutputItem_tuple);
+mod_consts_hash[336] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseComputerToolCallOutputItem);
+mod_consts_hash[337] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_format_text_json_schema_config);
+mod_consts_hash[338] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFormatTextJSONSchemaConfig_tuple);
+mod_consts_hash[339] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfig);
+mod_consts_hash[340] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_tool_call_output_item);
+mod_consts_hash[341] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionToolCallOutputItem_tuple);
+mod_consts_hash[342] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionToolCallOutputItem);
+mod_consts_hash[343] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_image_gen_call_completed_event);
+mod_consts_hash[344] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseImageGenCallCompletedEvent_tuple);
+mod_consts_hash[345] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseImageGenCallCompletedEvent);
+mod_consts_hash[346] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_call_arguments_delta_event);
+mod_consts_hash[347] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpCallArgumentsDeltaEvent_tuple);
+mod_consts_hash[348] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpCallArgumentsDeltaEvent);
+mod_consts_hash[349] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_list_tools_completed_event);
+mod_consts_hash[350] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpListToolsCompletedEvent_tuple);
+mod_consts_hash[351] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpListToolsCompletedEvent);
+mod_consts_hash[352] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_image_gen_call_generating_event);
+mod_consts_hash[353] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseImageGenCallGeneratingEvent_tuple);
+mod_consts_hash[354] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseImageGenCallGeneratingEvent);
+mod_consts_hash[355] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_web_search_call_completed_event);
+mod_consts_hash[356] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseWebSearchCallCompletedEvent_tuple);
+mod_consts_hash[357] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseWebSearchCallCompletedEvent);
+mod_consts_hash[358] = DEEP_HASH(tstate, mod_consts.const_str_plain_response_web_search_call_searching_event);
+mod_consts_hash[359] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseWebSearchCallSearchingEvent_tuple);
+mod_consts_hash[360] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseWebSearchCallSearchingEvent);
+mod_consts_hash[361] = DEEP_HASH(tstate, mod_consts.const_str_digest_cf0ac869c09d72e03bebf5dd0a47d092);
+mod_consts_hash[362] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCodeInterpreterToolCallParam_tuple);
+mod_consts_hash[363] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCodeInterpreterToolCallParam);
+mod_consts_hash[364] = DEEP_HASH(tstate, mod_consts.const_str_digest_db1bace0cfc001e14745ea641f153b87);
+mod_consts_hash[365] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFileSearchCallCompletedEvent_tuple);
+mod_consts_hash[366] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFileSearchCallCompletedEvent);
+mod_consts_hash[367] = DEEP_HASH(tstate, mod_consts.const_str_digest_da8cde4e5f8007b27a16ee8a8d34c7ca);
+mod_consts_hash[368] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFileSearchCallSearchingEvent_tuple);
+mod_consts_hash[369] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFileSearchCallSearchingEvent);
+mod_consts_hash[370] = DEEP_HASH(tstate, mod_consts.const_str_digest_a63d6aee411731207dfca54d4a08c6f1);
+mod_consts_hash[371] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseImageGenCallInProgressEvent_tuple);
+mod_consts_hash[372] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseImageGenCallInProgressEvent);
+mod_consts_hash[373] = DEEP_HASH(tstate, mod_consts.const_str_digest_ffd1258fd1207a7b77c1a482070cc0ee);
+mod_consts_hash[374] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputMessageContentListParam_tuple);
+mod_consts_hash[375] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputMessageContentListParam);
+mod_consts_hash[376] = DEEP_HASH(tstate, mod_consts.const_str_digest_3869a7d21bb2ab690675f2d75edd2c53);
+mod_consts_hash[377] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpListToolsInProgressEvent_tuple);
+mod_consts_hash[378] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpListToolsInProgressEvent);
+mod_consts_hash[379] = DEEP_HASH(tstate, mod_consts.const_str_digest_ec2c427f706e801bddb56836cfb686e8);
+mod_consts_hash[380] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCallInputDoneEvent_tuple);
+mod_consts_hash[381] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCallInputDoneEvent);
+mod_consts_hash[382] = DEEP_HASH(tstate, mod_consts.const_str_digest_551ec177d3a0f514071918ba435a1323);
+mod_consts_hash[383] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningSummaryPartDoneEvent_tuple);
+mod_consts_hash[384] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningSummaryPartDoneEvent);
+mod_consts_hash[385] = DEEP_HASH(tstate, mod_consts.const_str_digest_5b54bc56c455a9546f6cd46ecf7a137b);
+mod_consts_hash[386] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningSummaryTextDoneEvent_tuple);
+mod_consts_hash[387] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningSummaryTextDoneEvent);
+mod_consts_hash[388] = DEEP_HASH(tstate, mod_consts.const_str_digest_2326235548c09cdeef136c4cd9a9900b);
+mod_consts_hash[389] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseWebSearchCallInProgressEvent_tuple);
+mod_consts_hash[390] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseWebSearchCallInProgressEvent);
+mod_consts_hash[391] = DEEP_HASH(tstate, mod_consts.const_str_digest_bdd4cad3bd3111b78b89983f965fecd7);
+mod_consts_hash[392] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCallInputDeltaEvent_tuple);
+mod_consts_hash[393] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCallInputDeltaEvent);
+mod_consts_hash[394] = DEEP_HASH(tstate, mod_consts.const_str_digest_b74a486e6f8d3c2cf5b64509f1e008f4);
+mod_consts_hash[395] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFileSearchCallInProgressEvent_tuple);
+mod_consts_hash[396] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFileSearchCallInProgressEvent);
+mod_consts_hash[397] = DEEP_HASH(tstate, mod_consts.const_str_digest_7ca10734868c9e71eef094920fbc18a5);
+mod_consts_hash[398] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionCallArgumentsDoneEvent_tuple);
+mod_consts_hash[399] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionCallArgumentsDoneEvent);
+mod_consts_hash[400] = DEEP_HASH(tstate, mod_consts.const_str_digest_4fa49b8f51a2b5d603c1b21bd5cb88b6);
+mod_consts_hash[401] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseImageGenCallPartialImageEvent_tuple);
+mod_consts_hash[402] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseImageGenCallPartialImageEvent);
+mod_consts_hash[403] = DEEP_HASH(tstate, mod_consts.const_str_digest_62938c320d5ab37778c49561bb557de0);
+mod_consts_hash[404] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputTextAnnotationAddedEvent_tuple);
+mod_consts_hash[405] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputTextAnnotationAddedEvent);
+mod_consts_hash[406] = DEEP_HASH(tstate, mod_consts.const_str_digest_8720385bdd3f7a58c4a047ef1be427a4);
+mod_consts_hash[407] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningSummaryPartAddedEvent_tuple);
+mod_consts_hash[408] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningSummaryPartAddedEvent);
+mod_consts_hash[409] = DEEP_HASH(tstate, mod_consts.const_str_digest_48d62ccaac3f5a5eb113b4830ef94bcb);
+mod_consts_hash[410] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningSummaryTextDeltaEvent_tuple);
+mod_consts_hash[411] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningSummaryTextDeltaEvent);
+mod_consts_hash[412] = DEEP_HASH(tstate, mod_consts.const_str_digest_4b1771f20cc66dbc0ca5aadc0c0b9ccb);
+mod_consts_hash[413] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionCallArgumentsDeltaEvent_tuple);
+mod_consts_hash[414] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionCallArgumentsDeltaEvent);
+mod_consts_hash[415] = DEEP_HASH(tstate, mod_consts.const_str_digest_8a0a6b88cd5c993e6bfc9450a762f162);
+mod_consts_hash[416] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseComputerToolCallOutputScreenshot_tuple);
+mod_consts_hash[417] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseComputerToolCallOutputScreenshot);
+mod_consts_hash[418] = DEEP_HASH(tstate, mod_consts.const_str_digest_7f3597d608c3b98aab9e4a5cb005dbb2);
+mod_consts_hash[419] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFormatTextJSONSchemaConfigParam_tuple);
+mod_consts_hash[420] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfigParam);
+mod_consts_hash[421] = DEEP_HASH(tstate, mod_consts.const_str_digest_521998f9296b55ef22e849661f075a12);
+mod_consts_hash[422] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCodeInterpreterCallCodeDoneEvent_tuple);
+mod_consts_hash[423] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCodeInterpreterCallCodeDoneEvent);
+mod_consts_hash[424] = DEEP_HASH(tstate, mod_consts.const_str_digest_291fe7aa115dc7c5ac497c2d549b5773);
+mod_consts_hash[425] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_68535af65629c55f4de9600af2406536_tuple);
+mod_consts_hash[426] = DEEP_HASH(tstate, mod_consts.const_str_digest_68535af65629c55f4de9600af2406536);
+mod_consts_hash[427] = DEEP_HASH(tstate, mod_consts.const_str_digest_b1da21444fe18c8d5313ba42083fd806);
+mod_consts_hash[428] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d_tuple);
+mod_consts_hash[429] = DEEP_HASH(tstate, mod_consts.const_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d);
+mod_consts_hash[430] = DEEP_HASH(tstate, mod_consts.const_str_digest_93bdb945b11c5dda48cf9c17f581f0ed);
+mod_consts_hash[431] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_b4c0b7e4d7f31b62249d4cb49c670354_tuple);
+mod_consts_hash[432] = DEEP_HASH(tstate, mod_consts.const_str_digest_b4c0b7e4d7f31b62249d4cb49c670354);
+mod_consts_hash[433] = DEEP_HASH(tstate, mod_consts.const_str_digest_a7d474822c33e65637a1faa6ac18c93d);
+mod_consts_hash[434] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_1cde74e27f144331f01fe360fd360faf_tuple);
+mod_consts_hash[435] = DEEP_HASH(tstate, mod_consts.const_str_digest_1cde74e27f144331f01fe360fd360faf);
+mod_consts_hash[436] = DEEP_HASH(tstate, mod_consts.const_str_digest_d52db91d4d6d7b9765f76f30e806055b);
+mod_consts_hash[437] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_b25895db7f7c396591ceff47b4b28b76_tuple);
+mod_consts_hash[438] = DEEP_HASH(tstate, mod_consts.const_str_digest_b25895db7f7c396591ceff47b4b28b76);
+mod_consts_hash[439] = DEEP_HASH(tstate, mod_consts.const_str_digest_9d326b13d68914a103eaf898def824da);
+mod_consts_hash[440] = DEEP_HASH(tstate, mod_consts.const_str_digest_3e8d08c54d6542a1f3d570a50471843e);
+#endif
+    }
+}
+
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
+void createMainModuleConstants(PyThreadState *tstate) {
+    createModuleConstants(tstate);
+}
+#endif
+
+/* Function to verify module private constants for non-corruption. */
+#ifndef __NUITKA_NO_ASSERT__
+void checkModuleConstants_openai$types$responses(PyThreadState *tstate) {
+    // The module may not have been used at all, then ignore this.
+    if (constants_created == false) return;
+
+assert(mod_consts_hash[0] == DEEP_HASH(tstate, mod_consts.const_str_plain_join));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_join);
+assert(mod_consts_hash[1] == DEEP_HASH(tstate, mod_consts.const_str_plain_environ));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_environ);
+assert(mod_consts_hash[2] == DEEP_HASH(tstate, mod_consts.const_tuple_c0760630ed38e8aa80130ab81decf450_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_c0760630ed38e8aa80130ab81decf450_tuple);
+assert(mod_consts_hash[3] == DEEP_HASH(tstate, mod_consts.const_str_digest_07774d594059f023d150ae04ff063bcc));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_07774d594059f023d150ae04ff063bcc);
+assert(mod_consts_hash[4] == DEEP_HASH(tstate, mod_consts.const_tuple_9cd5bc076fd1ee60f6c29e9b75c3c5d6_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_9cd5bc076fd1ee60f6c29e9b75c3c5d6_tuple);
+assert(mod_consts_hash[5] == DEEP_HASH(tstate, mod_consts.const_str_plain_responses));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_responses);
+assert(mod_consts_hash[6] == DEEP_HASH(tstate, mod_consts.const_tuple_347f0ce0ca6518bc4bef4f2750bc4576_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_347f0ce0ca6518bc4bef4f2750bc4576_tuple);
+assert(mod_consts_hash[7] == DEEP_HASH(tstate, mod_consts.const_str_plain_origin));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_origin);
+assert(mod_consts_hash[8] == DEEP_HASH(tstate, mod_consts.const_str_plain_has_location));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_has_location);
+assert(mod_consts_hash[9] == DEEP_HASH(tstate, mod_consts.const_str_plain_submodule_search_locations));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_submodule_search_locations);
+assert(mod_consts_hash[10] == DEEP_HASH(tstate, mod_consts.const_str_plain_annotations));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_annotations);
+assert(mod_consts_hash[11] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool);
+assert(mod_consts_hash[12] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_Tool_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_Tool_tuple);
+assert(mod_consts_hash[13] == DEEP_HASH(tstate, mod_consts.const_str_plain_Tool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_Tool);
+assert(mod_consts_hash[14] == DEEP_HASH(tstate, mod_consts.const_str_plain_response));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response);
+assert(mod_consts_hash[15] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_Response_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_Response_tuple);
+assert(mod_consts_hash[16] == DEEP_HASH(tstate, mod_consts.const_str_plain_Response));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_Response);
+assert(mod_consts_hash[17] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_param);
+assert(mod_consts_hash[18] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolParam_tuple);
+assert(mod_consts_hash[19] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolParam);
+assert(mod_consts_hash[20] == DEEP_HASH(tstate, mod_consts.const_str_plain_custom_tool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_custom_tool);
+assert(mod_consts_hash[21] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_CustomTool_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_CustomTool_tuple);
+assert(mod_consts_hash[22] == DEEP_HASH(tstate, mod_consts.const_str_plain_CustomTool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_CustomTool);
+assert(mod_consts_hash[23] == DEEP_HASH(tstate, mod_consts.const_str_plain_computer_tool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_computer_tool);
+assert(mod_consts_hash[24] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ComputerTool_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ComputerTool_tuple);
+assert(mod_consts_hash[25] == DEEP_HASH(tstate, mod_consts.const_str_plain_ComputerTool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ComputerTool);
+assert(mod_consts_hash[26] == DEEP_HASH(tstate, mod_consts.const_str_plain_function_tool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_function_tool);
+assert(mod_consts_hash[27] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_FunctionTool_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_FunctionTool_tuple);
+assert(mod_consts_hash[28] == DEEP_HASH(tstate, mod_consts.const_str_plain_FunctionTool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_FunctionTool);
+assert(mod_consts_hash[29] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_item));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_item);
+assert(mod_consts_hash[30] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseItem_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseItem_tuple);
+assert(mod_consts_hash[31] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseItem));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseItem);
+assert(mod_consts_hash[32] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_error));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_error);
+assert(mod_consts_hash[33] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseError_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseError_tuple);
+assert(mod_consts_hash[34] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseError));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseError);
+assert(mod_consts_hash[35] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_usage));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_usage);
+assert(mod_consts_hash[36] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseUsage_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseUsage_tuple);
+assert(mod_consts_hash[37] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseUsage));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseUsage);
+assert(mod_consts_hash[38] == DEEP_HASH(tstate, mod_consts.const_str_plain_parsed_response));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_parsed_response);
+assert(mod_consts_hash[39] == DEEP_HASH(tstate, mod_consts.const_tuple_7bec7691ed8008cbd5789349a8365d14_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_7bec7691ed8008cbd5789349a8365d14_tuple);
+assert(mod_consts_hash[40] == DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedContent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ParsedContent);
+assert(mod_consts_hash[41] == DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedResponse));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ParsedResponse);
+assert(mod_consts_hash[42] == DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedResponseOutputItem));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ParsedResponseOutputItem);
+assert(mod_consts_hash[43] == DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedResponseOutputText));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ParsedResponseOutputText);
+assert(mod_consts_hash[44] == DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedResponseOutputMessage));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ParsedResponseOutputMessage);
+assert(mod_consts_hash[45] == DEEP_HASH(tstate, mod_consts.const_str_plain_ParsedResponseFunctionToolCall));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ParsedResponseFunctionToolCall);
+assert(mod_consts_hash[46] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_prompt));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_prompt);
+assert(mod_consts_hash[47] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponsePrompt_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponsePrompt_tuple);
+assert(mod_consts_hash[48] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponsePrompt));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponsePrompt);
+assert(mod_consts_hash[49] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_status));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_status);
+assert(mod_consts_hash[50] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseStatus_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseStatus_tuple);
+assert(mod_consts_hash[51] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseStatus));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseStatus);
+assert(mod_consts_hash[52] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_mcp));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_mcp);
+assert(mod_consts_hash[53] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceMcp_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceMcp_tuple);
+assert(mod_consts_hash[54] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceMcp));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceMcp);
+assert(mod_consts_hash[55] == DEEP_HASH(tstate, mod_consts.const_str_plain_web_search_tool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_web_search_tool);
+assert(mod_consts_hash[56] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_WebSearchTool_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_WebSearchTool_tuple);
+assert(mod_consts_hash[57] == DEEP_HASH(tstate, mod_consts.const_str_plain_WebSearchTool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_WebSearchTool);
+assert(mod_consts_hash[58] == DEEP_HASH(tstate, mod_consts.const_str_plain_file_search_tool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_file_search_tool);
+assert(mod_consts_hash[59] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_FileSearchTool_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_FileSearchTool_tuple);
+assert(mod_consts_hash[60] == DEEP_HASH(tstate, mod_consts.const_str_plain_FileSearchTool));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_FileSearchTool);
+assert(mod_consts_hash[61] == DEEP_HASH(tstate, mod_consts.const_str_plain_custom_tool_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_custom_tool_param);
+assert(mod_consts_hash[62] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_CustomToolParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_CustomToolParam_tuple);
+assert(mod_consts_hash[63] == DEEP_HASH(tstate, mod_consts.const_str_plain_CustomToolParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_CustomToolParam);
+assert(mod_consts_hash[64] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_types));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_types);
+assert(mod_consts_hash[65] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceTypes_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceTypes_tuple);
+assert(mod_consts_hash[66] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceTypes));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceTypes);
+assert(mod_consts_hash[67] == DEEP_HASH(tstate, mod_consts.const_str_plain_easy_input_message));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_easy_input_message);
+assert(mod_consts_hash[68] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_EasyInputMessage_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_EasyInputMessage_tuple);
+assert(mod_consts_hash[69] == DEEP_HASH(tstate, mod_consts.const_str_plain_EasyInputMessage));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_EasyInputMessage);
+assert(mod_consts_hash[70] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_item_list));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_item_list);
+assert(mod_consts_hash[71] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseItemList_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseItemList_tuple);
+assert(mod_consts_hash[72] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseItemList));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseItemList);
+assert(mod_consts_hash[73] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_custom));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_custom);
+assert(mod_consts_hash[74] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceCustom_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceCustom_tuple);
+assert(mod_consts_hash[75] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceCustom));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceCustom);
+assert(mod_consts_hash[76] == DEEP_HASH(tstate, mod_consts.const_str_plain_computer_tool_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_computer_tool_param);
+assert(mod_consts_hash[77] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ComputerToolParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ComputerToolParam_tuple);
+assert(mod_consts_hash[78] == DEEP_HASH(tstate, mod_consts.const_str_plain_ComputerToolParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ComputerToolParam);
+assert(mod_consts_hash[79] == DEEP_HASH(tstate, mod_consts.const_str_plain_function_tool_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_function_tool_param);
+assert(mod_consts_hash[80] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_FunctionToolParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_FunctionToolParam_tuple);
+assert(mod_consts_hash[81] == DEEP_HASH(tstate, mod_consts.const_str_plain_FunctionToolParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_FunctionToolParam);
+assert(mod_consts_hash[82] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_includable));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_includable);
+assert(mod_consts_hash[83] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseIncludable_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseIncludable_tuple);
+assert(mod_consts_hash[84] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseIncludable));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseIncludable);
+assert(mod_consts_hash[85] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_file));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_file);
+assert(mod_consts_hash[86] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputFile_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputFile_tuple);
+assert(mod_consts_hash[87] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputFile));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputFile);
+assert(mod_consts_hash[88] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_item));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_item);
+assert(mod_consts_hash[89] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputItem_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputItem_tuple);
+assert(mod_consts_hash[90] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputItem));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputItem);
+assert(mod_consts_hash[91] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_text));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_text);
+assert(mod_consts_hash[92] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputText_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputText_tuple);
+assert(mod_consts_hash[93] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputText));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputText);
+assert(mod_consts_hash[94] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_allowed));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_allowed);
+assert(mod_consts_hash[95] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceAllowed_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceAllowed_tuple);
+assert(mod_consts_hash[96] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceAllowed));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceAllowed);
+assert(mod_consts_hash[97] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_options));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_options);
+assert(mod_consts_hash[98] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceOptions_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceOptions_tuple);
+assert(mod_consts_hash[99] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceOptions));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceOptions);
+assert(mod_consts_hash[100] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_error_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_error_event);
+assert(mod_consts_hash[101] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseErrorEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseErrorEvent_tuple);
+assert(mod_consts_hash[102] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseErrorEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseErrorEvent);
+assert(mod_consts_hash[103] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_image));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_image);
+assert(mod_consts_hash[104] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputImage_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputImage_tuple);
+assert(mod_consts_hash[105] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputImage));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputImage);
+assert(mod_consts_hash[106] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_param);
+assert(mod_consts_hash[107] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputParam_tuple);
+assert(mod_consts_hash[108] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputParam);
+assert(mod_consts_hash[109] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_item));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_output_item);
+assert(mod_consts_hash[110] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputItem_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseOutputItem_tuple);
+assert(mod_consts_hash[111] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputItem));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseOutputItem);
+assert(mod_consts_hash[112] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_text));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_output_text);
+assert(mod_consts_hash[113] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputText_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseOutputText_tuple);
+assert(mod_consts_hash[114] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputText));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseOutputText);
+assert(mod_consts_hash[115] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_text_config));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_text_config);
+assert(mod_consts_hash[116] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseTextConfig_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseTextConfig_tuple);
+assert(mod_consts_hash[117] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseTextConfig));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseTextConfig);
+assert(mod_consts_hash[118] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_function));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_function);
+assert(mod_consts_hash[119] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceFunction_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceFunction_tuple);
+assert(mod_consts_hash[120] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceFunction));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceFunction);
+assert(mod_consts_hash[121] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_failed_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_failed_event);
+assert(mod_consts_hash[122] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFailedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFailedEvent_tuple);
+assert(mod_consts_hash[123] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFailedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFailedEvent);
+assert(mod_consts_hash[124] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_prompt_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_prompt_param);
+assert(mod_consts_hash[125] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponsePromptParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponsePromptParam_tuple);
+assert(mod_consts_hash[126] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponsePromptParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponsePromptParam);
+assert(mod_consts_hash[127] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_queued_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_queued_event);
+assert(mod_consts_hash[128] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseQueuedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseQueuedEvent_tuple);
+assert(mod_consts_hash[129] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseQueuedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseQueuedEvent);
+assert(mod_consts_hash[130] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_stream_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_stream_event);
+assert(mod_consts_hash[131] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseStreamEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseStreamEvent_tuple);
+assert(mod_consts_hash[132] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseStreamEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseStreamEvent);
+assert(mod_consts_hash[133] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_mcp_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_mcp_param);
+assert(mod_consts_hash[134] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceMcpParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceMcpParam_tuple);
+assert(mod_consts_hash[135] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceMcpParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceMcpParam);
+assert(mod_consts_hash[136] == DEEP_HASH(tstate, mod_consts.const_str_plain_web_search_tool_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_web_search_tool_param);
+assert(mod_consts_hash[137] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_WebSearchToolParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_WebSearchToolParam_tuple);
+assert(mod_consts_hash[138] == DEEP_HASH(tstate, mod_consts.const_str_plain_WebSearchToolParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_WebSearchToolParam);
+assert(mod_consts_hash[139] == DEEP_HASH(tstate, mod_consts.const_str_plain_file_search_tool_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_file_search_tool_param);
+assert(mod_consts_hash[140] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_FileSearchToolParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_FileSearchToolParam_tuple);
+assert(mod_consts_hash[141] == DEEP_HASH(tstate, mod_consts.const_str_plain_FileSearchToolParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_FileSearchToolParam);
+assert(mod_consts_hash[142] == DEEP_HASH(tstate, mod_consts.const_str_plain_input_item_list_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_input_item_list_params);
+assert(mod_consts_hash[143] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_InputItemListParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_InputItemListParams_tuple);
+assert(mod_consts_hash[144] == DEEP_HASH(tstate, mod_consts.const_str_plain_InputItemListParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_InputItemListParams);
+assert(mod_consts_hash[145] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_create_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_create_params);
+assert(mod_consts_hash[146] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCreateParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCreateParams_tuple);
+assert(mod_consts_hash[147] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCreateParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCreateParams);
+assert(mod_consts_hash[148] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_created_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_created_event);
+assert(mod_consts_hash[149] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCreatedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCreatedEvent_tuple);
+assert(mod_consts_hash[150] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCreatedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCreatedEvent);
+assert(mod_consts_hash[151] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_content));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_content);
+assert(mod_consts_hash[152] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputContent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputContent_tuple);
+assert(mod_consts_hash[153] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputContent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputContent);
+assert(mod_consts_hash[154] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_message));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_output_message);
+assert(mod_consts_hash[155] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputMessage_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseOutputMessage_tuple);
+assert(mod_consts_hash[156] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputMessage));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseOutputMessage);
+assert(mod_consts_hash[157] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_refusal));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_output_refusal);
+assert(mod_consts_hash[158] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputRefusal_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseOutputRefusal_tuple);
+assert(mod_consts_hash[159] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputRefusal));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseOutputRefusal);
+assert(mod_consts_hash[160] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_reasoning_item));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_reasoning_item);
+assert(mod_consts_hash[161] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningItem_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseReasoningItem_tuple);
+assert(mod_consts_hash[162] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningItem));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseReasoningItem);
+assert(mod_consts_hash[163] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_types_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_types_param);
+assert(mod_consts_hash[164] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceTypesParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceTypesParam_tuple);
+assert(mod_consts_hash[165] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceTypesParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceTypesParam);
+assert(mod_consts_hash[166] == DEEP_HASH(tstate, mod_consts.const_str_plain_easy_input_message_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_easy_input_message_param);
+assert(mod_consts_hash[167] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_EasyInputMessageParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_EasyInputMessageParam_tuple);
+assert(mod_consts_hash[168] == DEEP_HASH(tstate, mod_consts.const_str_plain_EasyInputMessageParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_EasyInputMessageParam);
+assert(mod_consts_hash[169] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_completed_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_completed_event);
+assert(mod_consts_hash[170] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCompletedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCompletedEvent_tuple);
+assert(mod_consts_hash[171] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCompletedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCompletedEvent);
+assert(mod_consts_hash[172] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_retrieve_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_retrieve_params);
+assert(mod_consts_hash[173] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseRetrieveParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseRetrieveParams_tuple);
+assert(mod_consts_hash[174] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseRetrieveParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseRetrieveParams);
+assert(mod_consts_hash[175] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_text_done_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_text_done_event);
+assert(mod_consts_hash[176] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseTextDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseTextDoneEvent_tuple);
+assert(mod_consts_hash[177] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseTextDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseTextDoneEvent);
+assert(mod_consts_hash[178] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_custom_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_custom_param);
+assert(mod_consts_hash[179] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceCustomParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceCustomParam_tuple);
+assert(mod_consts_hash[180] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceCustomParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceCustomParam);
+assert(mod_consts_hash[181] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_audio_done_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_audio_done_event);
+assert(mod_consts_hash[182] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseAudioDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseAudioDoneEvent_tuple);
+assert(mod_consts_hash[183] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseAudioDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseAudioDoneEvent);
+assert(mod_consts_hash[184] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_custom_tool_call));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_custom_tool_call);
+assert(mod_consts_hash[185] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCall_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCustomToolCall_tuple);
+assert(mod_consts_hash[186] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCall));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCustomToolCall);
+assert(mod_consts_hash[187] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_incomplete_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_incomplete_event);
+assert(mod_consts_hash[188] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseIncompleteEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseIncompleteEvent_tuple);
+assert(mod_consts_hash[189] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseIncompleteEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseIncompleteEvent);
+assert(mod_consts_hash[190] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_file_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_file_param);
+assert(mod_consts_hash[191] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputFileParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputFileParam_tuple);
+assert(mod_consts_hash[192] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputFileParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputFileParam);
+assert(mod_consts_hash[193] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_item_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_item_param);
+assert(mod_consts_hash[194] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputItemParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputItemParam_tuple);
+assert(mod_consts_hash[195] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputItemParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputItemParam);
+assert(mod_consts_hash[196] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_text_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_text_param);
+assert(mod_consts_hash[197] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputTextParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputTextParam_tuple);
+assert(mod_consts_hash[198] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputTextParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputTextParam);
+assert(mod_consts_hash[199] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_text_delta_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_text_delta_event);
+assert(mod_consts_hash[200] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseTextDeltaEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseTextDeltaEvent_tuple);
+assert(mod_consts_hash[201] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseTextDeltaEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseTextDeltaEvent);
+assert(mod_consts_hash[202] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_allowed_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_allowed_param);
+assert(mod_consts_hash[203] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceAllowedParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceAllowedParam_tuple);
+assert(mod_consts_hash[204] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceAllowedParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceAllowedParam);
+assert(mod_consts_hash[205] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_audio_delta_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_audio_delta_event);
+assert(mod_consts_hash[206] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseAudioDeltaEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseAudioDeltaEvent_tuple);
+assert(mod_consts_hash[207] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseAudioDeltaEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseAudioDeltaEvent);
+assert(mod_consts_hash[208] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_in_progress_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_in_progress_event);
+assert(mod_consts_hash[209] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInProgressEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInProgressEvent_tuple);
+assert(mod_consts_hash[210] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInProgressEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInProgressEvent);
+assert(mod_consts_hash[211] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_image_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_image_param);
+assert(mod_consts_hash[212] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputImageParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputImageParam_tuple);
+assert(mod_consts_hash[213] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputImageParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputImageParam);
+assert(mod_consts_hash[214] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_text_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_output_text_param);
+assert(mod_consts_hash[215] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputTextParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseOutputTextParam_tuple);
+assert(mod_consts_hash[216] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputTextParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseOutputTextParam);
+assert(mod_consts_hash[217] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_text_config_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_text_config_param);
+assert(mod_consts_hash[218] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseTextConfigParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseTextConfigParam_tuple);
+assert(mod_consts_hash[219] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseTextConfigParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseTextConfigParam);
+assert(mod_consts_hash[220] == DEEP_HASH(tstate, mod_consts.const_str_plain_tool_choice_function_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_tool_choice_function_param);
+assert(mod_consts_hash[221] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ToolChoiceFunctionParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ToolChoiceFunctionParam_tuple);
+assert(mod_consts_hash[222] == DEEP_HASH(tstate, mod_consts.const_str_plain_ToolChoiceFunctionParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ToolChoiceFunctionParam);
+assert(mod_consts_hash[223] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_computer_tool_call));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_computer_tool_call);
+assert(mod_consts_hash[224] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseComputerToolCall_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseComputerToolCall_tuple);
+assert(mod_consts_hash[225] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseComputerToolCall));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseComputerToolCall);
+assert(mod_consts_hash[226] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_conversation_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_conversation_param);
+assert(mod_consts_hash[227] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseConversationParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseConversationParam_tuple);
+assert(mod_consts_hash[228] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseConversationParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseConversationParam);
+assert(mod_consts_hash[229] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_format_text_config));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_format_text_config);
+assert(mod_consts_hash[230] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFormatTextConfig_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFormatTextConfig_tuple);
+assert(mod_consts_hash[231] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFormatTextConfig));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFormatTextConfig);
+assert(mod_consts_hash[232] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_tool_call));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_function_tool_call);
+assert(mod_consts_hash[233] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionToolCall_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFunctionToolCall_tuple);
+assert(mod_consts_hash[234] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionToolCall));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFunctionToolCall);
+assert(mod_consts_hash[235] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_message_item));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_message_item);
+assert(mod_consts_hash[236] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputMessageItem_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputMessageItem_tuple);
+assert(mod_consts_hash[237] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputMessageItem));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputMessageItem);
+assert(mod_consts_hash[238] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_refusal_done_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_refusal_done_event);
+assert(mod_consts_hash[239] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseRefusalDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseRefusalDoneEvent_tuple);
+assert(mod_consts_hash[240] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseRefusalDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseRefusalDoneEvent);
+assert(mod_consts_hash[241] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_web_search));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_function_web_search);
+assert(mod_consts_hash[242] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionWebSearch_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFunctionWebSearch_tuple);
+assert(mod_consts_hash[243] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionWebSearch));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFunctionWebSearch);
+assert(mod_consts_hash[244] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_content_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_content_param);
+assert(mod_consts_hash[245] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputContentParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputContentParam_tuple);
+assert(mod_consts_hash[246] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputContentParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputContentParam);
+assert(mod_consts_hash[247] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_refusal_delta_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_refusal_delta_event);
+assert(mod_consts_hash[248] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseRefusalDeltaEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseRefusalDeltaEvent_tuple);
+assert(mod_consts_hash[249] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseRefusalDeltaEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseRefusalDeltaEvent);
+assert(mod_consts_hash[250] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_message_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_output_message_param);
+assert(mod_consts_hash[251] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputMessageParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseOutputMessageParam_tuple);
+assert(mod_consts_hash[252] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputMessageParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseOutputMessageParam);
+assert(mod_consts_hash[253] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_refusal_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_output_refusal_param);
+assert(mod_consts_hash[254] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputRefusalParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseOutputRefusalParam_tuple);
+assert(mod_consts_hash[255] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputRefusalParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseOutputRefusalParam);
+assert(mod_consts_hash[256] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_reasoning_item_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_reasoning_item_param);
+assert(mod_consts_hash[257] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningItemParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseReasoningItemParam_tuple);
+assert(mod_consts_hash[258] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningItemParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseReasoningItemParam);
+assert(mod_consts_hash[259] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_file_search_tool_call));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_file_search_tool_call);
+assert(mod_consts_hash[260] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFileSearchToolCall_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFileSearchToolCall_tuple);
+assert(mod_consts_hash[261] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFileSearchToolCall));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFileSearchToolCall);
+assert(mod_consts_hash[262] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_call_failed_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_mcp_call_failed_event);
+assert(mod_consts_hash[263] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpCallFailedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseMcpCallFailedEvent_tuple);
+assert(mod_consts_hash[264] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpCallFailedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseMcpCallFailedEvent);
+assert(mod_consts_hash[265] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_custom_tool_call_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_custom_tool_call_param);
+assert(mod_consts_hash[266] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCallParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCustomToolCallParam_tuple);
+assert(mod_consts_hash[267] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCallParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCustomToolCallParam);
+assert(mod_consts_hash[268] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_item_done_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_output_item_done_event);
+assert(mod_consts_hash[269] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputItemDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseOutputItemDoneEvent_tuple);
+assert(mod_consts_hash[270] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputItemDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseOutputItemDoneEvent);
+assert(mod_consts_hash[271] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_content_part_done_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_content_part_done_event);
+assert(mod_consts_hash[272] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseContentPartDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseContentPartDoneEvent_tuple);
+assert(mod_consts_hash[273] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseContentPartDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseContentPartDoneEvent);
+assert(mod_consts_hash[274] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_custom_tool_call_output));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_custom_tool_call_output);
+assert(mod_consts_hash[275] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCallOutput_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCustomToolCallOutput_tuple);
+assert(mod_consts_hash[276] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCallOutput));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCustomToolCallOutput);
+assert(mod_consts_hash[277] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_tool_call_item));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_function_tool_call_item);
+assert(mod_consts_hash[278] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionToolCallItem_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFunctionToolCallItem_tuple);
+assert(mod_consts_hash[279] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionToolCallItem));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFunctionToolCallItem);
+assert(mod_consts_hash[280] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_output_item_added_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_output_item_added_event);
+assert(mod_consts_hash[281] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputItemAddedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseOutputItemAddedEvent_tuple);
+assert(mod_consts_hash[282] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputItemAddedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseOutputItemAddedEvent);
+assert(mod_consts_hash[283] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_computer_tool_call_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_computer_tool_call_param);
+assert(mod_consts_hash[284] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseComputerToolCallParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseComputerToolCallParam_tuple);
+assert(mod_consts_hash[285] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseComputerToolCallParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseComputerToolCallParam);
+assert(mod_consts_hash[286] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_content_part_added_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_content_part_added_event);
+assert(mod_consts_hash[287] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseContentPartAddedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseContentPartAddedEvent_tuple);
+assert(mod_consts_hash[288] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseContentPartAddedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseContentPartAddedEvent);
+assert(mod_consts_hash[289] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_format_text_config_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_format_text_config_param);
+assert(mod_consts_hash[290] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFormatTextConfigParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFormatTextConfigParam_tuple);
+assert(mod_consts_hash[291] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFormatTextConfigParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFormatTextConfigParam);
+assert(mod_consts_hash[292] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_tool_call_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_function_tool_call_param);
+assert(mod_consts_hash[293] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionToolCallParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFunctionToolCallParam_tuple);
+assert(mod_consts_hash[294] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionToolCallParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFunctionToolCallParam);
+assert(mod_consts_hash[295] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_call_completed_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_mcp_call_completed_event);
+assert(mod_consts_hash[296] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpCallCompletedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseMcpCallCompletedEvent_tuple);
+assert(mod_consts_hash[297] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpCallCompletedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseMcpCallCompletedEvent);
+assert(mod_consts_hash[298] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_web_search_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_function_web_search_param);
+assert(mod_consts_hash[299] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionWebSearchParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFunctionWebSearchParam_tuple);
+assert(mod_consts_hash[300] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionWebSearchParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFunctionWebSearchParam);
+assert(mod_consts_hash[301] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_reasoning_text_done_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_reasoning_text_done_event);
+assert(mod_consts_hash[302] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningTextDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseReasoningTextDoneEvent_tuple);
+assert(mod_consts_hash[303] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningTextDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseReasoningTextDoneEvent);
+assert(mod_consts_hash[304] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_code_interpreter_tool_call));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_code_interpreter_tool_call);
+assert(mod_consts_hash[305] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCodeInterpreterToolCall_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCodeInterpreterToolCall_tuple);
+assert(mod_consts_hash[306] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCodeInterpreterToolCall));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCodeInterpreterToolCall);
+assert(mod_consts_hash[307] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_input_message_content_list));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_input_message_content_list);
+assert(mod_consts_hash[308] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputMessageContentList_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputMessageContentList_tuple);
+assert(mod_consts_hash[309] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputMessageContentList));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputMessageContentList);
+assert(mod_consts_hash[310] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_call_in_progress_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_mcp_call_in_progress_event);
+assert(mod_consts_hash[311] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpCallInProgressEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseMcpCallInProgressEvent_tuple);
+assert(mod_consts_hash[312] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpCallInProgressEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseMcpCallInProgressEvent);
+assert(mod_consts_hash[313] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_reasoning_text_delta_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_reasoning_text_delta_event);
+assert(mod_consts_hash[314] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningTextDeltaEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseReasoningTextDeltaEvent_tuple);
+assert(mod_consts_hash[315] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningTextDeltaEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseReasoningTextDeltaEvent);
+assert(mod_consts_hash[316] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_audio_transcript_done_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_audio_transcript_done_event);
+assert(mod_consts_hash[317] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseAudioTranscriptDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseAudioTranscriptDoneEvent_tuple);
+assert(mod_consts_hash[318] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseAudioTranscriptDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseAudioTranscriptDoneEvent);
+assert(mod_consts_hash[319] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_file_search_tool_call_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_file_search_tool_call_param);
+assert(mod_consts_hash[320] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFileSearchToolCallParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFileSearchToolCallParam_tuple);
+assert(mod_consts_hash[321] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFileSearchToolCallParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFileSearchToolCallParam);
+assert(mod_consts_hash[322] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_list_tools_failed_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_mcp_list_tools_failed_event);
+assert(mod_consts_hash[323] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpListToolsFailedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseMcpListToolsFailedEvent_tuple);
+assert(mod_consts_hash[324] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpListToolsFailedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseMcpListToolsFailedEvent);
+assert(mod_consts_hash[325] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_audio_transcript_delta_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_audio_transcript_delta_event);
+assert(mod_consts_hash[326] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseAudioTranscriptDeltaEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseAudioTranscriptDeltaEvent_tuple);
+assert(mod_consts_hash[327] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseAudioTranscriptDeltaEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseAudioTranscriptDeltaEvent);
+assert(mod_consts_hash[328] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_custom_tool_call_output_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_custom_tool_call_output_param);
+assert(mod_consts_hash[329] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCallOutputParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCustomToolCallOutputParam_tuple);
+assert(mod_consts_hash[330] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCallOutputParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCustomToolCallOutputParam);
+assert(mod_consts_hash[331] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_call_arguments_done_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_mcp_call_arguments_done_event);
+assert(mod_consts_hash[332] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpCallArgumentsDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseMcpCallArgumentsDoneEvent_tuple);
+assert(mod_consts_hash[333] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpCallArgumentsDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseMcpCallArgumentsDoneEvent);
+assert(mod_consts_hash[334] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_computer_tool_call_output_item));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_computer_tool_call_output_item);
+assert(mod_consts_hash[335] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseComputerToolCallOutputItem_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseComputerToolCallOutputItem_tuple);
+assert(mod_consts_hash[336] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseComputerToolCallOutputItem));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseComputerToolCallOutputItem);
+assert(mod_consts_hash[337] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_format_text_json_schema_config));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_format_text_json_schema_config);
+assert(mod_consts_hash[338] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFormatTextJSONSchemaConfig_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFormatTextJSONSchemaConfig_tuple);
+assert(mod_consts_hash[339] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfig));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfig);
+assert(mod_consts_hash[340] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_function_tool_call_output_item));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_function_tool_call_output_item);
+assert(mod_consts_hash[341] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionToolCallOutputItem_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFunctionToolCallOutputItem_tuple);
+assert(mod_consts_hash[342] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionToolCallOutputItem));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFunctionToolCallOutputItem);
+assert(mod_consts_hash[343] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_image_gen_call_completed_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_image_gen_call_completed_event);
+assert(mod_consts_hash[344] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseImageGenCallCompletedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseImageGenCallCompletedEvent_tuple);
+assert(mod_consts_hash[345] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseImageGenCallCompletedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseImageGenCallCompletedEvent);
+assert(mod_consts_hash[346] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_call_arguments_delta_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_mcp_call_arguments_delta_event);
+assert(mod_consts_hash[347] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpCallArgumentsDeltaEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseMcpCallArgumentsDeltaEvent_tuple);
+assert(mod_consts_hash[348] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpCallArgumentsDeltaEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseMcpCallArgumentsDeltaEvent);
+assert(mod_consts_hash[349] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_mcp_list_tools_completed_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_mcp_list_tools_completed_event);
+assert(mod_consts_hash[350] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpListToolsCompletedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseMcpListToolsCompletedEvent_tuple);
+assert(mod_consts_hash[351] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpListToolsCompletedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseMcpListToolsCompletedEvent);
+assert(mod_consts_hash[352] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_image_gen_call_generating_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_image_gen_call_generating_event);
+assert(mod_consts_hash[353] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseImageGenCallGeneratingEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseImageGenCallGeneratingEvent_tuple);
+assert(mod_consts_hash[354] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseImageGenCallGeneratingEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseImageGenCallGeneratingEvent);
+assert(mod_consts_hash[355] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_web_search_call_completed_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_web_search_call_completed_event);
+assert(mod_consts_hash[356] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseWebSearchCallCompletedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseWebSearchCallCompletedEvent_tuple);
+assert(mod_consts_hash[357] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseWebSearchCallCompletedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseWebSearchCallCompletedEvent);
+assert(mod_consts_hash[358] == DEEP_HASH(tstate, mod_consts.const_str_plain_response_web_search_call_searching_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_response_web_search_call_searching_event);
+assert(mod_consts_hash[359] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseWebSearchCallSearchingEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseWebSearchCallSearchingEvent_tuple);
+assert(mod_consts_hash[360] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseWebSearchCallSearchingEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseWebSearchCallSearchingEvent);
+assert(mod_consts_hash[361] == DEEP_HASH(tstate, mod_consts.const_str_digest_cf0ac869c09d72e03bebf5dd0a47d092));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_cf0ac869c09d72e03bebf5dd0a47d092);
+assert(mod_consts_hash[362] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCodeInterpreterToolCallParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCodeInterpreterToolCallParam_tuple);
+assert(mod_consts_hash[363] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCodeInterpreterToolCallParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCodeInterpreterToolCallParam);
+assert(mod_consts_hash[364] == DEEP_HASH(tstate, mod_consts.const_str_digest_db1bace0cfc001e14745ea641f153b87));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_db1bace0cfc001e14745ea641f153b87);
+assert(mod_consts_hash[365] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFileSearchCallCompletedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFileSearchCallCompletedEvent_tuple);
+assert(mod_consts_hash[366] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFileSearchCallCompletedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFileSearchCallCompletedEvent);
+assert(mod_consts_hash[367] == DEEP_HASH(tstate, mod_consts.const_str_digest_da8cde4e5f8007b27a16ee8a8d34c7ca));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_da8cde4e5f8007b27a16ee8a8d34c7ca);
+assert(mod_consts_hash[368] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFileSearchCallSearchingEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFileSearchCallSearchingEvent_tuple);
+assert(mod_consts_hash[369] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFileSearchCallSearchingEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFileSearchCallSearchingEvent);
+assert(mod_consts_hash[370] == DEEP_HASH(tstate, mod_consts.const_str_digest_a63d6aee411731207dfca54d4a08c6f1));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_a63d6aee411731207dfca54d4a08c6f1);
+assert(mod_consts_hash[371] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseImageGenCallInProgressEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseImageGenCallInProgressEvent_tuple);
+assert(mod_consts_hash[372] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseImageGenCallInProgressEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseImageGenCallInProgressEvent);
+assert(mod_consts_hash[373] == DEEP_HASH(tstate, mod_consts.const_str_digest_ffd1258fd1207a7b77c1a482070cc0ee));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_ffd1258fd1207a7b77c1a482070cc0ee);
+assert(mod_consts_hash[374] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseInputMessageContentListParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseInputMessageContentListParam_tuple);
+assert(mod_consts_hash[375] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseInputMessageContentListParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseInputMessageContentListParam);
+assert(mod_consts_hash[376] == DEEP_HASH(tstate, mod_consts.const_str_digest_3869a7d21bb2ab690675f2d75edd2c53));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_3869a7d21bb2ab690675f2d75edd2c53);
+assert(mod_consts_hash[377] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseMcpListToolsInProgressEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseMcpListToolsInProgressEvent_tuple);
+assert(mod_consts_hash[378] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseMcpListToolsInProgressEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseMcpListToolsInProgressEvent);
+assert(mod_consts_hash[379] == DEEP_HASH(tstate, mod_consts.const_str_digest_ec2c427f706e801bddb56836cfb686e8));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_ec2c427f706e801bddb56836cfb686e8);
+assert(mod_consts_hash[380] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCallInputDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCustomToolCallInputDoneEvent_tuple);
+assert(mod_consts_hash[381] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCallInputDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCustomToolCallInputDoneEvent);
+assert(mod_consts_hash[382] == DEEP_HASH(tstate, mod_consts.const_str_digest_551ec177d3a0f514071918ba435a1323));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_551ec177d3a0f514071918ba435a1323);
+assert(mod_consts_hash[383] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningSummaryPartDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseReasoningSummaryPartDoneEvent_tuple);
+assert(mod_consts_hash[384] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningSummaryPartDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseReasoningSummaryPartDoneEvent);
+assert(mod_consts_hash[385] == DEEP_HASH(tstate, mod_consts.const_str_digest_5b54bc56c455a9546f6cd46ecf7a137b));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_5b54bc56c455a9546f6cd46ecf7a137b);
+assert(mod_consts_hash[386] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningSummaryTextDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseReasoningSummaryTextDoneEvent_tuple);
+assert(mod_consts_hash[387] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningSummaryTextDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseReasoningSummaryTextDoneEvent);
+assert(mod_consts_hash[388] == DEEP_HASH(tstate, mod_consts.const_str_digest_2326235548c09cdeef136c4cd9a9900b));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_2326235548c09cdeef136c4cd9a9900b);
+assert(mod_consts_hash[389] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseWebSearchCallInProgressEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseWebSearchCallInProgressEvent_tuple);
+assert(mod_consts_hash[390] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseWebSearchCallInProgressEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseWebSearchCallInProgressEvent);
+assert(mod_consts_hash[391] == DEEP_HASH(tstate, mod_consts.const_str_digest_bdd4cad3bd3111b78b89983f965fecd7));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_bdd4cad3bd3111b78b89983f965fecd7);
+assert(mod_consts_hash[392] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCustomToolCallInputDeltaEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCustomToolCallInputDeltaEvent_tuple);
+assert(mod_consts_hash[393] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCustomToolCallInputDeltaEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCustomToolCallInputDeltaEvent);
+assert(mod_consts_hash[394] == DEEP_HASH(tstate, mod_consts.const_str_digest_b74a486e6f8d3c2cf5b64509f1e008f4));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_b74a486e6f8d3c2cf5b64509f1e008f4);
+assert(mod_consts_hash[395] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFileSearchCallInProgressEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFileSearchCallInProgressEvent_tuple);
+assert(mod_consts_hash[396] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFileSearchCallInProgressEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFileSearchCallInProgressEvent);
+assert(mod_consts_hash[397] == DEEP_HASH(tstate, mod_consts.const_str_digest_7ca10734868c9e71eef094920fbc18a5));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_7ca10734868c9e71eef094920fbc18a5);
+assert(mod_consts_hash[398] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionCallArgumentsDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFunctionCallArgumentsDoneEvent_tuple);
+assert(mod_consts_hash[399] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionCallArgumentsDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFunctionCallArgumentsDoneEvent);
+assert(mod_consts_hash[400] == DEEP_HASH(tstate, mod_consts.const_str_digest_4fa49b8f51a2b5d603c1b21bd5cb88b6));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_4fa49b8f51a2b5d603c1b21bd5cb88b6);
+assert(mod_consts_hash[401] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseImageGenCallPartialImageEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseImageGenCallPartialImageEvent_tuple);
+assert(mod_consts_hash[402] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseImageGenCallPartialImageEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseImageGenCallPartialImageEvent);
+assert(mod_consts_hash[403] == DEEP_HASH(tstate, mod_consts.const_str_digest_62938c320d5ab37778c49561bb557de0));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_62938c320d5ab37778c49561bb557de0);
+assert(mod_consts_hash[404] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseOutputTextAnnotationAddedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseOutputTextAnnotationAddedEvent_tuple);
+assert(mod_consts_hash[405] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseOutputTextAnnotationAddedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseOutputTextAnnotationAddedEvent);
+assert(mod_consts_hash[406] == DEEP_HASH(tstate, mod_consts.const_str_digest_8720385bdd3f7a58c4a047ef1be427a4));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_8720385bdd3f7a58c4a047ef1be427a4);
+assert(mod_consts_hash[407] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningSummaryPartAddedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseReasoningSummaryPartAddedEvent_tuple);
+assert(mod_consts_hash[408] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningSummaryPartAddedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseReasoningSummaryPartAddedEvent);
+assert(mod_consts_hash[409] == DEEP_HASH(tstate, mod_consts.const_str_digest_48d62ccaac3f5a5eb113b4830ef94bcb));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_48d62ccaac3f5a5eb113b4830ef94bcb);
+assert(mod_consts_hash[410] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseReasoningSummaryTextDeltaEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseReasoningSummaryTextDeltaEvent_tuple);
+assert(mod_consts_hash[411] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseReasoningSummaryTextDeltaEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseReasoningSummaryTextDeltaEvent);
+assert(mod_consts_hash[412] == DEEP_HASH(tstate, mod_consts.const_str_digest_4b1771f20cc66dbc0ca5aadc0c0b9ccb));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_4b1771f20cc66dbc0ca5aadc0c0b9ccb);
+assert(mod_consts_hash[413] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFunctionCallArgumentsDeltaEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFunctionCallArgumentsDeltaEvent_tuple);
+assert(mod_consts_hash[414] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFunctionCallArgumentsDeltaEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFunctionCallArgumentsDeltaEvent);
+assert(mod_consts_hash[415] == DEEP_HASH(tstate, mod_consts.const_str_digest_8a0a6b88cd5c993e6bfc9450a762f162));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_8a0a6b88cd5c993e6bfc9450a762f162);
+assert(mod_consts_hash[416] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseComputerToolCallOutputScreenshot_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseComputerToolCallOutputScreenshot_tuple);
+assert(mod_consts_hash[417] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseComputerToolCallOutputScreenshot));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseComputerToolCallOutputScreenshot);
+assert(mod_consts_hash[418] == DEEP_HASH(tstate, mod_consts.const_str_digest_7f3597d608c3b98aab9e4a5cb005dbb2));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_7f3597d608c3b98aab9e4a5cb005dbb2);
+assert(mod_consts_hash[419] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseFormatTextJSONSchemaConfigParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseFormatTextJSONSchemaConfigParam_tuple);
+assert(mod_consts_hash[420] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfigParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfigParam);
+assert(mod_consts_hash[421] == DEEP_HASH(tstate, mod_consts.const_str_digest_521998f9296b55ef22e849661f075a12));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_521998f9296b55ef22e849661f075a12);
+assert(mod_consts_hash[422] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResponseCodeInterpreterCallCodeDoneEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResponseCodeInterpreterCallCodeDoneEvent_tuple);
+assert(mod_consts_hash[423] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResponseCodeInterpreterCallCodeDoneEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResponseCodeInterpreterCallCodeDoneEvent);
+assert(mod_consts_hash[424] == DEEP_HASH(tstate, mod_consts.const_str_digest_291fe7aa115dc7c5ac497c2d549b5773));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_291fe7aa115dc7c5ac497c2d549b5773);
+assert(mod_consts_hash[425] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_68535af65629c55f4de9600af2406536_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_68535af65629c55f4de9600af2406536_tuple);
+assert(mod_consts_hash[426] == DEEP_HASH(tstate, mod_consts.const_str_digest_68535af65629c55f4de9600af2406536));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_68535af65629c55f4de9600af2406536);
+assert(mod_consts_hash[427] == DEEP_HASH(tstate, mod_consts.const_str_digest_b1da21444fe18c8d5313ba42083fd806));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_b1da21444fe18c8d5313ba42083fd806);
+assert(mod_consts_hash[428] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d_tuple);
+assert(mod_consts_hash[429] == DEEP_HASH(tstate, mod_consts.const_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d);
+assert(mod_consts_hash[430] == DEEP_HASH(tstate, mod_consts.const_str_digest_93bdb945b11c5dda48cf9c17f581f0ed));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_93bdb945b11c5dda48cf9c17f581f0ed);
+assert(mod_consts_hash[431] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_b4c0b7e4d7f31b62249d4cb49c670354_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_b4c0b7e4d7f31b62249d4cb49c670354_tuple);
+assert(mod_consts_hash[432] == DEEP_HASH(tstate, mod_consts.const_str_digest_b4c0b7e4d7f31b62249d4cb49c670354));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_b4c0b7e4d7f31b62249d4cb49c670354);
+assert(mod_consts_hash[433] == DEEP_HASH(tstate, mod_consts.const_str_digest_a7d474822c33e65637a1faa6ac18c93d));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_a7d474822c33e65637a1faa6ac18c93d);
+assert(mod_consts_hash[434] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_1cde74e27f144331f01fe360fd360faf_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_1cde74e27f144331f01fe360fd360faf_tuple);
+assert(mod_consts_hash[435] == DEEP_HASH(tstate, mod_consts.const_str_digest_1cde74e27f144331f01fe360fd360faf));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_1cde74e27f144331f01fe360fd360faf);
+assert(mod_consts_hash[436] == DEEP_HASH(tstate, mod_consts.const_str_digest_d52db91d4d6d7b9765f76f30e806055b));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_d52db91d4d6d7b9765f76f30e806055b);
+assert(mod_consts_hash[437] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_b25895db7f7c396591ceff47b4b28b76_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_b25895db7f7c396591ceff47b4b28b76_tuple);
+assert(mod_consts_hash[438] == DEEP_HASH(tstate, mod_consts.const_str_digest_b25895db7f7c396591ceff47b4b28b76));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_b25895db7f7c396591ceff47b4b28b76);
+assert(mod_consts_hash[439] == DEEP_HASH(tstate, mod_consts.const_str_digest_9d326b13d68914a103eaf898def824da));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_9d326b13d68914a103eaf898def824da);
+assert(mod_consts_hash[440] == DEEP_HASH(tstate, mod_consts.const_str_digest_3e8d08c54d6542a1f3d570a50471843e));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_3e8d08c54d6542a1f3d570a50471843e);
+}
+#endif
+
+// Helper to preserving module variables for Python3.11+
+#if 2
+#if PYTHON_VERSION >= 0x3c0
+NUITKA_MAY_BE_UNUSED static uint32_t _Nuitka_PyDictKeys_GetVersionForCurrentState(PyInterpreterState *interp, PyDictKeysObject *dk)
+{
+    if (dk->dk_version != 0) {
+        return dk->dk_version;
+    }
+    uint32_t result = interp->dict_state.next_keys_version++;
+    dk->dk_version = result;
+    return result;
+}
+#elif PYTHON_VERSION >= 0x3b0
+static uint32_t _Nuitka_next_dict_keys_version = 2;
+
+NUITKA_MAY_BE_UNUSED static uint32_t _Nuitka_PyDictKeys_GetVersionForCurrentState(PyDictKeysObject *dk)
+{
+    if (dk->dk_version != 0) {
+        return dk->dk_version;
+    }
+    uint32_t result = _Nuitka_next_dict_keys_version++;
+    dk->dk_version = result;
+    return result;
+}
+#endif
+#endif
+
+// Accessors to module variables.
+static PyObject *module_var_accessor_openai$types$responses$__path__(PyThreadState *tstate) {
+#if 0
+    PyObject *result;
+
+#if PYTHON_VERSION < 0x3b0
+    static uint64_t dict_version = 0;
+    static PyObject *cache_value = NULL;
+
+    if (moduledict_openai$types$responses->ma_version_tag == dict_version) {
+        CHECK_OBJECT_X(cache_value);
+        result = cache_value;
+    } else {
+        dict_version = moduledict_openai$types$responses->ma_version_tag;
+
+        result = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___path__);
+        cache_value = result;
+    }
+#else
+    static uint32_t dict_keys_version = 0xFFFFFFFF;
+    static Py_ssize_t cache_dk_index = 0;
+
+    PyDictKeysObject *dk = moduledict_openai$types$responses->ma_keys;
+    if (likely(DK_IS_UNICODE(dk))) {
+
+#if PYTHON_VERSION >= 0x3c0
+        uint32_t current_dk_version = _Nuitka_PyDictKeys_GetVersionForCurrentState(tstate->interp, dk);
+#else
+        uint32_t current_dk_version = _Nuitka_PyDictKeys_GetVersionForCurrentState(dk);
+#endif
+
+        if (current_dk_version != dict_keys_version) {
+            dict_keys_version = current_dk_version;
+            Py_hash_t hash = Nuitka_Py_unicode_get_hash(const_str_plain___path__);
+            assert(hash != -1);
+
+            cache_dk_index = Nuitka_Py_unicodekeys_lookup_unicode(dk, const_str_plain___path__, hash);
+        }
+
+        if (cache_dk_index >= 0) {
+            assert(dk->dk_kind != DICT_KEYS_SPLIT);
+
+            PyDictUnicodeEntry *entries = DK_UNICODE_ENTRIES(dk);
+
+            result = entries[cache_dk_index].me_value;
+
+            if (unlikely(result == NULL)) {
+                Py_hash_t hash = Nuitka_Py_unicode_get_hash(const_str_plain___path__);
+                assert(hash != -1);
+
+                cache_dk_index = Nuitka_Py_unicodekeys_lookup_unicode(dk, const_str_plain___path__, hash);
+
+                if (cache_dk_index >= 0) {
+                    result = entries[cache_dk_index].me_value;
+                }
+            }
+        } else {
+            result = NULL;
+        }
+    } else {
+        result = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___path__);
+    }
+#endif
+
+#else
+    PyObject *result = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___path__);
+#endif
+
+    if (unlikely(result == NULL)) {
+        result = GET_STRING_DICT_VALUE(dict_builtin, (Nuitka_StringObject *)const_str_plain___path__);
+    }
+
+    return result;
+}
+
+static PyObject *module_var_accessor_openai$types$responses$__spec__(PyThreadState *tstate) {
+#if 0
+    PyObject *result;
+
+#if PYTHON_VERSION < 0x3b0
+    static uint64_t dict_version = 0;
+    static PyObject *cache_value = NULL;
+
+    if (moduledict_openai$types$responses->ma_version_tag == dict_version) {
+        CHECK_OBJECT_X(cache_value);
+        result = cache_value;
+    } else {
+        dict_version = moduledict_openai$types$responses->ma_version_tag;
+
+        result = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___spec__);
+        cache_value = result;
+    }
+#else
+    static uint32_t dict_keys_version = 0xFFFFFFFF;
+    static Py_ssize_t cache_dk_index = 0;
+
+    PyDictKeysObject *dk = moduledict_openai$types$responses->ma_keys;
+    if (likely(DK_IS_UNICODE(dk))) {
+
+#if PYTHON_VERSION >= 0x3c0
+        uint32_t current_dk_version = _Nuitka_PyDictKeys_GetVersionForCurrentState(tstate->interp, dk);
+#else
+        uint32_t current_dk_version = _Nuitka_PyDictKeys_GetVersionForCurrentState(dk);
+#endif
+
+        if (current_dk_version != dict_keys_version) {
+            dict_keys_version = current_dk_version;
+            Py_hash_t hash = Nuitka_Py_unicode_get_hash(const_str_plain___spec__);
+            assert(hash != -1);
+
+            cache_dk_index = Nuitka_Py_unicodekeys_lookup_unicode(dk, const_str_plain___spec__, hash);
+        }
+
+        if (cache_dk_index >= 0) {
+            assert(dk->dk_kind != DICT_KEYS_SPLIT);
+
+            PyDictUnicodeEntry *entries = DK_UNICODE_ENTRIES(dk);
+
+            result = entries[cache_dk_index].me_value;
+
+            if (unlikely(result == NULL)) {
+                Py_hash_t hash = Nuitka_Py_unicode_get_hash(const_str_plain___spec__);
+                assert(hash != -1);
+
+                cache_dk_index = Nuitka_Py_unicodekeys_lookup_unicode(dk, const_str_plain___spec__, hash);
+
+                if (cache_dk_index >= 0) {
+                    result = entries[cache_dk_index].me_value;
+                }
+            }
+        } else {
+            result = NULL;
+        }
+    } else {
+        result = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___spec__);
+    }
+#endif
+
+#else
+    PyObject *result = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___spec__);
+#endif
+
+    if (unlikely(result == NULL)) {
+        result = GET_STRING_DICT_VALUE(dict_builtin, (Nuitka_StringObject *)const_str_plain___spec__);
+    }
+
+    return result;
+}
+
+
+#if !defined(_NUITKA_EXPERIMENTAL_NEW_CODE_OBJECTS)
+// The module code objects.
+static PyCodeObject *code_objects_2f8757b980f9b32a6602b158585d0de3;
+
+static void createModuleCodeObjects(void) {
+module_filename_obj = MAKE_RELATIVE_PATH(mod_consts.const_str_digest_9d326b13d68914a103eaf898def824da); CHECK_OBJECT(module_filename_obj);
+code_objects_2f8757b980f9b32a6602b158585d0de3 = MAKE_CODE_OBJECT(module_filename_obj, 1, CO_FUTURE_ANNOTATIONS, mod_consts.const_str_digest_3e8d08c54d6542a1f3d570a50471843e, mod_consts.const_str_digest_3e8d08c54d6542a1f3d570a50471843e, NULL, NULL, 0, 0, 0);
+}
+#endif
+
+// The module function declarations.
+
+
+// The module function definitions.
+
+
+extern void _initCompiledCellType();
+extern void _initCompiledGeneratorType();
+extern void _initCompiledFunctionType();
+extern void _initCompiledMethodType();
+extern void _initCompiledFrameType();
+
+extern PyTypeObject Nuitka_Loader_Type;
+
+#ifdef _NUITKA_PLUGIN_DILL_ENABLED
+// Provide a way to create find a function via its C code and create it back
+// in another process, useful for multiprocessing extensions like dill
+extern void registerDillPluginTables(PyThreadState *tstate, char const *module_name, PyMethodDef *reduce_compiled_function, PyMethodDef *create_compiled_function);
+
+static function_impl_code const function_table_openai$types$responses[] = {
+
+    NULL
+};
+
+static PyObject *_reduce_compiled_function(PyObject *self, PyObject *args, PyObject *kwds) {
+    PyObject *func;
+
+    if (!PyArg_ParseTuple(args, "O:reduce_compiled_function", &func, NULL)) {
+        return NULL;
+    }
+
+    if (Nuitka_Function_Check(func) == false) {
+        PyThreadState *tstate = PyThreadState_GET();
+
+        SET_CURRENT_EXCEPTION_TYPE0_STR(tstate, PyExc_TypeError, "not a compiled function");
+        return NULL;
+    }
+
+    struct Nuitka_FunctionObject *function = (struct Nuitka_FunctionObject *)func;
+
+    return Nuitka_Function_GetFunctionState(function, function_table_openai$types$responses);
+}
+
+static PyMethodDef _method_def_reduce_compiled_function = {"reduce_compiled_function", (PyCFunction)_reduce_compiled_function,
+                                                           METH_VARARGS, NULL};
+
+
+static PyObject *_create_compiled_function(PyObject *self, PyObject *args, PyObject *kwds) {
+    CHECK_OBJECT_DEEP(args);
+
+    PyObject *function_index;
+    PyObject *code_object_desc;
+    PyObject *defaults;
+    PyObject *kw_defaults;
+    PyObject *doc;
+    PyObject *constant_return_value;
+    PyObject *function_qualname;
+    PyObject *closure;
+    PyObject *annotations;
+    PyObject *func_dict;
+
+    if (!PyArg_ParseTuple(args, "OOOOOOOOOO:create_compiled_function", &function_index, &code_object_desc, &defaults, &kw_defaults, &doc, &constant_return_value, &function_qualname, &closure, &annotations, &func_dict, NULL)) {
+        return NULL;
+    }
+
+    return (PyObject *)Nuitka_Function_CreateFunctionViaCodeIndex(
+        module_openai$types$responses,
+        function_qualname,
+        function_index,
+        code_object_desc,
+        constant_return_value,
+        defaults,
+        kw_defaults,
+        doc,
+        closure,
+        annotations,
+        func_dict,
+        function_table_openai$types$responses,
+        sizeof(function_table_openai$types$responses) / sizeof(function_impl_code)
+    );
+}
+
+static PyMethodDef _method_def_create_compiled_function = {
+    "create_compiled_function",
+    (PyCFunction)_create_compiled_function,
+    METH_VARARGS, NULL
+};
+
+
+#endif
+
+// Actual name might be different when loaded as a package.
+#if _NUITKA_MODULE_MODE && 0
+static char const *module_full_name = "openai.types.responses";
+#endif
+
+// Internal entry point for module code.
+PyObject *module_code_openai$types$responses(PyThreadState *tstate, PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("openai$types$responses");
+
+    // Store the module for future use.
+    module_openai$types$responses = module;
+
+    moduledict_openai$types$responses = MODULE_DICT(module_openai$types$responses);
+
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
+
+    if (init_done == false) {
+#if _NUITKA_MODULE_MODE && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
+#if PYTHON_VERSION > 0x350 && !defined(_NUITKA_EXPERIMENTAL_DISABLE_ALLOCATORS)
+        initNuitkaAllocators();
+#endif
+        // Initialize the constant values used.
+        _initBuiltinModule(tstate);
+
+        PyObject *real_module_name = PyObject_GetAttrString(module, "__name__");
+        CHECK_OBJECT(real_module_name);
+        module_full_name = strdup(Nuitka_String_AsString(real_module_name));
+
+        createGlobalConstants(tstate, real_module_name);
+
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
+#if PYTHON_VERSION >= 0x270
+        _initSlotIterNext();
+#endif
+
+        patchTypeComparison();
+
+        // Enable meta path based loader if not already done.
+#ifdef _NUITKA_TRACE
+        PRINT_STRING("openai$types$responses: Calling setupMetaPathBasedLoader().\n");
+#endif
+        setupMetaPathBasedLoader(tstate);
+#if 0 >= 0
+#ifdef _NUITKA_TRACE
+        PRINT_STRING("openai$types$responses: Calling updateMetaPathBasedLoaderModuleRoot().\n");
+#endif
+        updateMetaPathBasedLoaderModuleRoot(module_full_name);
+#endif
+
+
+#if PYTHON_VERSION >= 0x300
+        patchInspectModule(tstate);
+#endif
+
+#endif
+
+        /* The constants only used by this module are created now. */
+        NUITKA_PRINT_TRACE("openai$types$responses: Calling createModuleConstants().\n");
+        createModuleConstants(tstate);
+
+#if !defined(_NUITKA_EXPERIMENTAL_NEW_CODE_OBJECTS)
+        createModuleCodeObjects();
+#endif
+        init_done = true;
+    }
+
+#if _NUITKA_MODULE_MODE && 0
+    PyObject *pre_load = IMPORT_EMBEDDED_MODULE(tstate, "openai.types.responses" "-preLoad");
+    if (pre_load == NULL) {
+        return NULL;
+    }
+#endif
+
+    // PRINT_STRING("in initopenai$types$responses\n");
+
+#ifdef _NUITKA_PLUGIN_DILL_ENABLED
+    {
+        char const *module_name_c;
+        if (loader_entry != NULL) {
+            module_name_c = loader_entry->name;
+        } else {
+            PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___name__);
+            module_name_c = Nuitka_String_AsString(module_name);
+        }
+
+        registerDillPluginTables(tstate, module_name_c, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    }
+#endif
+
+    // Set "__compiled__" to what version information we have.
+    UPDATE_STRING_DICT0(
+        moduledict_openai$types$responses,
+        (Nuitka_StringObject *)const_str_plain___compiled__,
+        Nuitka_dunder_compiled_value
+    );
+
+    // Update "__package__" value to what it ought to be.
+    {
+#if 0
+        UPDATE_STRING_DICT0(
+            moduledict_openai$types$responses,
+            (Nuitka_StringObject *)const_str_plain___package__,
+            const_str_empty
+        );
+#elif 1
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___name__);
+
+        UPDATE_STRING_DICT0(
+            moduledict_openai$types$responses,
+            (Nuitka_StringObject *)const_str_plain___package__,
+            module_name
+        );
+#else
+
+#if PYTHON_VERSION < 0x300
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___name__);
+        char const *module_name_cstr = PyString_AS_STRING(module_name);
+
+        char const *last_dot = strrchr(module_name_cstr, '.');
+
+        if (last_dot != NULL) {
+            UPDATE_STRING_DICT1(
+                moduledict_openai$types$responses,
+                (Nuitka_StringObject *)const_str_plain___package__,
+                PyString_FromStringAndSize(module_name_cstr, last_dot - module_name_cstr)
+            );
+        }
+#else
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___name__);
+        Py_ssize_t dot_index = PyUnicode_Find(module_name, const_str_dot, 0, PyUnicode_GetLength(module_name), -1);
+
+        if (dot_index != -1) {
+            UPDATE_STRING_DICT1(
+                moduledict_openai$types$responses,
+                (Nuitka_StringObject *)const_str_plain___package__,
+                PyUnicode_Substring(module_name, 0, dot_index)
+            );
+        }
+#endif
+#endif
+    }
+
+    CHECK_OBJECT(module_openai$types$responses);
+
+    // For deep importing of a module we need to have "__builtins__", so we set
+    // it ourselves in the same way than CPython does. Note: This must be done
+    // before the frame object is allocated, or else it may fail.
+
+    if (GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___builtins__) == NULL) {
+        PyObject *value = (PyObject *)builtin_module;
+
+        // Check if main module, not a dict then but the module itself.
+#if _NUITKA_MODULE_MODE || !0
+        value = PyModule_GetDict(value);
+#endif
+
+        UPDATE_STRING_DICT0(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___builtins__, value);
+    }
+
+    PyObject *module_loader = Nuitka_Loader_New(loader_entry);
+    UPDATE_STRING_DICT0(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___loader__, module_loader);
+
+#if PYTHON_VERSION >= 0x300
+// Set the "__spec__" value
+
+#if 0
+    // Main modules just get "None" as spec.
+    UPDATE_STRING_DICT0(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___spec__, Py_None);
+#else
+    // Other modules get a "ModuleSpec" from the standard mechanism.
+    {
+        PyObject *bootstrap_module = getImportLibBootstrapModule();
+        CHECK_OBJECT(bootstrap_module);
+
+        PyObject *_spec_from_module = PyObject_GetAttrString(bootstrap_module, "_spec_from_module");
+        CHECK_OBJECT(_spec_from_module);
+
+        PyObject *spec_value = CALL_FUNCTION_WITH_SINGLE_ARG(tstate, _spec_from_module, module_openai$types$responses);
+        Py_DECREF(_spec_from_module);
+
+        // We can assume this to never fail, or else we are in trouble anyway.
+        // CHECK_OBJECT(spec_value);
+
+        if (spec_value == NULL) {
+            PyErr_PrintEx(0);
+            abort();
+        }
+
+        // Mark the execution in the "__spec__" value.
+        SET_ATTRIBUTE(tstate, spec_value, const_str_plain__initializing, Py_True);
+
+#if _NUITKA_MODULE_MODE && 0 && 0 >= 0
+        // Set our loader object in the "__spec__" value.
+        SET_ATTRIBUTE(tstate, spec_value, const_str_plain_loader, module_loader);
+#endif
+
+        UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___spec__, spec_value);
+    }
+#endif
+#endif
+
+    // Temp variables if any
+PyObject *tmp_import_from_1__module = NULL;
+struct Nuitka_FrameObject *frame_frame_openai$types$responses;
+NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
+struct Nuitka_ExceptionPreservationItem exception_state = Empty_Nuitka_ExceptionPreservationItem;
+NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
+bool tmp_result;
+struct Nuitka_ExceptionPreservationItem exception_keeper_name_1;
+NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
+
+    // Module init code if any
+
+
+    // Module code.
+{
+PyObject *tmp_assign_source_1;
+tmp_assign_source_1 = Py_None;
+UPDATE_STRING_DICT0(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1);
+}
+{
+PyObject *tmp_assign_source_2;
+tmp_assign_source_2 = module_filename_obj;
+UPDATE_STRING_DICT0(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2);
+}
+frame_frame_openai$types$responses = MAKE_MODULE_FRAME(code_objects_2f8757b980f9b32a6602b158585d0de3, module_openai$types$responses);
+
+// Push the new frame as the currently active one, and we should be exclusively
+// owning it.
+pushFrameStackCompiledFrame(tstate, frame_frame_openai$types$responses);
+assert(Py_REFCNT(frame_frame_openai$types$responses) == 2);
+
+// Framed code:
+{
+PyObject *tmp_assign_source_3;
+PyObject *tmp_list_element_1;
+PyObject *tmp_called_value_1;
+PyObject *tmp_expression_value_1;
+PyObject *tmp_args_element_value_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tstate, hard_module, const_str_plain_path);
+
+
+    } else {
+        tmp_expression_value_1 = NULL;
+    }
+}
+if (tmp_expression_value_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+tmp_called_value_1 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_1, const_str_plain_dirname);
+CHECK_OBJECT(tmp_expression_value_1);
+Py_DECREF(tmp_expression_value_1);
+if (tmp_called_value_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+tmp_args_element_value_1 = module_filename_obj;
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+tmp_list_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tstate, tmp_called_value_1, tmp_args_element_value_1);
+CHECK_OBJECT(tmp_called_value_1);
+Py_DECREF(tmp_called_value_1);
+if (tmp_list_element_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+tmp_assign_source_3 = MAKE_LIST_EMPTY(tstate, 4);
+{
+PyObject *tmp_called_value_2;
+PyObject *tmp_expression_value_2;
+PyObject *tmp_args_element_value_2;
+PyObject *tmp_called_value_3;
+PyObject *tmp_expression_value_3;
+PyObject *tmp_args_element_value_3;
+PyObject *tmp_called_value_4;
+PyObject *tmp_expression_value_4;
+PyObject *tmp_args_element_value_4;
+PyObject *tmp_called_value_5;
+PyObject *tmp_expression_value_5;
+PyObject *tmp_args_element_value_5;
+PyObject *tmp_called_value_6;
+PyObject *tmp_expression_value_6;
+PyList_SET_ITEM(tmp_assign_source_3, 0, tmp_list_element_1);
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tstate, hard_module, const_str_plain_path);
+
+
+    } else {
+        tmp_expression_value_2 = NULL;
+    }
+}
+if (tmp_expression_value_2 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_2 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_2, mod_consts.const_str_plain_join);
+CHECK_OBJECT(tmp_expression_value_2);
+Py_DECREF(tmp_expression_value_2);
+if (tmp_called_value_2 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tstate, hard_module, mod_consts.const_str_plain_environ);
+
+
+    } else {
+        tmp_expression_value_3 = NULL;
+    }
+}
+if (tmp_expression_value_3 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_2);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_3 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_3, const_str_plain_get);
+CHECK_OBJECT(tmp_expression_value_3);
+Py_DECREF(tmp_expression_value_3);
+if (tmp_called_value_3 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_2);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+tmp_args_element_value_2 = CALL_FUNCTION_WITH_POS_ARGS2(tstate, tmp_called_value_3, mod_consts.const_tuple_c0760630ed38e8aa80130ab81decf450_tuple);
+
+CHECK_OBJECT(tmp_called_value_3);
+Py_DECREF(tmp_called_value_3);
+if (tmp_args_element_value_2 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_2);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_args_element_value_3 = mod_consts.const_str_digest_07774d594059f023d150ae04ff063bcc;
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+{
+    PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+    tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tstate, tmp_called_value_2, call_args);
+}
+
+CHECK_OBJECT(tmp_called_value_2);
+Py_DECREF(tmp_called_value_2);
+CHECK_OBJECT(tmp_args_element_value_2);
+Py_DECREF(tmp_args_element_value_2);
+if (tmp_list_element_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+PyList_SET_ITEM(tmp_assign_source_3, 1, tmp_list_element_1);
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tstate, hard_module, const_str_plain_path);
+
+
+    } else {
+        tmp_expression_value_4 = NULL;
+    }
+}
+if (tmp_expression_value_4 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_4 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_4, mod_consts.const_str_plain_join);
+CHECK_OBJECT(tmp_expression_value_4);
+Py_DECREF(tmp_expression_value_4);
+if (tmp_called_value_4 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tstate, hard_module, mod_consts.const_str_plain_environ);
+
+
+    } else {
+        tmp_expression_value_5 = NULL;
+    }
+}
+if (tmp_expression_value_5 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_4);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_5 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_5, const_str_plain_get);
+CHECK_OBJECT(tmp_expression_value_5);
+Py_DECREF(tmp_expression_value_5);
+if (tmp_called_value_5 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_4);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+tmp_args_element_value_4 = CALL_FUNCTION_WITH_POS_ARGS2(tstate, tmp_called_value_5, mod_consts.const_tuple_9cd5bc076fd1ee60f6c29e9b75c3c5d6_tuple);
+
+CHECK_OBJECT(tmp_called_value_5);
+Py_DECREF(tmp_called_value_5);
+if (tmp_args_element_value_4 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_4);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_args_element_value_5 = mod_consts.const_str_plain_responses;
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+{
+    PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+    tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tstate, tmp_called_value_4, call_args);
+}
+
+CHECK_OBJECT(tmp_called_value_4);
+Py_DECREF(tmp_called_value_4);
+CHECK_OBJECT(tmp_args_element_value_4);
+Py_DECREF(tmp_args_element_value_4);
+if (tmp_list_element_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+PyList_SET_ITEM(tmp_assign_source_3, 2, tmp_list_element_1);
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tstate, hard_module, mod_consts.const_str_plain_environ);
+
+
+    } else {
+        tmp_expression_value_6 = NULL;
+    }
+}
+if (tmp_expression_value_6 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_6 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_6, const_str_plain_get);
+CHECK_OBJECT(tmp_expression_value_6);
+Py_DECREF(tmp_expression_value_6);
+if (tmp_called_value_6 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_openai$types$responses->m_frame.f_lineno = 1;
+tmp_list_element_1 = CALL_FUNCTION_WITH_POS_ARGS2(tstate, tmp_called_value_6, mod_consts.const_tuple_347f0ce0ca6518bc4bef4f2750bc4576_tuple);
+
+CHECK_OBJECT(tmp_called_value_6);
+Py_DECREF(tmp_called_value_6);
+if (tmp_list_element_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+PyList_SET_ITEM(tmp_assign_source_3, 3, tmp_list_element_1);
+}
+goto list_build_no_exception_1;
+// Exception handling pass through code for list_build:
+list_build_exception_1:;
+Py_DECREF(tmp_assign_source_3);
+goto frame_exception_exit_1;
+// Finished with no exception for list_build:
+list_build_no_exception_1:;
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___path__, tmp_assign_source_3);
+}
+{
+PyObject *tmp_assattr_value_1;
+PyObject *tmp_assattr_target_1;
+tmp_assattr_value_1 = module_filename_obj;
+tmp_assattr_target_1 = module_var_accessor_openai$types$responses$__spec__(tstate);
+assert(!(tmp_assattr_target_1 == NULL));
+tmp_result = SET_ATTRIBUTE(tstate, tmp_assattr_target_1, mod_consts.const_str_plain_origin, tmp_assattr_value_1);
+if (tmp_result == false) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+}
+{
+PyObject *tmp_assattr_value_2;
+PyObject *tmp_assattr_target_2;
+tmp_assattr_value_2 = Py_True;
+tmp_assattr_target_2 = module_var_accessor_openai$types$responses$__spec__(tstate);
+assert(!(tmp_assattr_target_2 == NULL));
+tmp_result = SET_ATTRIBUTE(tstate, tmp_assattr_target_2, mod_consts.const_str_plain_has_location, tmp_assattr_value_2);
+if (tmp_result == false) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+}
+{
+PyObject *tmp_assattr_value_3;
+PyObject *tmp_assattr_target_3;
+tmp_assattr_value_3 = module_var_accessor_openai$types$responses$__path__(tstate);
+if (unlikely(tmp_assattr_value_3 == NULL)) {
+    RAISE_CURRENT_EXCEPTION_NAME_ERROR(tstate, &exception_state, const_str_plain___path__);
+}
+
+if (tmp_assattr_value_3 == NULL) {
+    assert(HAS_EXCEPTION_STATE(&exception_state));
+
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+tmp_assattr_target_3 = module_var_accessor_openai$types$responses$__spec__(tstate);
+assert(!(tmp_assattr_target_3 == NULL));
+tmp_result = SET_ATTRIBUTE(tstate, tmp_assattr_target_3, mod_consts.const_str_plain_submodule_search_locations, tmp_assattr_value_3);
+if (tmp_result == false) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+}
+{
+PyObject *tmp_assign_source_4;
+tmp_assign_source_4 = Py_None;
+UPDATE_STRING_DICT0(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_4);
+}
+{
+PyObject *tmp_assign_source_5;
+{
+    PyObject *hard_module = IMPORT_HARD___FUTURE__();
+    tmp_assign_source_5 = LOOKUP_ATTRIBUTE(tstate, hard_module, mod_consts.const_str_plain_annotations);
+}
+assert(!(tmp_assign_source_5 == NULL));
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_annotations, tmp_assign_source_5);
+}
+{
+PyObject *tmp_assign_source_6;
+PyObject *tmp_import_name_from_1;
+PyObject *tmp_name_value_1;
+PyObject *tmp_globals_arg_value_1;
+PyObject *tmp_locals_arg_value_1;
+PyObject *tmp_fromlist_value_1;
+PyObject *tmp_level_value_1;
+tmp_name_value_1 = mod_consts.const_str_plain_tool;
+tmp_globals_arg_value_1 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_1 = Py_None;
+tmp_fromlist_value_1 = mod_consts.const_tuple_str_plain_Tool_tuple;
+tmp_level_value_1 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 5;
+tmp_import_name_from_1 = IMPORT_MODULE5(tstate, tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
+if (tmp_import_name_from_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 5;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_1)) {
+    tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_1,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_Tool,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_6 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_1, mod_consts.const_str_plain_Tool);
+}
+
+CHECK_OBJECT(tmp_import_name_from_1);
+Py_DECREF(tmp_import_name_from_1);
+if (tmp_assign_source_6 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 5;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_Tool, tmp_assign_source_6);
+}
+{
+PyObject *tmp_assign_source_7;
+PyObject *tmp_import_name_from_2;
+PyObject *tmp_name_value_2;
+PyObject *tmp_globals_arg_value_2;
+PyObject *tmp_locals_arg_value_2;
+PyObject *tmp_fromlist_value_2;
+PyObject *tmp_level_value_2;
+tmp_name_value_2 = mod_consts.const_str_plain_response;
+tmp_globals_arg_value_2 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_2 = Py_None;
+tmp_fromlist_value_2 = mod_consts.const_tuple_str_plain_Response_tuple;
+tmp_level_value_2 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 6;
+tmp_import_name_from_2 = IMPORT_MODULE5(tstate, tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
+if (tmp_import_name_from_2 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 6;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_2)) {
+    tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_2,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_Response,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_7 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_2, mod_consts.const_str_plain_Response);
+}
+
+CHECK_OBJECT(tmp_import_name_from_2);
+Py_DECREF(tmp_import_name_from_2);
+if (tmp_assign_source_7 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 6;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_Response, tmp_assign_source_7);
+}
+{
+PyObject *tmp_assign_source_8;
+PyObject *tmp_import_name_from_3;
+PyObject *tmp_name_value_3;
+PyObject *tmp_globals_arg_value_3;
+PyObject *tmp_locals_arg_value_3;
+PyObject *tmp_fromlist_value_3;
+PyObject *tmp_level_value_3;
+tmp_name_value_3 = mod_consts.const_str_plain_tool_param;
+tmp_globals_arg_value_3 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_3 = Py_None;
+tmp_fromlist_value_3 = mod_consts.const_tuple_str_plain_ToolParam_tuple;
+tmp_level_value_3 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 7;
+tmp_import_name_from_3 = IMPORT_MODULE5(tstate, tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
+if (tmp_import_name_from_3 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 7;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_3)) {
+    tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_3,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_8 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_3, mod_consts.const_str_plain_ToolParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_3);
+Py_DECREF(tmp_import_name_from_3);
+if (tmp_assign_source_8 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 7;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolParam, tmp_assign_source_8);
+}
+{
+PyObject *tmp_assign_source_9;
+PyObject *tmp_import_name_from_4;
+PyObject *tmp_name_value_4;
+PyObject *tmp_globals_arg_value_4;
+PyObject *tmp_locals_arg_value_4;
+PyObject *tmp_fromlist_value_4;
+PyObject *tmp_level_value_4;
+tmp_name_value_4 = mod_consts.const_str_plain_custom_tool;
+tmp_globals_arg_value_4 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_4 = Py_None;
+tmp_fromlist_value_4 = mod_consts.const_tuple_str_plain_CustomTool_tuple;
+tmp_level_value_4 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 8;
+tmp_import_name_from_4 = IMPORT_MODULE5(tstate, tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
+if (tmp_import_name_from_4 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 8;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_4)) {
+    tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_4,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_CustomTool,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_9 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_4, mod_consts.const_str_plain_CustomTool);
+}
+
+CHECK_OBJECT(tmp_import_name_from_4);
+Py_DECREF(tmp_import_name_from_4);
+if (tmp_assign_source_9 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 8;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_CustomTool, tmp_assign_source_9);
+}
+{
+PyObject *tmp_assign_source_10;
+PyObject *tmp_import_name_from_5;
+PyObject *tmp_name_value_5;
+PyObject *tmp_globals_arg_value_5;
+PyObject *tmp_locals_arg_value_5;
+PyObject *tmp_fromlist_value_5;
+PyObject *tmp_level_value_5;
+tmp_name_value_5 = mod_consts.const_str_plain_computer_tool;
+tmp_globals_arg_value_5 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_5 = Py_None;
+tmp_fromlist_value_5 = mod_consts.const_tuple_str_plain_ComputerTool_tuple;
+tmp_level_value_5 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 9;
+tmp_import_name_from_5 = IMPORT_MODULE5(tstate, tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
+if (tmp_import_name_from_5 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 9;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_5)) {
+    tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_5,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ComputerTool,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_10 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_5, mod_consts.const_str_plain_ComputerTool);
+}
+
+CHECK_OBJECT(tmp_import_name_from_5);
+Py_DECREF(tmp_import_name_from_5);
+if (tmp_assign_source_10 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 9;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ComputerTool, tmp_assign_source_10);
+}
+{
+PyObject *tmp_assign_source_11;
+PyObject *tmp_import_name_from_6;
+PyObject *tmp_name_value_6;
+PyObject *tmp_globals_arg_value_6;
+PyObject *tmp_locals_arg_value_6;
+PyObject *tmp_fromlist_value_6;
+PyObject *tmp_level_value_6;
+tmp_name_value_6 = mod_consts.const_str_plain_function_tool;
+tmp_globals_arg_value_6 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_6 = Py_None;
+tmp_fromlist_value_6 = mod_consts.const_tuple_str_plain_FunctionTool_tuple;
+tmp_level_value_6 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 10;
+tmp_import_name_from_6 = IMPORT_MODULE5(tstate, tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
+if (tmp_import_name_from_6 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 10;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_6)) {
+    tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_6,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_FunctionTool,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_11 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_6, mod_consts.const_str_plain_FunctionTool);
+}
+
+CHECK_OBJECT(tmp_import_name_from_6);
+Py_DECREF(tmp_import_name_from_6);
+if (tmp_assign_source_11 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 10;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_FunctionTool, tmp_assign_source_11);
+}
+{
+PyObject *tmp_assign_source_12;
+PyObject *tmp_import_name_from_7;
+PyObject *tmp_name_value_7;
+PyObject *tmp_globals_arg_value_7;
+PyObject *tmp_locals_arg_value_7;
+PyObject *tmp_fromlist_value_7;
+PyObject *tmp_level_value_7;
+tmp_name_value_7 = mod_consts.const_str_plain_response_item;
+tmp_globals_arg_value_7 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_7 = Py_None;
+tmp_fromlist_value_7 = mod_consts.const_tuple_str_plain_ResponseItem_tuple;
+tmp_level_value_7 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 11;
+tmp_import_name_from_7 = IMPORT_MODULE5(tstate, tmp_name_value_7, tmp_globals_arg_value_7, tmp_locals_arg_value_7, tmp_fromlist_value_7, tmp_level_value_7);
+if (tmp_import_name_from_7 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 11;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_7)) {
+    tmp_assign_source_12 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_7,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseItem,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_12 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_7, mod_consts.const_str_plain_ResponseItem);
+}
+
+CHECK_OBJECT(tmp_import_name_from_7);
+Py_DECREF(tmp_import_name_from_7);
+if (tmp_assign_source_12 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 11;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseItem, tmp_assign_source_12);
+}
+{
+PyObject *tmp_assign_source_13;
+PyObject *tmp_import_name_from_8;
+PyObject *tmp_name_value_8;
+PyObject *tmp_globals_arg_value_8;
+PyObject *tmp_locals_arg_value_8;
+PyObject *tmp_fromlist_value_8;
+PyObject *tmp_level_value_8;
+tmp_name_value_8 = mod_consts.const_str_plain_response_error;
+tmp_globals_arg_value_8 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_8 = Py_None;
+tmp_fromlist_value_8 = mod_consts.const_tuple_str_plain_ResponseError_tuple;
+tmp_level_value_8 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 12;
+tmp_import_name_from_8 = IMPORT_MODULE5(tstate, tmp_name_value_8, tmp_globals_arg_value_8, tmp_locals_arg_value_8, tmp_fromlist_value_8, tmp_level_value_8);
+if (tmp_import_name_from_8 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 12;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_8)) {
+    tmp_assign_source_13 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_8,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseError,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_13 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_8, mod_consts.const_str_plain_ResponseError);
+}
+
+CHECK_OBJECT(tmp_import_name_from_8);
+Py_DECREF(tmp_import_name_from_8);
+if (tmp_assign_source_13 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 12;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseError, tmp_assign_source_13);
+}
+{
+PyObject *tmp_assign_source_14;
+PyObject *tmp_import_name_from_9;
+PyObject *tmp_name_value_9;
+PyObject *tmp_globals_arg_value_9;
+PyObject *tmp_locals_arg_value_9;
+PyObject *tmp_fromlist_value_9;
+PyObject *tmp_level_value_9;
+tmp_name_value_9 = mod_consts.const_str_plain_response_usage;
+tmp_globals_arg_value_9 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_9 = Py_None;
+tmp_fromlist_value_9 = mod_consts.const_tuple_str_plain_ResponseUsage_tuple;
+tmp_level_value_9 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 13;
+tmp_import_name_from_9 = IMPORT_MODULE5(tstate, tmp_name_value_9, tmp_globals_arg_value_9, tmp_locals_arg_value_9, tmp_fromlist_value_9, tmp_level_value_9);
+if (tmp_import_name_from_9 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 13;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_9)) {
+    tmp_assign_source_14 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_9,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseUsage,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_14 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_9, mod_consts.const_str_plain_ResponseUsage);
+}
+
+CHECK_OBJECT(tmp_import_name_from_9);
+Py_DECREF(tmp_import_name_from_9);
+if (tmp_assign_source_14 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 13;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseUsage, tmp_assign_source_14);
+}
+{
+PyObject *tmp_assign_source_15;
+PyObject *tmp_name_value_10;
+PyObject *tmp_globals_arg_value_10;
+PyObject *tmp_locals_arg_value_10;
+PyObject *tmp_fromlist_value_10;
+PyObject *tmp_level_value_10;
+tmp_name_value_10 = mod_consts.const_str_plain_parsed_response;
+tmp_globals_arg_value_10 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_10 = Py_None;
+tmp_fromlist_value_10 = mod_consts.const_tuple_7bec7691ed8008cbd5789349a8365d14_tuple;
+tmp_level_value_10 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 14;
+tmp_assign_source_15 = IMPORT_MODULE5(tstate, tmp_name_value_10, tmp_globals_arg_value_10, tmp_locals_arg_value_10, tmp_fromlist_value_10, tmp_level_value_10);
+if (tmp_assign_source_15 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 14;
+
+    goto frame_exception_exit_1;
+}
+assert(tmp_import_from_1__module == NULL);
+tmp_import_from_1__module = tmp_assign_source_15;
+}
+// Tried code:
+{
+PyObject *tmp_assign_source_16;
+PyObject *tmp_import_name_from_10;
+CHECK_OBJECT(tmp_import_from_1__module);
+tmp_import_name_from_10 = tmp_import_from_1__module;
+if (PyModule_Check(tmp_import_name_from_10)) {
+    tmp_assign_source_16 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_10,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ParsedContent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_16 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_10, mod_consts.const_str_plain_ParsedContent);
+}
+
+if (tmp_assign_source_16 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 14;
+
+    goto try_except_handler_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ParsedContent, tmp_assign_source_16);
+}
+{
+PyObject *tmp_assign_source_17;
+PyObject *tmp_import_name_from_11;
+CHECK_OBJECT(tmp_import_from_1__module);
+tmp_import_name_from_11 = tmp_import_from_1__module;
+if (PyModule_Check(tmp_import_name_from_11)) {
+    tmp_assign_source_17 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_11,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ParsedResponse,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_17 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_11, mod_consts.const_str_plain_ParsedResponse);
+}
+
+if (tmp_assign_source_17 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 14;
+
+    goto try_except_handler_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ParsedResponse, tmp_assign_source_17);
+}
+{
+PyObject *tmp_assign_source_18;
+PyObject *tmp_import_name_from_12;
+CHECK_OBJECT(tmp_import_from_1__module);
+tmp_import_name_from_12 = tmp_import_from_1__module;
+if (PyModule_Check(tmp_import_name_from_12)) {
+    tmp_assign_source_18 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_12,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ParsedResponseOutputItem,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_18 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_12, mod_consts.const_str_plain_ParsedResponseOutputItem);
+}
+
+if (tmp_assign_source_18 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 14;
+
+    goto try_except_handler_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ParsedResponseOutputItem, tmp_assign_source_18);
+}
+{
+PyObject *tmp_assign_source_19;
+PyObject *tmp_import_name_from_13;
+CHECK_OBJECT(tmp_import_from_1__module);
+tmp_import_name_from_13 = tmp_import_from_1__module;
+if (PyModule_Check(tmp_import_name_from_13)) {
+    tmp_assign_source_19 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_13,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ParsedResponseOutputText,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_19 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_13, mod_consts.const_str_plain_ParsedResponseOutputText);
+}
+
+if (tmp_assign_source_19 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 14;
+
+    goto try_except_handler_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ParsedResponseOutputText, tmp_assign_source_19);
+}
+{
+PyObject *tmp_assign_source_20;
+PyObject *tmp_import_name_from_14;
+CHECK_OBJECT(tmp_import_from_1__module);
+tmp_import_name_from_14 = tmp_import_from_1__module;
+if (PyModule_Check(tmp_import_name_from_14)) {
+    tmp_assign_source_20 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_14,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ParsedResponseOutputMessage,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_20 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_14, mod_consts.const_str_plain_ParsedResponseOutputMessage);
+}
+
+if (tmp_assign_source_20 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 14;
+
+    goto try_except_handler_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ParsedResponseOutputMessage, tmp_assign_source_20);
+}
+{
+PyObject *tmp_assign_source_21;
+PyObject *tmp_import_name_from_15;
+CHECK_OBJECT(tmp_import_from_1__module);
+tmp_import_name_from_15 = tmp_import_from_1__module;
+if (PyModule_Check(tmp_import_name_from_15)) {
+    tmp_assign_source_21 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_15,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ParsedResponseFunctionToolCall,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_21 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_15, mod_consts.const_str_plain_ParsedResponseFunctionToolCall);
+}
+
+if (tmp_assign_source_21 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 14;
+
+    goto try_except_handler_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ParsedResponseFunctionToolCall, tmp_assign_source_21);
+}
+goto try_end_1;
+// Exception handler code:
+try_except_handler_1:;
+exception_keeper_lineno_1 = exception_lineno;
+exception_lineno = 0;
+exception_keeper_name_1 = exception_state;
+INIT_ERROR_OCCURRED_STATE(&exception_state);
+
+CHECK_OBJECT(tmp_import_from_1__module);
+CHECK_OBJECT(tmp_import_from_1__module);
+Py_DECREF(tmp_import_from_1__module);
+tmp_import_from_1__module = NULL;
+// Re-raise.
+exception_state = exception_keeper_name_1;
+exception_lineno = exception_keeper_lineno_1;
+
+goto frame_exception_exit_1;
+// End of try:
+try_end_1:;
+CHECK_OBJECT(tmp_import_from_1__module);
+CHECK_OBJECT(tmp_import_from_1__module);
+Py_DECREF(tmp_import_from_1__module);
+tmp_import_from_1__module = NULL;
+{
+PyObject *tmp_assign_source_22;
+PyObject *tmp_import_name_from_16;
+PyObject *tmp_name_value_11;
+PyObject *tmp_globals_arg_value_11;
+PyObject *tmp_locals_arg_value_11;
+PyObject *tmp_fromlist_value_11;
+PyObject *tmp_level_value_11;
+tmp_name_value_11 = mod_consts.const_str_plain_response_prompt;
+tmp_globals_arg_value_11 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_11 = Py_None;
+tmp_fromlist_value_11 = mod_consts.const_tuple_str_plain_ResponsePrompt_tuple;
+tmp_level_value_11 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 22;
+tmp_import_name_from_16 = IMPORT_MODULE5(tstate, tmp_name_value_11, tmp_globals_arg_value_11, tmp_locals_arg_value_11, tmp_fromlist_value_11, tmp_level_value_11);
+if (tmp_import_name_from_16 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 22;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_16)) {
+    tmp_assign_source_22 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_16,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponsePrompt,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_22 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_16, mod_consts.const_str_plain_ResponsePrompt);
+}
+
+CHECK_OBJECT(tmp_import_name_from_16);
+Py_DECREF(tmp_import_name_from_16);
+if (tmp_assign_source_22 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 22;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponsePrompt, tmp_assign_source_22);
+}
+{
+PyObject *tmp_assign_source_23;
+PyObject *tmp_import_name_from_17;
+PyObject *tmp_name_value_12;
+PyObject *tmp_globals_arg_value_12;
+PyObject *tmp_locals_arg_value_12;
+PyObject *tmp_fromlist_value_12;
+PyObject *tmp_level_value_12;
+tmp_name_value_12 = mod_consts.const_str_plain_response_status;
+tmp_globals_arg_value_12 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_12 = Py_None;
+tmp_fromlist_value_12 = mod_consts.const_tuple_str_plain_ResponseStatus_tuple;
+tmp_level_value_12 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 23;
+tmp_import_name_from_17 = IMPORT_MODULE5(tstate, tmp_name_value_12, tmp_globals_arg_value_12, tmp_locals_arg_value_12, tmp_fromlist_value_12, tmp_level_value_12);
+if (tmp_import_name_from_17 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 23;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_17)) {
+    tmp_assign_source_23 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_17,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseStatus,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_23 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_17, mod_consts.const_str_plain_ResponseStatus);
+}
+
+CHECK_OBJECT(tmp_import_name_from_17);
+Py_DECREF(tmp_import_name_from_17);
+if (tmp_assign_source_23 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 23;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseStatus, tmp_assign_source_23);
+}
+{
+PyObject *tmp_assign_source_24;
+PyObject *tmp_import_name_from_18;
+PyObject *tmp_name_value_13;
+PyObject *tmp_globals_arg_value_13;
+PyObject *tmp_locals_arg_value_13;
+PyObject *tmp_fromlist_value_13;
+PyObject *tmp_level_value_13;
+tmp_name_value_13 = mod_consts.const_str_plain_tool_choice_mcp;
+tmp_globals_arg_value_13 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_13 = Py_None;
+tmp_fromlist_value_13 = mod_consts.const_tuple_str_plain_ToolChoiceMcp_tuple;
+tmp_level_value_13 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 24;
+tmp_import_name_from_18 = IMPORT_MODULE5(tstate, tmp_name_value_13, tmp_globals_arg_value_13, tmp_locals_arg_value_13, tmp_fromlist_value_13, tmp_level_value_13);
+if (tmp_import_name_from_18 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 24;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_18)) {
+    tmp_assign_source_24 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_18,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceMcp,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_24 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_18, mod_consts.const_str_plain_ToolChoiceMcp);
+}
+
+CHECK_OBJECT(tmp_import_name_from_18);
+Py_DECREF(tmp_import_name_from_18);
+if (tmp_assign_source_24 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 24;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceMcp, tmp_assign_source_24);
+}
+{
+PyObject *tmp_assign_source_25;
+PyObject *tmp_import_name_from_19;
+PyObject *tmp_name_value_14;
+PyObject *tmp_globals_arg_value_14;
+PyObject *tmp_locals_arg_value_14;
+PyObject *tmp_fromlist_value_14;
+PyObject *tmp_level_value_14;
+tmp_name_value_14 = mod_consts.const_str_plain_web_search_tool;
+tmp_globals_arg_value_14 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_14 = Py_None;
+tmp_fromlist_value_14 = mod_consts.const_tuple_str_plain_WebSearchTool_tuple;
+tmp_level_value_14 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 25;
+tmp_import_name_from_19 = IMPORT_MODULE5(tstate, tmp_name_value_14, tmp_globals_arg_value_14, tmp_locals_arg_value_14, tmp_fromlist_value_14, tmp_level_value_14);
+if (tmp_import_name_from_19 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 25;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_19)) {
+    tmp_assign_source_25 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_19,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_WebSearchTool,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_25 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_19, mod_consts.const_str_plain_WebSearchTool);
+}
+
+CHECK_OBJECT(tmp_import_name_from_19);
+Py_DECREF(tmp_import_name_from_19);
+if (tmp_assign_source_25 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 25;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_WebSearchTool, tmp_assign_source_25);
+}
+{
+PyObject *tmp_assign_source_26;
+PyObject *tmp_import_name_from_20;
+PyObject *tmp_name_value_15;
+PyObject *tmp_globals_arg_value_15;
+PyObject *tmp_locals_arg_value_15;
+PyObject *tmp_fromlist_value_15;
+PyObject *tmp_level_value_15;
+tmp_name_value_15 = mod_consts.const_str_plain_file_search_tool;
+tmp_globals_arg_value_15 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_15 = Py_None;
+tmp_fromlist_value_15 = mod_consts.const_tuple_str_plain_FileSearchTool_tuple;
+tmp_level_value_15 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 26;
+tmp_import_name_from_20 = IMPORT_MODULE5(tstate, tmp_name_value_15, tmp_globals_arg_value_15, tmp_locals_arg_value_15, tmp_fromlist_value_15, tmp_level_value_15);
+if (tmp_import_name_from_20 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 26;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_20)) {
+    tmp_assign_source_26 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_20,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_FileSearchTool,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_26 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_20, mod_consts.const_str_plain_FileSearchTool);
+}
+
+CHECK_OBJECT(tmp_import_name_from_20);
+Py_DECREF(tmp_import_name_from_20);
+if (tmp_assign_source_26 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 26;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_FileSearchTool, tmp_assign_source_26);
+}
+{
+PyObject *tmp_assign_source_27;
+PyObject *tmp_import_name_from_21;
+PyObject *tmp_name_value_16;
+PyObject *tmp_globals_arg_value_16;
+PyObject *tmp_locals_arg_value_16;
+PyObject *tmp_fromlist_value_16;
+PyObject *tmp_level_value_16;
+tmp_name_value_16 = mod_consts.const_str_plain_custom_tool_param;
+tmp_globals_arg_value_16 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_16 = Py_None;
+tmp_fromlist_value_16 = mod_consts.const_tuple_str_plain_CustomToolParam_tuple;
+tmp_level_value_16 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 27;
+tmp_import_name_from_21 = IMPORT_MODULE5(tstate, tmp_name_value_16, tmp_globals_arg_value_16, tmp_locals_arg_value_16, tmp_fromlist_value_16, tmp_level_value_16);
+if (tmp_import_name_from_21 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 27;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_21)) {
+    tmp_assign_source_27 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_21,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_CustomToolParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_27 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_21, mod_consts.const_str_plain_CustomToolParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_21);
+Py_DECREF(tmp_import_name_from_21);
+if (tmp_assign_source_27 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 27;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_CustomToolParam, tmp_assign_source_27);
+}
+{
+PyObject *tmp_assign_source_28;
+PyObject *tmp_import_name_from_22;
+PyObject *tmp_name_value_17;
+PyObject *tmp_globals_arg_value_17;
+PyObject *tmp_locals_arg_value_17;
+PyObject *tmp_fromlist_value_17;
+PyObject *tmp_level_value_17;
+tmp_name_value_17 = mod_consts.const_str_plain_tool_choice_types;
+tmp_globals_arg_value_17 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_17 = Py_None;
+tmp_fromlist_value_17 = mod_consts.const_tuple_str_plain_ToolChoiceTypes_tuple;
+tmp_level_value_17 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 28;
+tmp_import_name_from_22 = IMPORT_MODULE5(tstate, tmp_name_value_17, tmp_globals_arg_value_17, tmp_locals_arg_value_17, tmp_fromlist_value_17, tmp_level_value_17);
+if (tmp_import_name_from_22 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 28;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_22)) {
+    tmp_assign_source_28 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_22,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceTypes,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_28 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_22, mod_consts.const_str_plain_ToolChoiceTypes);
+}
+
+CHECK_OBJECT(tmp_import_name_from_22);
+Py_DECREF(tmp_import_name_from_22);
+if (tmp_assign_source_28 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 28;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceTypes, tmp_assign_source_28);
+}
+{
+PyObject *tmp_assign_source_29;
+PyObject *tmp_import_name_from_23;
+PyObject *tmp_name_value_18;
+PyObject *tmp_globals_arg_value_18;
+PyObject *tmp_locals_arg_value_18;
+PyObject *tmp_fromlist_value_18;
+PyObject *tmp_level_value_18;
+tmp_name_value_18 = mod_consts.const_str_plain_easy_input_message;
+tmp_globals_arg_value_18 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_18 = Py_None;
+tmp_fromlist_value_18 = mod_consts.const_tuple_str_plain_EasyInputMessage_tuple;
+tmp_level_value_18 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 29;
+tmp_import_name_from_23 = IMPORT_MODULE5(tstate, tmp_name_value_18, tmp_globals_arg_value_18, tmp_locals_arg_value_18, tmp_fromlist_value_18, tmp_level_value_18);
+if (tmp_import_name_from_23 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 29;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_23)) {
+    tmp_assign_source_29 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_23,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_EasyInputMessage,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_29 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_23, mod_consts.const_str_plain_EasyInputMessage);
+}
+
+CHECK_OBJECT(tmp_import_name_from_23);
+Py_DECREF(tmp_import_name_from_23);
+if (tmp_assign_source_29 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 29;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_EasyInputMessage, tmp_assign_source_29);
+}
+{
+PyObject *tmp_assign_source_30;
+PyObject *tmp_import_name_from_24;
+PyObject *tmp_name_value_19;
+PyObject *tmp_globals_arg_value_19;
+PyObject *tmp_locals_arg_value_19;
+PyObject *tmp_fromlist_value_19;
+PyObject *tmp_level_value_19;
+tmp_name_value_19 = mod_consts.const_str_plain_response_item_list;
+tmp_globals_arg_value_19 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_19 = Py_None;
+tmp_fromlist_value_19 = mod_consts.const_tuple_str_plain_ResponseItemList_tuple;
+tmp_level_value_19 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 30;
+tmp_import_name_from_24 = IMPORT_MODULE5(tstate, tmp_name_value_19, tmp_globals_arg_value_19, tmp_locals_arg_value_19, tmp_fromlist_value_19, tmp_level_value_19);
+if (tmp_import_name_from_24 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 30;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_24)) {
+    tmp_assign_source_30 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_24,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseItemList,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_30 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_24, mod_consts.const_str_plain_ResponseItemList);
+}
+
+CHECK_OBJECT(tmp_import_name_from_24);
+Py_DECREF(tmp_import_name_from_24);
+if (tmp_assign_source_30 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 30;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseItemList, tmp_assign_source_30);
+}
+{
+PyObject *tmp_assign_source_31;
+PyObject *tmp_import_name_from_25;
+PyObject *tmp_name_value_20;
+PyObject *tmp_globals_arg_value_20;
+PyObject *tmp_locals_arg_value_20;
+PyObject *tmp_fromlist_value_20;
+PyObject *tmp_level_value_20;
+tmp_name_value_20 = mod_consts.const_str_plain_tool_choice_custom;
+tmp_globals_arg_value_20 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_20 = Py_None;
+tmp_fromlist_value_20 = mod_consts.const_tuple_str_plain_ToolChoiceCustom_tuple;
+tmp_level_value_20 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 31;
+tmp_import_name_from_25 = IMPORT_MODULE5(tstate, tmp_name_value_20, tmp_globals_arg_value_20, tmp_locals_arg_value_20, tmp_fromlist_value_20, tmp_level_value_20);
+if (tmp_import_name_from_25 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 31;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_25)) {
+    tmp_assign_source_31 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_25,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceCustom,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_31 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_25, mod_consts.const_str_plain_ToolChoiceCustom);
+}
+
+CHECK_OBJECT(tmp_import_name_from_25);
+Py_DECREF(tmp_import_name_from_25);
+if (tmp_assign_source_31 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 31;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceCustom, tmp_assign_source_31);
+}
+{
+PyObject *tmp_assign_source_32;
+PyObject *tmp_import_name_from_26;
+PyObject *tmp_name_value_21;
+PyObject *tmp_globals_arg_value_21;
+PyObject *tmp_locals_arg_value_21;
+PyObject *tmp_fromlist_value_21;
+PyObject *tmp_level_value_21;
+tmp_name_value_21 = mod_consts.const_str_plain_computer_tool_param;
+tmp_globals_arg_value_21 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_21 = Py_None;
+tmp_fromlist_value_21 = mod_consts.const_tuple_str_plain_ComputerToolParam_tuple;
+tmp_level_value_21 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 32;
+tmp_import_name_from_26 = IMPORT_MODULE5(tstate, tmp_name_value_21, tmp_globals_arg_value_21, tmp_locals_arg_value_21, tmp_fromlist_value_21, tmp_level_value_21);
+if (tmp_import_name_from_26 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 32;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_26)) {
+    tmp_assign_source_32 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_26,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ComputerToolParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_32 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_26, mod_consts.const_str_plain_ComputerToolParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_26);
+Py_DECREF(tmp_import_name_from_26);
+if (tmp_assign_source_32 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 32;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ComputerToolParam, tmp_assign_source_32);
+}
+{
+PyObject *tmp_assign_source_33;
+PyObject *tmp_import_name_from_27;
+PyObject *tmp_name_value_22;
+PyObject *tmp_globals_arg_value_22;
+PyObject *tmp_locals_arg_value_22;
+PyObject *tmp_fromlist_value_22;
+PyObject *tmp_level_value_22;
+tmp_name_value_22 = mod_consts.const_str_plain_function_tool_param;
+tmp_globals_arg_value_22 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_22 = Py_None;
+tmp_fromlist_value_22 = mod_consts.const_tuple_str_plain_FunctionToolParam_tuple;
+tmp_level_value_22 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 33;
+tmp_import_name_from_27 = IMPORT_MODULE5(tstate, tmp_name_value_22, tmp_globals_arg_value_22, tmp_locals_arg_value_22, tmp_fromlist_value_22, tmp_level_value_22);
+if (tmp_import_name_from_27 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 33;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_27)) {
+    tmp_assign_source_33 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_27,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_FunctionToolParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_33 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_27, mod_consts.const_str_plain_FunctionToolParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_27);
+Py_DECREF(tmp_import_name_from_27);
+if (tmp_assign_source_33 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 33;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_FunctionToolParam, tmp_assign_source_33);
+}
+{
+PyObject *tmp_assign_source_34;
+PyObject *tmp_import_name_from_28;
+PyObject *tmp_name_value_23;
+PyObject *tmp_globals_arg_value_23;
+PyObject *tmp_locals_arg_value_23;
+PyObject *tmp_fromlist_value_23;
+PyObject *tmp_level_value_23;
+tmp_name_value_23 = mod_consts.const_str_plain_response_includable;
+tmp_globals_arg_value_23 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_23 = Py_None;
+tmp_fromlist_value_23 = mod_consts.const_tuple_str_plain_ResponseIncludable_tuple;
+tmp_level_value_23 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 34;
+tmp_import_name_from_28 = IMPORT_MODULE5(tstate, tmp_name_value_23, tmp_globals_arg_value_23, tmp_locals_arg_value_23, tmp_fromlist_value_23, tmp_level_value_23);
+if (tmp_import_name_from_28 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 34;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_28)) {
+    tmp_assign_source_34 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_28,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseIncludable,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_34 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_28, mod_consts.const_str_plain_ResponseIncludable);
+}
+
+CHECK_OBJECT(tmp_import_name_from_28);
+Py_DECREF(tmp_import_name_from_28);
+if (tmp_assign_source_34 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 34;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseIncludable, tmp_assign_source_34);
+}
+{
+PyObject *tmp_assign_source_35;
+PyObject *tmp_import_name_from_29;
+PyObject *tmp_name_value_24;
+PyObject *tmp_globals_arg_value_24;
+PyObject *tmp_locals_arg_value_24;
+PyObject *tmp_fromlist_value_24;
+PyObject *tmp_level_value_24;
+tmp_name_value_24 = mod_consts.const_str_plain_response_input_file;
+tmp_globals_arg_value_24 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_24 = Py_None;
+tmp_fromlist_value_24 = mod_consts.const_tuple_str_plain_ResponseInputFile_tuple;
+tmp_level_value_24 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 35;
+tmp_import_name_from_29 = IMPORT_MODULE5(tstate, tmp_name_value_24, tmp_globals_arg_value_24, tmp_locals_arg_value_24, tmp_fromlist_value_24, tmp_level_value_24);
+if (tmp_import_name_from_29 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 35;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_29)) {
+    tmp_assign_source_35 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_29,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputFile,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_35 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_29, mod_consts.const_str_plain_ResponseInputFile);
+}
+
+CHECK_OBJECT(tmp_import_name_from_29);
+Py_DECREF(tmp_import_name_from_29);
+if (tmp_assign_source_35 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 35;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputFile, tmp_assign_source_35);
+}
+{
+PyObject *tmp_assign_source_36;
+PyObject *tmp_import_name_from_30;
+PyObject *tmp_name_value_25;
+PyObject *tmp_globals_arg_value_25;
+PyObject *tmp_locals_arg_value_25;
+PyObject *tmp_fromlist_value_25;
+PyObject *tmp_level_value_25;
+tmp_name_value_25 = mod_consts.const_str_plain_response_input_item;
+tmp_globals_arg_value_25 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_25 = Py_None;
+tmp_fromlist_value_25 = mod_consts.const_tuple_str_plain_ResponseInputItem_tuple;
+tmp_level_value_25 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 36;
+tmp_import_name_from_30 = IMPORT_MODULE5(tstate, tmp_name_value_25, tmp_globals_arg_value_25, tmp_locals_arg_value_25, tmp_fromlist_value_25, tmp_level_value_25);
+if (tmp_import_name_from_30 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 36;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_30)) {
+    tmp_assign_source_36 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_30,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputItem,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_36 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_30, mod_consts.const_str_plain_ResponseInputItem);
+}
+
+CHECK_OBJECT(tmp_import_name_from_30);
+Py_DECREF(tmp_import_name_from_30);
+if (tmp_assign_source_36 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 36;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputItem, tmp_assign_source_36);
+}
+{
+PyObject *tmp_assign_source_37;
+PyObject *tmp_import_name_from_31;
+PyObject *tmp_name_value_26;
+PyObject *tmp_globals_arg_value_26;
+PyObject *tmp_locals_arg_value_26;
+PyObject *tmp_fromlist_value_26;
+PyObject *tmp_level_value_26;
+tmp_name_value_26 = mod_consts.const_str_plain_response_input_text;
+tmp_globals_arg_value_26 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_26 = Py_None;
+tmp_fromlist_value_26 = mod_consts.const_tuple_str_plain_ResponseInputText_tuple;
+tmp_level_value_26 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 37;
+tmp_import_name_from_31 = IMPORT_MODULE5(tstate, tmp_name_value_26, tmp_globals_arg_value_26, tmp_locals_arg_value_26, tmp_fromlist_value_26, tmp_level_value_26);
+if (tmp_import_name_from_31 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 37;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_31)) {
+    tmp_assign_source_37 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_31,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputText,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_37 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_31, mod_consts.const_str_plain_ResponseInputText);
+}
+
+CHECK_OBJECT(tmp_import_name_from_31);
+Py_DECREF(tmp_import_name_from_31);
+if (tmp_assign_source_37 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 37;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputText, tmp_assign_source_37);
+}
+{
+PyObject *tmp_assign_source_38;
+PyObject *tmp_import_name_from_32;
+PyObject *tmp_name_value_27;
+PyObject *tmp_globals_arg_value_27;
+PyObject *tmp_locals_arg_value_27;
+PyObject *tmp_fromlist_value_27;
+PyObject *tmp_level_value_27;
+tmp_name_value_27 = mod_consts.const_str_plain_tool_choice_allowed;
+tmp_globals_arg_value_27 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_27 = Py_None;
+tmp_fromlist_value_27 = mod_consts.const_tuple_str_plain_ToolChoiceAllowed_tuple;
+tmp_level_value_27 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 38;
+tmp_import_name_from_32 = IMPORT_MODULE5(tstate, tmp_name_value_27, tmp_globals_arg_value_27, tmp_locals_arg_value_27, tmp_fromlist_value_27, tmp_level_value_27);
+if (tmp_import_name_from_32 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 38;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_32)) {
+    tmp_assign_source_38 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_32,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceAllowed,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_38 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_32, mod_consts.const_str_plain_ToolChoiceAllowed);
+}
+
+CHECK_OBJECT(tmp_import_name_from_32);
+Py_DECREF(tmp_import_name_from_32);
+if (tmp_assign_source_38 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 38;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceAllowed, tmp_assign_source_38);
+}
+{
+PyObject *tmp_assign_source_39;
+PyObject *tmp_import_name_from_33;
+PyObject *tmp_name_value_28;
+PyObject *tmp_globals_arg_value_28;
+PyObject *tmp_locals_arg_value_28;
+PyObject *tmp_fromlist_value_28;
+PyObject *tmp_level_value_28;
+tmp_name_value_28 = mod_consts.const_str_plain_tool_choice_options;
+tmp_globals_arg_value_28 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_28 = Py_None;
+tmp_fromlist_value_28 = mod_consts.const_tuple_str_plain_ToolChoiceOptions_tuple;
+tmp_level_value_28 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 39;
+tmp_import_name_from_33 = IMPORT_MODULE5(tstate, tmp_name_value_28, tmp_globals_arg_value_28, tmp_locals_arg_value_28, tmp_fromlist_value_28, tmp_level_value_28);
+if (tmp_import_name_from_33 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 39;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_33)) {
+    tmp_assign_source_39 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_33,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceOptions,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_39 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_33, mod_consts.const_str_plain_ToolChoiceOptions);
+}
+
+CHECK_OBJECT(tmp_import_name_from_33);
+Py_DECREF(tmp_import_name_from_33);
+if (tmp_assign_source_39 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 39;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceOptions, tmp_assign_source_39);
+}
+{
+PyObject *tmp_assign_source_40;
+PyObject *tmp_import_name_from_34;
+PyObject *tmp_name_value_29;
+PyObject *tmp_globals_arg_value_29;
+PyObject *tmp_locals_arg_value_29;
+PyObject *tmp_fromlist_value_29;
+PyObject *tmp_level_value_29;
+tmp_name_value_29 = mod_consts.const_str_plain_response_error_event;
+tmp_globals_arg_value_29 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_29 = Py_None;
+tmp_fromlist_value_29 = mod_consts.const_tuple_str_plain_ResponseErrorEvent_tuple;
+tmp_level_value_29 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 40;
+tmp_import_name_from_34 = IMPORT_MODULE5(tstate, tmp_name_value_29, tmp_globals_arg_value_29, tmp_locals_arg_value_29, tmp_fromlist_value_29, tmp_level_value_29);
+if (tmp_import_name_from_34 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 40;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_34)) {
+    tmp_assign_source_40 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_34,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseErrorEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_40 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_34, mod_consts.const_str_plain_ResponseErrorEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_34);
+Py_DECREF(tmp_import_name_from_34);
+if (tmp_assign_source_40 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 40;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseErrorEvent, tmp_assign_source_40);
+}
+{
+PyObject *tmp_assign_source_41;
+PyObject *tmp_import_name_from_35;
+PyObject *tmp_name_value_30;
+PyObject *tmp_globals_arg_value_30;
+PyObject *tmp_locals_arg_value_30;
+PyObject *tmp_fromlist_value_30;
+PyObject *tmp_level_value_30;
+tmp_name_value_30 = mod_consts.const_str_plain_response_input_image;
+tmp_globals_arg_value_30 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_30 = Py_None;
+tmp_fromlist_value_30 = mod_consts.const_tuple_str_plain_ResponseInputImage_tuple;
+tmp_level_value_30 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 41;
+tmp_import_name_from_35 = IMPORT_MODULE5(tstate, tmp_name_value_30, tmp_globals_arg_value_30, tmp_locals_arg_value_30, tmp_fromlist_value_30, tmp_level_value_30);
+if (tmp_import_name_from_35 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 41;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_35)) {
+    tmp_assign_source_41 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_35,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputImage,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_41 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_35, mod_consts.const_str_plain_ResponseInputImage);
+}
+
+CHECK_OBJECT(tmp_import_name_from_35);
+Py_DECREF(tmp_import_name_from_35);
+if (tmp_assign_source_41 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 41;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputImage, tmp_assign_source_41);
+}
+{
+PyObject *tmp_assign_source_42;
+PyObject *tmp_import_name_from_36;
+PyObject *tmp_name_value_31;
+PyObject *tmp_globals_arg_value_31;
+PyObject *tmp_locals_arg_value_31;
+PyObject *tmp_fromlist_value_31;
+PyObject *tmp_level_value_31;
+tmp_name_value_31 = mod_consts.const_str_plain_response_input_param;
+tmp_globals_arg_value_31 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_31 = Py_None;
+tmp_fromlist_value_31 = mod_consts.const_tuple_str_plain_ResponseInputParam_tuple;
+tmp_level_value_31 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 42;
+tmp_import_name_from_36 = IMPORT_MODULE5(tstate, tmp_name_value_31, tmp_globals_arg_value_31, tmp_locals_arg_value_31, tmp_fromlist_value_31, tmp_level_value_31);
+if (tmp_import_name_from_36 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 42;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_36)) {
+    tmp_assign_source_42 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_36,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_42 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_36, mod_consts.const_str_plain_ResponseInputParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_36);
+Py_DECREF(tmp_import_name_from_36);
+if (tmp_assign_source_42 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 42;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputParam, tmp_assign_source_42);
+}
+{
+PyObject *tmp_assign_source_43;
+PyObject *tmp_import_name_from_37;
+PyObject *tmp_name_value_32;
+PyObject *tmp_globals_arg_value_32;
+PyObject *tmp_locals_arg_value_32;
+PyObject *tmp_fromlist_value_32;
+PyObject *tmp_level_value_32;
+tmp_name_value_32 = mod_consts.const_str_plain_response_output_item;
+tmp_globals_arg_value_32 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_32 = Py_None;
+tmp_fromlist_value_32 = mod_consts.const_tuple_str_plain_ResponseOutputItem_tuple;
+tmp_level_value_32 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 43;
+tmp_import_name_from_37 = IMPORT_MODULE5(tstate, tmp_name_value_32, tmp_globals_arg_value_32, tmp_locals_arg_value_32, tmp_fromlist_value_32, tmp_level_value_32);
+if (tmp_import_name_from_37 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 43;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_37)) {
+    tmp_assign_source_43 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_37,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseOutputItem,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_43 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_37, mod_consts.const_str_plain_ResponseOutputItem);
+}
+
+CHECK_OBJECT(tmp_import_name_from_37);
+Py_DECREF(tmp_import_name_from_37);
+if (tmp_assign_source_43 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 43;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseOutputItem, tmp_assign_source_43);
+}
+{
+PyObject *tmp_assign_source_44;
+PyObject *tmp_import_name_from_38;
+PyObject *tmp_name_value_33;
+PyObject *tmp_globals_arg_value_33;
+PyObject *tmp_locals_arg_value_33;
+PyObject *tmp_fromlist_value_33;
+PyObject *tmp_level_value_33;
+tmp_name_value_33 = mod_consts.const_str_plain_response_output_text;
+tmp_globals_arg_value_33 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_33 = Py_None;
+tmp_fromlist_value_33 = mod_consts.const_tuple_str_plain_ResponseOutputText_tuple;
+tmp_level_value_33 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 44;
+tmp_import_name_from_38 = IMPORT_MODULE5(tstate, tmp_name_value_33, tmp_globals_arg_value_33, tmp_locals_arg_value_33, tmp_fromlist_value_33, tmp_level_value_33);
+if (tmp_import_name_from_38 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 44;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_38)) {
+    tmp_assign_source_44 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_38,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseOutputText,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_44 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_38, mod_consts.const_str_plain_ResponseOutputText);
+}
+
+CHECK_OBJECT(tmp_import_name_from_38);
+Py_DECREF(tmp_import_name_from_38);
+if (tmp_assign_source_44 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 44;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseOutputText, tmp_assign_source_44);
+}
+{
+PyObject *tmp_assign_source_45;
+PyObject *tmp_import_name_from_39;
+PyObject *tmp_name_value_34;
+PyObject *tmp_globals_arg_value_34;
+PyObject *tmp_locals_arg_value_34;
+PyObject *tmp_fromlist_value_34;
+PyObject *tmp_level_value_34;
+tmp_name_value_34 = mod_consts.const_str_plain_response_text_config;
+tmp_globals_arg_value_34 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_34 = Py_None;
+tmp_fromlist_value_34 = mod_consts.const_tuple_str_plain_ResponseTextConfig_tuple;
+tmp_level_value_34 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 45;
+tmp_import_name_from_39 = IMPORT_MODULE5(tstate, tmp_name_value_34, tmp_globals_arg_value_34, tmp_locals_arg_value_34, tmp_fromlist_value_34, tmp_level_value_34);
+if (tmp_import_name_from_39 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 45;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_39)) {
+    tmp_assign_source_45 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_39,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseTextConfig,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_45 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_39, mod_consts.const_str_plain_ResponseTextConfig);
+}
+
+CHECK_OBJECT(tmp_import_name_from_39);
+Py_DECREF(tmp_import_name_from_39);
+if (tmp_assign_source_45 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 45;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseTextConfig, tmp_assign_source_45);
+}
+{
+PyObject *tmp_assign_source_46;
+PyObject *tmp_import_name_from_40;
+PyObject *tmp_name_value_35;
+PyObject *tmp_globals_arg_value_35;
+PyObject *tmp_locals_arg_value_35;
+PyObject *tmp_fromlist_value_35;
+PyObject *tmp_level_value_35;
+tmp_name_value_35 = mod_consts.const_str_plain_tool_choice_function;
+tmp_globals_arg_value_35 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_35 = Py_None;
+tmp_fromlist_value_35 = mod_consts.const_tuple_str_plain_ToolChoiceFunction_tuple;
+tmp_level_value_35 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 46;
+tmp_import_name_from_40 = IMPORT_MODULE5(tstate, tmp_name_value_35, tmp_globals_arg_value_35, tmp_locals_arg_value_35, tmp_fromlist_value_35, tmp_level_value_35);
+if (tmp_import_name_from_40 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 46;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_40)) {
+    tmp_assign_source_46 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_40,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceFunction,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_46 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_40, mod_consts.const_str_plain_ToolChoiceFunction);
+}
+
+CHECK_OBJECT(tmp_import_name_from_40);
+Py_DECREF(tmp_import_name_from_40);
+if (tmp_assign_source_46 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 46;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceFunction, tmp_assign_source_46);
+}
+{
+PyObject *tmp_assign_source_47;
+PyObject *tmp_import_name_from_41;
+PyObject *tmp_name_value_36;
+PyObject *tmp_globals_arg_value_36;
+PyObject *tmp_locals_arg_value_36;
+PyObject *tmp_fromlist_value_36;
+PyObject *tmp_level_value_36;
+tmp_name_value_36 = mod_consts.const_str_plain_response_failed_event;
+tmp_globals_arg_value_36 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_36 = Py_None;
+tmp_fromlist_value_36 = mod_consts.const_tuple_str_plain_ResponseFailedEvent_tuple;
+tmp_level_value_36 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 47;
+tmp_import_name_from_41 = IMPORT_MODULE5(tstate, tmp_name_value_36, tmp_globals_arg_value_36, tmp_locals_arg_value_36, tmp_fromlist_value_36, tmp_level_value_36);
+if (tmp_import_name_from_41 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 47;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_41)) {
+    tmp_assign_source_47 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_41,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFailedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_47 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_41, mod_consts.const_str_plain_ResponseFailedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_41);
+Py_DECREF(tmp_import_name_from_41);
+if (tmp_assign_source_47 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 47;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFailedEvent, tmp_assign_source_47);
+}
+{
+PyObject *tmp_assign_source_48;
+PyObject *tmp_import_name_from_42;
+PyObject *tmp_name_value_37;
+PyObject *tmp_globals_arg_value_37;
+PyObject *tmp_locals_arg_value_37;
+PyObject *tmp_fromlist_value_37;
+PyObject *tmp_level_value_37;
+tmp_name_value_37 = mod_consts.const_str_plain_response_prompt_param;
+tmp_globals_arg_value_37 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_37 = Py_None;
+tmp_fromlist_value_37 = mod_consts.const_tuple_str_plain_ResponsePromptParam_tuple;
+tmp_level_value_37 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 48;
+tmp_import_name_from_42 = IMPORT_MODULE5(tstate, tmp_name_value_37, tmp_globals_arg_value_37, tmp_locals_arg_value_37, tmp_fromlist_value_37, tmp_level_value_37);
+if (tmp_import_name_from_42 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 48;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_42)) {
+    tmp_assign_source_48 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_42,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponsePromptParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_48 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_42, mod_consts.const_str_plain_ResponsePromptParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_42);
+Py_DECREF(tmp_import_name_from_42);
+if (tmp_assign_source_48 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 48;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponsePromptParam, tmp_assign_source_48);
+}
+{
+PyObject *tmp_assign_source_49;
+PyObject *tmp_import_name_from_43;
+PyObject *tmp_name_value_38;
+PyObject *tmp_globals_arg_value_38;
+PyObject *tmp_locals_arg_value_38;
+PyObject *tmp_fromlist_value_38;
+PyObject *tmp_level_value_38;
+tmp_name_value_38 = mod_consts.const_str_plain_response_queued_event;
+tmp_globals_arg_value_38 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_38 = Py_None;
+tmp_fromlist_value_38 = mod_consts.const_tuple_str_plain_ResponseQueuedEvent_tuple;
+tmp_level_value_38 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 49;
+tmp_import_name_from_43 = IMPORT_MODULE5(tstate, tmp_name_value_38, tmp_globals_arg_value_38, tmp_locals_arg_value_38, tmp_fromlist_value_38, tmp_level_value_38);
+if (tmp_import_name_from_43 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 49;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_43)) {
+    tmp_assign_source_49 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_43,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseQueuedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_49 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_43, mod_consts.const_str_plain_ResponseQueuedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_43);
+Py_DECREF(tmp_import_name_from_43);
+if (tmp_assign_source_49 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 49;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseQueuedEvent, tmp_assign_source_49);
+}
+{
+PyObject *tmp_assign_source_50;
+PyObject *tmp_import_name_from_44;
+PyObject *tmp_name_value_39;
+PyObject *tmp_globals_arg_value_39;
+PyObject *tmp_locals_arg_value_39;
+PyObject *tmp_fromlist_value_39;
+PyObject *tmp_level_value_39;
+tmp_name_value_39 = mod_consts.const_str_plain_response_stream_event;
+tmp_globals_arg_value_39 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_39 = Py_None;
+tmp_fromlist_value_39 = mod_consts.const_tuple_str_plain_ResponseStreamEvent_tuple;
+tmp_level_value_39 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 50;
+tmp_import_name_from_44 = IMPORT_MODULE5(tstate, tmp_name_value_39, tmp_globals_arg_value_39, tmp_locals_arg_value_39, tmp_fromlist_value_39, tmp_level_value_39);
+if (tmp_import_name_from_44 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 50;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_44)) {
+    tmp_assign_source_50 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_44,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseStreamEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_50 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_44, mod_consts.const_str_plain_ResponseStreamEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_44);
+Py_DECREF(tmp_import_name_from_44);
+if (tmp_assign_source_50 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 50;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseStreamEvent, tmp_assign_source_50);
+}
+{
+PyObject *tmp_assign_source_51;
+PyObject *tmp_import_name_from_45;
+PyObject *tmp_name_value_40;
+PyObject *tmp_globals_arg_value_40;
+PyObject *tmp_locals_arg_value_40;
+PyObject *tmp_fromlist_value_40;
+PyObject *tmp_level_value_40;
+tmp_name_value_40 = mod_consts.const_str_plain_tool_choice_mcp_param;
+tmp_globals_arg_value_40 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_40 = Py_None;
+tmp_fromlist_value_40 = mod_consts.const_tuple_str_plain_ToolChoiceMcpParam_tuple;
+tmp_level_value_40 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 51;
+tmp_import_name_from_45 = IMPORT_MODULE5(tstate, tmp_name_value_40, tmp_globals_arg_value_40, tmp_locals_arg_value_40, tmp_fromlist_value_40, tmp_level_value_40);
+if (tmp_import_name_from_45 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 51;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_45)) {
+    tmp_assign_source_51 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_45,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceMcpParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_51 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_45, mod_consts.const_str_plain_ToolChoiceMcpParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_45);
+Py_DECREF(tmp_import_name_from_45);
+if (tmp_assign_source_51 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 51;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceMcpParam, tmp_assign_source_51);
+}
+{
+PyObject *tmp_assign_source_52;
+PyObject *tmp_import_name_from_46;
+PyObject *tmp_name_value_41;
+PyObject *tmp_globals_arg_value_41;
+PyObject *tmp_locals_arg_value_41;
+PyObject *tmp_fromlist_value_41;
+PyObject *tmp_level_value_41;
+tmp_name_value_41 = mod_consts.const_str_plain_web_search_tool_param;
+tmp_globals_arg_value_41 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_41 = Py_None;
+tmp_fromlist_value_41 = mod_consts.const_tuple_str_plain_WebSearchToolParam_tuple;
+tmp_level_value_41 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 52;
+tmp_import_name_from_46 = IMPORT_MODULE5(tstate, tmp_name_value_41, tmp_globals_arg_value_41, tmp_locals_arg_value_41, tmp_fromlist_value_41, tmp_level_value_41);
+if (tmp_import_name_from_46 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 52;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_46)) {
+    tmp_assign_source_52 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_46,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_WebSearchToolParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_52 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_46, mod_consts.const_str_plain_WebSearchToolParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_46);
+Py_DECREF(tmp_import_name_from_46);
+if (tmp_assign_source_52 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 52;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_WebSearchToolParam, tmp_assign_source_52);
+}
+{
+PyObject *tmp_assign_source_53;
+PyObject *tmp_import_name_from_47;
+PyObject *tmp_name_value_42;
+PyObject *tmp_globals_arg_value_42;
+PyObject *tmp_locals_arg_value_42;
+PyObject *tmp_fromlist_value_42;
+PyObject *tmp_level_value_42;
+tmp_name_value_42 = mod_consts.const_str_plain_file_search_tool_param;
+tmp_globals_arg_value_42 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_42 = Py_None;
+tmp_fromlist_value_42 = mod_consts.const_tuple_str_plain_FileSearchToolParam_tuple;
+tmp_level_value_42 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 53;
+tmp_import_name_from_47 = IMPORT_MODULE5(tstate, tmp_name_value_42, tmp_globals_arg_value_42, tmp_locals_arg_value_42, tmp_fromlist_value_42, tmp_level_value_42);
+if (tmp_import_name_from_47 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 53;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_47)) {
+    tmp_assign_source_53 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_47,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_FileSearchToolParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_53 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_47, mod_consts.const_str_plain_FileSearchToolParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_47);
+Py_DECREF(tmp_import_name_from_47);
+if (tmp_assign_source_53 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 53;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_FileSearchToolParam, tmp_assign_source_53);
+}
+{
+PyObject *tmp_assign_source_54;
+PyObject *tmp_import_name_from_48;
+PyObject *tmp_name_value_43;
+PyObject *tmp_globals_arg_value_43;
+PyObject *tmp_locals_arg_value_43;
+PyObject *tmp_fromlist_value_43;
+PyObject *tmp_level_value_43;
+tmp_name_value_43 = mod_consts.const_str_plain_input_item_list_params;
+tmp_globals_arg_value_43 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_43 = Py_None;
+tmp_fromlist_value_43 = mod_consts.const_tuple_str_plain_InputItemListParams_tuple;
+tmp_level_value_43 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 54;
+tmp_import_name_from_48 = IMPORT_MODULE5(tstate, tmp_name_value_43, tmp_globals_arg_value_43, tmp_locals_arg_value_43, tmp_fromlist_value_43, tmp_level_value_43);
+if (tmp_import_name_from_48 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 54;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_48)) {
+    tmp_assign_source_54 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_48,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_InputItemListParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_54 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_48, mod_consts.const_str_plain_InputItemListParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_48);
+Py_DECREF(tmp_import_name_from_48);
+if (tmp_assign_source_54 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 54;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_InputItemListParams, tmp_assign_source_54);
+}
+{
+PyObject *tmp_assign_source_55;
+PyObject *tmp_import_name_from_49;
+PyObject *tmp_name_value_44;
+PyObject *tmp_globals_arg_value_44;
+PyObject *tmp_locals_arg_value_44;
+PyObject *tmp_fromlist_value_44;
+PyObject *tmp_level_value_44;
+tmp_name_value_44 = mod_consts.const_str_plain_response_create_params;
+tmp_globals_arg_value_44 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_44 = Py_None;
+tmp_fromlist_value_44 = mod_consts.const_tuple_str_plain_ResponseCreateParams_tuple;
+tmp_level_value_44 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 55;
+tmp_import_name_from_49 = IMPORT_MODULE5(tstate, tmp_name_value_44, tmp_globals_arg_value_44, tmp_locals_arg_value_44, tmp_fromlist_value_44, tmp_level_value_44);
+if (tmp_import_name_from_49 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 55;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_49)) {
+    tmp_assign_source_55 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_49,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCreateParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_55 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_49, mod_consts.const_str_plain_ResponseCreateParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_49);
+Py_DECREF(tmp_import_name_from_49);
+if (tmp_assign_source_55 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 55;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCreateParams, tmp_assign_source_55);
+}
+{
+PyObject *tmp_assign_source_56;
+PyObject *tmp_import_name_from_50;
+PyObject *tmp_name_value_45;
+PyObject *tmp_globals_arg_value_45;
+PyObject *tmp_locals_arg_value_45;
+PyObject *tmp_fromlist_value_45;
+PyObject *tmp_level_value_45;
+tmp_name_value_45 = mod_consts.const_str_plain_response_created_event;
+tmp_globals_arg_value_45 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_45 = Py_None;
+tmp_fromlist_value_45 = mod_consts.const_tuple_str_plain_ResponseCreatedEvent_tuple;
+tmp_level_value_45 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 56;
+tmp_import_name_from_50 = IMPORT_MODULE5(tstate, tmp_name_value_45, tmp_globals_arg_value_45, tmp_locals_arg_value_45, tmp_fromlist_value_45, tmp_level_value_45);
+if (tmp_import_name_from_50 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 56;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_50)) {
+    tmp_assign_source_56 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_50,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCreatedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_56 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_50, mod_consts.const_str_plain_ResponseCreatedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_50);
+Py_DECREF(tmp_import_name_from_50);
+if (tmp_assign_source_56 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 56;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCreatedEvent, tmp_assign_source_56);
+}
+{
+PyObject *tmp_assign_source_57;
+PyObject *tmp_import_name_from_51;
+PyObject *tmp_name_value_46;
+PyObject *tmp_globals_arg_value_46;
+PyObject *tmp_locals_arg_value_46;
+PyObject *tmp_fromlist_value_46;
+PyObject *tmp_level_value_46;
+tmp_name_value_46 = mod_consts.const_str_plain_response_input_content;
+tmp_globals_arg_value_46 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_46 = Py_None;
+tmp_fromlist_value_46 = mod_consts.const_tuple_str_plain_ResponseInputContent_tuple;
+tmp_level_value_46 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 57;
+tmp_import_name_from_51 = IMPORT_MODULE5(tstate, tmp_name_value_46, tmp_globals_arg_value_46, tmp_locals_arg_value_46, tmp_fromlist_value_46, tmp_level_value_46);
+if (tmp_import_name_from_51 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 57;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_51)) {
+    tmp_assign_source_57 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_51,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputContent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_57 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_51, mod_consts.const_str_plain_ResponseInputContent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_51);
+Py_DECREF(tmp_import_name_from_51);
+if (tmp_assign_source_57 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 57;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputContent, tmp_assign_source_57);
+}
+{
+PyObject *tmp_assign_source_58;
+PyObject *tmp_import_name_from_52;
+PyObject *tmp_name_value_47;
+PyObject *tmp_globals_arg_value_47;
+PyObject *tmp_locals_arg_value_47;
+PyObject *tmp_fromlist_value_47;
+PyObject *tmp_level_value_47;
+tmp_name_value_47 = mod_consts.const_str_plain_response_output_message;
+tmp_globals_arg_value_47 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_47 = Py_None;
+tmp_fromlist_value_47 = mod_consts.const_tuple_str_plain_ResponseOutputMessage_tuple;
+tmp_level_value_47 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 58;
+tmp_import_name_from_52 = IMPORT_MODULE5(tstate, tmp_name_value_47, tmp_globals_arg_value_47, tmp_locals_arg_value_47, tmp_fromlist_value_47, tmp_level_value_47);
+if (tmp_import_name_from_52 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 58;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_52)) {
+    tmp_assign_source_58 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_52,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseOutputMessage,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_58 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_52, mod_consts.const_str_plain_ResponseOutputMessage);
+}
+
+CHECK_OBJECT(tmp_import_name_from_52);
+Py_DECREF(tmp_import_name_from_52);
+if (tmp_assign_source_58 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 58;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseOutputMessage, tmp_assign_source_58);
+}
+{
+PyObject *tmp_assign_source_59;
+PyObject *tmp_import_name_from_53;
+PyObject *tmp_name_value_48;
+PyObject *tmp_globals_arg_value_48;
+PyObject *tmp_locals_arg_value_48;
+PyObject *tmp_fromlist_value_48;
+PyObject *tmp_level_value_48;
+tmp_name_value_48 = mod_consts.const_str_plain_response_output_refusal;
+tmp_globals_arg_value_48 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_48 = Py_None;
+tmp_fromlist_value_48 = mod_consts.const_tuple_str_plain_ResponseOutputRefusal_tuple;
+tmp_level_value_48 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 59;
+tmp_import_name_from_53 = IMPORT_MODULE5(tstate, tmp_name_value_48, tmp_globals_arg_value_48, tmp_locals_arg_value_48, tmp_fromlist_value_48, tmp_level_value_48);
+if (tmp_import_name_from_53 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 59;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_53)) {
+    tmp_assign_source_59 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_53,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseOutputRefusal,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_59 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_53, mod_consts.const_str_plain_ResponseOutputRefusal);
+}
+
+CHECK_OBJECT(tmp_import_name_from_53);
+Py_DECREF(tmp_import_name_from_53);
+if (tmp_assign_source_59 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 59;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseOutputRefusal, tmp_assign_source_59);
+}
+{
+PyObject *tmp_assign_source_60;
+PyObject *tmp_import_name_from_54;
+PyObject *tmp_name_value_49;
+PyObject *tmp_globals_arg_value_49;
+PyObject *tmp_locals_arg_value_49;
+PyObject *tmp_fromlist_value_49;
+PyObject *tmp_level_value_49;
+tmp_name_value_49 = mod_consts.const_str_plain_response_reasoning_item;
+tmp_globals_arg_value_49 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_49 = Py_None;
+tmp_fromlist_value_49 = mod_consts.const_tuple_str_plain_ResponseReasoningItem_tuple;
+tmp_level_value_49 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 60;
+tmp_import_name_from_54 = IMPORT_MODULE5(tstate, tmp_name_value_49, tmp_globals_arg_value_49, tmp_locals_arg_value_49, tmp_fromlist_value_49, tmp_level_value_49);
+if (tmp_import_name_from_54 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 60;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_54)) {
+    tmp_assign_source_60 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_54,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseReasoningItem,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_60 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_54, mod_consts.const_str_plain_ResponseReasoningItem);
+}
+
+CHECK_OBJECT(tmp_import_name_from_54);
+Py_DECREF(tmp_import_name_from_54);
+if (tmp_assign_source_60 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 60;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseReasoningItem, tmp_assign_source_60);
+}
+{
+PyObject *tmp_assign_source_61;
+PyObject *tmp_import_name_from_55;
+PyObject *tmp_name_value_50;
+PyObject *tmp_globals_arg_value_50;
+PyObject *tmp_locals_arg_value_50;
+PyObject *tmp_fromlist_value_50;
+PyObject *tmp_level_value_50;
+tmp_name_value_50 = mod_consts.const_str_plain_tool_choice_types_param;
+tmp_globals_arg_value_50 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_50 = Py_None;
+tmp_fromlist_value_50 = mod_consts.const_tuple_str_plain_ToolChoiceTypesParam_tuple;
+tmp_level_value_50 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 61;
+tmp_import_name_from_55 = IMPORT_MODULE5(tstate, tmp_name_value_50, tmp_globals_arg_value_50, tmp_locals_arg_value_50, tmp_fromlist_value_50, tmp_level_value_50);
+if (tmp_import_name_from_55 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 61;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_55)) {
+    tmp_assign_source_61 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_55,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceTypesParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_61 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_55, mod_consts.const_str_plain_ToolChoiceTypesParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_55);
+Py_DECREF(tmp_import_name_from_55);
+if (tmp_assign_source_61 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 61;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceTypesParam, tmp_assign_source_61);
+}
+{
+PyObject *tmp_assign_source_62;
+PyObject *tmp_import_name_from_56;
+PyObject *tmp_name_value_51;
+PyObject *tmp_globals_arg_value_51;
+PyObject *tmp_locals_arg_value_51;
+PyObject *tmp_fromlist_value_51;
+PyObject *tmp_level_value_51;
+tmp_name_value_51 = mod_consts.const_str_plain_easy_input_message_param;
+tmp_globals_arg_value_51 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_51 = Py_None;
+tmp_fromlist_value_51 = mod_consts.const_tuple_str_plain_EasyInputMessageParam_tuple;
+tmp_level_value_51 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 62;
+tmp_import_name_from_56 = IMPORT_MODULE5(tstate, tmp_name_value_51, tmp_globals_arg_value_51, tmp_locals_arg_value_51, tmp_fromlist_value_51, tmp_level_value_51);
+if (tmp_import_name_from_56 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 62;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_56)) {
+    tmp_assign_source_62 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_56,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_EasyInputMessageParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_62 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_56, mod_consts.const_str_plain_EasyInputMessageParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_56);
+Py_DECREF(tmp_import_name_from_56);
+if (tmp_assign_source_62 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 62;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_EasyInputMessageParam, tmp_assign_source_62);
+}
+{
+PyObject *tmp_assign_source_63;
+PyObject *tmp_import_name_from_57;
+PyObject *tmp_name_value_52;
+PyObject *tmp_globals_arg_value_52;
+PyObject *tmp_locals_arg_value_52;
+PyObject *tmp_fromlist_value_52;
+PyObject *tmp_level_value_52;
+tmp_name_value_52 = mod_consts.const_str_plain_response_completed_event;
+tmp_globals_arg_value_52 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_52 = Py_None;
+tmp_fromlist_value_52 = mod_consts.const_tuple_str_plain_ResponseCompletedEvent_tuple;
+tmp_level_value_52 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 63;
+tmp_import_name_from_57 = IMPORT_MODULE5(tstate, tmp_name_value_52, tmp_globals_arg_value_52, tmp_locals_arg_value_52, tmp_fromlist_value_52, tmp_level_value_52);
+if (tmp_import_name_from_57 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 63;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_57)) {
+    tmp_assign_source_63 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_57,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCompletedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_63 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_57, mod_consts.const_str_plain_ResponseCompletedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_57);
+Py_DECREF(tmp_import_name_from_57);
+if (tmp_assign_source_63 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 63;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCompletedEvent, tmp_assign_source_63);
+}
+{
+PyObject *tmp_assign_source_64;
+PyObject *tmp_import_name_from_58;
+PyObject *tmp_name_value_53;
+PyObject *tmp_globals_arg_value_53;
+PyObject *tmp_locals_arg_value_53;
+PyObject *tmp_fromlist_value_53;
+PyObject *tmp_level_value_53;
+tmp_name_value_53 = mod_consts.const_str_plain_response_retrieve_params;
+tmp_globals_arg_value_53 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_53 = Py_None;
+tmp_fromlist_value_53 = mod_consts.const_tuple_str_plain_ResponseRetrieveParams_tuple;
+tmp_level_value_53 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 64;
+tmp_import_name_from_58 = IMPORT_MODULE5(tstate, tmp_name_value_53, tmp_globals_arg_value_53, tmp_locals_arg_value_53, tmp_fromlist_value_53, tmp_level_value_53);
+if (tmp_import_name_from_58 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 64;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_58)) {
+    tmp_assign_source_64 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_58,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseRetrieveParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_64 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_58, mod_consts.const_str_plain_ResponseRetrieveParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_58);
+Py_DECREF(tmp_import_name_from_58);
+if (tmp_assign_source_64 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 64;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseRetrieveParams, tmp_assign_source_64);
+}
+{
+PyObject *tmp_assign_source_65;
+PyObject *tmp_import_name_from_59;
+PyObject *tmp_name_value_54;
+PyObject *tmp_globals_arg_value_54;
+PyObject *tmp_locals_arg_value_54;
+PyObject *tmp_fromlist_value_54;
+PyObject *tmp_level_value_54;
+tmp_name_value_54 = mod_consts.const_str_plain_response_text_done_event;
+tmp_globals_arg_value_54 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_54 = Py_None;
+tmp_fromlist_value_54 = mod_consts.const_tuple_str_plain_ResponseTextDoneEvent_tuple;
+tmp_level_value_54 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 65;
+tmp_import_name_from_59 = IMPORT_MODULE5(tstate, tmp_name_value_54, tmp_globals_arg_value_54, tmp_locals_arg_value_54, tmp_fromlist_value_54, tmp_level_value_54);
+if (tmp_import_name_from_59 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 65;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_59)) {
+    tmp_assign_source_65 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_59,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseTextDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_65 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_59, mod_consts.const_str_plain_ResponseTextDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_59);
+Py_DECREF(tmp_import_name_from_59);
+if (tmp_assign_source_65 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 65;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseTextDoneEvent, tmp_assign_source_65);
+}
+{
+PyObject *tmp_assign_source_66;
+PyObject *tmp_import_name_from_60;
+PyObject *tmp_name_value_55;
+PyObject *tmp_globals_arg_value_55;
+PyObject *tmp_locals_arg_value_55;
+PyObject *tmp_fromlist_value_55;
+PyObject *tmp_level_value_55;
+tmp_name_value_55 = mod_consts.const_str_plain_tool_choice_custom_param;
+tmp_globals_arg_value_55 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_55 = Py_None;
+tmp_fromlist_value_55 = mod_consts.const_tuple_str_plain_ToolChoiceCustomParam_tuple;
+tmp_level_value_55 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 66;
+tmp_import_name_from_60 = IMPORT_MODULE5(tstate, tmp_name_value_55, tmp_globals_arg_value_55, tmp_locals_arg_value_55, tmp_fromlist_value_55, tmp_level_value_55);
+if (tmp_import_name_from_60 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 66;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_60)) {
+    tmp_assign_source_66 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_60,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceCustomParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_66 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_60, mod_consts.const_str_plain_ToolChoiceCustomParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_60);
+Py_DECREF(tmp_import_name_from_60);
+if (tmp_assign_source_66 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 66;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceCustomParam, tmp_assign_source_66);
+}
+{
+PyObject *tmp_assign_source_67;
+PyObject *tmp_import_name_from_61;
+PyObject *tmp_name_value_56;
+PyObject *tmp_globals_arg_value_56;
+PyObject *tmp_locals_arg_value_56;
+PyObject *tmp_fromlist_value_56;
+PyObject *tmp_level_value_56;
+tmp_name_value_56 = mod_consts.const_str_plain_response_audio_done_event;
+tmp_globals_arg_value_56 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_56 = Py_None;
+tmp_fromlist_value_56 = mod_consts.const_tuple_str_plain_ResponseAudioDoneEvent_tuple;
+tmp_level_value_56 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 67;
+tmp_import_name_from_61 = IMPORT_MODULE5(tstate, tmp_name_value_56, tmp_globals_arg_value_56, tmp_locals_arg_value_56, tmp_fromlist_value_56, tmp_level_value_56);
+if (tmp_import_name_from_61 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 67;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_61)) {
+    tmp_assign_source_67 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_61,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseAudioDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_67 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_61, mod_consts.const_str_plain_ResponseAudioDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_61);
+Py_DECREF(tmp_import_name_from_61);
+if (tmp_assign_source_67 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 67;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseAudioDoneEvent, tmp_assign_source_67);
+}
+{
+PyObject *tmp_assign_source_68;
+PyObject *tmp_import_name_from_62;
+PyObject *tmp_name_value_57;
+PyObject *tmp_globals_arg_value_57;
+PyObject *tmp_locals_arg_value_57;
+PyObject *tmp_fromlist_value_57;
+PyObject *tmp_level_value_57;
+tmp_name_value_57 = mod_consts.const_str_plain_response_custom_tool_call;
+tmp_globals_arg_value_57 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_57 = Py_None;
+tmp_fromlist_value_57 = mod_consts.const_tuple_str_plain_ResponseCustomToolCall_tuple;
+tmp_level_value_57 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 68;
+tmp_import_name_from_62 = IMPORT_MODULE5(tstate, tmp_name_value_57, tmp_globals_arg_value_57, tmp_locals_arg_value_57, tmp_fromlist_value_57, tmp_level_value_57);
+if (tmp_import_name_from_62 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 68;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_62)) {
+    tmp_assign_source_68 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_62,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCustomToolCall,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_68 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_62, mod_consts.const_str_plain_ResponseCustomToolCall);
+}
+
+CHECK_OBJECT(tmp_import_name_from_62);
+Py_DECREF(tmp_import_name_from_62);
+if (tmp_assign_source_68 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 68;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCustomToolCall, tmp_assign_source_68);
+}
+{
+PyObject *tmp_assign_source_69;
+PyObject *tmp_import_name_from_63;
+PyObject *tmp_name_value_58;
+PyObject *tmp_globals_arg_value_58;
+PyObject *tmp_locals_arg_value_58;
+PyObject *tmp_fromlist_value_58;
+PyObject *tmp_level_value_58;
+tmp_name_value_58 = mod_consts.const_str_plain_response_incomplete_event;
+tmp_globals_arg_value_58 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_58 = Py_None;
+tmp_fromlist_value_58 = mod_consts.const_tuple_str_plain_ResponseIncompleteEvent_tuple;
+tmp_level_value_58 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 69;
+tmp_import_name_from_63 = IMPORT_MODULE5(tstate, tmp_name_value_58, tmp_globals_arg_value_58, tmp_locals_arg_value_58, tmp_fromlist_value_58, tmp_level_value_58);
+if (tmp_import_name_from_63 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 69;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_63)) {
+    tmp_assign_source_69 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_63,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseIncompleteEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_69 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_63, mod_consts.const_str_plain_ResponseIncompleteEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_63);
+Py_DECREF(tmp_import_name_from_63);
+if (tmp_assign_source_69 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 69;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseIncompleteEvent, tmp_assign_source_69);
+}
+{
+PyObject *tmp_assign_source_70;
+PyObject *tmp_import_name_from_64;
+PyObject *tmp_name_value_59;
+PyObject *tmp_globals_arg_value_59;
+PyObject *tmp_locals_arg_value_59;
+PyObject *tmp_fromlist_value_59;
+PyObject *tmp_level_value_59;
+tmp_name_value_59 = mod_consts.const_str_plain_response_input_file_param;
+tmp_globals_arg_value_59 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_59 = Py_None;
+tmp_fromlist_value_59 = mod_consts.const_tuple_str_plain_ResponseInputFileParam_tuple;
+tmp_level_value_59 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 70;
+tmp_import_name_from_64 = IMPORT_MODULE5(tstate, tmp_name_value_59, tmp_globals_arg_value_59, tmp_locals_arg_value_59, tmp_fromlist_value_59, tmp_level_value_59);
+if (tmp_import_name_from_64 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 70;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_64)) {
+    tmp_assign_source_70 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_64,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputFileParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_70 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_64, mod_consts.const_str_plain_ResponseInputFileParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_64);
+Py_DECREF(tmp_import_name_from_64);
+if (tmp_assign_source_70 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 70;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputFileParam, tmp_assign_source_70);
+}
+{
+PyObject *tmp_assign_source_71;
+PyObject *tmp_import_name_from_65;
+PyObject *tmp_name_value_60;
+PyObject *tmp_globals_arg_value_60;
+PyObject *tmp_locals_arg_value_60;
+PyObject *tmp_fromlist_value_60;
+PyObject *tmp_level_value_60;
+tmp_name_value_60 = mod_consts.const_str_plain_response_input_item_param;
+tmp_globals_arg_value_60 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_60 = Py_None;
+tmp_fromlist_value_60 = mod_consts.const_tuple_str_plain_ResponseInputItemParam_tuple;
+tmp_level_value_60 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 71;
+tmp_import_name_from_65 = IMPORT_MODULE5(tstate, tmp_name_value_60, tmp_globals_arg_value_60, tmp_locals_arg_value_60, tmp_fromlist_value_60, tmp_level_value_60);
+if (tmp_import_name_from_65 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 71;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_65)) {
+    tmp_assign_source_71 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_65,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputItemParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_71 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_65, mod_consts.const_str_plain_ResponseInputItemParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_65);
+Py_DECREF(tmp_import_name_from_65);
+if (tmp_assign_source_71 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 71;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputItemParam, tmp_assign_source_71);
+}
+{
+PyObject *tmp_assign_source_72;
+PyObject *tmp_import_name_from_66;
+PyObject *tmp_name_value_61;
+PyObject *tmp_globals_arg_value_61;
+PyObject *tmp_locals_arg_value_61;
+PyObject *tmp_fromlist_value_61;
+PyObject *tmp_level_value_61;
+tmp_name_value_61 = mod_consts.const_str_plain_response_input_text_param;
+tmp_globals_arg_value_61 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_61 = Py_None;
+tmp_fromlist_value_61 = mod_consts.const_tuple_str_plain_ResponseInputTextParam_tuple;
+tmp_level_value_61 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 72;
+tmp_import_name_from_66 = IMPORT_MODULE5(tstate, tmp_name_value_61, tmp_globals_arg_value_61, tmp_locals_arg_value_61, tmp_fromlist_value_61, tmp_level_value_61);
+if (tmp_import_name_from_66 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 72;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_66)) {
+    tmp_assign_source_72 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_66,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputTextParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_72 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_66, mod_consts.const_str_plain_ResponseInputTextParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_66);
+Py_DECREF(tmp_import_name_from_66);
+if (tmp_assign_source_72 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 72;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputTextParam, tmp_assign_source_72);
+}
+{
+PyObject *tmp_assign_source_73;
+PyObject *tmp_import_name_from_67;
+PyObject *tmp_name_value_62;
+PyObject *tmp_globals_arg_value_62;
+PyObject *tmp_locals_arg_value_62;
+PyObject *tmp_fromlist_value_62;
+PyObject *tmp_level_value_62;
+tmp_name_value_62 = mod_consts.const_str_plain_response_text_delta_event;
+tmp_globals_arg_value_62 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_62 = Py_None;
+tmp_fromlist_value_62 = mod_consts.const_tuple_str_plain_ResponseTextDeltaEvent_tuple;
+tmp_level_value_62 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 73;
+tmp_import_name_from_67 = IMPORT_MODULE5(tstate, tmp_name_value_62, tmp_globals_arg_value_62, tmp_locals_arg_value_62, tmp_fromlist_value_62, tmp_level_value_62);
+if (tmp_import_name_from_67 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 73;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_67)) {
+    tmp_assign_source_73 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_67,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseTextDeltaEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_73 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_67, mod_consts.const_str_plain_ResponseTextDeltaEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_67);
+Py_DECREF(tmp_import_name_from_67);
+if (tmp_assign_source_73 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 73;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseTextDeltaEvent, tmp_assign_source_73);
+}
+{
+PyObject *tmp_assign_source_74;
+PyObject *tmp_import_name_from_68;
+PyObject *tmp_name_value_63;
+PyObject *tmp_globals_arg_value_63;
+PyObject *tmp_locals_arg_value_63;
+PyObject *tmp_fromlist_value_63;
+PyObject *tmp_level_value_63;
+tmp_name_value_63 = mod_consts.const_str_plain_tool_choice_allowed_param;
+tmp_globals_arg_value_63 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_63 = Py_None;
+tmp_fromlist_value_63 = mod_consts.const_tuple_str_plain_ToolChoiceAllowedParam_tuple;
+tmp_level_value_63 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 74;
+tmp_import_name_from_68 = IMPORT_MODULE5(tstate, tmp_name_value_63, tmp_globals_arg_value_63, tmp_locals_arg_value_63, tmp_fromlist_value_63, tmp_level_value_63);
+if (tmp_import_name_from_68 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 74;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_68)) {
+    tmp_assign_source_74 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_68,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceAllowedParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_74 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_68, mod_consts.const_str_plain_ToolChoiceAllowedParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_68);
+Py_DECREF(tmp_import_name_from_68);
+if (tmp_assign_source_74 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 74;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceAllowedParam, tmp_assign_source_74);
+}
+{
+PyObject *tmp_assign_source_75;
+PyObject *tmp_import_name_from_69;
+PyObject *tmp_name_value_64;
+PyObject *tmp_globals_arg_value_64;
+PyObject *tmp_locals_arg_value_64;
+PyObject *tmp_fromlist_value_64;
+PyObject *tmp_level_value_64;
+tmp_name_value_64 = mod_consts.const_str_plain_response_audio_delta_event;
+tmp_globals_arg_value_64 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_64 = Py_None;
+tmp_fromlist_value_64 = mod_consts.const_tuple_str_plain_ResponseAudioDeltaEvent_tuple;
+tmp_level_value_64 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 75;
+tmp_import_name_from_69 = IMPORT_MODULE5(tstate, tmp_name_value_64, tmp_globals_arg_value_64, tmp_locals_arg_value_64, tmp_fromlist_value_64, tmp_level_value_64);
+if (tmp_import_name_from_69 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 75;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_69)) {
+    tmp_assign_source_75 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_69,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseAudioDeltaEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_75 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_69, mod_consts.const_str_plain_ResponseAudioDeltaEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_69);
+Py_DECREF(tmp_import_name_from_69);
+if (tmp_assign_source_75 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 75;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseAudioDeltaEvent, tmp_assign_source_75);
+}
+{
+PyObject *tmp_assign_source_76;
+PyObject *tmp_import_name_from_70;
+PyObject *tmp_name_value_65;
+PyObject *tmp_globals_arg_value_65;
+PyObject *tmp_locals_arg_value_65;
+PyObject *tmp_fromlist_value_65;
+PyObject *tmp_level_value_65;
+tmp_name_value_65 = mod_consts.const_str_plain_response_in_progress_event;
+tmp_globals_arg_value_65 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_65 = Py_None;
+tmp_fromlist_value_65 = mod_consts.const_tuple_str_plain_ResponseInProgressEvent_tuple;
+tmp_level_value_65 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 76;
+tmp_import_name_from_70 = IMPORT_MODULE5(tstate, tmp_name_value_65, tmp_globals_arg_value_65, tmp_locals_arg_value_65, tmp_fromlist_value_65, tmp_level_value_65);
+if (tmp_import_name_from_70 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 76;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_70)) {
+    tmp_assign_source_76 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_70,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInProgressEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_76 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_70, mod_consts.const_str_plain_ResponseInProgressEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_70);
+Py_DECREF(tmp_import_name_from_70);
+if (tmp_assign_source_76 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 76;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInProgressEvent, tmp_assign_source_76);
+}
+{
+PyObject *tmp_assign_source_77;
+PyObject *tmp_import_name_from_71;
+PyObject *tmp_name_value_66;
+PyObject *tmp_globals_arg_value_66;
+PyObject *tmp_locals_arg_value_66;
+PyObject *tmp_fromlist_value_66;
+PyObject *tmp_level_value_66;
+tmp_name_value_66 = mod_consts.const_str_plain_response_input_image_param;
+tmp_globals_arg_value_66 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_66 = Py_None;
+tmp_fromlist_value_66 = mod_consts.const_tuple_str_plain_ResponseInputImageParam_tuple;
+tmp_level_value_66 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 77;
+tmp_import_name_from_71 = IMPORT_MODULE5(tstate, tmp_name_value_66, tmp_globals_arg_value_66, tmp_locals_arg_value_66, tmp_fromlist_value_66, tmp_level_value_66);
+if (tmp_import_name_from_71 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 77;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_71)) {
+    tmp_assign_source_77 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_71,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputImageParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_77 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_71, mod_consts.const_str_plain_ResponseInputImageParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_71);
+Py_DECREF(tmp_import_name_from_71);
+if (tmp_assign_source_77 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 77;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputImageParam, tmp_assign_source_77);
+}
+{
+PyObject *tmp_assign_source_78;
+PyObject *tmp_import_name_from_72;
+PyObject *tmp_name_value_67;
+PyObject *tmp_globals_arg_value_67;
+PyObject *tmp_locals_arg_value_67;
+PyObject *tmp_fromlist_value_67;
+PyObject *tmp_level_value_67;
+tmp_name_value_67 = mod_consts.const_str_plain_response_output_text_param;
+tmp_globals_arg_value_67 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_67 = Py_None;
+tmp_fromlist_value_67 = mod_consts.const_tuple_str_plain_ResponseOutputTextParam_tuple;
+tmp_level_value_67 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 78;
+tmp_import_name_from_72 = IMPORT_MODULE5(tstate, tmp_name_value_67, tmp_globals_arg_value_67, tmp_locals_arg_value_67, tmp_fromlist_value_67, tmp_level_value_67);
+if (tmp_import_name_from_72 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 78;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_72)) {
+    tmp_assign_source_78 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_72,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseOutputTextParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_78 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_72, mod_consts.const_str_plain_ResponseOutputTextParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_72);
+Py_DECREF(tmp_import_name_from_72);
+if (tmp_assign_source_78 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 78;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseOutputTextParam, tmp_assign_source_78);
+}
+{
+PyObject *tmp_assign_source_79;
+PyObject *tmp_import_name_from_73;
+PyObject *tmp_name_value_68;
+PyObject *tmp_globals_arg_value_68;
+PyObject *tmp_locals_arg_value_68;
+PyObject *tmp_fromlist_value_68;
+PyObject *tmp_level_value_68;
+tmp_name_value_68 = mod_consts.const_str_plain_response_text_config_param;
+tmp_globals_arg_value_68 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_68 = Py_None;
+tmp_fromlist_value_68 = mod_consts.const_tuple_str_plain_ResponseTextConfigParam_tuple;
+tmp_level_value_68 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 79;
+tmp_import_name_from_73 = IMPORT_MODULE5(tstate, tmp_name_value_68, tmp_globals_arg_value_68, tmp_locals_arg_value_68, tmp_fromlist_value_68, tmp_level_value_68);
+if (tmp_import_name_from_73 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 79;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_73)) {
+    tmp_assign_source_79 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_73,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseTextConfigParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_79 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_73, mod_consts.const_str_plain_ResponseTextConfigParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_73);
+Py_DECREF(tmp_import_name_from_73);
+if (tmp_assign_source_79 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 79;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseTextConfigParam, tmp_assign_source_79);
+}
+{
+PyObject *tmp_assign_source_80;
+PyObject *tmp_import_name_from_74;
+PyObject *tmp_name_value_69;
+PyObject *tmp_globals_arg_value_69;
+PyObject *tmp_locals_arg_value_69;
+PyObject *tmp_fromlist_value_69;
+PyObject *tmp_level_value_69;
+tmp_name_value_69 = mod_consts.const_str_plain_tool_choice_function_param;
+tmp_globals_arg_value_69 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_69 = Py_None;
+tmp_fromlist_value_69 = mod_consts.const_tuple_str_plain_ToolChoiceFunctionParam_tuple;
+tmp_level_value_69 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 80;
+tmp_import_name_from_74 = IMPORT_MODULE5(tstate, tmp_name_value_69, tmp_globals_arg_value_69, tmp_locals_arg_value_69, tmp_fromlist_value_69, tmp_level_value_69);
+if (tmp_import_name_from_74 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 80;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_74)) {
+    tmp_assign_source_80 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_74,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ToolChoiceFunctionParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_80 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_74, mod_consts.const_str_plain_ToolChoiceFunctionParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_74);
+Py_DECREF(tmp_import_name_from_74);
+if (tmp_assign_source_80 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 80;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ToolChoiceFunctionParam, tmp_assign_source_80);
+}
+{
+PyObject *tmp_assign_source_81;
+PyObject *tmp_import_name_from_75;
+PyObject *tmp_name_value_70;
+PyObject *tmp_globals_arg_value_70;
+PyObject *tmp_locals_arg_value_70;
+PyObject *tmp_fromlist_value_70;
+PyObject *tmp_level_value_70;
+tmp_name_value_70 = mod_consts.const_str_plain_response_computer_tool_call;
+tmp_globals_arg_value_70 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_70 = Py_None;
+tmp_fromlist_value_70 = mod_consts.const_tuple_str_plain_ResponseComputerToolCall_tuple;
+tmp_level_value_70 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 81;
+tmp_import_name_from_75 = IMPORT_MODULE5(tstate, tmp_name_value_70, tmp_globals_arg_value_70, tmp_locals_arg_value_70, tmp_fromlist_value_70, tmp_level_value_70);
+if (tmp_import_name_from_75 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 81;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_75)) {
+    tmp_assign_source_81 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_75,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseComputerToolCall,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_81 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_75, mod_consts.const_str_plain_ResponseComputerToolCall);
+}
+
+CHECK_OBJECT(tmp_import_name_from_75);
+Py_DECREF(tmp_import_name_from_75);
+if (tmp_assign_source_81 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 81;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseComputerToolCall, tmp_assign_source_81);
+}
+{
+PyObject *tmp_assign_source_82;
+PyObject *tmp_import_name_from_76;
+PyObject *tmp_name_value_71;
+PyObject *tmp_globals_arg_value_71;
+PyObject *tmp_locals_arg_value_71;
+PyObject *tmp_fromlist_value_71;
+PyObject *tmp_level_value_71;
+tmp_name_value_71 = mod_consts.const_str_plain_response_conversation_param;
+tmp_globals_arg_value_71 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_71 = Py_None;
+tmp_fromlist_value_71 = mod_consts.const_tuple_str_plain_ResponseConversationParam_tuple;
+tmp_level_value_71 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 82;
+tmp_import_name_from_76 = IMPORT_MODULE5(tstate, tmp_name_value_71, tmp_globals_arg_value_71, tmp_locals_arg_value_71, tmp_fromlist_value_71, tmp_level_value_71);
+if (tmp_import_name_from_76 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 82;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_76)) {
+    tmp_assign_source_82 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_76,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseConversationParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_82 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_76, mod_consts.const_str_plain_ResponseConversationParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_76);
+Py_DECREF(tmp_import_name_from_76);
+if (tmp_assign_source_82 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 82;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseConversationParam, tmp_assign_source_82);
+}
+{
+PyObject *tmp_assign_source_83;
+PyObject *tmp_import_name_from_77;
+PyObject *tmp_name_value_72;
+PyObject *tmp_globals_arg_value_72;
+PyObject *tmp_locals_arg_value_72;
+PyObject *tmp_fromlist_value_72;
+PyObject *tmp_level_value_72;
+tmp_name_value_72 = mod_consts.const_str_plain_response_format_text_config;
+tmp_globals_arg_value_72 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_72 = Py_None;
+tmp_fromlist_value_72 = mod_consts.const_tuple_str_plain_ResponseFormatTextConfig_tuple;
+tmp_level_value_72 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 83;
+tmp_import_name_from_77 = IMPORT_MODULE5(tstate, tmp_name_value_72, tmp_globals_arg_value_72, tmp_locals_arg_value_72, tmp_fromlist_value_72, tmp_level_value_72);
+if (tmp_import_name_from_77 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 83;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_77)) {
+    tmp_assign_source_83 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_77,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFormatTextConfig,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_83 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_77, mod_consts.const_str_plain_ResponseFormatTextConfig);
+}
+
+CHECK_OBJECT(tmp_import_name_from_77);
+Py_DECREF(tmp_import_name_from_77);
+if (tmp_assign_source_83 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 83;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFormatTextConfig, tmp_assign_source_83);
+}
+{
+PyObject *tmp_assign_source_84;
+PyObject *tmp_import_name_from_78;
+PyObject *tmp_name_value_73;
+PyObject *tmp_globals_arg_value_73;
+PyObject *tmp_locals_arg_value_73;
+PyObject *tmp_fromlist_value_73;
+PyObject *tmp_level_value_73;
+tmp_name_value_73 = mod_consts.const_str_plain_response_function_tool_call;
+tmp_globals_arg_value_73 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_73 = Py_None;
+tmp_fromlist_value_73 = mod_consts.const_tuple_str_plain_ResponseFunctionToolCall_tuple;
+tmp_level_value_73 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 84;
+tmp_import_name_from_78 = IMPORT_MODULE5(tstate, tmp_name_value_73, tmp_globals_arg_value_73, tmp_locals_arg_value_73, tmp_fromlist_value_73, tmp_level_value_73);
+if (tmp_import_name_from_78 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 84;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_78)) {
+    tmp_assign_source_84 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_78,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFunctionToolCall,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_84 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_78, mod_consts.const_str_plain_ResponseFunctionToolCall);
+}
+
+CHECK_OBJECT(tmp_import_name_from_78);
+Py_DECREF(tmp_import_name_from_78);
+if (tmp_assign_source_84 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 84;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFunctionToolCall, tmp_assign_source_84);
+}
+{
+PyObject *tmp_assign_source_85;
+PyObject *tmp_import_name_from_79;
+PyObject *tmp_name_value_74;
+PyObject *tmp_globals_arg_value_74;
+PyObject *tmp_locals_arg_value_74;
+PyObject *tmp_fromlist_value_74;
+PyObject *tmp_level_value_74;
+tmp_name_value_74 = mod_consts.const_str_plain_response_input_message_item;
+tmp_globals_arg_value_74 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_74 = Py_None;
+tmp_fromlist_value_74 = mod_consts.const_tuple_str_plain_ResponseInputMessageItem_tuple;
+tmp_level_value_74 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 85;
+tmp_import_name_from_79 = IMPORT_MODULE5(tstate, tmp_name_value_74, tmp_globals_arg_value_74, tmp_locals_arg_value_74, tmp_fromlist_value_74, tmp_level_value_74);
+if (tmp_import_name_from_79 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 85;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_79)) {
+    tmp_assign_source_85 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_79,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputMessageItem,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_85 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_79, mod_consts.const_str_plain_ResponseInputMessageItem);
+}
+
+CHECK_OBJECT(tmp_import_name_from_79);
+Py_DECREF(tmp_import_name_from_79);
+if (tmp_assign_source_85 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 85;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputMessageItem, tmp_assign_source_85);
+}
+{
+PyObject *tmp_assign_source_86;
+PyObject *tmp_import_name_from_80;
+PyObject *tmp_name_value_75;
+PyObject *tmp_globals_arg_value_75;
+PyObject *tmp_locals_arg_value_75;
+PyObject *tmp_fromlist_value_75;
+PyObject *tmp_level_value_75;
+tmp_name_value_75 = mod_consts.const_str_plain_response_refusal_done_event;
+tmp_globals_arg_value_75 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_75 = Py_None;
+tmp_fromlist_value_75 = mod_consts.const_tuple_str_plain_ResponseRefusalDoneEvent_tuple;
+tmp_level_value_75 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 86;
+tmp_import_name_from_80 = IMPORT_MODULE5(tstate, tmp_name_value_75, tmp_globals_arg_value_75, tmp_locals_arg_value_75, tmp_fromlist_value_75, tmp_level_value_75);
+if (tmp_import_name_from_80 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 86;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_80)) {
+    tmp_assign_source_86 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_80,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseRefusalDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_86 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_80, mod_consts.const_str_plain_ResponseRefusalDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_80);
+Py_DECREF(tmp_import_name_from_80);
+if (tmp_assign_source_86 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 86;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseRefusalDoneEvent, tmp_assign_source_86);
+}
+{
+PyObject *tmp_assign_source_87;
+PyObject *tmp_import_name_from_81;
+PyObject *tmp_name_value_76;
+PyObject *tmp_globals_arg_value_76;
+PyObject *tmp_locals_arg_value_76;
+PyObject *tmp_fromlist_value_76;
+PyObject *tmp_level_value_76;
+tmp_name_value_76 = mod_consts.const_str_plain_response_function_web_search;
+tmp_globals_arg_value_76 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_76 = Py_None;
+tmp_fromlist_value_76 = mod_consts.const_tuple_str_plain_ResponseFunctionWebSearch_tuple;
+tmp_level_value_76 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 87;
+tmp_import_name_from_81 = IMPORT_MODULE5(tstate, tmp_name_value_76, tmp_globals_arg_value_76, tmp_locals_arg_value_76, tmp_fromlist_value_76, tmp_level_value_76);
+if (tmp_import_name_from_81 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 87;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_81)) {
+    tmp_assign_source_87 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_81,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFunctionWebSearch,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_87 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_81, mod_consts.const_str_plain_ResponseFunctionWebSearch);
+}
+
+CHECK_OBJECT(tmp_import_name_from_81);
+Py_DECREF(tmp_import_name_from_81);
+if (tmp_assign_source_87 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 87;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFunctionWebSearch, tmp_assign_source_87);
+}
+{
+PyObject *tmp_assign_source_88;
+PyObject *tmp_import_name_from_82;
+PyObject *tmp_name_value_77;
+PyObject *tmp_globals_arg_value_77;
+PyObject *tmp_locals_arg_value_77;
+PyObject *tmp_fromlist_value_77;
+PyObject *tmp_level_value_77;
+tmp_name_value_77 = mod_consts.const_str_plain_response_input_content_param;
+tmp_globals_arg_value_77 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_77 = Py_None;
+tmp_fromlist_value_77 = mod_consts.const_tuple_str_plain_ResponseInputContentParam_tuple;
+tmp_level_value_77 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 88;
+tmp_import_name_from_82 = IMPORT_MODULE5(tstate, tmp_name_value_77, tmp_globals_arg_value_77, tmp_locals_arg_value_77, tmp_fromlist_value_77, tmp_level_value_77);
+if (tmp_import_name_from_82 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 88;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_82)) {
+    tmp_assign_source_88 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_82,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputContentParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_88 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_82, mod_consts.const_str_plain_ResponseInputContentParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_82);
+Py_DECREF(tmp_import_name_from_82);
+if (tmp_assign_source_88 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 88;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputContentParam, tmp_assign_source_88);
+}
+{
+PyObject *tmp_assign_source_89;
+PyObject *tmp_import_name_from_83;
+PyObject *tmp_name_value_78;
+PyObject *tmp_globals_arg_value_78;
+PyObject *tmp_locals_arg_value_78;
+PyObject *tmp_fromlist_value_78;
+PyObject *tmp_level_value_78;
+tmp_name_value_78 = mod_consts.const_str_plain_response_refusal_delta_event;
+tmp_globals_arg_value_78 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_78 = Py_None;
+tmp_fromlist_value_78 = mod_consts.const_tuple_str_plain_ResponseRefusalDeltaEvent_tuple;
+tmp_level_value_78 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 89;
+tmp_import_name_from_83 = IMPORT_MODULE5(tstate, tmp_name_value_78, tmp_globals_arg_value_78, tmp_locals_arg_value_78, tmp_fromlist_value_78, tmp_level_value_78);
+if (tmp_import_name_from_83 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 89;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_83)) {
+    tmp_assign_source_89 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_83,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseRefusalDeltaEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_89 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_83, mod_consts.const_str_plain_ResponseRefusalDeltaEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_83);
+Py_DECREF(tmp_import_name_from_83);
+if (tmp_assign_source_89 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 89;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseRefusalDeltaEvent, tmp_assign_source_89);
+}
+{
+PyObject *tmp_assign_source_90;
+PyObject *tmp_import_name_from_84;
+PyObject *tmp_name_value_79;
+PyObject *tmp_globals_arg_value_79;
+PyObject *tmp_locals_arg_value_79;
+PyObject *tmp_fromlist_value_79;
+PyObject *tmp_level_value_79;
+tmp_name_value_79 = mod_consts.const_str_plain_response_output_message_param;
+tmp_globals_arg_value_79 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_79 = Py_None;
+tmp_fromlist_value_79 = mod_consts.const_tuple_str_plain_ResponseOutputMessageParam_tuple;
+tmp_level_value_79 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 90;
+tmp_import_name_from_84 = IMPORT_MODULE5(tstate, tmp_name_value_79, tmp_globals_arg_value_79, tmp_locals_arg_value_79, tmp_fromlist_value_79, tmp_level_value_79);
+if (tmp_import_name_from_84 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 90;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_84)) {
+    tmp_assign_source_90 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_84,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseOutputMessageParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_90 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_84, mod_consts.const_str_plain_ResponseOutputMessageParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_84);
+Py_DECREF(tmp_import_name_from_84);
+if (tmp_assign_source_90 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 90;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseOutputMessageParam, tmp_assign_source_90);
+}
+{
+PyObject *tmp_assign_source_91;
+PyObject *tmp_import_name_from_85;
+PyObject *tmp_name_value_80;
+PyObject *tmp_globals_arg_value_80;
+PyObject *tmp_locals_arg_value_80;
+PyObject *tmp_fromlist_value_80;
+PyObject *tmp_level_value_80;
+tmp_name_value_80 = mod_consts.const_str_plain_response_output_refusal_param;
+tmp_globals_arg_value_80 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_80 = Py_None;
+tmp_fromlist_value_80 = mod_consts.const_tuple_str_plain_ResponseOutputRefusalParam_tuple;
+tmp_level_value_80 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 91;
+tmp_import_name_from_85 = IMPORT_MODULE5(tstate, tmp_name_value_80, tmp_globals_arg_value_80, tmp_locals_arg_value_80, tmp_fromlist_value_80, tmp_level_value_80);
+if (tmp_import_name_from_85 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 91;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_85)) {
+    tmp_assign_source_91 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_85,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseOutputRefusalParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_91 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_85, mod_consts.const_str_plain_ResponseOutputRefusalParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_85);
+Py_DECREF(tmp_import_name_from_85);
+if (tmp_assign_source_91 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 91;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseOutputRefusalParam, tmp_assign_source_91);
+}
+{
+PyObject *tmp_assign_source_92;
+PyObject *tmp_import_name_from_86;
+PyObject *tmp_name_value_81;
+PyObject *tmp_globals_arg_value_81;
+PyObject *tmp_locals_arg_value_81;
+PyObject *tmp_fromlist_value_81;
+PyObject *tmp_level_value_81;
+tmp_name_value_81 = mod_consts.const_str_plain_response_reasoning_item_param;
+tmp_globals_arg_value_81 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_81 = Py_None;
+tmp_fromlist_value_81 = mod_consts.const_tuple_str_plain_ResponseReasoningItemParam_tuple;
+tmp_level_value_81 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 92;
+tmp_import_name_from_86 = IMPORT_MODULE5(tstate, tmp_name_value_81, tmp_globals_arg_value_81, tmp_locals_arg_value_81, tmp_fromlist_value_81, tmp_level_value_81);
+if (tmp_import_name_from_86 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 92;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_86)) {
+    tmp_assign_source_92 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_86,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseReasoningItemParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_92 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_86, mod_consts.const_str_plain_ResponseReasoningItemParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_86);
+Py_DECREF(tmp_import_name_from_86);
+if (tmp_assign_source_92 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 92;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseReasoningItemParam, tmp_assign_source_92);
+}
+{
+PyObject *tmp_assign_source_93;
+PyObject *tmp_import_name_from_87;
+PyObject *tmp_name_value_82;
+PyObject *tmp_globals_arg_value_82;
+PyObject *tmp_locals_arg_value_82;
+PyObject *tmp_fromlist_value_82;
+PyObject *tmp_level_value_82;
+tmp_name_value_82 = mod_consts.const_str_plain_response_file_search_tool_call;
+tmp_globals_arg_value_82 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_82 = Py_None;
+tmp_fromlist_value_82 = mod_consts.const_tuple_str_plain_ResponseFileSearchToolCall_tuple;
+tmp_level_value_82 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 93;
+tmp_import_name_from_87 = IMPORT_MODULE5(tstate, tmp_name_value_82, tmp_globals_arg_value_82, tmp_locals_arg_value_82, tmp_fromlist_value_82, tmp_level_value_82);
+if (tmp_import_name_from_87 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 93;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_87)) {
+    tmp_assign_source_93 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_87,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFileSearchToolCall,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_93 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_87, mod_consts.const_str_plain_ResponseFileSearchToolCall);
+}
+
+CHECK_OBJECT(tmp_import_name_from_87);
+Py_DECREF(tmp_import_name_from_87);
+if (tmp_assign_source_93 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 93;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFileSearchToolCall, tmp_assign_source_93);
+}
+{
+PyObject *tmp_assign_source_94;
+PyObject *tmp_import_name_from_88;
+PyObject *tmp_name_value_83;
+PyObject *tmp_globals_arg_value_83;
+PyObject *tmp_locals_arg_value_83;
+PyObject *tmp_fromlist_value_83;
+PyObject *tmp_level_value_83;
+tmp_name_value_83 = mod_consts.const_str_plain_response_mcp_call_failed_event;
+tmp_globals_arg_value_83 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_83 = Py_None;
+tmp_fromlist_value_83 = mod_consts.const_tuple_str_plain_ResponseMcpCallFailedEvent_tuple;
+tmp_level_value_83 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 94;
+tmp_import_name_from_88 = IMPORT_MODULE5(tstate, tmp_name_value_83, tmp_globals_arg_value_83, tmp_locals_arg_value_83, tmp_fromlist_value_83, tmp_level_value_83);
+if (tmp_import_name_from_88 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 94;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_88)) {
+    tmp_assign_source_94 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_88,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseMcpCallFailedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_94 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_88, mod_consts.const_str_plain_ResponseMcpCallFailedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_88);
+Py_DECREF(tmp_import_name_from_88);
+if (tmp_assign_source_94 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 94;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseMcpCallFailedEvent, tmp_assign_source_94);
+}
+{
+PyObject *tmp_assign_source_95;
+PyObject *tmp_import_name_from_89;
+PyObject *tmp_name_value_84;
+PyObject *tmp_globals_arg_value_84;
+PyObject *tmp_locals_arg_value_84;
+PyObject *tmp_fromlist_value_84;
+PyObject *tmp_level_value_84;
+tmp_name_value_84 = mod_consts.const_str_plain_response_custom_tool_call_param;
+tmp_globals_arg_value_84 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_84 = Py_None;
+tmp_fromlist_value_84 = mod_consts.const_tuple_str_plain_ResponseCustomToolCallParam_tuple;
+tmp_level_value_84 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 95;
+tmp_import_name_from_89 = IMPORT_MODULE5(tstate, tmp_name_value_84, tmp_globals_arg_value_84, tmp_locals_arg_value_84, tmp_fromlist_value_84, tmp_level_value_84);
+if (tmp_import_name_from_89 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 95;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_89)) {
+    tmp_assign_source_95 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_89,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCustomToolCallParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_95 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_89, mod_consts.const_str_plain_ResponseCustomToolCallParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_89);
+Py_DECREF(tmp_import_name_from_89);
+if (tmp_assign_source_95 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 95;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCustomToolCallParam, tmp_assign_source_95);
+}
+{
+PyObject *tmp_assign_source_96;
+PyObject *tmp_import_name_from_90;
+PyObject *tmp_name_value_85;
+PyObject *tmp_globals_arg_value_85;
+PyObject *tmp_locals_arg_value_85;
+PyObject *tmp_fromlist_value_85;
+PyObject *tmp_level_value_85;
+tmp_name_value_85 = mod_consts.const_str_plain_response_output_item_done_event;
+tmp_globals_arg_value_85 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_85 = Py_None;
+tmp_fromlist_value_85 = mod_consts.const_tuple_str_plain_ResponseOutputItemDoneEvent_tuple;
+tmp_level_value_85 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 96;
+tmp_import_name_from_90 = IMPORT_MODULE5(tstate, tmp_name_value_85, tmp_globals_arg_value_85, tmp_locals_arg_value_85, tmp_fromlist_value_85, tmp_level_value_85);
+if (tmp_import_name_from_90 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 96;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_90)) {
+    tmp_assign_source_96 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_90,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseOutputItemDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_96 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_90, mod_consts.const_str_plain_ResponseOutputItemDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_90);
+Py_DECREF(tmp_import_name_from_90);
+if (tmp_assign_source_96 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 96;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseOutputItemDoneEvent, tmp_assign_source_96);
+}
+{
+PyObject *tmp_assign_source_97;
+PyObject *tmp_import_name_from_91;
+PyObject *tmp_name_value_86;
+PyObject *tmp_globals_arg_value_86;
+PyObject *tmp_locals_arg_value_86;
+PyObject *tmp_fromlist_value_86;
+PyObject *tmp_level_value_86;
+tmp_name_value_86 = mod_consts.const_str_plain_response_content_part_done_event;
+tmp_globals_arg_value_86 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_86 = Py_None;
+tmp_fromlist_value_86 = mod_consts.const_tuple_str_plain_ResponseContentPartDoneEvent_tuple;
+tmp_level_value_86 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 97;
+tmp_import_name_from_91 = IMPORT_MODULE5(tstate, tmp_name_value_86, tmp_globals_arg_value_86, tmp_locals_arg_value_86, tmp_fromlist_value_86, tmp_level_value_86);
+if (tmp_import_name_from_91 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 97;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_91)) {
+    tmp_assign_source_97 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_91,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseContentPartDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_97 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_91, mod_consts.const_str_plain_ResponseContentPartDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_91);
+Py_DECREF(tmp_import_name_from_91);
+if (tmp_assign_source_97 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 97;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseContentPartDoneEvent, tmp_assign_source_97);
+}
+{
+PyObject *tmp_assign_source_98;
+PyObject *tmp_import_name_from_92;
+PyObject *tmp_name_value_87;
+PyObject *tmp_globals_arg_value_87;
+PyObject *tmp_locals_arg_value_87;
+PyObject *tmp_fromlist_value_87;
+PyObject *tmp_level_value_87;
+tmp_name_value_87 = mod_consts.const_str_plain_response_custom_tool_call_output;
+tmp_globals_arg_value_87 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_87 = Py_None;
+tmp_fromlist_value_87 = mod_consts.const_tuple_str_plain_ResponseCustomToolCallOutput_tuple;
+tmp_level_value_87 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 98;
+tmp_import_name_from_92 = IMPORT_MODULE5(tstate, tmp_name_value_87, tmp_globals_arg_value_87, tmp_locals_arg_value_87, tmp_fromlist_value_87, tmp_level_value_87);
+if (tmp_import_name_from_92 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 98;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_92)) {
+    tmp_assign_source_98 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_92,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCustomToolCallOutput,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_98 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_92, mod_consts.const_str_plain_ResponseCustomToolCallOutput);
+}
+
+CHECK_OBJECT(tmp_import_name_from_92);
+Py_DECREF(tmp_import_name_from_92);
+if (tmp_assign_source_98 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 98;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCustomToolCallOutput, tmp_assign_source_98);
+}
+{
+PyObject *tmp_assign_source_99;
+PyObject *tmp_import_name_from_93;
+PyObject *tmp_name_value_88;
+PyObject *tmp_globals_arg_value_88;
+PyObject *tmp_locals_arg_value_88;
+PyObject *tmp_fromlist_value_88;
+PyObject *tmp_level_value_88;
+tmp_name_value_88 = mod_consts.const_str_plain_response_function_tool_call_item;
+tmp_globals_arg_value_88 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_88 = Py_None;
+tmp_fromlist_value_88 = mod_consts.const_tuple_str_plain_ResponseFunctionToolCallItem_tuple;
+tmp_level_value_88 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 99;
+tmp_import_name_from_93 = IMPORT_MODULE5(tstate, tmp_name_value_88, tmp_globals_arg_value_88, tmp_locals_arg_value_88, tmp_fromlist_value_88, tmp_level_value_88);
+if (tmp_import_name_from_93 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 99;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_93)) {
+    tmp_assign_source_99 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_93,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFunctionToolCallItem,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_99 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_93, mod_consts.const_str_plain_ResponseFunctionToolCallItem);
+}
+
+CHECK_OBJECT(tmp_import_name_from_93);
+Py_DECREF(tmp_import_name_from_93);
+if (tmp_assign_source_99 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 99;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFunctionToolCallItem, tmp_assign_source_99);
+}
+{
+PyObject *tmp_assign_source_100;
+PyObject *tmp_import_name_from_94;
+PyObject *tmp_name_value_89;
+PyObject *tmp_globals_arg_value_89;
+PyObject *tmp_locals_arg_value_89;
+PyObject *tmp_fromlist_value_89;
+PyObject *tmp_level_value_89;
+tmp_name_value_89 = mod_consts.const_str_plain_response_output_item_added_event;
+tmp_globals_arg_value_89 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_89 = Py_None;
+tmp_fromlist_value_89 = mod_consts.const_tuple_str_plain_ResponseOutputItemAddedEvent_tuple;
+tmp_level_value_89 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 100;
+tmp_import_name_from_94 = IMPORT_MODULE5(tstate, tmp_name_value_89, tmp_globals_arg_value_89, tmp_locals_arg_value_89, tmp_fromlist_value_89, tmp_level_value_89);
+if (tmp_import_name_from_94 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 100;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_94)) {
+    tmp_assign_source_100 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_94,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseOutputItemAddedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_100 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_94, mod_consts.const_str_plain_ResponseOutputItemAddedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_94);
+Py_DECREF(tmp_import_name_from_94);
+if (tmp_assign_source_100 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 100;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseOutputItemAddedEvent, tmp_assign_source_100);
+}
+{
+PyObject *tmp_assign_source_101;
+PyObject *tmp_import_name_from_95;
+PyObject *tmp_name_value_90;
+PyObject *tmp_globals_arg_value_90;
+PyObject *tmp_locals_arg_value_90;
+PyObject *tmp_fromlist_value_90;
+PyObject *tmp_level_value_90;
+tmp_name_value_90 = mod_consts.const_str_plain_response_computer_tool_call_param;
+tmp_globals_arg_value_90 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_90 = Py_None;
+tmp_fromlist_value_90 = mod_consts.const_tuple_str_plain_ResponseComputerToolCallParam_tuple;
+tmp_level_value_90 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 101;
+tmp_import_name_from_95 = IMPORT_MODULE5(tstate, tmp_name_value_90, tmp_globals_arg_value_90, tmp_locals_arg_value_90, tmp_fromlist_value_90, tmp_level_value_90);
+if (tmp_import_name_from_95 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 101;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_95)) {
+    tmp_assign_source_101 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_95,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseComputerToolCallParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_101 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_95, mod_consts.const_str_plain_ResponseComputerToolCallParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_95);
+Py_DECREF(tmp_import_name_from_95);
+if (tmp_assign_source_101 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 101;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseComputerToolCallParam, tmp_assign_source_101);
+}
+{
+PyObject *tmp_assign_source_102;
+PyObject *tmp_import_name_from_96;
+PyObject *tmp_name_value_91;
+PyObject *tmp_globals_arg_value_91;
+PyObject *tmp_locals_arg_value_91;
+PyObject *tmp_fromlist_value_91;
+PyObject *tmp_level_value_91;
+tmp_name_value_91 = mod_consts.const_str_plain_response_content_part_added_event;
+tmp_globals_arg_value_91 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_91 = Py_None;
+tmp_fromlist_value_91 = mod_consts.const_tuple_str_plain_ResponseContentPartAddedEvent_tuple;
+tmp_level_value_91 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 102;
+tmp_import_name_from_96 = IMPORT_MODULE5(tstate, tmp_name_value_91, tmp_globals_arg_value_91, tmp_locals_arg_value_91, tmp_fromlist_value_91, tmp_level_value_91);
+if (tmp_import_name_from_96 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 102;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_96)) {
+    tmp_assign_source_102 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_96,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseContentPartAddedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_102 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_96, mod_consts.const_str_plain_ResponseContentPartAddedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_96);
+Py_DECREF(tmp_import_name_from_96);
+if (tmp_assign_source_102 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 102;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseContentPartAddedEvent, tmp_assign_source_102);
+}
+{
+PyObject *tmp_assign_source_103;
+PyObject *tmp_import_name_from_97;
+PyObject *tmp_name_value_92;
+PyObject *tmp_globals_arg_value_92;
+PyObject *tmp_locals_arg_value_92;
+PyObject *tmp_fromlist_value_92;
+PyObject *tmp_level_value_92;
+tmp_name_value_92 = mod_consts.const_str_plain_response_format_text_config_param;
+tmp_globals_arg_value_92 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_92 = Py_None;
+tmp_fromlist_value_92 = mod_consts.const_tuple_str_plain_ResponseFormatTextConfigParam_tuple;
+tmp_level_value_92 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 103;
+tmp_import_name_from_97 = IMPORT_MODULE5(tstate, tmp_name_value_92, tmp_globals_arg_value_92, tmp_locals_arg_value_92, tmp_fromlist_value_92, tmp_level_value_92);
+if (tmp_import_name_from_97 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 103;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_97)) {
+    tmp_assign_source_103 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_97,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFormatTextConfigParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_103 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_97, mod_consts.const_str_plain_ResponseFormatTextConfigParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_97);
+Py_DECREF(tmp_import_name_from_97);
+if (tmp_assign_source_103 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 103;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFormatTextConfigParam, tmp_assign_source_103);
+}
+{
+PyObject *tmp_assign_source_104;
+PyObject *tmp_import_name_from_98;
+PyObject *tmp_name_value_93;
+PyObject *tmp_globals_arg_value_93;
+PyObject *tmp_locals_arg_value_93;
+PyObject *tmp_fromlist_value_93;
+PyObject *tmp_level_value_93;
+tmp_name_value_93 = mod_consts.const_str_plain_response_function_tool_call_param;
+tmp_globals_arg_value_93 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_93 = Py_None;
+tmp_fromlist_value_93 = mod_consts.const_tuple_str_plain_ResponseFunctionToolCallParam_tuple;
+tmp_level_value_93 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 104;
+tmp_import_name_from_98 = IMPORT_MODULE5(tstate, tmp_name_value_93, tmp_globals_arg_value_93, tmp_locals_arg_value_93, tmp_fromlist_value_93, tmp_level_value_93);
+if (tmp_import_name_from_98 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 104;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_98)) {
+    tmp_assign_source_104 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_98,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFunctionToolCallParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_104 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_98, mod_consts.const_str_plain_ResponseFunctionToolCallParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_98);
+Py_DECREF(tmp_import_name_from_98);
+if (tmp_assign_source_104 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 104;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFunctionToolCallParam, tmp_assign_source_104);
+}
+{
+PyObject *tmp_assign_source_105;
+PyObject *tmp_import_name_from_99;
+PyObject *tmp_name_value_94;
+PyObject *tmp_globals_arg_value_94;
+PyObject *tmp_locals_arg_value_94;
+PyObject *tmp_fromlist_value_94;
+PyObject *tmp_level_value_94;
+tmp_name_value_94 = mod_consts.const_str_plain_response_mcp_call_completed_event;
+tmp_globals_arg_value_94 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_94 = Py_None;
+tmp_fromlist_value_94 = mod_consts.const_tuple_str_plain_ResponseMcpCallCompletedEvent_tuple;
+tmp_level_value_94 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 105;
+tmp_import_name_from_99 = IMPORT_MODULE5(tstate, tmp_name_value_94, tmp_globals_arg_value_94, tmp_locals_arg_value_94, tmp_fromlist_value_94, tmp_level_value_94);
+if (tmp_import_name_from_99 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 105;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_99)) {
+    tmp_assign_source_105 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_99,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseMcpCallCompletedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_105 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_99, mod_consts.const_str_plain_ResponseMcpCallCompletedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_99);
+Py_DECREF(tmp_import_name_from_99);
+if (tmp_assign_source_105 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 105;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseMcpCallCompletedEvent, tmp_assign_source_105);
+}
+{
+PyObject *tmp_assign_source_106;
+PyObject *tmp_import_name_from_100;
+PyObject *tmp_name_value_95;
+PyObject *tmp_globals_arg_value_95;
+PyObject *tmp_locals_arg_value_95;
+PyObject *tmp_fromlist_value_95;
+PyObject *tmp_level_value_95;
+tmp_name_value_95 = mod_consts.const_str_plain_response_function_web_search_param;
+tmp_globals_arg_value_95 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_95 = Py_None;
+tmp_fromlist_value_95 = mod_consts.const_tuple_str_plain_ResponseFunctionWebSearchParam_tuple;
+tmp_level_value_95 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 106;
+tmp_import_name_from_100 = IMPORT_MODULE5(tstate, tmp_name_value_95, tmp_globals_arg_value_95, tmp_locals_arg_value_95, tmp_fromlist_value_95, tmp_level_value_95);
+if (tmp_import_name_from_100 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 106;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_100)) {
+    tmp_assign_source_106 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_100,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFunctionWebSearchParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_106 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_100, mod_consts.const_str_plain_ResponseFunctionWebSearchParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_100);
+Py_DECREF(tmp_import_name_from_100);
+if (tmp_assign_source_106 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 106;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFunctionWebSearchParam, tmp_assign_source_106);
+}
+{
+PyObject *tmp_assign_source_107;
+PyObject *tmp_import_name_from_101;
+PyObject *tmp_name_value_96;
+PyObject *tmp_globals_arg_value_96;
+PyObject *tmp_locals_arg_value_96;
+PyObject *tmp_fromlist_value_96;
+PyObject *tmp_level_value_96;
+tmp_name_value_96 = mod_consts.const_str_plain_response_reasoning_text_done_event;
+tmp_globals_arg_value_96 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_96 = Py_None;
+tmp_fromlist_value_96 = mod_consts.const_tuple_str_plain_ResponseReasoningTextDoneEvent_tuple;
+tmp_level_value_96 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 107;
+tmp_import_name_from_101 = IMPORT_MODULE5(tstate, tmp_name_value_96, tmp_globals_arg_value_96, tmp_locals_arg_value_96, tmp_fromlist_value_96, tmp_level_value_96);
+if (tmp_import_name_from_101 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 107;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_101)) {
+    tmp_assign_source_107 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_101,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseReasoningTextDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_107 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_101, mod_consts.const_str_plain_ResponseReasoningTextDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_101);
+Py_DECREF(tmp_import_name_from_101);
+if (tmp_assign_source_107 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 107;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseReasoningTextDoneEvent, tmp_assign_source_107);
+}
+{
+PyObject *tmp_assign_source_108;
+PyObject *tmp_import_name_from_102;
+PyObject *tmp_name_value_97;
+PyObject *tmp_globals_arg_value_97;
+PyObject *tmp_locals_arg_value_97;
+PyObject *tmp_fromlist_value_97;
+PyObject *tmp_level_value_97;
+tmp_name_value_97 = mod_consts.const_str_plain_response_code_interpreter_tool_call;
+tmp_globals_arg_value_97 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_97 = Py_None;
+tmp_fromlist_value_97 = mod_consts.const_tuple_str_plain_ResponseCodeInterpreterToolCall_tuple;
+tmp_level_value_97 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 108;
+tmp_import_name_from_102 = IMPORT_MODULE5(tstate, tmp_name_value_97, tmp_globals_arg_value_97, tmp_locals_arg_value_97, tmp_fromlist_value_97, tmp_level_value_97);
+if (tmp_import_name_from_102 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 108;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_102)) {
+    tmp_assign_source_108 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_102,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCodeInterpreterToolCall,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_108 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_102, mod_consts.const_str_plain_ResponseCodeInterpreterToolCall);
+}
+
+CHECK_OBJECT(tmp_import_name_from_102);
+Py_DECREF(tmp_import_name_from_102);
+if (tmp_assign_source_108 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 108;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCodeInterpreterToolCall, tmp_assign_source_108);
+}
+{
+PyObject *tmp_assign_source_109;
+PyObject *tmp_import_name_from_103;
+PyObject *tmp_name_value_98;
+PyObject *tmp_globals_arg_value_98;
+PyObject *tmp_locals_arg_value_98;
+PyObject *tmp_fromlist_value_98;
+PyObject *tmp_level_value_98;
+tmp_name_value_98 = mod_consts.const_str_plain_response_input_message_content_list;
+tmp_globals_arg_value_98 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_98 = Py_None;
+tmp_fromlist_value_98 = mod_consts.const_tuple_str_plain_ResponseInputMessageContentList_tuple;
+tmp_level_value_98 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 109;
+tmp_import_name_from_103 = IMPORT_MODULE5(tstate, tmp_name_value_98, tmp_globals_arg_value_98, tmp_locals_arg_value_98, tmp_fromlist_value_98, tmp_level_value_98);
+if (tmp_import_name_from_103 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 109;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_103)) {
+    tmp_assign_source_109 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_103,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputMessageContentList,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_109 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_103, mod_consts.const_str_plain_ResponseInputMessageContentList);
+}
+
+CHECK_OBJECT(tmp_import_name_from_103);
+Py_DECREF(tmp_import_name_from_103);
+if (tmp_assign_source_109 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 109;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputMessageContentList, tmp_assign_source_109);
+}
+{
+PyObject *tmp_assign_source_110;
+PyObject *tmp_import_name_from_104;
+PyObject *tmp_name_value_99;
+PyObject *tmp_globals_arg_value_99;
+PyObject *tmp_locals_arg_value_99;
+PyObject *tmp_fromlist_value_99;
+PyObject *tmp_level_value_99;
+tmp_name_value_99 = mod_consts.const_str_plain_response_mcp_call_in_progress_event;
+tmp_globals_arg_value_99 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_99 = Py_None;
+tmp_fromlist_value_99 = mod_consts.const_tuple_str_plain_ResponseMcpCallInProgressEvent_tuple;
+tmp_level_value_99 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 110;
+tmp_import_name_from_104 = IMPORT_MODULE5(tstate, tmp_name_value_99, tmp_globals_arg_value_99, tmp_locals_arg_value_99, tmp_fromlist_value_99, tmp_level_value_99);
+if (tmp_import_name_from_104 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 110;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_104)) {
+    tmp_assign_source_110 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_104,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseMcpCallInProgressEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_110 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_104, mod_consts.const_str_plain_ResponseMcpCallInProgressEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_104);
+Py_DECREF(tmp_import_name_from_104);
+if (tmp_assign_source_110 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 110;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseMcpCallInProgressEvent, tmp_assign_source_110);
+}
+{
+PyObject *tmp_assign_source_111;
+PyObject *tmp_import_name_from_105;
+PyObject *tmp_name_value_100;
+PyObject *tmp_globals_arg_value_100;
+PyObject *tmp_locals_arg_value_100;
+PyObject *tmp_fromlist_value_100;
+PyObject *tmp_level_value_100;
+tmp_name_value_100 = mod_consts.const_str_plain_response_reasoning_text_delta_event;
+tmp_globals_arg_value_100 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_100 = Py_None;
+tmp_fromlist_value_100 = mod_consts.const_tuple_str_plain_ResponseReasoningTextDeltaEvent_tuple;
+tmp_level_value_100 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 111;
+tmp_import_name_from_105 = IMPORT_MODULE5(tstate, tmp_name_value_100, tmp_globals_arg_value_100, tmp_locals_arg_value_100, tmp_fromlist_value_100, tmp_level_value_100);
+if (tmp_import_name_from_105 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 111;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_105)) {
+    tmp_assign_source_111 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_105,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseReasoningTextDeltaEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_111 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_105, mod_consts.const_str_plain_ResponseReasoningTextDeltaEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_105);
+Py_DECREF(tmp_import_name_from_105);
+if (tmp_assign_source_111 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 111;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseReasoningTextDeltaEvent, tmp_assign_source_111);
+}
+{
+PyObject *tmp_assign_source_112;
+PyObject *tmp_import_name_from_106;
+PyObject *tmp_name_value_101;
+PyObject *tmp_globals_arg_value_101;
+PyObject *tmp_locals_arg_value_101;
+PyObject *tmp_fromlist_value_101;
+PyObject *tmp_level_value_101;
+tmp_name_value_101 = mod_consts.const_str_plain_response_audio_transcript_done_event;
+tmp_globals_arg_value_101 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_101 = Py_None;
+tmp_fromlist_value_101 = mod_consts.const_tuple_str_plain_ResponseAudioTranscriptDoneEvent_tuple;
+tmp_level_value_101 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 112;
+tmp_import_name_from_106 = IMPORT_MODULE5(tstate, tmp_name_value_101, tmp_globals_arg_value_101, tmp_locals_arg_value_101, tmp_fromlist_value_101, tmp_level_value_101);
+if (tmp_import_name_from_106 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 112;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_106)) {
+    tmp_assign_source_112 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_106,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseAudioTranscriptDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_112 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_106, mod_consts.const_str_plain_ResponseAudioTranscriptDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_106);
+Py_DECREF(tmp_import_name_from_106);
+if (tmp_assign_source_112 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 112;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseAudioTranscriptDoneEvent, tmp_assign_source_112);
+}
+{
+PyObject *tmp_assign_source_113;
+PyObject *tmp_import_name_from_107;
+PyObject *tmp_name_value_102;
+PyObject *tmp_globals_arg_value_102;
+PyObject *tmp_locals_arg_value_102;
+PyObject *tmp_fromlist_value_102;
+PyObject *tmp_level_value_102;
+tmp_name_value_102 = mod_consts.const_str_plain_response_file_search_tool_call_param;
+tmp_globals_arg_value_102 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_102 = Py_None;
+tmp_fromlist_value_102 = mod_consts.const_tuple_str_plain_ResponseFileSearchToolCallParam_tuple;
+tmp_level_value_102 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 113;
+tmp_import_name_from_107 = IMPORT_MODULE5(tstate, tmp_name_value_102, tmp_globals_arg_value_102, tmp_locals_arg_value_102, tmp_fromlist_value_102, tmp_level_value_102);
+if (tmp_import_name_from_107 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 113;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_107)) {
+    tmp_assign_source_113 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_107,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFileSearchToolCallParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_113 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_107, mod_consts.const_str_plain_ResponseFileSearchToolCallParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_107);
+Py_DECREF(tmp_import_name_from_107);
+if (tmp_assign_source_113 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 113;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFileSearchToolCallParam, tmp_assign_source_113);
+}
+{
+PyObject *tmp_assign_source_114;
+PyObject *tmp_import_name_from_108;
+PyObject *tmp_name_value_103;
+PyObject *tmp_globals_arg_value_103;
+PyObject *tmp_locals_arg_value_103;
+PyObject *tmp_fromlist_value_103;
+PyObject *tmp_level_value_103;
+tmp_name_value_103 = mod_consts.const_str_plain_response_mcp_list_tools_failed_event;
+tmp_globals_arg_value_103 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_103 = Py_None;
+tmp_fromlist_value_103 = mod_consts.const_tuple_str_plain_ResponseMcpListToolsFailedEvent_tuple;
+tmp_level_value_103 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 114;
+tmp_import_name_from_108 = IMPORT_MODULE5(tstate, tmp_name_value_103, tmp_globals_arg_value_103, tmp_locals_arg_value_103, tmp_fromlist_value_103, tmp_level_value_103);
+if (tmp_import_name_from_108 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 114;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_108)) {
+    tmp_assign_source_114 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_108,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseMcpListToolsFailedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_114 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_108, mod_consts.const_str_plain_ResponseMcpListToolsFailedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_108);
+Py_DECREF(tmp_import_name_from_108);
+if (tmp_assign_source_114 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 114;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseMcpListToolsFailedEvent, tmp_assign_source_114);
+}
+{
+PyObject *tmp_assign_source_115;
+PyObject *tmp_import_name_from_109;
+PyObject *tmp_name_value_104;
+PyObject *tmp_globals_arg_value_104;
+PyObject *tmp_locals_arg_value_104;
+PyObject *tmp_fromlist_value_104;
+PyObject *tmp_level_value_104;
+tmp_name_value_104 = mod_consts.const_str_plain_response_audio_transcript_delta_event;
+tmp_globals_arg_value_104 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_104 = Py_None;
+tmp_fromlist_value_104 = mod_consts.const_tuple_str_plain_ResponseAudioTranscriptDeltaEvent_tuple;
+tmp_level_value_104 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 115;
+tmp_import_name_from_109 = IMPORT_MODULE5(tstate, tmp_name_value_104, tmp_globals_arg_value_104, tmp_locals_arg_value_104, tmp_fromlist_value_104, tmp_level_value_104);
+if (tmp_import_name_from_109 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 115;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_109)) {
+    tmp_assign_source_115 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_109,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseAudioTranscriptDeltaEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_115 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_109, mod_consts.const_str_plain_ResponseAudioTranscriptDeltaEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_109);
+Py_DECREF(tmp_import_name_from_109);
+if (tmp_assign_source_115 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 115;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseAudioTranscriptDeltaEvent, tmp_assign_source_115);
+}
+{
+PyObject *tmp_assign_source_116;
+PyObject *tmp_import_name_from_110;
+PyObject *tmp_name_value_105;
+PyObject *tmp_globals_arg_value_105;
+PyObject *tmp_locals_arg_value_105;
+PyObject *tmp_fromlist_value_105;
+PyObject *tmp_level_value_105;
+tmp_name_value_105 = mod_consts.const_str_plain_response_custom_tool_call_output_param;
+tmp_globals_arg_value_105 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_105 = Py_None;
+tmp_fromlist_value_105 = mod_consts.const_tuple_str_plain_ResponseCustomToolCallOutputParam_tuple;
+tmp_level_value_105 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 118;
+tmp_import_name_from_110 = IMPORT_MODULE5(tstate, tmp_name_value_105, tmp_globals_arg_value_105, tmp_locals_arg_value_105, tmp_fromlist_value_105, tmp_level_value_105);
+if (tmp_import_name_from_110 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 118;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_110)) {
+    tmp_assign_source_116 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_110,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCustomToolCallOutputParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_116 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_110, mod_consts.const_str_plain_ResponseCustomToolCallOutputParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_110);
+Py_DECREF(tmp_import_name_from_110);
+if (tmp_assign_source_116 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 118;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCustomToolCallOutputParam, tmp_assign_source_116);
+}
+{
+PyObject *tmp_assign_source_117;
+PyObject *tmp_import_name_from_111;
+PyObject *tmp_name_value_106;
+PyObject *tmp_globals_arg_value_106;
+PyObject *tmp_locals_arg_value_106;
+PyObject *tmp_fromlist_value_106;
+PyObject *tmp_level_value_106;
+tmp_name_value_106 = mod_consts.const_str_plain_response_mcp_call_arguments_done_event;
+tmp_globals_arg_value_106 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_106 = Py_None;
+tmp_fromlist_value_106 = mod_consts.const_tuple_str_plain_ResponseMcpCallArgumentsDoneEvent_tuple;
+tmp_level_value_106 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 121;
+tmp_import_name_from_111 = IMPORT_MODULE5(tstate, tmp_name_value_106, tmp_globals_arg_value_106, tmp_locals_arg_value_106, tmp_fromlist_value_106, tmp_level_value_106);
+if (tmp_import_name_from_111 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 121;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_111)) {
+    tmp_assign_source_117 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_111,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseMcpCallArgumentsDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_117 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_111, mod_consts.const_str_plain_ResponseMcpCallArgumentsDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_111);
+Py_DECREF(tmp_import_name_from_111);
+if (tmp_assign_source_117 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 121;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseMcpCallArgumentsDoneEvent, tmp_assign_source_117);
+}
+{
+PyObject *tmp_assign_source_118;
+PyObject *tmp_import_name_from_112;
+PyObject *tmp_name_value_107;
+PyObject *tmp_globals_arg_value_107;
+PyObject *tmp_locals_arg_value_107;
+PyObject *tmp_fromlist_value_107;
+PyObject *tmp_level_value_107;
+tmp_name_value_107 = mod_consts.const_str_plain_response_computer_tool_call_output_item;
+tmp_globals_arg_value_107 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_107 = Py_None;
+tmp_fromlist_value_107 = mod_consts.const_tuple_str_plain_ResponseComputerToolCallOutputItem_tuple;
+tmp_level_value_107 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 124;
+tmp_import_name_from_112 = IMPORT_MODULE5(tstate, tmp_name_value_107, tmp_globals_arg_value_107, tmp_locals_arg_value_107, tmp_fromlist_value_107, tmp_level_value_107);
+if (tmp_import_name_from_112 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 124;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_112)) {
+    tmp_assign_source_118 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_112,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseComputerToolCallOutputItem,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_118 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_112, mod_consts.const_str_plain_ResponseComputerToolCallOutputItem);
+}
+
+CHECK_OBJECT(tmp_import_name_from_112);
+Py_DECREF(tmp_import_name_from_112);
+if (tmp_assign_source_118 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 124;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseComputerToolCallOutputItem, tmp_assign_source_118);
+}
+{
+PyObject *tmp_assign_source_119;
+PyObject *tmp_import_name_from_113;
+PyObject *tmp_name_value_108;
+PyObject *tmp_globals_arg_value_108;
+PyObject *tmp_locals_arg_value_108;
+PyObject *tmp_fromlist_value_108;
+PyObject *tmp_level_value_108;
+tmp_name_value_108 = mod_consts.const_str_plain_response_format_text_json_schema_config;
+tmp_globals_arg_value_108 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_108 = Py_None;
+tmp_fromlist_value_108 = mod_consts.const_tuple_str_plain_ResponseFormatTextJSONSchemaConfig_tuple;
+tmp_level_value_108 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 127;
+tmp_import_name_from_113 = IMPORT_MODULE5(tstate, tmp_name_value_108, tmp_globals_arg_value_108, tmp_locals_arg_value_108, tmp_fromlist_value_108, tmp_level_value_108);
+if (tmp_import_name_from_113 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 127;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_113)) {
+    tmp_assign_source_119 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_113,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfig,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_119 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_113, mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfig);
+}
+
+CHECK_OBJECT(tmp_import_name_from_113);
+Py_DECREF(tmp_import_name_from_113);
+if (tmp_assign_source_119 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 127;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfig, tmp_assign_source_119);
+}
+{
+PyObject *tmp_assign_source_120;
+PyObject *tmp_import_name_from_114;
+PyObject *tmp_name_value_109;
+PyObject *tmp_globals_arg_value_109;
+PyObject *tmp_locals_arg_value_109;
+PyObject *tmp_fromlist_value_109;
+PyObject *tmp_level_value_109;
+tmp_name_value_109 = mod_consts.const_str_plain_response_function_tool_call_output_item;
+tmp_globals_arg_value_109 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_109 = Py_None;
+tmp_fromlist_value_109 = mod_consts.const_tuple_str_plain_ResponseFunctionToolCallOutputItem_tuple;
+tmp_level_value_109 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 130;
+tmp_import_name_from_114 = IMPORT_MODULE5(tstate, tmp_name_value_109, tmp_globals_arg_value_109, tmp_locals_arg_value_109, tmp_fromlist_value_109, tmp_level_value_109);
+if (tmp_import_name_from_114 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 130;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_114)) {
+    tmp_assign_source_120 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_114,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFunctionToolCallOutputItem,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_120 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_114, mod_consts.const_str_plain_ResponseFunctionToolCallOutputItem);
+}
+
+CHECK_OBJECT(tmp_import_name_from_114);
+Py_DECREF(tmp_import_name_from_114);
+if (tmp_assign_source_120 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 130;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFunctionToolCallOutputItem, tmp_assign_source_120);
+}
+{
+PyObject *tmp_assign_source_121;
+PyObject *tmp_import_name_from_115;
+PyObject *tmp_name_value_110;
+PyObject *tmp_globals_arg_value_110;
+PyObject *tmp_locals_arg_value_110;
+PyObject *tmp_fromlist_value_110;
+PyObject *tmp_level_value_110;
+tmp_name_value_110 = mod_consts.const_str_plain_response_image_gen_call_completed_event;
+tmp_globals_arg_value_110 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_110 = Py_None;
+tmp_fromlist_value_110 = mod_consts.const_tuple_str_plain_ResponseImageGenCallCompletedEvent_tuple;
+tmp_level_value_110 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 133;
+tmp_import_name_from_115 = IMPORT_MODULE5(tstate, tmp_name_value_110, tmp_globals_arg_value_110, tmp_locals_arg_value_110, tmp_fromlist_value_110, tmp_level_value_110);
+if (tmp_import_name_from_115 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 133;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_115)) {
+    tmp_assign_source_121 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_115,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseImageGenCallCompletedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_121 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_115, mod_consts.const_str_plain_ResponseImageGenCallCompletedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_115);
+Py_DECREF(tmp_import_name_from_115);
+if (tmp_assign_source_121 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 133;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseImageGenCallCompletedEvent, tmp_assign_source_121);
+}
+{
+PyObject *tmp_assign_source_122;
+PyObject *tmp_import_name_from_116;
+PyObject *tmp_name_value_111;
+PyObject *tmp_globals_arg_value_111;
+PyObject *tmp_locals_arg_value_111;
+PyObject *tmp_fromlist_value_111;
+PyObject *tmp_level_value_111;
+tmp_name_value_111 = mod_consts.const_str_plain_response_mcp_call_arguments_delta_event;
+tmp_globals_arg_value_111 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_111 = Py_None;
+tmp_fromlist_value_111 = mod_consts.const_tuple_str_plain_ResponseMcpCallArgumentsDeltaEvent_tuple;
+tmp_level_value_111 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 136;
+tmp_import_name_from_116 = IMPORT_MODULE5(tstate, tmp_name_value_111, tmp_globals_arg_value_111, tmp_locals_arg_value_111, tmp_fromlist_value_111, tmp_level_value_111);
+if (tmp_import_name_from_116 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 136;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_116)) {
+    tmp_assign_source_122 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_116,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseMcpCallArgumentsDeltaEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_122 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_116, mod_consts.const_str_plain_ResponseMcpCallArgumentsDeltaEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_116);
+Py_DECREF(tmp_import_name_from_116);
+if (tmp_assign_source_122 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 136;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseMcpCallArgumentsDeltaEvent, tmp_assign_source_122);
+}
+{
+PyObject *tmp_assign_source_123;
+PyObject *tmp_import_name_from_117;
+PyObject *tmp_name_value_112;
+PyObject *tmp_globals_arg_value_112;
+PyObject *tmp_locals_arg_value_112;
+PyObject *tmp_fromlist_value_112;
+PyObject *tmp_level_value_112;
+tmp_name_value_112 = mod_consts.const_str_plain_response_mcp_list_tools_completed_event;
+tmp_globals_arg_value_112 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_112 = Py_None;
+tmp_fromlist_value_112 = mod_consts.const_tuple_str_plain_ResponseMcpListToolsCompletedEvent_tuple;
+tmp_level_value_112 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 139;
+tmp_import_name_from_117 = IMPORT_MODULE5(tstate, tmp_name_value_112, tmp_globals_arg_value_112, tmp_locals_arg_value_112, tmp_fromlist_value_112, tmp_level_value_112);
+if (tmp_import_name_from_117 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 139;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_117)) {
+    tmp_assign_source_123 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_117,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseMcpListToolsCompletedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_123 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_117, mod_consts.const_str_plain_ResponseMcpListToolsCompletedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_117);
+Py_DECREF(tmp_import_name_from_117);
+if (tmp_assign_source_123 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 139;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseMcpListToolsCompletedEvent, tmp_assign_source_123);
+}
+{
+PyObject *tmp_assign_source_124;
+PyObject *tmp_import_name_from_118;
+PyObject *tmp_name_value_113;
+PyObject *tmp_globals_arg_value_113;
+PyObject *tmp_locals_arg_value_113;
+PyObject *tmp_fromlist_value_113;
+PyObject *tmp_level_value_113;
+tmp_name_value_113 = mod_consts.const_str_plain_response_image_gen_call_generating_event;
+tmp_globals_arg_value_113 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_113 = Py_None;
+tmp_fromlist_value_113 = mod_consts.const_tuple_str_plain_ResponseImageGenCallGeneratingEvent_tuple;
+tmp_level_value_113 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 142;
+tmp_import_name_from_118 = IMPORT_MODULE5(tstate, tmp_name_value_113, tmp_globals_arg_value_113, tmp_locals_arg_value_113, tmp_fromlist_value_113, tmp_level_value_113);
+if (tmp_import_name_from_118 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 142;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_118)) {
+    tmp_assign_source_124 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_118,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseImageGenCallGeneratingEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_124 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_118, mod_consts.const_str_plain_ResponseImageGenCallGeneratingEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_118);
+Py_DECREF(tmp_import_name_from_118);
+if (tmp_assign_source_124 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 142;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseImageGenCallGeneratingEvent, tmp_assign_source_124);
+}
+{
+PyObject *tmp_assign_source_125;
+PyObject *tmp_import_name_from_119;
+PyObject *tmp_name_value_114;
+PyObject *tmp_globals_arg_value_114;
+PyObject *tmp_locals_arg_value_114;
+PyObject *tmp_fromlist_value_114;
+PyObject *tmp_level_value_114;
+tmp_name_value_114 = mod_consts.const_str_plain_response_web_search_call_completed_event;
+tmp_globals_arg_value_114 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_114 = Py_None;
+tmp_fromlist_value_114 = mod_consts.const_tuple_str_plain_ResponseWebSearchCallCompletedEvent_tuple;
+tmp_level_value_114 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 145;
+tmp_import_name_from_119 = IMPORT_MODULE5(tstate, tmp_name_value_114, tmp_globals_arg_value_114, tmp_locals_arg_value_114, tmp_fromlist_value_114, tmp_level_value_114);
+if (tmp_import_name_from_119 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 145;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_119)) {
+    tmp_assign_source_125 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_119,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseWebSearchCallCompletedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_125 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_119, mod_consts.const_str_plain_ResponseWebSearchCallCompletedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_119);
+Py_DECREF(tmp_import_name_from_119);
+if (tmp_assign_source_125 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 145;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseWebSearchCallCompletedEvent, tmp_assign_source_125);
+}
+{
+PyObject *tmp_assign_source_126;
+PyObject *tmp_import_name_from_120;
+PyObject *tmp_name_value_115;
+PyObject *tmp_globals_arg_value_115;
+PyObject *tmp_locals_arg_value_115;
+PyObject *tmp_fromlist_value_115;
+PyObject *tmp_level_value_115;
+tmp_name_value_115 = mod_consts.const_str_plain_response_web_search_call_searching_event;
+tmp_globals_arg_value_115 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_115 = Py_None;
+tmp_fromlist_value_115 = mod_consts.const_tuple_str_plain_ResponseWebSearchCallSearchingEvent_tuple;
+tmp_level_value_115 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 148;
+tmp_import_name_from_120 = IMPORT_MODULE5(tstate, tmp_name_value_115, tmp_globals_arg_value_115, tmp_locals_arg_value_115, tmp_fromlist_value_115, tmp_level_value_115);
+if (tmp_import_name_from_120 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 148;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_120)) {
+    tmp_assign_source_126 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_120,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseWebSearchCallSearchingEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_126 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_120, mod_consts.const_str_plain_ResponseWebSearchCallSearchingEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_120);
+Py_DECREF(tmp_import_name_from_120);
+if (tmp_assign_source_126 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 148;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseWebSearchCallSearchingEvent, tmp_assign_source_126);
+}
+{
+PyObject *tmp_assign_source_127;
+PyObject *tmp_import_name_from_121;
+PyObject *tmp_name_value_116;
+PyObject *tmp_globals_arg_value_116;
+PyObject *tmp_locals_arg_value_116;
+PyObject *tmp_fromlist_value_116;
+PyObject *tmp_level_value_116;
+tmp_name_value_116 = mod_consts.const_str_digest_cf0ac869c09d72e03bebf5dd0a47d092;
+tmp_globals_arg_value_116 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_116 = Py_None;
+tmp_fromlist_value_116 = mod_consts.const_tuple_str_plain_ResponseCodeInterpreterToolCallParam_tuple;
+tmp_level_value_116 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 151;
+tmp_import_name_from_121 = IMPORT_MODULE5(tstate, tmp_name_value_116, tmp_globals_arg_value_116, tmp_locals_arg_value_116, tmp_fromlist_value_116, tmp_level_value_116);
+if (tmp_import_name_from_121 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 151;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_121)) {
+    tmp_assign_source_127 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_121,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCodeInterpreterToolCallParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_127 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_121, mod_consts.const_str_plain_ResponseCodeInterpreterToolCallParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_121);
+Py_DECREF(tmp_import_name_from_121);
+if (tmp_assign_source_127 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 151;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCodeInterpreterToolCallParam, tmp_assign_source_127);
+}
+{
+PyObject *tmp_assign_source_128;
+PyObject *tmp_import_name_from_122;
+PyObject *tmp_name_value_117;
+PyObject *tmp_globals_arg_value_117;
+PyObject *tmp_locals_arg_value_117;
+PyObject *tmp_fromlist_value_117;
+PyObject *tmp_level_value_117;
+tmp_name_value_117 = mod_consts.const_str_digest_db1bace0cfc001e14745ea641f153b87;
+tmp_globals_arg_value_117 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_117 = Py_None;
+tmp_fromlist_value_117 = mod_consts.const_tuple_str_plain_ResponseFileSearchCallCompletedEvent_tuple;
+tmp_level_value_117 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 154;
+tmp_import_name_from_122 = IMPORT_MODULE5(tstate, tmp_name_value_117, tmp_globals_arg_value_117, tmp_locals_arg_value_117, tmp_fromlist_value_117, tmp_level_value_117);
+if (tmp_import_name_from_122 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 154;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_122)) {
+    tmp_assign_source_128 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_122,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFileSearchCallCompletedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_128 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_122, mod_consts.const_str_plain_ResponseFileSearchCallCompletedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_122);
+Py_DECREF(tmp_import_name_from_122);
+if (tmp_assign_source_128 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 154;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFileSearchCallCompletedEvent, tmp_assign_source_128);
+}
+{
+PyObject *tmp_assign_source_129;
+PyObject *tmp_import_name_from_123;
+PyObject *tmp_name_value_118;
+PyObject *tmp_globals_arg_value_118;
+PyObject *tmp_locals_arg_value_118;
+PyObject *tmp_fromlist_value_118;
+PyObject *tmp_level_value_118;
+tmp_name_value_118 = mod_consts.const_str_digest_da8cde4e5f8007b27a16ee8a8d34c7ca;
+tmp_globals_arg_value_118 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_118 = Py_None;
+tmp_fromlist_value_118 = mod_consts.const_tuple_str_plain_ResponseFileSearchCallSearchingEvent_tuple;
+tmp_level_value_118 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 157;
+tmp_import_name_from_123 = IMPORT_MODULE5(tstate, tmp_name_value_118, tmp_globals_arg_value_118, tmp_locals_arg_value_118, tmp_fromlist_value_118, tmp_level_value_118);
+if (tmp_import_name_from_123 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 157;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_123)) {
+    tmp_assign_source_129 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_123,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFileSearchCallSearchingEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_129 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_123, mod_consts.const_str_plain_ResponseFileSearchCallSearchingEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_123);
+Py_DECREF(tmp_import_name_from_123);
+if (tmp_assign_source_129 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 157;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFileSearchCallSearchingEvent, tmp_assign_source_129);
+}
+{
+PyObject *tmp_assign_source_130;
+PyObject *tmp_import_name_from_124;
+PyObject *tmp_name_value_119;
+PyObject *tmp_globals_arg_value_119;
+PyObject *tmp_locals_arg_value_119;
+PyObject *tmp_fromlist_value_119;
+PyObject *tmp_level_value_119;
+tmp_name_value_119 = mod_consts.const_str_digest_a63d6aee411731207dfca54d4a08c6f1;
+tmp_globals_arg_value_119 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_119 = Py_None;
+tmp_fromlist_value_119 = mod_consts.const_tuple_str_plain_ResponseImageGenCallInProgressEvent_tuple;
+tmp_level_value_119 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 160;
+tmp_import_name_from_124 = IMPORT_MODULE5(tstate, tmp_name_value_119, tmp_globals_arg_value_119, tmp_locals_arg_value_119, tmp_fromlist_value_119, tmp_level_value_119);
+if (tmp_import_name_from_124 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 160;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_124)) {
+    tmp_assign_source_130 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_124,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseImageGenCallInProgressEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_130 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_124, mod_consts.const_str_plain_ResponseImageGenCallInProgressEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_124);
+Py_DECREF(tmp_import_name_from_124);
+if (tmp_assign_source_130 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 160;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseImageGenCallInProgressEvent, tmp_assign_source_130);
+}
+{
+PyObject *tmp_assign_source_131;
+PyObject *tmp_import_name_from_125;
+PyObject *tmp_name_value_120;
+PyObject *tmp_globals_arg_value_120;
+PyObject *tmp_locals_arg_value_120;
+PyObject *tmp_fromlist_value_120;
+PyObject *tmp_level_value_120;
+tmp_name_value_120 = mod_consts.const_str_digest_ffd1258fd1207a7b77c1a482070cc0ee;
+tmp_globals_arg_value_120 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_120 = Py_None;
+tmp_fromlist_value_120 = mod_consts.const_tuple_str_plain_ResponseInputMessageContentListParam_tuple;
+tmp_level_value_120 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 163;
+tmp_import_name_from_125 = IMPORT_MODULE5(tstate, tmp_name_value_120, tmp_globals_arg_value_120, tmp_locals_arg_value_120, tmp_fromlist_value_120, tmp_level_value_120);
+if (tmp_import_name_from_125 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 163;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_125)) {
+    tmp_assign_source_131 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_125,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseInputMessageContentListParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_131 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_125, mod_consts.const_str_plain_ResponseInputMessageContentListParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_125);
+Py_DECREF(tmp_import_name_from_125);
+if (tmp_assign_source_131 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 163;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseInputMessageContentListParam, tmp_assign_source_131);
+}
+{
+PyObject *tmp_assign_source_132;
+PyObject *tmp_import_name_from_126;
+PyObject *tmp_name_value_121;
+PyObject *tmp_globals_arg_value_121;
+PyObject *tmp_locals_arg_value_121;
+PyObject *tmp_fromlist_value_121;
+PyObject *tmp_level_value_121;
+tmp_name_value_121 = mod_consts.const_str_digest_3869a7d21bb2ab690675f2d75edd2c53;
+tmp_globals_arg_value_121 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_121 = Py_None;
+tmp_fromlist_value_121 = mod_consts.const_tuple_str_plain_ResponseMcpListToolsInProgressEvent_tuple;
+tmp_level_value_121 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 166;
+tmp_import_name_from_126 = IMPORT_MODULE5(tstate, tmp_name_value_121, tmp_globals_arg_value_121, tmp_locals_arg_value_121, tmp_fromlist_value_121, tmp_level_value_121);
+if (tmp_import_name_from_126 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 166;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_126)) {
+    tmp_assign_source_132 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_126,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseMcpListToolsInProgressEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_132 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_126, mod_consts.const_str_plain_ResponseMcpListToolsInProgressEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_126);
+Py_DECREF(tmp_import_name_from_126);
+if (tmp_assign_source_132 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 166;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseMcpListToolsInProgressEvent, tmp_assign_source_132);
+}
+{
+PyObject *tmp_assign_source_133;
+PyObject *tmp_import_name_from_127;
+PyObject *tmp_name_value_122;
+PyObject *tmp_globals_arg_value_122;
+PyObject *tmp_locals_arg_value_122;
+PyObject *tmp_fromlist_value_122;
+PyObject *tmp_level_value_122;
+tmp_name_value_122 = mod_consts.const_str_digest_ec2c427f706e801bddb56836cfb686e8;
+tmp_globals_arg_value_122 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_122 = Py_None;
+tmp_fromlist_value_122 = mod_consts.const_tuple_str_plain_ResponseCustomToolCallInputDoneEvent_tuple;
+tmp_level_value_122 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 169;
+tmp_import_name_from_127 = IMPORT_MODULE5(tstate, tmp_name_value_122, tmp_globals_arg_value_122, tmp_locals_arg_value_122, tmp_fromlist_value_122, tmp_level_value_122);
+if (tmp_import_name_from_127 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 169;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_127)) {
+    tmp_assign_source_133 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_127,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCustomToolCallInputDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_133 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_127, mod_consts.const_str_plain_ResponseCustomToolCallInputDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_127);
+Py_DECREF(tmp_import_name_from_127);
+if (tmp_assign_source_133 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 169;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCustomToolCallInputDoneEvent, tmp_assign_source_133);
+}
+{
+PyObject *tmp_assign_source_134;
+PyObject *tmp_import_name_from_128;
+PyObject *tmp_name_value_123;
+PyObject *tmp_globals_arg_value_123;
+PyObject *tmp_locals_arg_value_123;
+PyObject *tmp_fromlist_value_123;
+PyObject *tmp_level_value_123;
+tmp_name_value_123 = mod_consts.const_str_digest_551ec177d3a0f514071918ba435a1323;
+tmp_globals_arg_value_123 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_123 = Py_None;
+tmp_fromlist_value_123 = mod_consts.const_tuple_str_plain_ResponseReasoningSummaryPartDoneEvent_tuple;
+tmp_level_value_123 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 172;
+tmp_import_name_from_128 = IMPORT_MODULE5(tstate, tmp_name_value_123, tmp_globals_arg_value_123, tmp_locals_arg_value_123, tmp_fromlist_value_123, tmp_level_value_123);
+if (tmp_import_name_from_128 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 172;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_128)) {
+    tmp_assign_source_134 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_128,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseReasoningSummaryPartDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_134 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_128, mod_consts.const_str_plain_ResponseReasoningSummaryPartDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_128);
+Py_DECREF(tmp_import_name_from_128);
+if (tmp_assign_source_134 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 172;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseReasoningSummaryPartDoneEvent, tmp_assign_source_134);
+}
+{
+PyObject *tmp_assign_source_135;
+PyObject *tmp_import_name_from_129;
+PyObject *tmp_name_value_124;
+PyObject *tmp_globals_arg_value_124;
+PyObject *tmp_locals_arg_value_124;
+PyObject *tmp_fromlist_value_124;
+PyObject *tmp_level_value_124;
+tmp_name_value_124 = mod_consts.const_str_digest_5b54bc56c455a9546f6cd46ecf7a137b;
+tmp_globals_arg_value_124 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_124 = Py_None;
+tmp_fromlist_value_124 = mod_consts.const_tuple_str_plain_ResponseReasoningSummaryTextDoneEvent_tuple;
+tmp_level_value_124 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 175;
+tmp_import_name_from_129 = IMPORT_MODULE5(tstate, tmp_name_value_124, tmp_globals_arg_value_124, tmp_locals_arg_value_124, tmp_fromlist_value_124, tmp_level_value_124);
+if (tmp_import_name_from_129 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 175;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_129)) {
+    tmp_assign_source_135 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_129,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseReasoningSummaryTextDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_135 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_129, mod_consts.const_str_plain_ResponseReasoningSummaryTextDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_129);
+Py_DECREF(tmp_import_name_from_129);
+if (tmp_assign_source_135 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 175;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseReasoningSummaryTextDoneEvent, tmp_assign_source_135);
+}
+{
+PyObject *tmp_assign_source_136;
+PyObject *tmp_import_name_from_130;
+PyObject *tmp_name_value_125;
+PyObject *tmp_globals_arg_value_125;
+PyObject *tmp_locals_arg_value_125;
+PyObject *tmp_fromlist_value_125;
+PyObject *tmp_level_value_125;
+tmp_name_value_125 = mod_consts.const_str_digest_2326235548c09cdeef136c4cd9a9900b;
+tmp_globals_arg_value_125 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_125 = Py_None;
+tmp_fromlist_value_125 = mod_consts.const_tuple_str_plain_ResponseWebSearchCallInProgressEvent_tuple;
+tmp_level_value_125 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 178;
+tmp_import_name_from_130 = IMPORT_MODULE5(tstate, tmp_name_value_125, tmp_globals_arg_value_125, tmp_locals_arg_value_125, tmp_fromlist_value_125, tmp_level_value_125);
+if (tmp_import_name_from_130 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 178;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_130)) {
+    tmp_assign_source_136 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_130,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseWebSearchCallInProgressEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_136 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_130, mod_consts.const_str_plain_ResponseWebSearchCallInProgressEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_130);
+Py_DECREF(tmp_import_name_from_130);
+if (tmp_assign_source_136 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 178;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseWebSearchCallInProgressEvent, tmp_assign_source_136);
+}
+{
+PyObject *tmp_assign_source_137;
+PyObject *tmp_import_name_from_131;
+PyObject *tmp_name_value_126;
+PyObject *tmp_globals_arg_value_126;
+PyObject *tmp_locals_arg_value_126;
+PyObject *tmp_fromlist_value_126;
+PyObject *tmp_level_value_126;
+tmp_name_value_126 = mod_consts.const_str_digest_bdd4cad3bd3111b78b89983f965fecd7;
+tmp_globals_arg_value_126 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_126 = Py_None;
+tmp_fromlist_value_126 = mod_consts.const_tuple_str_plain_ResponseCustomToolCallInputDeltaEvent_tuple;
+tmp_level_value_126 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 181;
+tmp_import_name_from_131 = IMPORT_MODULE5(tstate, tmp_name_value_126, tmp_globals_arg_value_126, tmp_locals_arg_value_126, tmp_fromlist_value_126, tmp_level_value_126);
+if (tmp_import_name_from_131 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 181;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_131)) {
+    tmp_assign_source_137 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_131,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCustomToolCallInputDeltaEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_137 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_131, mod_consts.const_str_plain_ResponseCustomToolCallInputDeltaEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_131);
+Py_DECREF(tmp_import_name_from_131);
+if (tmp_assign_source_137 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 181;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCustomToolCallInputDeltaEvent, tmp_assign_source_137);
+}
+{
+PyObject *tmp_assign_source_138;
+PyObject *tmp_import_name_from_132;
+PyObject *tmp_name_value_127;
+PyObject *tmp_globals_arg_value_127;
+PyObject *tmp_locals_arg_value_127;
+PyObject *tmp_fromlist_value_127;
+PyObject *tmp_level_value_127;
+tmp_name_value_127 = mod_consts.const_str_digest_b74a486e6f8d3c2cf5b64509f1e008f4;
+tmp_globals_arg_value_127 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_127 = Py_None;
+tmp_fromlist_value_127 = mod_consts.const_tuple_str_plain_ResponseFileSearchCallInProgressEvent_tuple;
+tmp_level_value_127 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 184;
+tmp_import_name_from_132 = IMPORT_MODULE5(tstate, tmp_name_value_127, tmp_globals_arg_value_127, tmp_locals_arg_value_127, tmp_fromlist_value_127, tmp_level_value_127);
+if (tmp_import_name_from_132 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 184;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_132)) {
+    tmp_assign_source_138 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_132,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFileSearchCallInProgressEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_138 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_132, mod_consts.const_str_plain_ResponseFileSearchCallInProgressEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_132);
+Py_DECREF(tmp_import_name_from_132);
+if (tmp_assign_source_138 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 184;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFileSearchCallInProgressEvent, tmp_assign_source_138);
+}
+{
+PyObject *tmp_assign_source_139;
+PyObject *tmp_import_name_from_133;
+PyObject *tmp_name_value_128;
+PyObject *tmp_globals_arg_value_128;
+PyObject *tmp_locals_arg_value_128;
+PyObject *tmp_fromlist_value_128;
+PyObject *tmp_level_value_128;
+tmp_name_value_128 = mod_consts.const_str_digest_7ca10734868c9e71eef094920fbc18a5;
+tmp_globals_arg_value_128 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_128 = Py_None;
+tmp_fromlist_value_128 = mod_consts.const_tuple_str_plain_ResponseFunctionCallArgumentsDoneEvent_tuple;
+tmp_level_value_128 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 187;
+tmp_import_name_from_133 = IMPORT_MODULE5(tstate, tmp_name_value_128, tmp_globals_arg_value_128, tmp_locals_arg_value_128, tmp_fromlist_value_128, tmp_level_value_128);
+if (tmp_import_name_from_133 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 187;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_133)) {
+    tmp_assign_source_139 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_133,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFunctionCallArgumentsDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_139 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_133, mod_consts.const_str_plain_ResponseFunctionCallArgumentsDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_133);
+Py_DECREF(tmp_import_name_from_133);
+if (tmp_assign_source_139 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 187;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFunctionCallArgumentsDoneEvent, tmp_assign_source_139);
+}
+{
+PyObject *tmp_assign_source_140;
+PyObject *tmp_import_name_from_134;
+PyObject *tmp_name_value_129;
+PyObject *tmp_globals_arg_value_129;
+PyObject *tmp_locals_arg_value_129;
+PyObject *tmp_fromlist_value_129;
+PyObject *tmp_level_value_129;
+tmp_name_value_129 = mod_consts.const_str_digest_4fa49b8f51a2b5d603c1b21bd5cb88b6;
+tmp_globals_arg_value_129 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_129 = Py_None;
+tmp_fromlist_value_129 = mod_consts.const_tuple_str_plain_ResponseImageGenCallPartialImageEvent_tuple;
+tmp_level_value_129 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 190;
+tmp_import_name_from_134 = IMPORT_MODULE5(tstate, tmp_name_value_129, tmp_globals_arg_value_129, tmp_locals_arg_value_129, tmp_fromlist_value_129, tmp_level_value_129);
+if (tmp_import_name_from_134 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 190;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_134)) {
+    tmp_assign_source_140 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_134,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseImageGenCallPartialImageEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_140 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_134, mod_consts.const_str_plain_ResponseImageGenCallPartialImageEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_134);
+Py_DECREF(tmp_import_name_from_134);
+if (tmp_assign_source_140 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 190;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseImageGenCallPartialImageEvent, tmp_assign_source_140);
+}
+{
+PyObject *tmp_assign_source_141;
+PyObject *tmp_import_name_from_135;
+PyObject *tmp_name_value_130;
+PyObject *tmp_globals_arg_value_130;
+PyObject *tmp_locals_arg_value_130;
+PyObject *tmp_fromlist_value_130;
+PyObject *tmp_level_value_130;
+tmp_name_value_130 = mod_consts.const_str_digest_62938c320d5ab37778c49561bb557de0;
+tmp_globals_arg_value_130 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_130 = Py_None;
+tmp_fromlist_value_130 = mod_consts.const_tuple_str_plain_ResponseOutputTextAnnotationAddedEvent_tuple;
+tmp_level_value_130 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 193;
+tmp_import_name_from_135 = IMPORT_MODULE5(tstate, tmp_name_value_130, tmp_globals_arg_value_130, tmp_locals_arg_value_130, tmp_fromlist_value_130, tmp_level_value_130);
+if (tmp_import_name_from_135 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 193;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_135)) {
+    tmp_assign_source_141 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_135,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseOutputTextAnnotationAddedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_141 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_135, mod_consts.const_str_plain_ResponseOutputTextAnnotationAddedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_135);
+Py_DECREF(tmp_import_name_from_135);
+if (tmp_assign_source_141 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 193;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseOutputTextAnnotationAddedEvent, tmp_assign_source_141);
+}
+{
+PyObject *tmp_assign_source_142;
+PyObject *tmp_import_name_from_136;
+PyObject *tmp_name_value_131;
+PyObject *tmp_globals_arg_value_131;
+PyObject *tmp_locals_arg_value_131;
+PyObject *tmp_fromlist_value_131;
+PyObject *tmp_level_value_131;
+tmp_name_value_131 = mod_consts.const_str_digest_8720385bdd3f7a58c4a047ef1be427a4;
+tmp_globals_arg_value_131 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_131 = Py_None;
+tmp_fromlist_value_131 = mod_consts.const_tuple_str_plain_ResponseReasoningSummaryPartAddedEvent_tuple;
+tmp_level_value_131 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 196;
+tmp_import_name_from_136 = IMPORT_MODULE5(tstate, tmp_name_value_131, tmp_globals_arg_value_131, tmp_locals_arg_value_131, tmp_fromlist_value_131, tmp_level_value_131);
+if (tmp_import_name_from_136 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 196;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_136)) {
+    tmp_assign_source_142 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_136,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseReasoningSummaryPartAddedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_142 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_136, mod_consts.const_str_plain_ResponseReasoningSummaryPartAddedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_136);
+Py_DECREF(tmp_import_name_from_136);
+if (tmp_assign_source_142 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 196;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseReasoningSummaryPartAddedEvent, tmp_assign_source_142);
+}
+{
+PyObject *tmp_assign_source_143;
+PyObject *tmp_import_name_from_137;
+PyObject *tmp_name_value_132;
+PyObject *tmp_globals_arg_value_132;
+PyObject *tmp_locals_arg_value_132;
+PyObject *tmp_fromlist_value_132;
+PyObject *tmp_level_value_132;
+tmp_name_value_132 = mod_consts.const_str_digest_48d62ccaac3f5a5eb113b4830ef94bcb;
+tmp_globals_arg_value_132 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_132 = Py_None;
+tmp_fromlist_value_132 = mod_consts.const_tuple_str_plain_ResponseReasoningSummaryTextDeltaEvent_tuple;
+tmp_level_value_132 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 199;
+tmp_import_name_from_137 = IMPORT_MODULE5(tstate, tmp_name_value_132, tmp_globals_arg_value_132, tmp_locals_arg_value_132, tmp_fromlist_value_132, tmp_level_value_132);
+if (tmp_import_name_from_137 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 199;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_137)) {
+    tmp_assign_source_143 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_137,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseReasoningSummaryTextDeltaEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_143 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_137, mod_consts.const_str_plain_ResponseReasoningSummaryTextDeltaEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_137);
+Py_DECREF(tmp_import_name_from_137);
+if (tmp_assign_source_143 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 199;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseReasoningSummaryTextDeltaEvent, tmp_assign_source_143);
+}
+{
+PyObject *tmp_assign_source_144;
+PyObject *tmp_import_name_from_138;
+PyObject *tmp_name_value_133;
+PyObject *tmp_globals_arg_value_133;
+PyObject *tmp_locals_arg_value_133;
+PyObject *tmp_fromlist_value_133;
+PyObject *tmp_level_value_133;
+tmp_name_value_133 = mod_consts.const_str_digest_4b1771f20cc66dbc0ca5aadc0c0b9ccb;
+tmp_globals_arg_value_133 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_133 = Py_None;
+tmp_fromlist_value_133 = mod_consts.const_tuple_str_plain_ResponseFunctionCallArgumentsDeltaEvent_tuple;
+tmp_level_value_133 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 202;
+tmp_import_name_from_138 = IMPORT_MODULE5(tstate, tmp_name_value_133, tmp_globals_arg_value_133, tmp_locals_arg_value_133, tmp_fromlist_value_133, tmp_level_value_133);
+if (tmp_import_name_from_138 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 202;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_138)) {
+    tmp_assign_source_144 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_138,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFunctionCallArgumentsDeltaEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_144 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_138, mod_consts.const_str_plain_ResponseFunctionCallArgumentsDeltaEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_138);
+Py_DECREF(tmp_import_name_from_138);
+if (tmp_assign_source_144 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 202;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFunctionCallArgumentsDeltaEvent, tmp_assign_source_144);
+}
+{
+PyObject *tmp_assign_source_145;
+PyObject *tmp_import_name_from_139;
+PyObject *tmp_name_value_134;
+PyObject *tmp_globals_arg_value_134;
+PyObject *tmp_locals_arg_value_134;
+PyObject *tmp_fromlist_value_134;
+PyObject *tmp_level_value_134;
+tmp_name_value_134 = mod_consts.const_str_digest_8a0a6b88cd5c993e6bfc9450a762f162;
+tmp_globals_arg_value_134 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_134 = Py_None;
+tmp_fromlist_value_134 = mod_consts.const_tuple_str_plain_ResponseComputerToolCallOutputScreenshot_tuple;
+tmp_level_value_134 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 205;
+tmp_import_name_from_139 = IMPORT_MODULE5(tstate, tmp_name_value_134, tmp_globals_arg_value_134, tmp_locals_arg_value_134, tmp_fromlist_value_134, tmp_level_value_134);
+if (tmp_import_name_from_139 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 205;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_139)) {
+    tmp_assign_source_145 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_139,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseComputerToolCallOutputScreenshot,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_145 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_139, mod_consts.const_str_plain_ResponseComputerToolCallOutputScreenshot);
+}
+
+CHECK_OBJECT(tmp_import_name_from_139);
+Py_DECREF(tmp_import_name_from_139);
+if (tmp_assign_source_145 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 205;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseComputerToolCallOutputScreenshot, tmp_assign_source_145);
+}
+{
+PyObject *tmp_assign_source_146;
+PyObject *tmp_import_name_from_140;
+PyObject *tmp_name_value_135;
+PyObject *tmp_globals_arg_value_135;
+PyObject *tmp_locals_arg_value_135;
+PyObject *tmp_fromlist_value_135;
+PyObject *tmp_level_value_135;
+tmp_name_value_135 = mod_consts.const_str_digest_7f3597d608c3b98aab9e4a5cb005dbb2;
+tmp_globals_arg_value_135 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_135 = Py_None;
+tmp_fromlist_value_135 = mod_consts.const_tuple_str_plain_ResponseFormatTextJSONSchemaConfigParam_tuple;
+tmp_level_value_135 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 208;
+tmp_import_name_from_140 = IMPORT_MODULE5(tstate, tmp_name_value_135, tmp_globals_arg_value_135, tmp_locals_arg_value_135, tmp_fromlist_value_135, tmp_level_value_135);
+if (tmp_import_name_from_140 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 208;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_140)) {
+    tmp_assign_source_146 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_140,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfigParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_146 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_140, mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfigParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_140);
+Py_DECREF(tmp_import_name_from_140);
+if (tmp_assign_source_146 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 208;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseFormatTextJSONSchemaConfigParam, tmp_assign_source_146);
+}
+{
+PyObject *tmp_assign_source_147;
+PyObject *tmp_import_name_from_141;
+PyObject *tmp_name_value_136;
+PyObject *tmp_globals_arg_value_136;
+PyObject *tmp_locals_arg_value_136;
+PyObject *tmp_fromlist_value_136;
+PyObject *tmp_level_value_136;
+tmp_name_value_136 = mod_consts.const_str_digest_521998f9296b55ef22e849661f075a12;
+tmp_globals_arg_value_136 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_136 = Py_None;
+tmp_fromlist_value_136 = mod_consts.const_tuple_str_plain_ResponseCodeInterpreterCallCodeDoneEvent_tuple;
+tmp_level_value_136 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 211;
+tmp_import_name_from_141 = IMPORT_MODULE5(tstate, tmp_name_value_136, tmp_globals_arg_value_136, tmp_locals_arg_value_136, tmp_fromlist_value_136, tmp_level_value_136);
+if (tmp_import_name_from_141 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 211;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_141)) {
+    tmp_assign_source_147 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_141,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_plain_ResponseCodeInterpreterCallCodeDoneEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_147 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_141, mod_consts.const_str_plain_ResponseCodeInterpreterCallCodeDoneEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_141);
+Py_DECREF(tmp_import_name_from_141);
+if (tmp_assign_source_147 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 211;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_plain_ResponseCodeInterpreterCallCodeDoneEvent, tmp_assign_source_147);
+}
+{
+PyObject *tmp_assign_source_148;
+PyObject *tmp_import_name_from_142;
+PyObject *tmp_name_value_137;
+PyObject *tmp_globals_arg_value_137;
+PyObject *tmp_locals_arg_value_137;
+PyObject *tmp_fromlist_value_137;
+PyObject *tmp_level_value_137;
+tmp_name_value_137 = mod_consts.const_str_digest_291fe7aa115dc7c5ac497c2d549b5773;
+tmp_globals_arg_value_137 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_137 = Py_None;
+tmp_fromlist_value_137 = mod_consts.const_tuple_str_digest_68535af65629c55f4de9600af2406536_tuple;
+tmp_level_value_137 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 214;
+tmp_import_name_from_142 = IMPORT_MODULE5(tstate, tmp_name_value_137, tmp_globals_arg_value_137, tmp_locals_arg_value_137, tmp_fromlist_value_137, tmp_level_value_137);
+if (tmp_import_name_from_142 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 214;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_142)) {
+    tmp_assign_source_148 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_142,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_digest_68535af65629c55f4de9600af2406536,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_148 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_142, mod_consts.const_str_digest_68535af65629c55f4de9600af2406536);
+}
+
+CHECK_OBJECT(tmp_import_name_from_142);
+Py_DECREF(tmp_import_name_from_142);
+if (tmp_assign_source_148 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 214;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_digest_68535af65629c55f4de9600af2406536, tmp_assign_source_148);
+}
+{
+PyObject *tmp_assign_source_149;
+PyObject *tmp_import_name_from_143;
+PyObject *tmp_name_value_138;
+PyObject *tmp_globals_arg_value_138;
+PyObject *tmp_locals_arg_value_138;
+PyObject *tmp_fromlist_value_138;
+PyObject *tmp_level_value_138;
+tmp_name_value_138 = mod_consts.const_str_digest_b1da21444fe18c8d5313ba42083fd806;
+tmp_globals_arg_value_138 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_138 = Py_None;
+tmp_fromlist_value_138 = mod_consts.const_tuple_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d_tuple;
+tmp_level_value_138 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 217;
+tmp_import_name_from_143 = IMPORT_MODULE5(tstate, tmp_name_value_138, tmp_globals_arg_value_138, tmp_locals_arg_value_138, tmp_fromlist_value_138, tmp_level_value_138);
+if (tmp_import_name_from_143 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 217;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_143)) {
+    tmp_assign_source_149 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_143,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_149 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_143, mod_consts.const_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d);
+}
+
+CHECK_OBJECT(tmp_import_name_from_143);
+Py_DECREF(tmp_import_name_from_143);
+if (tmp_assign_source_149 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 217;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_digest_06fa003e00145a609e4ea6f4e2dc1a9d, tmp_assign_source_149);
+}
+{
+PyObject *tmp_assign_source_150;
+PyObject *tmp_import_name_from_144;
+PyObject *tmp_name_value_139;
+PyObject *tmp_globals_arg_value_139;
+PyObject *tmp_locals_arg_value_139;
+PyObject *tmp_fromlist_value_139;
+PyObject *tmp_level_value_139;
+tmp_name_value_139 = mod_consts.const_str_digest_93bdb945b11c5dda48cf9c17f581f0ed;
+tmp_globals_arg_value_139 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_139 = Py_None;
+tmp_fromlist_value_139 = mod_consts.const_tuple_str_digest_b4c0b7e4d7f31b62249d4cb49c670354_tuple;
+tmp_level_value_139 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 220;
+tmp_import_name_from_144 = IMPORT_MODULE5(tstate, tmp_name_value_139, tmp_globals_arg_value_139, tmp_locals_arg_value_139, tmp_fromlist_value_139, tmp_level_value_139);
+if (tmp_import_name_from_144 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 220;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_144)) {
+    tmp_assign_source_150 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_144,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_digest_b4c0b7e4d7f31b62249d4cb49c670354,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_150 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_144, mod_consts.const_str_digest_b4c0b7e4d7f31b62249d4cb49c670354);
+}
+
+CHECK_OBJECT(tmp_import_name_from_144);
+Py_DECREF(tmp_import_name_from_144);
+if (tmp_assign_source_150 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 220;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_digest_b4c0b7e4d7f31b62249d4cb49c670354, tmp_assign_source_150);
+}
+{
+PyObject *tmp_assign_source_151;
+PyObject *tmp_import_name_from_145;
+PyObject *tmp_name_value_140;
+PyObject *tmp_globals_arg_value_140;
+PyObject *tmp_locals_arg_value_140;
+PyObject *tmp_fromlist_value_140;
+PyObject *tmp_level_value_140;
+tmp_name_value_140 = mod_consts.const_str_digest_a7d474822c33e65637a1faa6ac18c93d;
+tmp_globals_arg_value_140 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_140 = Py_None;
+tmp_fromlist_value_140 = mod_consts.const_tuple_str_digest_1cde74e27f144331f01fe360fd360faf_tuple;
+tmp_level_value_140 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 223;
+tmp_import_name_from_145 = IMPORT_MODULE5(tstate, tmp_name_value_140, tmp_globals_arg_value_140, tmp_locals_arg_value_140, tmp_fromlist_value_140, tmp_level_value_140);
+if (tmp_import_name_from_145 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 223;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_145)) {
+    tmp_assign_source_151 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_145,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_digest_1cde74e27f144331f01fe360fd360faf,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_151 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_145, mod_consts.const_str_digest_1cde74e27f144331f01fe360fd360faf);
+}
+
+CHECK_OBJECT(tmp_import_name_from_145);
+Py_DECREF(tmp_import_name_from_145);
+if (tmp_assign_source_151 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 223;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_digest_1cde74e27f144331f01fe360fd360faf, tmp_assign_source_151);
+}
+{
+PyObject *tmp_assign_source_152;
+PyObject *tmp_import_name_from_146;
+PyObject *tmp_name_value_141;
+PyObject *tmp_globals_arg_value_141;
+PyObject *tmp_locals_arg_value_141;
+PyObject *tmp_fromlist_value_141;
+PyObject *tmp_level_value_141;
+tmp_name_value_141 = mod_consts.const_str_digest_d52db91d4d6d7b9765f76f30e806055b;
+tmp_globals_arg_value_141 = (PyObject *)moduledict_openai$types$responses;
+tmp_locals_arg_value_141 = Py_None;
+tmp_fromlist_value_141 = mod_consts.const_tuple_str_digest_b25895db7f7c396591ceff47b4b28b76_tuple;
+tmp_level_value_141 = const_int_pos_1;
+frame_frame_openai$types$responses->m_frame.f_lineno = 226;
+tmp_import_name_from_146 = IMPORT_MODULE5(tstate, tmp_name_value_141, tmp_globals_arg_value_141, tmp_locals_arg_value_141, tmp_fromlist_value_141, tmp_level_value_141);
+if (tmp_import_name_from_146 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 226;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_146)) {
+    tmp_assign_source_152 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_146,
+        (PyObject *)moduledict_openai$types$responses,
+        mod_consts.const_str_digest_b25895db7f7c396591ceff47b4b28b76,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_152 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_146, mod_consts.const_str_digest_b25895db7f7c396591ceff47b4b28b76);
+}
+
+CHECK_OBJECT(tmp_import_name_from_146);
+Py_DECREF(tmp_import_name_from_146);
+if (tmp_assign_source_152 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 226;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_openai$types$responses, (Nuitka_StringObject *)mod_consts.const_str_digest_b25895db7f7c396591ceff47b4b28b76, tmp_assign_source_152);
+}
+
+
+// Put the previous frame back on top.
+popFrameStack(tstate);
+
+goto frame_no_exception_1;
+frame_exception_exit_1:
+
+
+{
+    PyTracebackObject *exception_tb = GET_EXCEPTION_STATE_TRACEBACK(&exception_state);
+    if (exception_tb == NULL) {
+        exception_tb = MAKE_TRACEBACK(frame_frame_openai$types$responses, exception_lineno);
+        SET_EXCEPTION_STATE_TRACEBACK(&exception_state, exception_tb);
+    } else if (exception_tb->tb_frame != &frame_frame_openai$types$responses->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_frame_openai$types$responses, exception_lineno);
+        SET_EXCEPTION_STATE_TRACEBACK(&exception_state, exception_tb);
+    }
+}
+
+
+
+assertFrameObject(frame_frame_openai$types$responses);
+
+// Put the previous frame back on top.
+popFrameStack(tstate);
+
+// Return the error.
+goto module_exception_exit;
+frame_no_exception_1:;
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("openai$types$responses", false);
+
+#if _NUITKA_MODULE_MODE && 0
+    {
+        PyObject *post_load = IMPORT_EMBEDDED_MODULE(tstate, "openai.types.responses" "-postLoad");
+        if (post_load == NULL) {
+            return NULL;
+        }
+    }
+#endif
+
+    Py_INCREF(module_openai$types$responses);
+    return module_openai$types$responses;
+    module_exception_exit:
+
+#if _NUITKA_MODULE_MODE && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_openai$types$responses, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(tstate, module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("openai$types$responses", false);
+
+    RESTORE_ERROR_OCCURRED_STATE(tstate, &exception_state);
+    return NULL;
+}

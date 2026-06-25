@@ -1,0 +1,71 @@
+name: Build YAC
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    name: Windows GCC
+    runs-on: windows-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Setup MinGW
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          update: true
+          install: mingw-w64-x86_64-gcc make
+
+      - name: Get Python paths
+        id: pypath
+        shell: pwsh
+        run: |
+          $pyexe = (Get-Command python).Source
+          $pydir = Split-Path $pyexe
+          echo "PYINC=$pydir\include" >> $env:GITHUB_OUTPUT
+          echo "PYLIB=$pydir\libs" >> $env:GITHUB_OUTPUT
+
+      - name: Build with Make -j4
+        shell: msys2 {0}
+        env:
+          PYINC: ${{ steps.pypath.outputs.PYINC }}
+          PYLIB: ${{ steps.pypath.outputs.PYLIB }}
+        run: |
+          cd YACNuitkaSrc
+          PYINC_U=$(cygpath -u "$PYINC")
+          PYLIB_U=$(cygpath -u "$PYLIB")
+
+          SRCS=$(find . -name "*.c" | tr '\n' ' ')
+          OBJS=$(find . -name "*.c" | sed 's/\.c$/.o/' | tr '\n' ' ')
+
+          cat > Makefile << MAKE
+          CFLAGS = -Os --param ggc-min-expand=0 --param ggc-min-heapsize=4096 -I. -I${PYINC_U}
+          SRCS   = ${SRCS}
+          OBJS   = ${OBJS}
+
+          all: ../yac.exe
+
+          %.o: %.c
+          	gcc \$(CFLAGS) -c \$< -o \$@
+
+          ../yac.exe: \$(OBJS)
+          	gcc \$(OBJS) -o ../yac.exe -L${PYLIB_U} -lpython313 -static-libgcc
+          MAKE
+
+          make -j4
+          echo "Build done."
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: yac-windows
+          path: yac.exe
+          retention-days: 30

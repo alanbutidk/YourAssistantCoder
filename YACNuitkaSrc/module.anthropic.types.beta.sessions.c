@@ -1,0 +1,7741 @@
+/* Generated code for Python module 'anthropic$types$beta$sessions'
+ * created by Nuitka version 4.0.8
+ *
+ * This code is in part copyright 2025 Kay Hayen.
+ *
+ * Licensed under the GNU Affero General Public License, Version 3 (the "License");
+ * you may not use this file except in compliance with the License.
+ *
+ * You may obtain a copy of the License in "LICENSE.txt" and the runtime
+ * exception granted in "LICENSE-RUNTIME.txt" from Nuitka source code. For
+ * deploying the generated code it is intended to not restrict distributing
+ * created binaries.
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include "nuitka/prelude.h"
+
+#include "nuitka/unfreezing.h"
+
+#include "__helpers.h"
+
+
+
+/* The "module_anthropic$types$beta$sessions" is a Python object pointer of module type.
+ *
+ * Note: For full compatibility with CPython, every module variable access
+ * needs to go through it except for cases where the module cannot possibly
+ * have changed in the mean time.
+ */
+
+PyObject *module_anthropic$types$beta$sessions;
+PyDictObject *moduledict_anthropic$types$beta$sessions;
+
+/* The declarations of module constants used, if any. */
+static struct ModuleConstants {
+PyObject *const_str_plain_join;
+PyObject *const_str_plain_environ;
+PyObject *const_tuple_267b1b08e23cbd828589c9ff1fb413aa_tuple;
+PyObject *const_str_digest_2b32f0eb3b0c3f1fce1dd791b81fd0eb;
+PyObject *const_tuple_b33bb4004300fc3cd16d82c209c32141_tuple;
+PyObject *const_str_digest_5d4fb6971b9d7772f04c3be614a6ad5c;
+PyObject *const_tuple_63bca6ec0c203e2c19b2279effd52b81_tuple;
+PyObject *const_str_plain_sessions;
+PyObject *const_tuple_af00aba555f71d1d4d45b2b70c5e8e77_tuple;
+PyObject *const_str_plain_origin;
+PyObject *const_str_plain_has_location;
+PyObject *const_str_plain_submodule_search_locations;
+PyObject *const_str_plain_annotations;
+PyObject *const_str_plain_event_list_params;
+PyObject *const_tuple_str_plain_EventListParams_tuple;
+PyObject *const_str_plain_EventListParams;
+PyObject *const_str_plain_event_send_params;
+PyObject *const_tuple_str_plain_EventSendParams_tuple;
+PyObject *const_str_plain_EventSendParams;
+PyObject *const_str_plain_thread_list_params;
+PyObject *const_tuple_str_plain_ThreadListParams_tuple;
+PyObject *const_str_plain_ThreadListParams;
+PyObject *const_str_plain_resource_add_params;
+PyObject *const_tuple_str_plain_ResourceAddParams_tuple;
+PyObject *const_str_plain_ResourceAddParams;
+PyObject *const_str_plain_resource_list_params;
+PyObject *const_tuple_str_plain_ResourceListParams_tuple;
+PyObject *const_str_plain_ResourceListParams;
+PyObject *const_str_plain_resource_update_params;
+PyObject *const_tuple_str_plain_ResourceUpdateParams_tuple;
+PyObject *const_str_plain_ResourceUpdateParams;
+PyObject *const_str_plain_resource_update_response;
+PyObject *const_tuple_str_plain_ResourceUpdateResponse_tuple;
+PyObject *const_str_plain_ResourceUpdateResponse;
+PyObject *const_str_plain_resource_retrieve_response;
+PyObject *const_tuple_str_plain_ResourceRetrieveResponse_tuple;
+PyObject *const_str_plain_ResourceRetrieveResponse;
+PyObject *const_str_plain_beta_managed_agents_text_block;
+PyObject *const_tuple_str_plain_BetaManagedAgentsTextBlock_tuple;
+PyObject *const_str_plain_BetaManagedAgentsTextBlock;
+PyObject *const_str_plain_beta_managed_agents_file_rubric;
+PyObject *const_tuple_str_plain_BetaManagedAgentsFileRubric_tuple;
+PyObject *const_str_plain_BetaManagedAgentsFileRubric;
+PyObject *const_str_plain_beta_managed_agents_image_block;
+PyObject *const_tuple_str_plain_BetaManagedAgentsImageBlock_tuple;
+PyObject *const_str_plain_BetaManagedAgentsImageBlock;
+PyObject *const_str_plain_beta_managed_agents_text_rubric;
+PyObject *const_tuple_str_plain_BetaManagedAgentsTextRubric_tuple;
+PyObject *const_str_plain_BetaManagedAgentsTextRubric;
+PyObject *const_str_plain_beta_managed_agents_event_params;
+PyObject *const_tuple_str_plain_BetaManagedAgentsEventParams_tuple;
+PyObject *const_str_plain_BetaManagedAgentsEventParams;
+PyObject *const_str_plain_beta_managed_agents_billing_error;
+PyObject *const_tuple_str_plain_BetaManagedAgentsBillingError_tuple;
+PyObject *const_str_plain_BetaManagedAgentsBillingError;
+PyObject *const_str_plain_beta_managed_agents_file_resource;
+PyObject *const_tuple_str_plain_BetaManagedAgentsFileResource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsFileResource;
+PyObject *const_str_plain_beta_managed_agents_session_event;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionEvent;
+PyObject *const_str_plain_beta_managed_agents_unknown_error;
+PyObject *const_tuple_str_plain_BetaManagedAgentsUnknownError_tuple;
+PyObject *const_str_plain_BetaManagedAgentsUnknownError;
+PyObject *const_str_plain_beta_managed_agents_document_block;
+PyObject *const_tuple_str_plain_BetaManagedAgentsDocumentBlock_tuple;
+PyObject *const_str_plain_BetaManagedAgentsDocumentBlock;
+PyObject *const_str_plain_beta_managed_agents_session_thread;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionThread_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionThread;
+PyObject *const_str_plain_beta_managed_agents_session_end_turn;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionEndTurn_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionEndTurn;
+PyObject *const_str_plain_beta_managed_agents_session_resource;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionResource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionResource;
+PyObject *const_str_plain_beta_managed_agents_span_model_usage;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSpanModelUsage_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSpanModelUsage;
+PyObject *const_str_plain_beta_managed_agents_text_block_param;
+PyObject *const_tuple_str_plain_BetaManagedAgentsTextBlockParam_tuple;
+PyObject *const_str_plain_BetaManagedAgentsTextBlockParam;
+PyObject *const_str_plain_beta_managed_agents_url_image_source;
+PyObject *const_tuple_str_plain_BetaManagedAgentsURLImageSource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsURLImageSource;
+PyObject *const_str_plain_beta_managed_agents_file_image_source;
+PyObject *const_tuple_str_plain_BetaManagedAgentsFileImageSource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsFileImageSource;
+PyObject *const_str_plain_beta_managed_agents_image_block_param;
+PyObject *const_tuple_str_plain_BetaManagedAgentsImageBlockParam_tuple;
+PyObject *const_str_plain_BetaManagedAgentsImageBlockParam;
+PyObject *const_str_plain_beta_managed_agents_file_rubric_params;
+PyObject *const_tuple_str_plain_BetaManagedAgentsFileRubricParams_tuple;
+PyObject *const_str_plain_BetaManagedAgentsFileRubricParams;
+PyObject *const_str_plain_beta_managed_agents_text_rubric_params;
+PyObject *const_tuple_str_plain_BetaManagedAgentsTextRubricParams_tuple;
+PyObject *const_str_plain_BetaManagedAgentsTextRubricParams;
+PyObject *const_str_plain_beta_managed_agents_user_message_event;
+PyObject *const_tuple_str_plain_BetaManagedAgentsUserMessageEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsUserMessageEvent;
+PyObject *const_str_plain_beta_managed_agents_agent_message_event;
+PyObject *const_tuple_str_plain_BetaManagedAgentsAgentMessageEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsAgentMessageEvent;
+PyObject *const_str_plain_beta_managed_agents_base64_image_source;
+PyObject *const_tuple_str_plain_BetaManagedAgentsBase64ImageSource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsBase64ImageSource;
+PyObject *const_str_plain_beta_managed_agents_search_result_block;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSearchResultBlock_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSearchResultBlock;
+PyObject *const_str_plain_beta_managed_agents_send_session_events;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSendSessionEvents_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSendSessionEvents;
+PyObject *const_str_plain_beta_managed_agents_session_error_event;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionErrorEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionErrorEvent;
+PyObject *const_str_plain_beta_managed_agents_url_document_source;
+PyObject *const_tuple_str_plain_BetaManagedAgentsURLDocumentSource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsURLDocumentSource;
+PyObject *const_str_plain_beta_managed_agents_agent_thinking_event;
+PyObject *const_tuple_str_plain_BetaManagedAgentsAgentThinkingEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsAgentThinkingEvent;
+PyObject *const_str_plain_beta_managed_agents_agent_tool_use_event;
+PyObject *const_tuple_str_plain_BetaManagedAgentsAgentToolUseEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsAgentToolUseEvent;
+PyObject *const_str_plain_beta_managed_agents_document_block_param;
+PyObject *const_tuple_str_plain_BetaManagedAgentsDocumentBlockParam_tuple;
+PyObject *const_str_plain_BetaManagedAgentsDocumentBlockParam;
+PyObject *const_str_plain_beta_managed_agents_file_document_source;
+PyObject *const_tuple_str_plain_BetaManagedAgentsFileDocumentSource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsFileDocumentSource;
+PyObject *const_str_plain_beta_managed_agents_session_thread_stats;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionThreadStats_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionThreadStats;
+PyObject *const_str_plain_beta_managed_agents_session_thread_usage;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionThreadUsage_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionThreadUsage;
+PyObject *const_str_plain_beta_managed_agents_user_interrupt_event;
+PyObject *const_tuple_str_plain_BetaManagedAgentsUserInterruptEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsUserInterruptEvent;
+PyObject *const_str_digest_4d5ff906fa46065bd576d488cf6644da;
+PyObject *const_tuple_str_plain_BetaManagedAgentsMemoryStoreResource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsMemoryStoreResource;
+PyObject *const_str_digest_e1188b2adac853d5f780269a175da474;
+PyObject *const_tuple_str_plain_BetaManagedAgentsRetryStatusRetrying_tuple;
+PyObject *const_str_plain_BetaManagedAgentsRetryStatusRetrying;
+PyObject *const_str_digest_a3ba35c9f8c9fd464327064b5f3ef057;
+PyObject *const_tuple_str_plain_BetaManagedAgentsRetryStatusTerminal_tuple;
+PyObject *const_str_plain_BetaManagedAgentsRetryStatusTerminal;
+PyObject *const_str_digest_0711530fd7fda92e4f2f52d0c181f057;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSearchResultContent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSearchResultContent;
+PyObject *const_str_digest_230cf712991ca05edd3dcd967b1d4d87;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionDeletedEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionDeletedEvent;
+PyObject *const_str_digest_560cbcfce43524d4443be33a534ac730;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionThreadStatus_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionThreadStatus;
+PyObject *const_str_digest_f8194516717ada5da62a92b3eb63fc08;
+PyObject *const_tuple_str_plain_BetaManagedAgentsStreamSessionEvents_tuple;
+PyObject *const_str_plain_BetaManagedAgentsStreamSessionEvents;
+PyObject *const_str_digest_97794e9119c4c8c04471d41f96263d7c;
+PyObject *const_tuple_str_plain_BetaManagedAgentsBase64DocumentSource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsBase64DocumentSource;
+PyObject *const_str_digest_c8cda2d1f5f906aec1fead4089f7c19a;
+PyObject *const_tuple_str_plain_BetaManagedAgentsModelOverloadedError_tuple;
+PyObject *const_str_plain_BetaManagedAgentsModelOverloadedError;
+PyObject *const_str_digest_46685a56077522eed81e810fe06cc744;
+PyObject *const_tuple_str_plain_BetaManagedAgentsRetryStatusExhausted_tuple;
+PyObject *const_str_plain_BetaManagedAgentsRetryStatusExhausted;
+PyObject *const_str_digest_9c855d5412534f3193c5a5c0c5c2c231;
+PyObject *const_tuple_str_plain_BetaManagedAgentsURLImageSourceParam_tuple;
+PyObject *const_str_plain_BetaManagedAgentsURLImageSourceParam;
+PyObject *const_str_digest_ff7a1785b84792891d1dbe7b070c47b4;
+PyObject *const_tuple_str_plain_BetaManagedAgentsAgentToolResultEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsAgentToolResultEvent;
+PyObject *const_str_digest_223cca9ed6b87103eb9924b6dce13e0c;
+PyObject *const_tuple_str_plain_BetaManagedAgentsDeleteSessionResource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsDeleteSessionResource;
+PyObject *const_str_digest_61d12c11bf02539ceff8d4c7309b7fda;
+PyObject *const_tuple_str_plain_BetaManagedAgentsFileImageSourceParam_tuple;
+PyObject *const_str_plain_BetaManagedAgentsFileImageSourceParam;
+PyObject *const_str_digest_6b8a3520a58d384fddb23ee7df11c3c4;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSearchResultCitations_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSearchResultCitations;
+PyObject *const_str_digest_aea22668ea0a349ffe774bc823f0348d;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionRequiresAction_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionRequiresAction;
+PyObject *const_str_digest_1a02886b578e6e83915e9e85830aa625;
+PyObject *const_tuple_str_plain_BetaManagedAgentsAgentMCPToolUseEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsAgentMCPToolUseEvent;
+PyObject *const_str_digest_e98ebba0d9c49841eaa6d7b9fdc28eae;
+PyObject *const_tuple_str_plain_BetaManagedAgentsModelRateLimitedError_tuple;
+PyObject *const_str_plain_BetaManagedAgentsModelRateLimitedError;
+PyObject *const_str_digest_237d50500fabe51b25c23e842641dbb6;
+PyObject *const_tuple_str_plain_BetaManagedAgentsBase64ImageSourceParam_tuple;
+PyObject *const_str_plain_BetaManagedAgentsBase64ImageSourceParam;
+PyObject *const_str_digest_1847b8fc3dbd5fc4758458bbcda6379c;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSearchResultBlockParam_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSearchResultBlockParam;
+PyObject *const_str_digest_5b663ff13e7e4b866b0ae8cf9b9b865f;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionRetriesExhausted_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionRetriesExhausted;
+PyObject *const_str_digest_7ea9bd93674f086a4aaeca2d3e22c51b;
+PyObject *const_tuple_str_plain_BetaManagedAgentsSessionStatusIdleEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsSessionStatusIdleEvent;
+PyObject *const_str_digest_11eeaaf653ae468c5d548401bf0e638f;
+PyObject *const_tuple_str_plain_BetaManagedAgentsURLDocumentSourceParam_tuple;
+PyObject *const_str_plain_BetaManagedAgentsURLDocumentSourceParam;
+PyObject *const_str_digest_26fe297ca4ea1d1e115a15748d0d72dc;
+PyObject *const_tuple_str_plain_BetaManagedAgentsUserDefineOutcomeEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsUserDefineOutcomeEvent;
+PyObject *const_str_digest_3bef3f5f068e73b6bbe434e8ab3907d2;
+PyObject *const_tuple_str_plain_BetaManagedAgentsUserMessageEventParams_tuple;
+PyObject *const_str_plain_BetaManagedAgentsUserMessageEventParams;
+PyObject *const_str_digest_17c4c3e76f57665e8c37d3e8e05f4485;
+PyObject *const_tuple_str_plain_BetaManagedAgentsFileDocumentSourceParam_tuple;
+PyObject *const_str_plain_BetaManagedAgentsFileDocumentSourceParam;
+PyObject *const_str_digest_8f3e1ddcf963a5d641b0c54bfd3f6f23;
+PyObject *const_tuple_str_digest_c208f803a714c3fa632910db28470705_tuple;
+PyObject *const_str_digest_c208f803a714c3fa632910db28470705;
+PyObject *const_str_digest_acf6c8bd2b1df01d7b3913b3b4445847;
+PyObject *const_tuple_str_plain_BetaManagedAgentsModelRequestFailedError_tuple;
+PyObject *const_str_plain_BetaManagedAgentsModelRequestFailedError;
+PyObject *const_str_digest_cd880bb52b89b3980aba14b2e1dea914;
+PyObject *const_tuple_str_plain_BetaManagedAgentsPlainTextDocumentSource_tuple;
+PyObject *const_str_plain_BetaManagedAgentsPlainTextDocumentSource;
+PyObject *const_str_digest_8de9b38d69878d132f1d06943d71c118;
+PyObject *const_tuple_str_plain_BetaManagedAgentsAgentCustomToolUseEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsAgentCustomToolUseEvent;
+PyObject *const_str_digest_9b86de5cb83fcd2792d0a25b2223ccb1;
+PyObject *const_tuple_str_plain_BetaManagedAgentsAgentMCPToolResultEvent_tuple;
+PyObject *const_str_plain_BetaManagedAgentsAgentMCPToolResultEvent;
+PyObject *const_str_digest_b1e4574a2d2798659bb173d1b4694ea4;
+PyObject *const_tuple_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147_tuple;
+PyObject *const_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147;
+PyObject *const_str_digest_c52876987c535d76bc4fe24fafe78167;
+PyObject *const_tuple_str_digest_6fe7353544f7f387cb0045c98890b3b7_tuple;
+PyObject *const_str_digest_6fe7353544f7f387cb0045c98890b3b7;
+PyObject *const_str_digest_e3bdbcce8f5e497f6a92e376257c0061;
+PyObject *const_tuple_str_digest_d89f5443f324538af014bc954ea5d2b0_tuple;
+PyObject *const_str_digest_d89f5443f324538af014bc954ea5d2b0;
+PyObject *const_str_digest_d3aa71efb401174fba1c4133f7328ee0;
+PyObject *const_tuple_str_digest_097b50026d50f058ff37fab2be627c5a_tuple;
+PyObject *const_str_digest_097b50026d50f058ff37fab2be627c5a;
+PyObject *const_str_digest_df4d2f0963c141f6f99904381d948245;
+PyObject *const_tuple_str_digest_7bd78a3f07d54c8e773e97b2b33d4855_tuple;
+PyObject *const_str_digest_7bd78a3f07d54c8e773e97b2b33d4855;
+PyObject *const_str_digest_8bf6bbeecbb9b26c4bf9be3e428b8ee0;
+PyObject *const_tuple_str_digest_680985bd76c009f9f484b2ca1ee7179b_tuple;
+PyObject *const_str_digest_680985bd76c009f9f484b2ca1ee7179b;
+PyObject *const_str_digest_69b94baa64a893477643a644d2b44ab5;
+PyObject *const_tuple_str_digest_87fa0cb24f156084d751cb015c923d88_tuple;
+PyObject *const_str_digest_87fa0cb24f156084d751cb015c923d88;
+PyObject *const_str_digest_1669eb22806384dccf6274d7042e1858;
+PyObject *const_tuple_str_digest_1c85da38dd09ccf517e65697df6a701b_tuple;
+PyObject *const_str_digest_1c85da38dd09ccf517e65697df6a701b;
+PyObject *const_str_digest_40d972d8062bd5d21699266ecbec1be1;
+PyObject *const_tuple_str_digest_47a3d32085b8900d70eebcf91501a8ea_tuple;
+PyObject *const_str_digest_47a3d32085b8900d70eebcf91501a8ea;
+PyObject *const_str_digest_aea9a1a16508b16b31c2c6a58f9cc47d;
+PyObject *const_tuple_str_digest_0890907e33afebe5186f7369782e72a8_tuple;
+PyObject *const_str_digest_0890907e33afebe5186f7369782e72a8;
+PyObject *const_str_digest_b057ace19175756317b43867257827a8;
+PyObject *const_tuple_str_digest_be0c919b566c3ecfa243fcd814cb9d7c_tuple;
+PyObject *const_str_digest_be0c919b566c3ecfa243fcd814cb9d7c;
+PyObject *const_str_digest_051e583293111ff440e6b92cd3f28e3f;
+PyObject *const_tuple_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063_tuple;
+PyObject *const_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063;
+PyObject *const_str_digest_590fe6cd1c992a1fff94d3643dbdf1e4;
+PyObject *const_tuple_str_digest_bbb81df83a566cf2814346e63f686900_tuple;
+PyObject *const_str_digest_bbb81df83a566cf2814346e63f686900;
+PyObject *const_str_digest_9dc1af1b57f64fa267f0908b6f5c4afb;
+PyObject *const_tuple_str_digest_53b65cba1e561c6df7f51f1093dca70d_tuple;
+PyObject *const_str_digest_53b65cba1e561c6df7f51f1093dca70d;
+PyObject *const_str_digest_e2c6c3dabb6f518a0a6297ce1b09c3ca;
+PyObject *const_tuple_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487_tuple;
+PyObject *const_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487;
+PyObject *const_str_digest_11b40ac95fdb12964baf6c6c41b32b78;
+PyObject *const_tuple_str_digest_a39975e914a6a86ba3153b197792b326_tuple;
+PyObject *const_str_digest_a39975e914a6a86ba3153b197792b326;
+PyObject *const_str_digest_54f946fcfe17e0cdab8c188cdbbc27f1;
+PyObject *const_tuple_str_digest_e6071443bffad02c21354a5fd3f17994_tuple;
+PyObject *const_str_digest_e6071443bffad02c21354a5fd3f17994;
+PyObject *const_str_digest_f5f71707011d14e7134746d6f9a3fcca;
+PyObject *const_tuple_str_digest_79208f99f42387dedaa503f910cf801e_tuple;
+PyObject *const_str_digest_79208f99f42387dedaa503f910cf801e;
+PyObject *const_str_digest_7fb08b4202f0695f1759c805e119dac8;
+PyObject *const_tuple_str_digest_e0e15641e9785d45266c86e750f17f58_tuple;
+PyObject *const_str_digest_e0e15641e9785d45266c86e750f17f58;
+PyObject *const_str_digest_d103e12d900b8dc659f4cb8b6b2123c0;
+PyObject *const_tuple_str_digest_0b022c66340cc7524b2f5f92a40cc1bd_tuple;
+PyObject *const_str_digest_0b022c66340cc7524b2f5f92a40cc1bd;
+PyObject *const_str_digest_936baf57ce758ebde4ee8bc4e9a3742a;
+PyObject *const_tuple_str_digest_68b72308bf2917066fde4b492afa1489_tuple;
+PyObject *const_str_digest_68b72308bf2917066fde4b492afa1489;
+PyObject *const_str_digest_da236c84c2dbb31314d9e00436fc24e3;
+PyObject *const_tuple_str_digest_8aa8484df48f880159babc856f073325_tuple;
+PyObject *const_str_digest_8aa8484df48f880159babc856f073325;
+PyObject *const_str_digest_374ffb61669f909eb3359f731d6c6fa0;
+PyObject *const_tuple_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac_tuple;
+PyObject *const_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac;
+PyObject *const_str_digest_b9bc0d714c8bd89d4149c6e3907b1de4;
+PyObject *const_tuple_str_digest_b2ea6e7e043e35d36ec3c1599733882c_tuple;
+PyObject *const_str_digest_b2ea6e7e043e35d36ec3c1599733882c;
+PyObject *const_str_digest_2a1f97edc80a2d8bda40d1e34932fdfd;
+PyObject *const_tuple_str_digest_0fb152346dd6fa9a4cf8f10654950779_tuple;
+PyObject *const_str_digest_0fb152346dd6fa9a4cf8f10654950779;
+PyObject *const_str_digest_2a790bc9daba1a9003a9515bb59feb21;
+PyObject *const_tuple_str_digest_e328354439fe86c13e6c5cffe6a79707_tuple;
+PyObject *const_str_digest_e328354439fe86c13e6c5cffe6a79707;
+PyObject *const_str_digest_66286995c0043be401da32224d412da8;
+PyObject *const_tuple_str_digest_91c05374584395232324d09dd05abad1_tuple;
+PyObject *const_str_digest_91c05374584395232324d09dd05abad1;
+PyObject *const_str_digest_42b7b03f5a1fe35a2a2a85378a38aac4;
+PyObject *const_tuple_str_digest_eca874ca0aca92a60a9f3961c3eeca4a_tuple;
+PyObject *const_str_digest_eca874ca0aca92a60a9f3961c3eeca4a;
+PyObject *const_str_digest_2c6b0b64226c8987a8654e5faf02f5e6;
+PyObject *const_tuple_str_digest_134a26556d1ccf879ef7b122beeef960_tuple;
+PyObject *const_str_digest_134a26556d1ccf879ef7b122beeef960;
+PyObject *const_str_digest_fb6bf8f58efa4f66ca6ef4ac71839ade;
+PyObject *const_tuple_str_digest_80411456df379e8767e34326f63b4233_tuple;
+PyObject *const_str_digest_80411456df379e8767e34326f63b4233;
+PyObject *const_str_digest_67f3fb50bf2a38c6cb21090701ab2c3f;
+PyObject *const_str_digest_809228f0fc663309bfc21295b9946c6f;
+} mod_consts;
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[324];
+#endif
+
+static PyObject *module_filename_obj = NULL;
+
+/* Indicator if this modules private constants were created yet. */
+static bool constants_created = false;
+
+/* Function to create module private constants. */
+static void createModuleConstants(PyThreadState *tstate) {
+    if (constants_created == false) {
+        loadConstantsBlob(tstate, (PyObject **)&mod_consts, UN_TRANSLATE("anthropic.types.beta.sessions"));
+        constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+mod_consts_hash[0] = DEEP_HASH(tstate, mod_consts.const_str_plain_join);
+mod_consts_hash[1] = DEEP_HASH(tstate, mod_consts.const_str_plain_environ);
+mod_consts_hash[2] = DEEP_HASH(tstate, mod_consts.const_tuple_267b1b08e23cbd828589c9ff1fb413aa_tuple);
+mod_consts_hash[3] = DEEP_HASH(tstate, mod_consts.const_str_digest_2b32f0eb3b0c3f1fce1dd791b81fd0eb);
+mod_consts_hash[4] = DEEP_HASH(tstate, mod_consts.const_tuple_b33bb4004300fc3cd16d82c209c32141_tuple);
+mod_consts_hash[5] = DEEP_HASH(tstate, mod_consts.const_str_digest_5d4fb6971b9d7772f04c3be614a6ad5c);
+mod_consts_hash[6] = DEEP_HASH(tstate, mod_consts.const_tuple_63bca6ec0c203e2c19b2279effd52b81_tuple);
+mod_consts_hash[7] = DEEP_HASH(tstate, mod_consts.const_str_plain_sessions);
+mod_consts_hash[8] = DEEP_HASH(tstate, mod_consts.const_tuple_af00aba555f71d1d4d45b2b70c5e8e77_tuple);
+mod_consts_hash[9] = DEEP_HASH(tstate, mod_consts.const_str_plain_origin);
+mod_consts_hash[10] = DEEP_HASH(tstate, mod_consts.const_str_plain_has_location);
+mod_consts_hash[11] = DEEP_HASH(tstate, mod_consts.const_str_plain_submodule_search_locations);
+mod_consts_hash[12] = DEEP_HASH(tstate, mod_consts.const_str_plain_annotations);
+mod_consts_hash[13] = DEEP_HASH(tstate, mod_consts.const_str_plain_event_list_params);
+mod_consts_hash[14] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_EventListParams_tuple);
+mod_consts_hash[15] = DEEP_HASH(tstate, mod_consts.const_str_plain_EventListParams);
+mod_consts_hash[16] = DEEP_HASH(tstate, mod_consts.const_str_plain_event_send_params);
+mod_consts_hash[17] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_EventSendParams_tuple);
+mod_consts_hash[18] = DEEP_HASH(tstate, mod_consts.const_str_plain_EventSendParams);
+mod_consts_hash[19] = DEEP_HASH(tstate, mod_consts.const_str_plain_thread_list_params);
+mod_consts_hash[20] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ThreadListParams_tuple);
+mod_consts_hash[21] = DEEP_HASH(tstate, mod_consts.const_str_plain_ThreadListParams);
+mod_consts_hash[22] = DEEP_HASH(tstate, mod_consts.const_str_plain_resource_add_params);
+mod_consts_hash[23] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResourceAddParams_tuple);
+mod_consts_hash[24] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResourceAddParams);
+mod_consts_hash[25] = DEEP_HASH(tstate, mod_consts.const_str_plain_resource_list_params);
+mod_consts_hash[26] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResourceListParams_tuple);
+mod_consts_hash[27] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResourceListParams);
+mod_consts_hash[28] = DEEP_HASH(tstate, mod_consts.const_str_plain_resource_update_params);
+mod_consts_hash[29] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResourceUpdateParams_tuple);
+mod_consts_hash[30] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResourceUpdateParams);
+mod_consts_hash[31] = DEEP_HASH(tstate, mod_consts.const_str_plain_resource_update_response);
+mod_consts_hash[32] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResourceUpdateResponse_tuple);
+mod_consts_hash[33] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResourceUpdateResponse);
+mod_consts_hash[34] = DEEP_HASH(tstate, mod_consts.const_str_plain_resource_retrieve_response);
+mod_consts_hash[35] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResourceRetrieveResponse_tuple);
+mod_consts_hash[36] = DEEP_HASH(tstate, mod_consts.const_str_plain_ResourceRetrieveResponse);
+mod_consts_hash[37] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_text_block);
+mod_consts_hash[38] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsTextBlock_tuple);
+mod_consts_hash[39] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsTextBlock);
+mod_consts_hash[40] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_file_rubric);
+mod_consts_hash[41] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileRubric_tuple);
+mod_consts_hash[42] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileRubric);
+mod_consts_hash[43] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_image_block);
+mod_consts_hash[44] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsImageBlock_tuple);
+mod_consts_hash[45] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsImageBlock);
+mod_consts_hash[46] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_text_rubric);
+mod_consts_hash[47] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsTextRubric_tuple);
+mod_consts_hash[48] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsTextRubric);
+mod_consts_hash[49] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_event_params);
+mod_consts_hash[50] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsEventParams_tuple);
+mod_consts_hash[51] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsEventParams);
+mod_consts_hash[52] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_billing_error);
+mod_consts_hash[53] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsBillingError_tuple);
+mod_consts_hash[54] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsBillingError);
+mod_consts_hash[55] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_file_resource);
+mod_consts_hash[56] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileResource_tuple);
+mod_consts_hash[57] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileResource);
+mod_consts_hash[58] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_event);
+mod_consts_hash[59] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionEvent_tuple);
+mod_consts_hash[60] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionEvent);
+mod_consts_hash[61] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_unknown_error);
+mod_consts_hash[62] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsUnknownError_tuple);
+mod_consts_hash[63] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsUnknownError);
+mod_consts_hash[64] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_document_block);
+mod_consts_hash[65] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsDocumentBlock_tuple);
+mod_consts_hash[66] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsDocumentBlock);
+mod_consts_hash[67] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_thread);
+mod_consts_hash[68] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThread_tuple);
+mod_consts_hash[69] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionThread);
+mod_consts_hash[70] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_end_turn);
+mod_consts_hash[71] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionEndTurn_tuple);
+mod_consts_hash[72] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionEndTurn);
+mod_consts_hash[73] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_resource);
+mod_consts_hash[74] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionResource_tuple);
+mod_consts_hash[75] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionResource);
+mod_consts_hash[76] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_span_model_usage);
+mod_consts_hash[77] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSpanModelUsage_tuple);
+mod_consts_hash[78] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSpanModelUsage);
+mod_consts_hash[79] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_text_block_param);
+mod_consts_hash[80] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsTextBlockParam_tuple);
+mod_consts_hash[81] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsTextBlockParam);
+mod_consts_hash[82] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_url_image_source);
+mod_consts_hash[83] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsURLImageSource_tuple);
+mod_consts_hash[84] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsURLImageSource);
+mod_consts_hash[85] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_file_image_source);
+mod_consts_hash[86] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileImageSource_tuple);
+mod_consts_hash[87] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileImageSource);
+mod_consts_hash[88] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_image_block_param);
+mod_consts_hash[89] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsImageBlockParam_tuple);
+mod_consts_hash[90] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsImageBlockParam);
+mod_consts_hash[91] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_file_rubric_params);
+mod_consts_hash[92] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileRubricParams_tuple);
+mod_consts_hash[93] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileRubricParams);
+mod_consts_hash[94] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_text_rubric_params);
+mod_consts_hash[95] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsTextRubricParams_tuple);
+mod_consts_hash[96] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsTextRubricParams);
+mod_consts_hash[97] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_user_message_event);
+mod_consts_hash[98] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsUserMessageEvent_tuple);
+mod_consts_hash[99] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsUserMessageEvent);
+mod_consts_hash[100] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_agent_message_event);
+mod_consts_hash[101] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMessageEvent_tuple);
+mod_consts_hash[102] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentMessageEvent);
+mod_consts_hash[103] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_base64_image_source);
+mod_consts_hash[104] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64ImageSource_tuple);
+mod_consts_hash[105] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSource);
+mod_consts_hash[106] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_search_result_block);
+mod_consts_hash[107] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultBlock_tuple);
+mod_consts_hash[108] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlock);
+mod_consts_hash[109] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_send_session_events);
+mod_consts_hash[110] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSendSessionEvents_tuple);
+mod_consts_hash[111] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSendSessionEvents);
+mod_consts_hash[112] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_error_event);
+mod_consts_hash[113] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionErrorEvent_tuple);
+mod_consts_hash[114] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionErrorEvent);
+mod_consts_hash[115] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_url_document_source);
+mod_consts_hash[116] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsURLDocumentSource_tuple);
+mod_consts_hash[117] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSource);
+mod_consts_hash[118] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_agent_thinking_event);
+mod_consts_hash[119] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentThinkingEvent_tuple);
+mod_consts_hash[120] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentThinkingEvent);
+mod_consts_hash[121] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_agent_tool_use_event);
+mod_consts_hash[122] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentToolUseEvent_tuple);
+mod_consts_hash[123] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentToolUseEvent);
+mod_consts_hash[124] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_document_block_param);
+mod_consts_hash[125] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsDocumentBlockParam_tuple);
+mod_consts_hash[126] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsDocumentBlockParam);
+mod_consts_hash[127] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_file_document_source);
+mod_consts_hash[128] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileDocumentSource_tuple);
+mod_consts_hash[129] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSource);
+mod_consts_hash[130] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_thread_stats);
+mod_consts_hash[131] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadStats_tuple);
+mod_consts_hash[132] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStats);
+mod_consts_hash[133] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_thread_usage);
+mod_consts_hash[134] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadUsage_tuple);
+mod_consts_hash[135] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionThreadUsage);
+mod_consts_hash[136] = DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_user_interrupt_event);
+mod_consts_hash[137] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsUserInterruptEvent_tuple);
+mod_consts_hash[138] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsUserInterruptEvent);
+mod_consts_hash[139] = DEEP_HASH(tstate, mod_consts.const_str_digest_4d5ff906fa46065bd576d488cf6644da);
+mod_consts_hash[140] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsMemoryStoreResource_tuple);
+mod_consts_hash[141] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsMemoryStoreResource);
+mod_consts_hash[142] = DEEP_HASH(tstate, mod_consts.const_str_digest_e1188b2adac853d5f780269a175da474);
+mod_consts_hash[143] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusRetrying_tuple);
+mod_consts_hash[144] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsRetryStatusRetrying);
+mod_consts_hash[145] = DEEP_HASH(tstate, mod_consts.const_str_digest_a3ba35c9f8c9fd464327064b5f3ef057);
+mod_consts_hash[146] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusTerminal_tuple);
+mod_consts_hash[147] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsRetryStatusTerminal);
+mod_consts_hash[148] = DEEP_HASH(tstate, mod_consts.const_str_digest_0711530fd7fda92e4f2f52d0c181f057);
+mod_consts_hash[149] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultContent_tuple);
+mod_consts_hash[150] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSearchResultContent);
+mod_consts_hash[151] = DEEP_HASH(tstate, mod_consts.const_str_digest_230cf712991ca05edd3dcd967b1d4d87);
+mod_consts_hash[152] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionDeletedEvent_tuple);
+mod_consts_hash[153] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionDeletedEvent);
+mod_consts_hash[154] = DEEP_HASH(tstate, mod_consts.const_str_digest_560cbcfce43524d4443be33a534ac730);
+mod_consts_hash[155] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadStatus_tuple);
+mod_consts_hash[156] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStatus);
+mod_consts_hash[157] = DEEP_HASH(tstate, mod_consts.const_str_digest_f8194516717ada5da62a92b3eb63fc08);
+mod_consts_hash[158] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsStreamSessionEvents_tuple);
+mod_consts_hash[159] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsStreamSessionEvents);
+mod_consts_hash[160] = DEEP_HASH(tstate, mod_consts.const_str_digest_97794e9119c4c8c04471d41f96263d7c);
+mod_consts_hash[161] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64DocumentSource_tuple);
+mod_consts_hash[162] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsBase64DocumentSource);
+mod_consts_hash[163] = DEEP_HASH(tstate, mod_consts.const_str_digest_c8cda2d1f5f906aec1fead4089f7c19a);
+mod_consts_hash[164] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsModelOverloadedError_tuple);
+mod_consts_hash[165] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsModelOverloadedError);
+mod_consts_hash[166] = DEEP_HASH(tstate, mod_consts.const_str_digest_46685a56077522eed81e810fe06cc744);
+mod_consts_hash[167] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusExhausted_tuple);
+mod_consts_hash[168] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsRetryStatusExhausted);
+mod_consts_hash[169] = DEEP_HASH(tstate, mod_consts.const_str_digest_9c855d5412534f3193c5a5c0c5c2c231);
+mod_consts_hash[170] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsURLImageSourceParam_tuple);
+mod_consts_hash[171] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsURLImageSourceParam);
+mod_consts_hash[172] = DEEP_HASH(tstate, mod_consts.const_str_digest_ff7a1785b84792891d1dbe7b070c47b4);
+mod_consts_hash[173] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentToolResultEvent_tuple);
+mod_consts_hash[174] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentToolResultEvent);
+mod_consts_hash[175] = DEEP_HASH(tstate, mod_consts.const_str_digest_223cca9ed6b87103eb9924b6dce13e0c);
+mod_consts_hash[176] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsDeleteSessionResource_tuple);
+mod_consts_hash[177] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsDeleteSessionResource);
+mod_consts_hash[178] = DEEP_HASH(tstate, mod_consts.const_str_digest_61d12c11bf02539ceff8d4c7309b7fda);
+mod_consts_hash[179] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileImageSourceParam_tuple);
+mod_consts_hash[180] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileImageSourceParam);
+mod_consts_hash[181] = DEEP_HASH(tstate, mod_consts.const_str_digest_6b8a3520a58d384fddb23ee7df11c3c4);
+mod_consts_hash[182] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultCitations_tuple);
+mod_consts_hash[183] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSearchResultCitations);
+mod_consts_hash[184] = DEEP_HASH(tstate, mod_consts.const_str_digest_aea22668ea0a349ffe774bc823f0348d);
+mod_consts_hash[185] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionRequiresAction_tuple);
+mod_consts_hash[186] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionRequiresAction);
+mod_consts_hash[187] = DEEP_HASH(tstate, mod_consts.const_str_digest_1a02886b578e6e83915e9e85830aa625);
+mod_consts_hash[188] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMCPToolUseEvent_tuple);
+mod_consts_hash[189] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolUseEvent);
+mod_consts_hash[190] = DEEP_HASH(tstate, mod_consts.const_str_digest_e98ebba0d9c49841eaa6d7b9fdc28eae);
+mod_consts_hash[191] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsModelRateLimitedError_tuple);
+mod_consts_hash[192] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsModelRateLimitedError);
+mod_consts_hash[193] = DEEP_HASH(tstate, mod_consts.const_str_digest_237d50500fabe51b25c23e842641dbb6);
+mod_consts_hash[194] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64ImageSourceParam_tuple);
+mod_consts_hash[195] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSourceParam);
+mod_consts_hash[196] = DEEP_HASH(tstate, mod_consts.const_str_digest_1847b8fc3dbd5fc4758458bbcda6379c);
+mod_consts_hash[197] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultBlockParam_tuple);
+mod_consts_hash[198] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlockParam);
+mod_consts_hash[199] = DEEP_HASH(tstate, mod_consts.const_str_digest_5b663ff13e7e4b866b0ae8cf9b9b865f);
+mod_consts_hash[200] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionRetriesExhausted_tuple);
+mod_consts_hash[201] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionRetriesExhausted);
+mod_consts_hash[202] = DEEP_HASH(tstate, mod_consts.const_str_digest_7ea9bd93674f086a4aaeca2d3e22c51b);
+mod_consts_hash[203] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionStatusIdleEvent_tuple);
+mod_consts_hash[204] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionStatusIdleEvent);
+mod_consts_hash[205] = DEEP_HASH(tstate, mod_consts.const_str_digest_11eeaaf653ae468c5d548401bf0e638f);
+mod_consts_hash[206] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsURLDocumentSourceParam_tuple);
+mod_consts_hash[207] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSourceParam);
+mod_consts_hash[208] = DEEP_HASH(tstate, mod_consts.const_str_digest_26fe297ca4ea1d1e115a15748d0d72dc);
+mod_consts_hash[209] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsUserDefineOutcomeEvent_tuple);
+mod_consts_hash[210] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsUserDefineOutcomeEvent);
+mod_consts_hash[211] = DEEP_HASH(tstate, mod_consts.const_str_digest_3bef3f5f068e73b6bbe434e8ab3907d2);
+mod_consts_hash[212] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsUserMessageEventParams_tuple);
+mod_consts_hash[213] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsUserMessageEventParams);
+mod_consts_hash[214] = DEEP_HASH(tstate, mod_consts.const_str_digest_17c4c3e76f57665e8c37d3e8e05f4485);
+mod_consts_hash[215] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileDocumentSourceParam_tuple);
+mod_consts_hash[216] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSourceParam);
+mod_consts_hash[217] = DEEP_HASH(tstate, mod_consts.const_str_digest_8f3e1ddcf963a5d641b0c54bfd3f6f23);
+mod_consts_hash[218] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_c208f803a714c3fa632910db28470705_tuple);
+mod_consts_hash[219] = DEEP_HASH(tstate, mod_consts.const_str_digest_c208f803a714c3fa632910db28470705);
+mod_consts_hash[220] = DEEP_HASH(tstate, mod_consts.const_str_digest_acf6c8bd2b1df01d7b3913b3b4445847);
+mod_consts_hash[221] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsModelRequestFailedError_tuple);
+mod_consts_hash[222] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsModelRequestFailedError);
+mod_consts_hash[223] = DEEP_HASH(tstate, mod_consts.const_str_digest_cd880bb52b89b3980aba14b2e1dea914);
+mod_consts_hash[224] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsPlainTextDocumentSource_tuple);
+mod_consts_hash[225] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsPlainTextDocumentSource);
+mod_consts_hash[226] = DEEP_HASH(tstate, mod_consts.const_str_digest_8de9b38d69878d132f1d06943d71c118);
+mod_consts_hash[227] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentCustomToolUseEvent_tuple);
+mod_consts_hash[228] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentCustomToolUseEvent);
+mod_consts_hash[229] = DEEP_HASH(tstate, mod_consts.const_str_digest_9b86de5cb83fcd2792d0a25b2223ccb1);
+mod_consts_hash[230] = DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMCPToolResultEvent_tuple);
+mod_consts_hash[231] = DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolResultEvent);
+mod_consts_hash[232] = DEEP_HASH(tstate, mod_consts.const_str_digest_b1e4574a2d2798659bb173d1b4694ea4);
+mod_consts_hash[233] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147_tuple);
+mod_consts_hash[234] = DEEP_HASH(tstate, mod_consts.const_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147);
+mod_consts_hash[235] = DEEP_HASH(tstate, mod_consts.const_str_digest_c52876987c535d76bc4fe24fafe78167);
+mod_consts_hash[236] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_6fe7353544f7f387cb0045c98890b3b7_tuple);
+mod_consts_hash[237] = DEEP_HASH(tstate, mod_consts.const_str_digest_6fe7353544f7f387cb0045c98890b3b7);
+mod_consts_hash[238] = DEEP_HASH(tstate, mod_consts.const_str_digest_e3bdbcce8f5e497f6a92e376257c0061);
+mod_consts_hash[239] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_d89f5443f324538af014bc954ea5d2b0_tuple);
+mod_consts_hash[240] = DEEP_HASH(tstate, mod_consts.const_str_digest_d89f5443f324538af014bc954ea5d2b0);
+mod_consts_hash[241] = DEEP_HASH(tstate, mod_consts.const_str_digest_d3aa71efb401174fba1c4133f7328ee0);
+mod_consts_hash[242] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_097b50026d50f058ff37fab2be627c5a_tuple);
+mod_consts_hash[243] = DEEP_HASH(tstate, mod_consts.const_str_digest_097b50026d50f058ff37fab2be627c5a);
+mod_consts_hash[244] = DEEP_HASH(tstate, mod_consts.const_str_digest_df4d2f0963c141f6f99904381d948245);
+mod_consts_hash[245] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_7bd78a3f07d54c8e773e97b2b33d4855_tuple);
+mod_consts_hash[246] = DEEP_HASH(tstate, mod_consts.const_str_digest_7bd78a3f07d54c8e773e97b2b33d4855);
+mod_consts_hash[247] = DEEP_HASH(tstate, mod_consts.const_str_digest_8bf6bbeecbb9b26c4bf9be3e428b8ee0);
+mod_consts_hash[248] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_680985bd76c009f9f484b2ca1ee7179b_tuple);
+mod_consts_hash[249] = DEEP_HASH(tstate, mod_consts.const_str_digest_680985bd76c009f9f484b2ca1ee7179b);
+mod_consts_hash[250] = DEEP_HASH(tstate, mod_consts.const_str_digest_69b94baa64a893477643a644d2b44ab5);
+mod_consts_hash[251] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_87fa0cb24f156084d751cb015c923d88_tuple);
+mod_consts_hash[252] = DEEP_HASH(tstate, mod_consts.const_str_digest_87fa0cb24f156084d751cb015c923d88);
+mod_consts_hash[253] = DEEP_HASH(tstate, mod_consts.const_str_digest_1669eb22806384dccf6274d7042e1858);
+mod_consts_hash[254] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_1c85da38dd09ccf517e65697df6a701b_tuple);
+mod_consts_hash[255] = DEEP_HASH(tstate, mod_consts.const_str_digest_1c85da38dd09ccf517e65697df6a701b);
+mod_consts_hash[256] = DEEP_HASH(tstate, mod_consts.const_str_digest_40d972d8062bd5d21699266ecbec1be1);
+mod_consts_hash[257] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_47a3d32085b8900d70eebcf91501a8ea_tuple);
+mod_consts_hash[258] = DEEP_HASH(tstate, mod_consts.const_str_digest_47a3d32085b8900d70eebcf91501a8ea);
+mod_consts_hash[259] = DEEP_HASH(tstate, mod_consts.const_str_digest_aea9a1a16508b16b31c2c6a58f9cc47d);
+mod_consts_hash[260] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_0890907e33afebe5186f7369782e72a8_tuple);
+mod_consts_hash[261] = DEEP_HASH(tstate, mod_consts.const_str_digest_0890907e33afebe5186f7369782e72a8);
+mod_consts_hash[262] = DEEP_HASH(tstate, mod_consts.const_str_digest_b057ace19175756317b43867257827a8);
+mod_consts_hash[263] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_be0c919b566c3ecfa243fcd814cb9d7c_tuple);
+mod_consts_hash[264] = DEEP_HASH(tstate, mod_consts.const_str_digest_be0c919b566c3ecfa243fcd814cb9d7c);
+mod_consts_hash[265] = DEEP_HASH(tstate, mod_consts.const_str_digest_051e583293111ff440e6b92cd3f28e3f);
+mod_consts_hash[266] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063_tuple);
+mod_consts_hash[267] = DEEP_HASH(tstate, mod_consts.const_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063);
+mod_consts_hash[268] = DEEP_HASH(tstate, mod_consts.const_str_digest_590fe6cd1c992a1fff94d3643dbdf1e4);
+mod_consts_hash[269] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_bbb81df83a566cf2814346e63f686900_tuple);
+mod_consts_hash[270] = DEEP_HASH(tstate, mod_consts.const_str_digest_bbb81df83a566cf2814346e63f686900);
+mod_consts_hash[271] = DEEP_HASH(tstate, mod_consts.const_str_digest_9dc1af1b57f64fa267f0908b6f5c4afb);
+mod_consts_hash[272] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_53b65cba1e561c6df7f51f1093dca70d_tuple);
+mod_consts_hash[273] = DEEP_HASH(tstate, mod_consts.const_str_digest_53b65cba1e561c6df7f51f1093dca70d);
+mod_consts_hash[274] = DEEP_HASH(tstate, mod_consts.const_str_digest_e2c6c3dabb6f518a0a6297ce1b09c3ca);
+mod_consts_hash[275] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487_tuple);
+mod_consts_hash[276] = DEEP_HASH(tstate, mod_consts.const_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487);
+mod_consts_hash[277] = DEEP_HASH(tstate, mod_consts.const_str_digest_11b40ac95fdb12964baf6c6c41b32b78);
+mod_consts_hash[278] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_a39975e914a6a86ba3153b197792b326_tuple);
+mod_consts_hash[279] = DEEP_HASH(tstate, mod_consts.const_str_digest_a39975e914a6a86ba3153b197792b326);
+mod_consts_hash[280] = DEEP_HASH(tstate, mod_consts.const_str_digest_54f946fcfe17e0cdab8c188cdbbc27f1);
+mod_consts_hash[281] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_e6071443bffad02c21354a5fd3f17994_tuple);
+mod_consts_hash[282] = DEEP_HASH(tstate, mod_consts.const_str_digest_e6071443bffad02c21354a5fd3f17994);
+mod_consts_hash[283] = DEEP_HASH(tstate, mod_consts.const_str_digest_f5f71707011d14e7134746d6f9a3fcca);
+mod_consts_hash[284] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_79208f99f42387dedaa503f910cf801e_tuple);
+mod_consts_hash[285] = DEEP_HASH(tstate, mod_consts.const_str_digest_79208f99f42387dedaa503f910cf801e);
+mod_consts_hash[286] = DEEP_HASH(tstate, mod_consts.const_str_digest_7fb08b4202f0695f1759c805e119dac8);
+mod_consts_hash[287] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_e0e15641e9785d45266c86e750f17f58_tuple);
+mod_consts_hash[288] = DEEP_HASH(tstate, mod_consts.const_str_digest_e0e15641e9785d45266c86e750f17f58);
+mod_consts_hash[289] = DEEP_HASH(tstate, mod_consts.const_str_digest_d103e12d900b8dc659f4cb8b6b2123c0);
+mod_consts_hash[290] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_0b022c66340cc7524b2f5f92a40cc1bd_tuple);
+mod_consts_hash[291] = DEEP_HASH(tstate, mod_consts.const_str_digest_0b022c66340cc7524b2f5f92a40cc1bd);
+mod_consts_hash[292] = DEEP_HASH(tstate, mod_consts.const_str_digest_936baf57ce758ebde4ee8bc4e9a3742a);
+mod_consts_hash[293] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_68b72308bf2917066fde4b492afa1489_tuple);
+mod_consts_hash[294] = DEEP_HASH(tstate, mod_consts.const_str_digest_68b72308bf2917066fde4b492afa1489);
+mod_consts_hash[295] = DEEP_HASH(tstate, mod_consts.const_str_digest_da236c84c2dbb31314d9e00436fc24e3);
+mod_consts_hash[296] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_8aa8484df48f880159babc856f073325_tuple);
+mod_consts_hash[297] = DEEP_HASH(tstate, mod_consts.const_str_digest_8aa8484df48f880159babc856f073325);
+mod_consts_hash[298] = DEEP_HASH(tstate, mod_consts.const_str_digest_374ffb61669f909eb3359f731d6c6fa0);
+mod_consts_hash[299] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac_tuple);
+mod_consts_hash[300] = DEEP_HASH(tstate, mod_consts.const_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac);
+mod_consts_hash[301] = DEEP_HASH(tstate, mod_consts.const_str_digest_b9bc0d714c8bd89d4149c6e3907b1de4);
+mod_consts_hash[302] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_b2ea6e7e043e35d36ec3c1599733882c_tuple);
+mod_consts_hash[303] = DEEP_HASH(tstate, mod_consts.const_str_digest_b2ea6e7e043e35d36ec3c1599733882c);
+mod_consts_hash[304] = DEEP_HASH(tstate, mod_consts.const_str_digest_2a1f97edc80a2d8bda40d1e34932fdfd);
+mod_consts_hash[305] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_0fb152346dd6fa9a4cf8f10654950779_tuple);
+mod_consts_hash[306] = DEEP_HASH(tstate, mod_consts.const_str_digest_0fb152346dd6fa9a4cf8f10654950779);
+mod_consts_hash[307] = DEEP_HASH(tstate, mod_consts.const_str_digest_2a790bc9daba1a9003a9515bb59feb21);
+mod_consts_hash[308] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_e328354439fe86c13e6c5cffe6a79707_tuple);
+mod_consts_hash[309] = DEEP_HASH(tstate, mod_consts.const_str_digest_e328354439fe86c13e6c5cffe6a79707);
+mod_consts_hash[310] = DEEP_HASH(tstate, mod_consts.const_str_digest_66286995c0043be401da32224d412da8);
+mod_consts_hash[311] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_91c05374584395232324d09dd05abad1_tuple);
+mod_consts_hash[312] = DEEP_HASH(tstate, mod_consts.const_str_digest_91c05374584395232324d09dd05abad1);
+mod_consts_hash[313] = DEEP_HASH(tstate, mod_consts.const_str_digest_42b7b03f5a1fe35a2a2a85378a38aac4);
+mod_consts_hash[314] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_eca874ca0aca92a60a9f3961c3eeca4a_tuple);
+mod_consts_hash[315] = DEEP_HASH(tstate, mod_consts.const_str_digest_eca874ca0aca92a60a9f3961c3eeca4a);
+mod_consts_hash[316] = DEEP_HASH(tstate, mod_consts.const_str_digest_2c6b0b64226c8987a8654e5faf02f5e6);
+mod_consts_hash[317] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_134a26556d1ccf879ef7b122beeef960_tuple);
+mod_consts_hash[318] = DEEP_HASH(tstate, mod_consts.const_str_digest_134a26556d1ccf879ef7b122beeef960);
+mod_consts_hash[319] = DEEP_HASH(tstate, mod_consts.const_str_digest_fb6bf8f58efa4f66ca6ef4ac71839ade);
+mod_consts_hash[320] = DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_80411456df379e8767e34326f63b4233_tuple);
+mod_consts_hash[321] = DEEP_HASH(tstate, mod_consts.const_str_digest_80411456df379e8767e34326f63b4233);
+mod_consts_hash[322] = DEEP_HASH(tstate, mod_consts.const_str_digest_67f3fb50bf2a38c6cb21090701ab2c3f);
+mod_consts_hash[323] = DEEP_HASH(tstate, mod_consts.const_str_digest_809228f0fc663309bfc21295b9946c6f);
+#endif
+    }
+}
+
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
+void createMainModuleConstants(PyThreadState *tstate) {
+    createModuleConstants(tstate);
+}
+#endif
+
+/* Function to verify module private constants for non-corruption. */
+#ifndef __NUITKA_NO_ASSERT__
+void checkModuleConstants_anthropic$types$beta$sessions(PyThreadState *tstate) {
+    // The module may not have been used at all, then ignore this.
+    if (constants_created == false) return;
+
+assert(mod_consts_hash[0] == DEEP_HASH(tstate, mod_consts.const_str_plain_join));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_join);
+assert(mod_consts_hash[1] == DEEP_HASH(tstate, mod_consts.const_str_plain_environ));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_environ);
+assert(mod_consts_hash[2] == DEEP_HASH(tstate, mod_consts.const_tuple_267b1b08e23cbd828589c9ff1fb413aa_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_267b1b08e23cbd828589c9ff1fb413aa_tuple);
+assert(mod_consts_hash[3] == DEEP_HASH(tstate, mod_consts.const_str_digest_2b32f0eb3b0c3f1fce1dd791b81fd0eb));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_2b32f0eb3b0c3f1fce1dd791b81fd0eb);
+assert(mod_consts_hash[4] == DEEP_HASH(tstate, mod_consts.const_tuple_b33bb4004300fc3cd16d82c209c32141_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_b33bb4004300fc3cd16d82c209c32141_tuple);
+assert(mod_consts_hash[5] == DEEP_HASH(tstate, mod_consts.const_str_digest_5d4fb6971b9d7772f04c3be614a6ad5c));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_5d4fb6971b9d7772f04c3be614a6ad5c);
+assert(mod_consts_hash[6] == DEEP_HASH(tstate, mod_consts.const_tuple_63bca6ec0c203e2c19b2279effd52b81_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_63bca6ec0c203e2c19b2279effd52b81_tuple);
+assert(mod_consts_hash[7] == DEEP_HASH(tstate, mod_consts.const_str_plain_sessions));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_sessions);
+assert(mod_consts_hash[8] == DEEP_HASH(tstate, mod_consts.const_tuple_af00aba555f71d1d4d45b2b70c5e8e77_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_af00aba555f71d1d4d45b2b70c5e8e77_tuple);
+assert(mod_consts_hash[9] == DEEP_HASH(tstate, mod_consts.const_str_plain_origin));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_origin);
+assert(mod_consts_hash[10] == DEEP_HASH(tstate, mod_consts.const_str_plain_has_location));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_has_location);
+assert(mod_consts_hash[11] == DEEP_HASH(tstate, mod_consts.const_str_plain_submodule_search_locations));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_submodule_search_locations);
+assert(mod_consts_hash[12] == DEEP_HASH(tstate, mod_consts.const_str_plain_annotations));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_annotations);
+assert(mod_consts_hash[13] == DEEP_HASH(tstate, mod_consts.const_str_plain_event_list_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_event_list_params);
+assert(mod_consts_hash[14] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_EventListParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_EventListParams_tuple);
+assert(mod_consts_hash[15] == DEEP_HASH(tstate, mod_consts.const_str_plain_EventListParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_EventListParams);
+assert(mod_consts_hash[16] == DEEP_HASH(tstate, mod_consts.const_str_plain_event_send_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_event_send_params);
+assert(mod_consts_hash[17] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_EventSendParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_EventSendParams_tuple);
+assert(mod_consts_hash[18] == DEEP_HASH(tstate, mod_consts.const_str_plain_EventSendParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_EventSendParams);
+assert(mod_consts_hash[19] == DEEP_HASH(tstate, mod_consts.const_str_plain_thread_list_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_thread_list_params);
+assert(mod_consts_hash[20] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ThreadListParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ThreadListParams_tuple);
+assert(mod_consts_hash[21] == DEEP_HASH(tstate, mod_consts.const_str_plain_ThreadListParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ThreadListParams);
+assert(mod_consts_hash[22] == DEEP_HASH(tstate, mod_consts.const_str_plain_resource_add_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_resource_add_params);
+assert(mod_consts_hash[23] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResourceAddParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResourceAddParams_tuple);
+assert(mod_consts_hash[24] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResourceAddParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResourceAddParams);
+assert(mod_consts_hash[25] == DEEP_HASH(tstate, mod_consts.const_str_plain_resource_list_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_resource_list_params);
+assert(mod_consts_hash[26] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResourceListParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResourceListParams_tuple);
+assert(mod_consts_hash[27] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResourceListParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResourceListParams);
+assert(mod_consts_hash[28] == DEEP_HASH(tstate, mod_consts.const_str_plain_resource_update_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_resource_update_params);
+assert(mod_consts_hash[29] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResourceUpdateParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResourceUpdateParams_tuple);
+assert(mod_consts_hash[30] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResourceUpdateParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResourceUpdateParams);
+assert(mod_consts_hash[31] == DEEP_HASH(tstate, mod_consts.const_str_plain_resource_update_response));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_resource_update_response);
+assert(mod_consts_hash[32] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResourceUpdateResponse_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResourceUpdateResponse_tuple);
+assert(mod_consts_hash[33] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResourceUpdateResponse));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResourceUpdateResponse);
+assert(mod_consts_hash[34] == DEEP_HASH(tstate, mod_consts.const_str_plain_resource_retrieve_response));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_resource_retrieve_response);
+assert(mod_consts_hash[35] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_ResourceRetrieveResponse_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_ResourceRetrieveResponse_tuple);
+assert(mod_consts_hash[36] == DEEP_HASH(tstate, mod_consts.const_str_plain_ResourceRetrieveResponse));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_ResourceRetrieveResponse);
+assert(mod_consts_hash[37] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_text_block));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_text_block);
+assert(mod_consts_hash[38] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsTextBlock_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsTextBlock_tuple);
+assert(mod_consts_hash[39] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsTextBlock));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsTextBlock);
+assert(mod_consts_hash[40] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_file_rubric));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_file_rubric);
+assert(mod_consts_hash[41] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileRubric_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsFileRubric_tuple);
+assert(mod_consts_hash[42] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileRubric));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsFileRubric);
+assert(mod_consts_hash[43] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_image_block));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_image_block);
+assert(mod_consts_hash[44] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsImageBlock_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsImageBlock_tuple);
+assert(mod_consts_hash[45] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsImageBlock));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsImageBlock);
+assert(mod_consts_hash[46] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_text_rubric));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_text_rubric);
+assert(mod_consts_hash[47] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsTextRubric_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsTextRubric_tuple);
+assert(mod_consts_hash[48] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsTextRubric));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsTextRubric);
+assert(mod_consts_hash[49] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_event_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_event_params);
+assert(mod_consts_hash[50] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsEventParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsEventParams_tuple);
+assert(mod_consts_hash[51] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsEventParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsEventParams);
+assert(mod_consts_hash[52] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_billing_error));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_billing_error);
+assert(mod_consts_hash[53] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsBillingError_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsBillingError_tuple);
+assert(mod_consts_hash[54] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsBillingError));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsBillingError);
+assert(mod_consts_hash[55] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_file_resource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_file_resource);
+assert(mod_consts_hash[56] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileResource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsFileResource_tuple);
+assert(mod_consts_hash[57] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileResource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsFileResource);
+assert(mod_consts_hash[58] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_session_event);
+assert(mod_consts_hash[59] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionEvent_tuple);
+assert(mod_consts_hash[60] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionEvent);
+assert(mod_consts_hash[61] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_unknown_error));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_unknown_error);
+assert(mod_consts_hash[62] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsUnknownError_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsUnknownError_tuple);
+assert(mod_consts_hash[63] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsUnknownError));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsUnknownError);
+assert(mod_consts_hash[64] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_document_block));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_document_block);
+assert(mod_consts_hash[65] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsDocumentBlock_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsDocumentBlock_tuple);
+assert(mod_consts_hash[66] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsDocumentBlock));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsDocumentBlock);
+assert(mod_consts_hash[67] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_thread));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_session_thread);
+assert(mod_consts_hash[68] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThread_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThread_tuple);
+assert(mod_consts_hash[69] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionThread));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionThread);
+assert(mod_consts_hash[70] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_end_turn));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_session_end_turn);
+assert(mod_consts_hash[71] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionEndTurn_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionEndTurn_tuple);
+assert(mod_consts_hash[72] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionEndTurn));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionEndTurn);
+assert(mod_consts_hash[73] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_resource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_session_resource);
+assert(mod_consts_hash[74] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionResource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionResource_tuple);
+assert(mod_consts_hash[75] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionResource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionResource);
+assert(mod_consts_hash[76] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_span_model_usage));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_span_model_usage);
+assert(mod_consts_hash[77] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSpanModelUsage_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSpanModelUsage_tuple);
+assert(mod_consts_hash[78] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSpanModelUsage));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSpanModelUsage);
+assert(mod_consts_hash[79] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_text_block_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_text_block_param);
+assert(mod_consts_hash[80] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsTextBlockParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsTextBlockParam_tuple);
+assert(mod_consts_hash[81] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsTextBlockParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsTextBlockParam);
+assert(mod_consts_hash[82] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_url_image_source));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_url_image_source);
+assert(mod_consts_hash[83] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsURLImageSource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsURLImageSource_tuple);
+assert(mod_consts_hash[84] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsURLImageSource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsURLImageSource);
+assert(mod_consts_hash[85] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_file_image_source));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_file_image_source);
+assert(mod_consts_hash[86] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileImageSource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsFileImageSource_tuple);
+assert(mod_consts_hash[87] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileImageSource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsFileImageSource);
+assert(mod_consts_hash[88] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_image_block_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_image_block_param);
+assert(mod_consts_hash[89] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsImageBlockParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsImageBlockParam_tuple);
+assert(mod_consts_hash[90] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsImageBlockParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsImageBlockParam);
+assert(mod_consts_hash[91] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_file_rubric_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_file_rubric_params);
+assert(mod_consts_hash[92] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileRubricParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsFileRubricParams_tuple);
+assert(mod_consts_hash[93] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileRubricParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsFileRubricParams);
+assert(mod_consts_hash[94] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_text_rubric_params));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_text_rubric_params);
+assert(mod_consts_hash[95] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsTextRubricParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsTextRubricParams_tuple);
+assert(mod_consts_hash[96] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsTextRubricParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsTextRubricParams);
+assert(mod_consts_hash[97] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_user_message_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_user_message_event);
+assert(mod_consts_hash[98] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsUserMessageEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsUserMessageEvent_tuple);
+assert(mod_consts_hash[99] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsUserMessageEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsUserMessageEvent);
+assert(mod_consts_hash[100] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_agent_message_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_agent_message_event);
+assert(mod_consts_hash[101] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMessageEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMessageEvent_tuple);
+assert(mod_consts_hash[102] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentMessageEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsAgentMessageEvent);
+assert(mod_consts_hash[103] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_base64_image_source));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_base64_image_source);
+assert(mod_consts_hash[104] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64ImageSource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64ImageSource_tuple);
+assert(mod_consts_hash[105] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSource);
+assert(mod_consts_hash[106] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_search_result_block));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_search_result_block);
+assert(mod_consts_hash[107] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultBlock_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultBlock_tuple);
+assert(mod_consts_hash[108] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlock));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlock);
+assert(mod_consts_hash[109] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_send_session_events));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_send_session_events);
+assert(mod_consts_hash[110] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSendSessionEvents_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSendSessionEvents_tuple);
+assert(mod_consts_hash[111] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSendSessionEvents));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSendSessionEvents);
+assert(mod_consts_hash[112] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_error_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_session_error_event);
+assert(mod_consts_hash[113] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionErrorEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionErrorEvent_tuple);
+assert(mod_consts_hash[114] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionErrorEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionErrorEvent);
+assert(mod_consts_hash[115] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_url_document_source));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_url_document_source);
+assert(mod_consts_hash[116] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsURLDocumentSource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsURLDocumentSource_tuple);
+assert(mod_consts_hash[117] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSource);
+assert(mod_consts_hash[118] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_agent_thinking_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_agent_thinking_event);
+assert(mod_consts_hash[119] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentThinkingEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentThinkingEvent_tuple);
+assert(mod_consts_hash[120] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentThinkingEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsAgentThinkingEvent);
+assert(mod_consts_hash[121] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_agent_tool_use_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_agent_tool_use_event);
+assert(mod_consts_hash[122] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentToolUseEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentToolUseEvent_tuple);
+assert(mod_consts_hash[123] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentToolUseEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsAgentToolUseEvent);
+assert(mod_consts_hash[124] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_document_block_param));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_document_block_param);
+assert(mod_consts_hash[125] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsDocumentBlockParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsDocumentBlockParam_tuple);
+assert(mod_consts_hash[126] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsDocumentBlockParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsDocumentBlockParam);
+assert(mod_consts_hash[127] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_file_document_source));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_file_document_source);
+assert(mod_consts_hash[128] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileDocumentSource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsFileDocumentSource_tuple);
+assert(mod_consts_hash[129] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSource);
+assert(mod_consts_hash[130] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_thread_stats));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_session_thread_stats);
+assert(mod_consts_hash[131] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadStats_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadStats_tuple);
+assert(mod_consts_hash[132] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStats));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStats);
+assert(mod_consts_hash[133] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_session_thread_usage));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_session_thread_usage);
+assert(mod_consts_hash[134] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadUsage_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadUsage_tuple);
+assert(mod_consts_hash[135] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionThreadUsage));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionThreadUsage);
+assert(mod_consts_hash[136] == DEEP_HASH(tstate, mod_consts.const_str_plain_beta_managed_agents_user_interrupt_event));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_beta_managed_agents_user_interrupt_event);
+assert(mod_consts_hash[137] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsUserInterruptEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsUserInterruptEvent_tuple);
+assert(mod_consts_hash[138] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsUserInterruptEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsUserInterruptEvent);
+assert(mod_consts_hash[139] == DEEP_HASH(tstate, mod_consts.const_str_digest_4d5ff906fa46065bd576d488cf6644da));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_4d5ff906fa46065bd576d488cf6644da);
+assert(mod_consts_hash[140] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsMemoryStoreResource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsMemoryStoreResource_tuple);
+assert(mod_consts_hash[141] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsMemoryStoreResource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsMemoryStoreResource);
+assert(mod_consts_hash[142] == DEEP_HASH(tstate, mod_consts.const_str_digest_e1188b2adac853d5f780269a175da474));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_e1188b2adac853d5f780269a175da474);
+assert(mod_consts_hash[143] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusRetrying_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusRetrying_tuple);
+assert(mod_consts_hash[144] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsRetryStatusRetrying));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsRetryStatusRetrying);
+assert(mod_consts_hash[145] == DEEP_HASH(tstate, mod_consts.const_str_digest_a3ba35c9f8c9fd464327064b5f3ef057));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_a3ba35c9f8c9fd464327064b5f3ef057);
+assert(mod_consts_hash[146] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusTerminal_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusTerminal_tuple);
+assert(mod_consts_hash[147] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsRetryStatusTerminal));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsRetryStatusTerminal);
+assert(mod_consts_hash[148] == DEEP_HASH(tstate, mod_consts.const_str_digest_0711530fd7fda92e4f2f52d0c181f057));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_0711530fd7fda92e4f2f52d0c181f057);
+assert(mod_consts_hash[149] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultContent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultContent_tuple);
+assert(mod_consts_hash[150] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSearchResultContent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSearchResultContent);
+assert(mod_consts_hash[151] == DEEP_HASH(tstate, mod_consts.const_str_digest_230cf712991ca05edd3dcd967b1d4d87));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_230cf712991ca05edd3dcd967b1d4d87);
+assert(mod_consts_hash[152] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionDeletedEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionDeletedEvent_tuple);
+assert(mod_consts_hash[153] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionDeletedEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionDeletedEvent);
+assert(mod_consts_hash[154] == DEEP_HASH(tstate, mod_consts.const_str_digest_560cbcfce43524d4443be33a534ac730));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_560cbcfce43524d4443be33a534ac730);
+assert(mod_consts_hash[155] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadStatus_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadStatus_tuple);
+assert(mod_consts_hash[156] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStatus));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStatus);
+assert(mod_consts_hash[157] == DEEP_HASH(tstate, mod_consts.const_str_digest_f8194516717ada5da62a92b3eb63fc08));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_f8194516717ada5da62a92b3eb63fc08);
+assert(mod_consts_hash[158] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsStreamSessionEvents_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsStreamSessionEvents_tuple);
+assert(mod_consts_hash[159] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsStreamSessionEvents));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsStreamSessionEvents);
+assert(mod_consts_hash[160] == DEEP_HASH(tstate, mod_consts.const_str_digest_97794e9119c4c8c04471d41f96263d7c));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_97794e9119c4c8c04471d41f96263d7c);
+assert(mod_consts_hash[161] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64DocumentSource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64DocumentSource_tuple);
+assert(mod_consts_hash[162] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsBase64DocumentSource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsBase64DocumentSource);
+assert(mod_consts_hash[163] == DEEP_HASH(tstate, mod_consts.const_str_digest_c8cda2d1f5f906aec1fead4089f7c19a));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_c8cda2d1f5f906aec1fead4089f7c19a);
+assert(mod_consts_hash[164] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsModelOverloadedError_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsModelOverloadedError_tuple);
+assert(mod_consts_hash[165] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsModelOverloadedError));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsModelOverloadedError);
+assert(mod_consts_hash[166] == DEEP_HASH(tstate, mod_consts.const_str_digest_46685a56077522eed81e810fe06cc744));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_46685a56077522eed81e810fe06cc744);
+assert(mod_consts_hash[167] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusExhausted_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusExhausted_tuple);
+assert(mod_consts_hash[168] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsRetryStatusExhausted));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsRetryStatusExhausted);
+assert(mod_consts_hash[169] == DEEP_HASH(tstate, mod_consts.const_str_digest_9c855d5412534f3193c5a5c0c5c2c231));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_9c855d5412534f3193c5a5c0c5c2c231);
+assert(mod_consts_hash[170] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsURLImageSourceParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsURLImageSourceParam_tuple);
+assert(mod_consts_hash[171] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsURLImageSourceParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsURLImageSourceParam);
+assert(mod_consts_hash[172] == DEEP_HASH(tstate, mod_consts.const_str_digest_ff7a1785b84792891d1dbe7b070c47b4));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_ff7a1785b84792891d1dbe7b070c47b4);
+assert(mod_consts_hash[173] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentToolResultEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentToolResultEvent_tuple);
+assert(mod_consts_hash[174] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentToolResultEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsAgentToolResultEvent);
+assert(mod_consts_hash[175] == DEEP_HASH(tstate, mod_consts.const_str_digest_223cca9ed6b87103eb9924b6dce13e0c));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_223cca9ed6b87103eb9924b6dce13e0c);
+assert(mod_consts_hash[176] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsDeleteSessionResource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsDeleteSessionResource_tuple);
+assert(mod_consts_hash[177] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsDeleteSessionResource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsDeleteSessionResource);
+assert(mod_consts_hash[178] == DEEP_HASH(tstate, mod_consts.const_str_digest_61d12c11bf02539ceff8d4c7309b7fda));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_61d12c11bf02539ceff8d4c7309b7fda);
+assert(mod_consts_hash[179] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileImageSourceParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsFileImageSourceParam_tuple);
+assert(mod_consts_hash[180] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileImageSourceParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsFileImageSourceParam);
+assert(mod_consts_hash[181] == DEEP_HASH(tstate, mod_consts.const_str_digest_6b8a3520a58d384fddb23ee7df11c3c4));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_6b8a3520a58d384fddb23ee7df11c3c4);
+assert(mod_consts_hash[182] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultCitations_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultCitations_tuple);
+assert(mod_consts_hash[183] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSearchResultCitations));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSearchResultCitations);
+assert(mod_consts_hash[184] == DEEP_HASH(tstate, mod_consts.const_str_digest_aea22668ea0a349ffe774bc823f0348d));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_aea22668ea0a349ffe774bc823f0348d);
+assert(mod_consts_hash[185] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionRequiresAction_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionRequiresAction_tuple);
+assert(mod_consts_hash[186] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionRequiresAction));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionRequiresAction);
+assert(mod_consts_hash[187] == DEEP_HASH(tstate, mod_consts.const_str_digest_1a02886b578e6e83915e9e85830aa625));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_1a02886b578e6e83915e9e85830aa625);
+assert(mod_consts_hash[188] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMCPToolUseEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMCPToolUseEvent_tuple);
+assert(mod_consts_hash[189] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolUseEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolUseEvent);
+assert(mod_consts_hash[190] == DEEP_HASH(tstate, mod_consts.const_str_digest_e98ebba0d9c49841eaa6d7b9fdc28eae));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_e98ebba0d9c49841eaa6d7b9fdc28eae);
+assert(mod_consts_hash[191] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsModelRateLimitedError_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsModelRateLimitedError_tuple);
+assert(mod_consts_hash[192] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsModelRateLimitedError));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsModelRateLimitedError);
+assert(mod_consts_hash[193] == DEEP_HASH(tstate, mod_consts.const_str_digest_237d50500fabe51b25c23e842641dbb6));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_237d50500fabe51b25c23e842641dbb6);
+assert(mod_consts_hash[194] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64ImageSourceParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64ImageSourceParam_tuple);
+assert(mod_consts_hash[195] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSourceParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSourceParam);
+assert(mod_consts_hash[196] == DEEP_HASH(tstate, mod_consts.const_str_digest_1847b8fc3dbd5fc4758458bbcda6379c));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_1847b8fc3dbd5fc4758458bbcda6379c);
+assert(mod_consts_hash[197] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultBlockParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultBlockParam_tuple);
+assert(mod_consts_hash[198] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlockParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlockParam);
+assert(mod_consts_hash[199] == DEEP_HASH(tstate, mod_consts.const_str_digest_5b663ff13e7e4b866b0ae8cf9b9b865f));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_5b663ff13e7e4b866b0ae8cf9b9b865f);
+assert(mod_consts_hash[200] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionRetriesExhausted_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionRetriesExhausted_tuple);
+assert(mod_consts_hash[201] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionRetriesExhausted));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionRetriesExhausted);
+assert(mod_consts_hash[202] == DEEP_HASH(tstate, mod_consts.const_str_digest_7ea9bd93674f086a4aaeca2d3e22c51b));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_7ea9bd93674f086a4aaeca2d3e22c51b);
+assert(mod_consts_hash[203] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionStatusIdleEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionStatusIdleEvent_tuple);
+assert(mod_consts_hash[204] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsSessionStatusIdleEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsSessionStatusIdleEvent);
+assert(mod_consts_hash[205] == DEEP_HASH(tstate, mod_consts.const_str_digest_11eeaaf653ae468c5d548401bf0e638f));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_11eeaaf653ae468c5d548401bf0e638f);
+assert(mod_consts_hash[206] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsURLDocumentSourceParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsURLDocumentSourceParam_tuple);
+assert(mod_consts_hash[207] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSourceParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSourceParam);
+assert(mod_consts_hash[208] == DEEP_HASH(tstate, mod_consts.const_str_digest_26fe297ca4ea1d1e115a15748d0d72dc));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_26fe297ca4ea1d1e115a15748d0d72dc);
+assert(mod_consts_hash[209] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsUserDefineOutcomeEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsUserDefineOutcomeEvent_tuple);
+assert(mod_consts_hash[210] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsUserDefineOutcomeEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsUserDefineOutcomeEvent);
+assert(mod_consts_hash[211] == DEEP_HASH(tstate, mod_consts.const_str_digest_3bef3f5f068e73b6bbe434e8ab3907d2));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_3bef3f5f068e73b6bbe434e8ab3907d2);
+assert(mod_consts_hash[212] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsUserMessageEventParams_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsUserMessageEventParams_tuple);
+assert(mod_consts_hash[213] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsUserMessageEventParams));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsUserMessageEventParams);
+assert(mod_consts_hash[214] == DEEP_HASH(tstate, mod_consts.const_str_digest_17c4c3e76f57665e8c37d3e8e05f4485));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_17c4c3e76f57665e8c37d3e8e05f4485);
+assert(mod_consts_hash[215] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsFileDocumentSourceParam_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsFileDocumentSourceParam_tuple);
+assert(mod_consts_hash[216] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSourceParam));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSourceParam);
+assert(mod_consts_hash[217] == DEEP_HASH(tstate, mod_consts.const_str_digest_8f3e1ddcf963a5d641b0c54bfd3f6f23));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_8f3e1ddcf963a5d641b0c54bfd3f6f23);
+assert(mod_consts_hash[218] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_c208f803a714c3fa632910db28470705_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_c208f803a714c3fa632910db28470705_tuple);
+assert(mod_consts_hash[219] == DEEP_HASH(tstate, mod_consts.const_str_digest_c208f803a714c3fa632910db28470705));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_c208f803a714c3fa632910db28470705);
+assert(mod_consts_hash[220] == DEEP_HASH(tstate, mod_consts.const_str_digest_acf6c8bd2b1df01d7b3913b3b4445847));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_acf6c8bd2b1df01d7b3913b3b4445847);
+assert(mod_consts_hash[221] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsModelRequestFailedError_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsModelRequestFailedError_tuple);
+assert(mod_consts_hash[222] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsModelRequestFailedError));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsModelRequestFailedError);
+assert(mod_consts_hash[223] == DEEP_HASH(tstate, mod_consts.const_str_digest_cd880bb52b89b3980aba14b2e1dea914));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_cd880bb52b89b3980aba14b2e1dea914);
+assert(mod_consts_hash[224] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsPlainTextDocumentSource_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsPlainTextDocumentSource_tuple);
+assert(mod_consts_hash[225] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsPlainTextDocumentSource));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsPlainTextDocumentSource);
+assert(mod_consts_hash[226] == DEEP_HASH(tstate, mod_consts.const_str_digest_8de9b38d69878d132f1d06943d71c118));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_8de9b38d69878d132f1d06943d71c118);
+assert(mod_consts_hash[227] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentCustomToolUseEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentCustomToolUseEvent_tuple);
+assert(mod_consts_hash[228] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentCustomToolUseEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsAgentCustomToolUseEvent);
+assert(mod_consts_hash[229] == DEEP_HASH(tstate, mod_consts.const_str_digest_9b86de5cb83fcd2792d0a25b2223ccb1));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_9b86de5cb83fcd2792d0a25b2223ccb1);
+assert(mod_consts_hash[230] == DEEP_HASH(tstate, mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMCPToolResultEvent_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMCPToolResultEvent_tuple);
+assert(mod_consts_hash[231] == DEEP_HASH(tstate, mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolResultEvent));
+CHECK_OBJECT_DEEP(mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolResultEvent);
+assert(mod_consts_hash[232] == DEEP_HASH(tstate, mod_consts.const_str_digest_b1e4574a2d2798659bb173d1b4694ea4));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_b1e4574a2d2798659bb173d1b4694ea4);
+assert(mod_consts_hash[233] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147_tuple);
+assert(mod_consts_hash[234] == DEEP_HASH(tstate, mod_consts.const_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147);
+assert(mod_consts_hash[235] == DEEP_HASH(tstate, mod_consts.const_str_digest_c52876987c535d76bc4fe24fafe78167));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_c52876987c535d76bc4fe24fafe78167);
+assert(mod_consts_hash[236] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_6fe7353544f7f387cb0045c98890b3b7_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_6fe7353544f7f387cb0045c98890b3b7_tuple);
+assert(mod_consts_hash[237] == DEEP_HASH(tstate, mod_consts.const_str_digest_6fe7353544f7f387cb0045c98890b3b7));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_6fe7353544f7f387cb0045c98890b3b7);
+assert(mod_consts_hash[238] == DEEP_HASH(tstate, mod_consts.const_str_digest_e3bdbcce8f5e497f6a92e376257c0061));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_e3bdbcce8f5e497f6a92e376257c0061);
+assert(mod_consts_hash[239] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_d89f5443f324538af014bc954ea5d2b0_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_d89f5443f324538af014bc954ea5d2b0_tuple);
+assert(mod_consts_hash[240] == DEEP_HASH(tstate, mod_consts.const_str_digest_d89f5443f324538af014bc954ea5d2b0));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_d89f5443f324538af014bc954ea5d2b0);
+assert(mod_consts_hash[241] == DEEP_HASH(tstate, mod_consts.const_str_digest_d3aa71efb401174fba1c4133f7328ee0));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_d3aa71efb401174fba1c4133f7328ee0);
+assert(mod_consts_hash[242] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_097b50026d50f058ff37fab2be627c5a_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_097b50026d50f058ff37fab2be627c5a_tuple);
+assert(mod_consts_hash[243] == DEEP_HASH(tstate, mod_consts.const_str_digest_097b50026d50f058ff37fab2be627c5a));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_097b50026d50f058ff37fab2be627c5a);
+assert(mod_consts_hash[244] == DEEP_HASH(tstate, mod_consts.const_str_digest_df4d2f0963c141f6f99904381d948245));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_df4d2f0963c141f6f99904381d948245);
+assert(mod_consts_hash[245] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_7bd78a3f07d54c8e773e97b2b33d4855_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_7bd78a3f07d54c8e773e97b2b33d4855_tuple);
+assert(mod_consts_hash[246] == DEEP_HASH(tstate, mod_consts.const_str_digest_7bd78a3f07d54c8e773e97b2b33d4855));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_7bd78a3f07d54c8e773e97b2b33d4855);
+assert(mod_consts_hash[247] == DEEP_HASH(tstate, mod_consts.const_str_digest_8bf6bbeecbb9b26c4bf9be3e428b8ee0));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_8bf6bbeecbb9b26c4bf9be3e428b8ee0);
+assert(mod_consts_hash[248] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_680985bd76c009f9f484b2ca1ee7179b_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_680985bd76c009f9f484b2ca1ee7179b_tuple);
+assert(mod_consts_hash[249] == DEEP_HASH(tstate, mod_consts.const_str_digest_680985bd76c009f9f484b2ca1ee7179b));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_680985bd76c009f9f484b2ca1ee7179b);
+assert(mod_consts_hash[250] == DEEP_HASH(tstate, mod_consts.const_str_digest_69b94baa64a893477643a644d2b44ab5));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_69b94baa64a893477643a644d2b44ab5);
+assert(mod_consts_hash[251] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_87fa0cb24f156084d751cb015c923d88_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_87fa0cb24f156084d751cb015c923d88_tuple);
+assert(mod_consts_hash[252] == DEEP_HASH(tstate, mod_consts.const_str_digest_87fa0cb24f156084d751cb015c923d88));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_87fa0cb24f156084d751cb015c923d88);
+assert(mod_consts_hash[253] == DEEP_HASH(tstate, mod_consts.const_str_digest_1669eb22806384dccf6274d7042e1858));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_1669eb22806384dccf6274d7042e1858);
+assert(mod_consts_hash[254] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_1c85da38dd09ccf517e65697df6a701b_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_1c85da38dd09ccf517e65697df6a701b_tuple);
+assert(mod_consts_hash[255] == DEEP_HASH(tstate, mod_consts.const_str_digest_1c85da38dd09ccf517e65697df6a701b));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_1c85da38dd09ccf517e65697df6a701b);
+assert(mod_consts_hash[256] == DEEP_HASH(tstate, mod_consts.const_str_digest_40d972d8062bd5d21699266ecbec1be1));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_40d972d8062bd5d21699266ecbec1be1);
+assert(mod_consts_hash[257] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_47a3d32085b8900d70eebcf91501a8ea_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_47a3d32085b8900d70eebcf91501a8ea_tuple);
+assert(mod_consts_hash[258] == DEEP_HASH(tstate, mod_consts.const_str_digest_47a3d32085b8900d70eebcf91501a8ea));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_47a3d32085b8900d70eebcf91501a8ea);
+assert(mod_consts_hash[259] == DEEP_HASH(tstate, mod_consts.const_str_digest_aea9a1a16508b16b31c2c6a58f9cc47d));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_aea9a1a16508b16b31c2c6a58f9cc47d);
+assert(mod_consts_hash[260] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_0890907e33afebe5186f7369782e72a8_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_0890907e33afebe5186f7369782e72a8_tuple);
+assert(mod_consts_hash[261] == DEEP_HASH(tstate, mod_consts.const_str_digest_0890907e33afebe5186f7369782e72a8));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_0890907e33afebe5186f7369782e72a8);
+assert(mod_consts_hash[262] == DEEP_HASH(tstate, mod_consts.const_str_digest_b057ace19175756317b43867257827a8));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_b057ace19175756317b43867257827a8);
+assert(mod_consts_hash[263] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_be0c919b566c3ecfa243fcd814cb9d7c_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_be0c919b566c3ecfa243fcd814cb9d7c_tuple);
+assert(mod_consts_hash[264] == DEEP_HASH(tstate, mod_consts.const_str_digest_be0c919b566c3ecfa243fcd814cb9d7c));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_be0c919b566c3ecfa243fcd814cb9d7c);
+assert(mod_consts_hash[265] == DEEP_HASH(tstate, mod_consts.const_str_digest_051e583293111ff440e6b92cd3f28e3f));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_051e583293111ff440e6b92cd3f28e3f);
+assert(mod_consts_hash[266] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063_tuple);
+assert(mod_consts_hash[267] == DEEP_HASH(tstate, mod_consts.const_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063);
+assert(mod_consts_hash[268] == DEEP_HASH(tstate, mod_consts.const_str_digest_590fe6cd1c992a1fff94d3643dbdf1e4));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_590fe6cd1c992a1fff94d3643dbdf1e4);
+assert(mod_consts_hash[269] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_bbb81df83a566cf2814346e63f686900_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_bbb81df83a566cf2814346e63f686900_tuple);
+assert(mod_consts_hash[270] == DEEP_HASH(tstate, mod_consts.const_str_digest_bbb81df83a566cf2814346e63f686900));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_bbb81df83a566cf2814346e63f686900);
+assert(mod_consts_hash[271] == DEEP_HASH(tstate, mod_consts.const_str_digest_9dc1af1b57f64fa267f0908b6f5c4afb));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_9dc1af1b57f64fa267f0908b6f5c4afb);
+assert(mod_consts_hash[272] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_53b65cba1e561c6df7f51f1093dca70d_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_53b65cba1e561c6df7f51f1093dca70d_tuple);
+assert(mod_consts_hash[273] == DEEP_HASH(tstate, mod_consts.const_str_digest_53b65cba1e561c6df7f51f1093dca70d));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_53b65cba1e561c6df7f51f1093dca70d);
+assert(mod_consts_hash[274] == DEEP_HASH(tstate, mod_consts.const_str_digest_e2c6c3dabb6f518a0a6297ce1b09c3ca));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_e2c6c3dabb6f518a0a6297ce1b09c3ca);
+assert(mod_consts_hash[275] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487_tuple);
+assert(mod_consts_hash[276] == DEEP_HASH(tstate, mod_consts.const_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487);
+assert(mod_consts_hash[277] == DEEP_HASH(tstate, mod_consts.const_str_digest_11b40ac95fdb12964baf6c6c41b32b78));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_11b40ac95fdb12964baf6c6c41b32b78);
+assert(mod_consts_hash[278] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_a39975e914a6a86ba3153b197792b326_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_a39975e914a6a86ba3153b197792b326_tuple);
+assert(mod_consts_hash[279] == DEEP_HASH(tstate, mod_consts.const_str_digest_a39975e914a6a86ba3153b197792b326));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_a39975e914a6a86ba3153b197792b326);
+assert(mod_consts_hash[280] == DEEP_HASH(tstate, mod_consts.const_str_digest_54f946fcfe17e0cdab8c188cdbbc27f1));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_54f946fcfe17e0cdab8c188cdbbc27f1);
+assert(mod_consts_hash[281] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_e6071443bffad02c21354a5fd3f17994_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_e6071443bffad02c21354a5fd3f17994_tuple);
+assert(mod_consts_hash[282] == DEEP_HASH(tstate, mod_consts.const_str_digest_e6071443bffad02c21354a5fd3f17994));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_e6071443bffad02c21354a5fd3f17994);
+assert(mod_consts_hash[283] == DEEP_HASH(tstate, mod_consts.const_str_digest_f5f71707011d14e7134746d6f9a3fcca));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_f5f71707011d14e7134746d6f9a3fcca);
+assert(mod_consts_hash[284] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_79208f99f42387dedaa503f910cf801e_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_79208f99f42387dedaa503f910cf801e_tuple);
+assert(mod_consts_hash[285] == DEEP_HASH(tstate, mod_consts.const_str_digest_79208f99f42387dedaa503f910cf801e));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_79208f99f42387dedaa503f910cf801e);
+assert(mod_consts_hash[286] == DEEP_HASH(tstate, mod_consts.const_str_digest_7fb08b4202f0695f1759c805e119dac8));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_7fb08b4202f0695f1759c805e119dac8);
+assert(mod_consts_hash[287] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_e0e15641e9785d45266c86e750f17f58_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_e0e15641e9785d45266c86e750f17f58_tuple);
+assert(mod_consts_hash[288] == DEEP_HASH(tstate, mod_consts.const_str_digest_e0e15641e9785d45266c86e750f17f58));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_e0e15641e9785d45266c86e750f17f58);
+assert(mod_consts_hash[289] == DEEP_HASH(tstate, mod_consts.const_str_digest_d103e12d900b8dc659f4cb8b6b2123c0));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_d103e12d900b8dc659f4cb8b6b2123c0);
+assert(mod_consts_hash[290] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_0b022c66340cc7524b2f5f92a40cc1bd_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_0b022c66340cc7524b2f5f92a40cc1bd_tuple);
+assert(mod_consts_hash[291] == DEEP_HASH(tstate, mod_consts.const_str_digest_0b022c66340cc7524b2f5f92a40cc1bd));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_0b022c66340cc7524b2f5f92a40cc1bd);
+assert(mod_consts_hash[292] == DEEP_HASH(tstate, mod_consts.const_str_digest_936baf57ce758ebde4ee8bc4e9a3742a));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_936baf57ce758ebde4ee8bc4e9a3742a);
+assert(mod_consts_hash[293] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_68b72308bf2917066fde4b492afa1489_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_68b72308bf2917066fde4b492afa1489_tuple);
+assert(mod_consts_hash[294] == DEEP_HASH(tstate, mod_consts.const_str_digest_68b72308bf2917066fde4b492afa1489));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_68b72308bf2917066fde4b492afa1489);
+assert(mod_consts_hash[295] == DEEP_HASH(tstate, mod_consts.const_str_digest_da236c84c2dbb31314d9e00436fc24e3));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_da236c84c2dbb31314d9e00436fc24e3);
+assert(mod_consts_hash[296] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_8aa8484df48f880159babc856f073325_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_8aa8484df48f880159babc856f073325_tuple);
+assert(mod_consts_hash[297] == DEEP_HASH(tstate, mod_consts.const_str_digest_8aa8484df48f880159babc856f073325));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_8aa8484df48f880159babc856f073325);
+assert(mod_consts_hash[298] == DEEP_HASH(tstate, mod_consts.const_str_digest_374ffb61669f909eb3359f731d6c6fa0));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_374ffb61669f909eb3359f731d6c6fa0);
+assert(mod_consts_hash[299] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac_tuple);
+assert(mod_consts_hash[300] == DEEP_HASH(tstate, mod_consts.const_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac);
+assert(mod_consts_hash[301] == DEEP_HASH(tstate, mod_consts.const_str_digest_b9bc0d714c8bd89d4149c6e3907b1de4));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_b9bc0d714c8bd89d4149c6e3907b1de4);
+assert(mod_consts_hash[302] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_b2ea6e7e043e35d36ec3c1599733882c_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_b2ea6e7e043e35d36ec3c1599733882c_tuple);
+assert(mod_consts_hash[303] == DEEP_HASH(tstate, mod_consts.const_str_digest_b2ea6e7e043e35d36ec3c1599733882c));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_b2ea6e7e043e35d36ec3c1599733882c);
+assert(mod_consts_hash[304] == DEEP_HASH(tstate, mod_consts.const_str_digest_2a1f97edc80a2d8bda40d1e34932fdfd));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_2a1f97edc80a2d8bda40d1e34932fdfd);
+assert(mod_consts_hash[305] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_0fb152346dd6fa9a4cf8f10654950779_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_0fb152346dd6fa9a4cf8f10654950779_tuple);
+assert(mod_consts_hash[306] == DEEP_HASH(tstate, mod_consts.const_str_digest_0fb152346dd6fa9a4cf8f10654950779));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_0fb152346dd6fa9a4cf8f10654950779);
+assert(mod_consts_hash[307] == DEEP_HASH(tstate, mod_consts.const_str_digest_2a790bc9daba1a9003a9515bb59feb21));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_2a790bc9daba1a9003a9515bb59feb21);
+assert(mod_consts_hash[308] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_e328354439fe86c13e6c5cffe6a79707_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_e328354439fe86c13e6c5cffe6a79707_tuple);
+assert(mod_consts_hash[309] == DEEP_HASH(tstate, mod_consts.const_str_digest_e328354439fe86c13e6c5cffe6a79707));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_e328354439fe86c13e6c5cffe6a79707);
+assert(mod_consts_hash[310] == DEEP_HASH(tstate, mod_consts.const_str_digest_66286995c0043be401da32224d412da8));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_66286995c0043be401da32224d412da8);
+assert(mod_consts_hash[311] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_91c05374584395232324d09dd05abad1_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_91c05374584395232324d09dd05abad1_tuple);
+assert(mod_consts_hash[312] == DEEP_HASH(tstate, mod_consts.const_str_digest_91c05374584395232324d09dd05abad1));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_91c05374584395232324d09dd05abad1);
+assert(mod_consts_hash[313] == DEEP_HASH(tstate, mod_consts.const_str_digest_42b7b03f5a1fe35a2a2a85378a38aac4));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_42b7b03f5a1fe35a2a2a85378a38aac4);
+assert(mod_consts_hash[314] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_eca874ca0aca92a60a9f3961c3eeca4a_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_eca874ca0aca92a60a9f3961c3eeca4a_tuple);
+assert(mod_consts_hash[315] == DEEP_HASH(tstate, mod_consts.const_str_digest_eca874ca0aca92a60a9f3961c3eeca4a));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_eca874ca0aca92a60a9f3961c3eeca4a);
+assert(mod_consts_hash[316] == DEEP_HASH(tstate, mod_consts.const_str_digest_2c6b0b64226c8987a8654e5faf02f5e6));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_2c6b0b64226c8987a8654e5faf02f5e6);
+assert(mod_consts_hash[317] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_134a26556d1ccf879ef7b122beeef960_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_134a26556d1ccf879ef7b122beeef960_tuple);
+assert(mod_consts_hash[318] == DEEP_HASH(tstate, mod_consts.const_str_digest_134a26556d1ccf879ef7b122beeef960));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_134a26556d1ccf879ef7b122beeef960);
+assert(mod_consts_hash[319] == DEEP_HASH(tstate, mod_consts.const_str_digest_fb6bf8f58efa4f66ca6ef4ac71839ade));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_fb6bf8f58efa4f66ca6ef4ac71839ade);
+assert(mod_consts_hash[320] == DEEP_HASH(tstate, mod_consts.const_tuple_str_digest_80411456df379e8767e34326f63b4233_tuple));
+CHECK_OBJECT_DEEP(mod_consts.const_tuple_str_digest_80411456df379e8767e34326f63b4233_tuple);
+assert(mod_consts_hash[321] == DEEP_HASH(tstate, mod_consts.const_str_digest_80411456df379e8767e34326f63b4233));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_80411456df379e8767e34326f63b4233);
+assert(mod_consts_hash[322] == DEEP_HASH(tstate, mod_consts.const_str_digest_67f3fb50bf2a38c6cb21090701ab2c3f));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_67f3fb50bf2a38c6cb21090701ab2c3f);
+assert(mod_consts_hash[323] == DEEP_HASH(tstate, mod_consts.const_str_digest_809228f0fc663309bfc21295b9946c6f));
+CHECK_OBJECT_DEEP(mod_consts.const_str_digest_809228f0fc663309bfc21295b9946c6f);
+}
+#endif
+
+// Helper to preserving module variables for Python3.11+
+#if 2
+#if PYTHON_VERSION >= 0x3c0
+NUITKA_MAY_BE_UNUSED static uint32_t _Nuitka_PyDictKeys_GetVersionForCurrentState(PyInterpreterState *interp, PyDictKeysObject *dk)
+{
+    if (dk->dk_version != 0) {
+        return dk->dk_version;
+    }
+    uint32_t result = interp->dict_state.next_keys_version++;
+    dk->dk_version = result;
+    return result;
+}
+#elif PYTHON_VERSION >= 0x3b0
+static uint32_t _Nuitka_next_dict_keys_version = 2;
+
+NUITKA_MAY_BE_UNUSED static uint32_t _Nuitka_PyDictKeys_GetVersionForCurrentState(PyDictKeysObject *dk)
+{
+    if (dk->dk_version != 0) {
+        return dk->dk_version;
+    }
+    uint32_t result = _Nuitka_next_dict_keys_version++;
+    dk->dk_version = result;
+    return result;
+}
+#endif
+#endif
+
+// Accessors to module variables.
+static PyObject *module_var_accessor_anthropic$types$beta$sessions$__path__(PyThreadState *tstate) {
+#if 0
+    PyObject *result;
+
+#if PYTHON_VERSION < 0x3b0
+    static uint64_t dict_version = 0;
+    static PyObject *cache_value = NULL;
+
+    if (moduledict_anthropic$types$beta$sessions->ma_version_tag == dict_version) {
+        CHECK_OBJECT_X(cache_value);
+        result = cache_value;
+    } else {
+        dict_version = moduledict_anthropic$types$beta$sessions->ma_version_tag;
+
+        result = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___path__);
+        cache_value = result;
+    }
+#else
+    static uint32_t dict_keys_version = 0xFFFFFFFF;
+    static Py_ssize_t cache_dk_index = 0;
+
+    PyDictKeysObject *dk = moduledict_anthropic$types$beta$sessions->ma_keys;
+    if (likely(DK_IS_UNICODE(dk))) {
+
+#if PYTHON_VERSION >= 0x3c0
+        uint32_t current_dk_version = _Nuitka_PyDictKeys_GetVersionForCurrentState(tstate->interp, dk);
+#else
+        uint32_t current_dk_version = _Nuitka_PyDictKeys_GetVersionForCurrentState(dk);
+#endif
+
+        if (current_dk_version != dict_keys_version) {
+            dict_keys_version = current_dk_version;
+            Py_hash_t hash = Nuitka_Py_unicode_get_hash(const_str_plain___path__);
+            assert(hash != -1);
+
+            cache_dk_index = Nuitka_Py_unicodekeys_lookup_unicode(dk, const_str_plain___path__, hash);
+        }
+
+        if (cache_dk_index >= 0) {
+            assert(dk->dk_kind != DICT_KEYS_SPLIT);
+
+            PyDictUnicodeEntry *entries = DK_UNICODE_ENTRIES(dk);
+
+            result = entries[cache_dk_index].me_value;
+
+            if (unlikely(result == NULL)) {
+                Py_hash_t hash = Nuitka_Py_unicode_get_hash(const_str_plain___path__);
+                assert(hash != -1);
+
+                cache_dk_index = Nuitka_Py_unicodekeys_lookup_unicode(dk, const_str_plain___path__, hash);
+
+                if (cache_dk_index >= 0) {
+                    result = entries[cache_dk_index].me_value;
+                }
+            }
+        } else {
+            result = NULL;
+        }
+    } else {
+        result = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___path__);
+    }
+#endif
+
+#else
+    PyObject *result = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___path__);
+#endif
+
+    if (unlikely(result == NULL)) {
+        result = GET_STRING_DICT_VALUE(dict_builtin, (Nuitka_StringObject *)const_str_plain___path__);
+    }
+
+    return result;
+}
+
+static PyObject *module_var_accessor_anthropic$types$beta$sessions$__spec__(PyThreadState *tstate) {
+#if 0
+    PyObject *result;
+
+#if PYTHON_VERSION < 0x3b0
+    static uint64_t dict_version = 0;
+    static PyObject *cache_value = NULL;
+
+    if (moduledict_anthropic$types$beta$sessions->ma_version_tag == dict_version) {
+        CHECK_OBJECT_X(cache_value);
+        result = cache_value;
+    } else {
+        dict_version = moduledict_anthropic$types$beta$sessions->ma_version_tag;
+
+        result = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___spec__);
+        cache_value = result;
+    }
+#else
+    static uint32_t dict_keys_version = 0xFFFFFFFF;
+    static Py_ssize_t cache_dk_index = 0;
+
+    PyDictKeysObject *dk = moduledict_anthropic$types$beta$sessions->ma_keys;
+    if (likely(DK_IS_UNICODE(dk))) {
+
+#if PYTHON_VERSION >= 0x3c0
+        uint32_t current_dk_version = _Nuitka_PyDictKeys_GetVersionForCurrentState(tstate->interp, dk);
+#else
+        uint32_t current_dk_version = _Nuitka_PyDictKeys_GetVersionForCurrentState(dk);
+#endif
+
+        if (current_dk_version != dict_keys_version) {
+            dict_keys_version = current_dk_version;
+            Py_hash_t hash = Nuitka_Py_unicode_get_hash(const_str_plain___spec__);
+            assert(hash != -1);
+
+            cache_dk_index = Nuitka_Py_unicodekeys_lookup_unicode(dk, const_str_plain___spec__, hash);
+        }
+
+        if (cache_dk_index >= 0) {
+            assert(dk->dk_kind != DICT_KEYS_SPLIT);
+
+            PyDictUnicodeEntry *entries = DK_UNICODE_ENTRIES(dk);
+
+            result = entries[cache_dk_index].me_value;
+
+            if (unlikely(result == NULL)) {
+                Py_hash_t hash = Nuitka_Py_unicode_get_hash(const_str_plain___spec__);
+                assert(hash != -1);
+
+                cache_dk_index = Nuitka_Py_unicodekeys_lookup_unicode(dk, const_str_plain___spec__, hash);
+
+                if (cache_dk_index >= 0) {
+                    result = entries[cache_dk_index].me_value;
+                }
+            }
+        } else {
+            result = NULL;
+        }
+    } else {
+        result = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___spec__);
+    }
+#endif
+
+#else
+    PyObject *result = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___spec__);
+#endif
+
+    if (unlikely(result == NULL)) {
+        result = GET_STRING_DICT_VALUE(dict_builtin, (Nuitka_StringObject *)const_str_plain___spec__);
+    }
+
+    return result;
+}
+
+
+#if !defined(_NUITKA_EXPERIMENTAL_NEW_CODE_OBJECTS)
+// The module code objects.
+static PyCodeObject *code_objects_a1ede3e87c08906d1813bd9059ed55aa;
+
+static void createModuleCodeObjects(void) {
+module_filename_obj = MAKE_RELATIVE_PATH(mod_consts.const_str_digest_67f3fb50bf2a38c6cb21090701ab2c3f); CHECK_OBJECT(module_filename_obj);
+code_objects_a1ede3e87c08906d1813bd9059ed55aa = MAKE_CODE_OBJECT(module_filename_obj, 1, CO_FUTURE_ANNOTATIONS, mod_consts.const_str_digest_809228f0fc663309bfc21295b9946c6f, mod_consts.const_str_digest_809228f0fc663309bfc21295b9946c6f, NULL, NULL, 0, 0, 0);
+}
+#endif
+
+// The module function declarations.
+
+
+// The module function definitions.
+
+
+extern void _initCompiledCellType();
+extern void _initCompiledGeneratorType();
+extern void _initCompiledFunctionType();
+extern void _initCompiledMethodType();
+extern void _initCompiledFrameType();
+
+extern PyTypeObject Nuitka_Loader_Type;
+
+#ifdef _NUITKA_PLUGIN_DILL_ENABLED
+// Provide a way to create find a function via its C code and create it back
+// in another process, useful for multiprocessing extensions like dill
+extern void registerDillPluginTables(PyThreadState *tstate, char const *module_name, PyMethodDef *reduce_compiled_function, PyMethodDef *create_compiled_function);
+
+static function_impl_code const function_table_anthropic$types$beta$sessions[] = {
+
+    NULL
+};
+
+static PyObject *_reduce_compiled_function(PyObject *self, PyObject *args, PyObject *kwds) {
+    PyObject *func;
+
+    if (!PyArg_ParseTuple(args, "O:reduce_compiled_function", &func, NULL)) {
+        return NULL;
+    }
+
+    if (Nuitka_Function_Check(func) == false) {
+        PyThreadState *tstate = PyThreadState_GET();
+
+        SET_CURRENT_EXCEPTION_TYPE0_STR(tstate, PyExc_TypeError, "not a compiled function");
+        return NULL;
+    }
+
+    struct Nuitka_FunctionObject *function = (struct Nuitka_FunctionObject *)func;
+
+    return Nuitka_Function_GetFunctionState(function, function_table_anthropic$types$beta$sessions);
+}
+
+static PyMethodDef _method_def_reduce_compiled_function = {"reduce_compiled_function", (PyCFunction)_reduce_compiled_function,
+                                                           METH_VARARGS, NULL};
+
+
+static PyObject *_create_compiled_function(PyObject *self, PyObject *args, PyObject *kwds) {
+    CHECK_OBJECT_DEEP(args);
+
+    PyObject *function_index;
+    PyObject *code_object_desc;
+    PyObject *defaults;
+    PyObject *kw_defaults;
+    PyObject *doc;
+    PyObject *constant_return_value;
+    PyObject *function_qualname;
+    PyObject *closure;
+    PyObject *annotations;
+    PyObject *func_dict;
+
+    if (!PyArg_ParseTuple(args, "OOOOOOOOOO:create_compiled_function", &function_index, &code_object_desc, &defaults, &kw_defaults, &doc, &constant_return_value, &function_qualname, &closure, &annotations, &func_dict, NULL)) {
+        return NULL;
+    }
+
+    return (PyObject *)Nuitka_Function_CreateFunctionViaCodeIndex(
+        module_anthropic$types$beta$sessions,
+        function_qualname,
+        function_index,
+        code_object_desc,
+        constant_return_value,
+        defaults,
+        kw_defaults,
+        doc,
+        closure,
+        annotations,
+        func_dict,
+        function_table_anthropic$types$beta$sessions,
+        sizeof(function_table_anthropic$types$beta$sessions) / sizeof(function_impl_code)
+    );
+}
+
+static PyMethodDef _method_def_create_compiled_function = {
+    "create_compiled_function",
+    (PyCFunction)_create_compiled_function,
+    METH_VARARGS, NULL
+};
+
+
+#endif
+
+// Actual name might be different when loaded as a package.
+#if _NUITKA_MODULE_MODE && 0
+static char const *module_full_name = "anthropic.types.beta.sessions";
+#endif
+
+// Internal entry point for module code.
+PyObject *module_code_anthropic$types$beta$sessions(PyThreadState *tstate, PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("anthropic$types$beta$sessions");
+
+    // Store the module for future use.
+    module_anthropic$types$beta$sessions = module;
+
+    moduledict_anthropic$types$beta$sessions = MODULE_DICT(module_anthropic$types$beta$sessions);
+
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
+
+    if (init_done == false) {
+#if _NUITKA_MODULE_MODE && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
+#if PYTHON_VERSION > 0x350 && !defined(_NUITKA_EXPERIMENTAL_DISABLE_ALLOCATORS)
+        initNuitkaAllocators();
+#endif
+        // Initialize the constant values used.
+        _initBuiltinModule(tstate);
+
+        PyObject *real_module_name = PyObject_GetAttrString(module, "__name__");
+        CHECK_OBJECT(real_module_name);
+        module_full_name = strdup(Nuitka_String_AsString(real_module_name));
+
+        createGlobalConstants(tstate, real_module_name);
+
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
+#if PYTHON_VERSION >= 0x270
+        _initSlotIterNext();
+#endif
+
+        patchTypeComparison();
+
+        // Enable meta path based loader if not already done.
+#ifdef _NUITKA_TRACE
+        PRINT_STRING("anthropic$types$beta$sessions: Calling setupMetaPathBasedLoader().\n");
+#endif
+        setupMetaPathBasedLoader(tstate);
+#if 0 >= 0
+#ifdef _NUITKA_TRACE
+        PRINT_STRING("anthropic$types$beta$sessions: Calling updateMetaPathBasedLoaderModuleRoot().\n");
+#endif
+        updateMetaPathBasedLoaderModuleRoot(module_full_name);
+#endif
+
+
+#if PYTHON_VERSION >= 0x300
+        patchInspectModule(tstate);
+#endif
+
+#endif
+
+        /* The constants only used by this module are created now. */
+        NUITKA_PRINT_TRACE("anthropic$types$beta$sessions: Calling createModuleConstants().\n");
+        createModuleConstants(tstate);
+
+#if !defined(_NUITKA_EXPERIMENTAL_NEW_CODE_OBJECTS)
+        createModuleCodeObjects();
+#endif
+        init_done = true;
+    }
+
+#if _NUITKA_MODULE_MODE && 0
+    PyObject *pre_load = IMPORT_EMBEDDED_MODULE(tstate, "anthropic.types.beta.sessions" "-preLoad");
+    if (pre_load == NULL) {
+        return NULL;
+    }
+#endif
+
+    // PRINT_STRING("in initanthropic$types$beta$sessions\n");
+
+#ifdef _NUITKA_PLUGIN_DILL_ENABLED
+    {
+        char const *module_name_c;
+        if (loader_entry != NULL) {
+            module_name_c = loader_entry->name;
+        } else {
+            PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___name__);
+            module_name_c = Nuitka_String_AsString(module_name);
+        }
+
+        registerDillPluginTables(tstate, module_name_c, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    }
+#endif
+
+    // Set "__compiled__" to what version information we have.
+    UPDATE_STRING_DICT0(
+        moduledict_anthropic$types$beta$sessions,
+        (Nuitka_StringObject *)const_str_plain___compiled__,
+        Nuitka_dunder_compiled_value
+    );
+
+    // Update "__package__" value to what it ought to be.
+    {
+#if 0
+        UPDATE_STRING_DICT0(
+            moduledict_anthropic$types$beta$sessions,
+            (Nuitka_StringObject *)const_str_plain___package__,
+            const_str_empty
+        );
+#elif 1
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___name__);
+
+        UPDATE_STRING_DICT0(
+            moduledict_anthropic$types$beta$sessions,
+            (Nuitka_StringObject *)const_str_plain___package__,
+            module_name
+        );
+#else
+
+#if PYTHON_VERSION < 0x300
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___name__);
+        char const *module_name_cstr = PyString_AS_STRING(module_name);
+
+        char const *last_dot = strrchr(module_name_cstr, '.');
+
+        if (last_dot != NULL) {
+            UPDATE_STRING_DICT1(
+                moduledict_anthropic$types$beta$sessions,
+                (Nuitka_StringObject *)const_str_plain___package__,
+                PyString_FromStringAndSize(module_name_cstr, last_dot - module_name_cstr)
+            );
+        }
+#else
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___name__);
+        Py_ssize_t dot_index = PyUnicode_Find(module_name, const_str_dot, 0, PyUnicode_GetLength(module_name), -1);
+
+        if (dot_index != -1) {
+            UPDATE_STRING_DICT1(
+                moduledict_anthropic$types$beta$sessions,
+                (Nuitka_StringObject *)const_str_plain___package__,
+                PyUnicode_Substring(module_name, 0, dot_index)
+            );
+        }
+#endif
+#endif
+    }
+
+    CHECK_OBJECT(module_anthropic$types$beta$sessions);
+
+    // For deep importing of a module we need to have "__builtins__", so we set
+    // it ourselves in the same way than CPython does. Note: This must be done
+    // before the frame object is allocated, or else it may fail.
+
+    if (GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___builtins__) == NULL) {
+        PyObject *value = (PyObject *)builtin_module;
+
+        // Check if main module, not a dict then but the module itself.
+#if _NUITKA_MODULE_MODE || !0
+        value = PyModule_GetDict(value);
+#endif
+
+        UPDATE_STRING_DICT0(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___builtins__, value);
+    }
+
+    PyObject *module_loader = Nuitka_Loader_New(loader_entry);
+    UPDATE_STRING_DICT0(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___loader__, module_loader);
+
+#if PYTHON_VERSION >= 0x300
+// Set the "__spec__" value
+
+#if 0
+    // Main modules just get "None" as spec.
+    UPDATE_STRING_DICT0(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___spec__, Py_None);
+#else
+    // Other modules get a "ModuleSpec" from the standard mechanism.
+    {
+        PyObject *bootstrap_module = getImportLibBootstrapModule();
+        CHECK_OBJECT(bootstrap_module);
+
+        PyObject *_spec_from_module = PyObject_GetAttrString(bootstrap_module, "_spec_from_module");
+        CHECK_OBJECT(_spec_from_module);
+
+        PyObject *spec_value = CALL_FUNCTION_WITH_SINGLE_ARG(tstate, _spec_from_module, module_anthropic$types$beta$sessions);
+        Py_DECREF(_spec_from_module);
+
+        // We can assume this to never fail, or else we are in trouble anyway.
+        // CHECK_OBJECT(spec_value);
+
+        if (spec_value == NULL) {
+            PyErr_PrintEx(0);
+            abort();
+        }
+
+        // Mark the execution in the "__spec__" value.
+        SET_ATTRIBUTE(tstate, spec_value, const_str_plain__initializing, Py_True);
+
+#if _NUITKA_MODULE_MODE && 0 && 0 >= 0
+        // Set our loader object in the "__spec__" value.
+        SET_ATTRIBUTE(tstate, spec_value, const_str_plain_loader, module_loader);
+#endif
+
+        UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___spec__, spec_value);
+    }
+#endif
+#endif
+
+    // Temp variables if any
+struct Nuitka_FrameObject *frame_frame_anthropic$types$beta$sessions;
+NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
+struct Nuitka_ExceptionPreservationItem exception_state = Empty_Nuitka_ExceptionPreservationItem;
+NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
+bool tmp_result;
+
+    // Module init code if any
+
+
+    // Module code.
+{
+PyObject *tmp_assign_source_1;
+tmp_assign_source_1 = Py_None;
+UPDATE_STRING_DICT0(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1);
+}
+{
+PyObject *tmp_assign_source_2;
+tmp_assign_source_2 = module_filename_obj;
+UPDATE_STRING_DICT0(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2);
+}
+frame_frame_anthropic$types$beta$sessions = MAKE_MODULE_FRAME(code_objects_a1ede3e87c08906d1813bd9059ed55aa, module_anthropic$types$beta$sessions);
+
+// Push the new frame as the currently active one, and we should be exclusively
+// owning it.
+pushFrameStackCompiledFrame(tstate, frame_frame_anthropic$types$beta$sessions);
+assert(Py_REFCNT(frame_frame_anthropic$types$beta$sessions) == 2);
+
+// Framed code:
+{
+PyObject *tmp_assign_source_3;
+PyObject *tmp_list_element_1;
+PyObject *tmp_called_value_1;
+PyObject *tmp_expression_value_1;
+PyObject *tmp_args_element_value_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tstate, hard_module, const_str_plain_path);
+
+
+    } else {
+        tmp_expression_value_1 = NULL;
+    }
+}
+if (tmp_expression_value_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+tmp_called_value_1 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_1, const_str_plain_dirname);
+CHECK_OBJECT(tmp_expression_value_1);
+Py_DECREF(tmp_expression_value_1);
+if (tmp_called_value_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+tmp_args_element_value_1 = module_filename_obj;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+tmp_list_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tstate, tmp_called_value_1, tmp_args_element_value_1);
+CHECK_OBJECT(tmp_called_value_1);
+Py_DECREF(tmp_called_value_1);
+if (tmp_list_element_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+tmp_assign_source_3 = MAKE_LIST_EMPTY(tstate, 5);
+{
+PyObject *tmp_called_value_2;
+PyObject *tmp_expression_value_2;
+PyObject *tmp_args_element_value_2;
+PyObject *tmp_called_value_3;
+PyObject *tmp_expression_value_3;
+PyObject *tmp_args_element_value_3;
+PyObject *tmp_called_value_4;
+PyObject *tmp_expression_value_4;
+PyObject *tmp_args_element_value_4;
+PyObject *tmp_called_value_5;
+PyObject *tmp_expression_value_5;
+PyObject *tmp_args_element_value_5;
+PyObject *tmp_called_value_6;
+PyObject *tmp_expression_value_6;
+PyObject *tmp_args_element_value_6;
+PyObject *tmp_called_value_7;
+PyObject *tmp_expression_value_7;
+PyObject *tmp_args_element_value_7;
+PyObject *tmp_called_value_8;
+PyObject *tmp_expression_value_8;
+PyList_SET_ITEM(tmp_assign_source_3, 0, tmp_list_element_1);
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tstate, hard_module, const_str_plain_path);
+
+
+    } else {
+        tmp_expression_value_2 = NULL;
+    }
+}
+if (tmp_expression_value_2 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_2 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_2, mod_consts.const_str_plain_join);
+CHECK_OBJECT(tmp_expression_value_2);
+Py_DECREF(tmp_expression_value_2);
+if (tmp_called_value_2 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tstate, hard_module, mod_consts.const_str_plain_environ);
+
+
+    } else {
+        tmp_expression_value_3 = NULL;
+    }
+}
+if (tmp_expression_value_3 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_2);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_3 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_3, const_str_plain_get);
+CHECK_OBJECT(tmp_expression_value_3);
+Py_DECREF(tmp_expression_value_3);
+if (tmp_called_value_3 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_2);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+tmp_args_element_value_2 = CALL_FUNCTION_WITH_POS_ARGS2(tstate, tmp_called_value_3, mod_consts.const_tuple_267b1b08e23cbd828589c9ff1fb413aa_tuple);
+
+CHECK_OBJECT(tmp_called_value_3);
+Py_DECREF(tmp_called_value_3);
+if (tmp_args_element_value_2 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_2);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_args_element_value_3 = mod_consts.const_str_digest_2b32f0eb3b0c3f1fce1dd791b81fd0eb;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+    tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tstate, tmp_called_value_2, call_args);
+}
+
+CHECK_OBJECT(tmp_called_value_2);
+Py_DECREF(tmp_called_value_2);
+CHECK_OBJECT(tmp_args_element_value_2);
+Py_DECREF(tmp_args_element_value_2);
+if (tmp_list_element_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+PyList_SET_ITEM(tmp_assign_source_3, 1, tmp_list_element_1);
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tstate, hard_module, const_str_plain_path);
+
+
+    } else {
+        tmp_expression_value_4 = NULL;
+    }
+}
+if (tmp_expression_value_4 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_4 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_4, mod_consts.const_str_plain_join);
+CHECK_OBJECT(tmp_expression_value_4);
+Py_DECREF(tmp_expression_value_4);
+if (tmp_called_value_4 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tstate, hard_module, mod_consts.const_str_plain_environ);
+
+
+    } else {
+        tmp_expression_value_5 = NULL;
+    }
+}
+if (tmp_expression_value_5 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_4);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_5 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_5, const_str_plain_get);
+CHECK_OBJECT(tmp_expression_value_5);
+Py_DECREF(tmp_expression_value_5);
+if (tmp_called_value_5 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_4);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+tmp_args_element_value_4 = CALL_FUNCTION_WITH_POS_ARGS2(tstate, tmp_called_value_5, mod_consts.const_tuple_b33bb4004300fc3cd16d82c209c32141_tuple);
+
+CHECK_OBJECT(tmp_called_value_5);
+Py_DECREF(tmp_called_value_5);
+if (tmp_args_element_value_4 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_4);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_args_element_value_5 = mod_consts.const_str_digest_5d4fb6971b9d7772f04c3be614a6ad5c;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+    tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tstate, tmp_called_value_4, call_args);
+}
+
+CHECK_OBJECT(tmp_called_value_4);
+Py_DECREF(tmp_called_value_4);
+CHECK_OBJECT(tmp_args_element_value_4);
+Py_DECREF(tmp_args_element_value_4);
+if (tmp_list_element_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+PyList_SET_ITEM(tmp_assign_source_3, 2, tmp_list_element_1);
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tstate, hard_module, const_str_plain_path);
+
+
+    } else {
+        tmp_expression_value_6 = NULL;
+    }
+}
+if (tmp_expression_value_6 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_6 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_6, mod_consts.const_str_plain_join);
+CHECK_OBJECT(tmp_expression_value_6);
+Py_DECREF(tmp_expression_value_6);
+if (tmp_called_value_6 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_7 = LOOKUP_ATTRIBUTE(tstate, hard_module, mod_consts.const_str_plain_environ);
+
+
+    } else {
+        tmp_expression_value_7 = NULL;
+    }
+}
+if (tmp_expression_value_7 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_6);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_7 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_7, const_str_plain_get);
+CHECK_OBJECT(tmp_expression_value_7);
+Py_DECREF(tmp_expression_value_7);
+if (tmp_called_value_7 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_6);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+tmp_args_element_value_6 = CALL_FUNCTION_WITH_POS_ARGS2(tstate, tmp_called_value_7, mod_consts.const_tuple_63bca6ec0c203e2c19b2279effd52b81_tuple);
+
+CHECK_OBJECT(tmp_called_value_7);
+Py_DECREF(tmp_called_value_7);
+if (tmp_args_element_value_6 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+Py_DECREF(tmp_called_value_6);
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_args_element_value_7 = mod_consts.const_str_plain_sessions;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7};
+    tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tstate, tmp_called_value_6, call_args);
+}
+
+CHECK_OBJECT(tmp_called_value_6);
+Py_DECREF(tmp_called_value_6);
+CHECK_OBJECT(tmp_args_element_value_6);
+Py_DECREF(tmp_args_element_value_6);
+if (tmp_list_element_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+PyList_SET_ITEM(tmp_assign_source_3, 3, tmp_list_element_1);
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+{
+    PyObject *hard_module = IMPORT_HARD_OS();
+    if (likely(hard_module != NULL)) {
+        tmp_expression_value_8 = LOOKUP_ATTRIBUTE(tstate, hard_module, mod_consts.const_str_plain_environ);
+
+
+    } else {
+        tmp_expression_value_8 = NULL;
+    }
+}
+if (tmp_expression_value_8 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+tmp_called_value_8 = LOOKUP_ATTRIBUTE(tstate, tmp_expression_value_8, const_str_plain_get);
+CHECK_OBJECT(tmp_expression_value_8);
+Py_DECREF(tmp_expression_value_8);
+if (tmp_called_value_8 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 1;
+tmp_list_element_1 = CALL_FUNCTION_WITH_POS_ARGS2(tstate, tmp_called_value_8, mod_consts.const_tuple_af00aba555f71d1d4d45b2b70c5e8e77_tuple);
+
+CHECK_OBJECT(tmp_called_value_8);
+Py_DECREF(tmp_called_value_8);
+if (tmp_list_element_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto list_build_exception_1;
+}
+PyList_SET_ITEM(tmp_assign_source_3, 4, tmp_list_element_1);
+}
+goto list_build_no_exception_1;
+// Exception handling pass through code for list_build:
+list_build_exception_1:;
+Py_DECREF(tmp_assign_source_3);
+goto frame_exception_exit_1;
+// Finished with no exception for list_build:
+list_build_no_exception_1:;
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___path__, tmp_assign_source_3);
+}
+{
+PyObject *tmp_assattr_value_1;
+PyObject *tmp_assattr_target_1;
+tmp_assattr_value_1 = module_filename_obj;
+tmp_assattr_target_1 = module_var_accessor_anthropic$types$beta$sessions$__spec__(tstate);
+assert(!(tmp_assattr_target_1 == NULL));
+tmp_result = SET_ATTRIBUTE(tstate, tmp_assattr_target_1, mod_consts.const_str_plain_origin, tmp_assattr_value_1);
+if (tmp_result == false) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+}
+{
+PyObject *tmp_assattr_value_2;
+PyObject *tmp_assattr_target_2;
+tmp_assattr_value_2 = Py_True;
+tmp_assattr_target_2 = module_var_accessor_anthropic$types$beta$sessions$__spec__(tstate);
+assert(!(tmp_assattr_target_2 == NULL));
+tmp_result = SET_ATTRIBUTE(tstate, tmp_assattr_target_2, mod_consts.const_str_plain_has_location, tmp_assattr_value_2);
+if (tmp_result == false) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+}
+{
+PyObject *tmp_assattr_value_3;
+PyObject *tmp_assattr_target_3;
+tmp_assattr_value_3 = module_var_accessor_anthropic$types$beta$sessions$__path__(tstate);
+if (unlikely(tmp_assattr_value_3 == NULL)) {
+    RAISE_CURRENT_EXCEPTION_NAME_ERROR(tstate, &exception_state, const_str_plain___path__);
+}
+
+if (tmp_assattr_value_3 == NULL) {
+    assert(HAS_EXCEPTION_STATE(&exception_state));
+
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+tmp_assattr_target_3 = module_var_accessor_anthropic$types$beta$sessions$__spec__(tstate);
+assert(!(tmp_assattr_target_3 == NULL));
+tmp_result = SET_ATTRIBUTE(tstate, tmp_assattr_target_3, mod_consts.const_str_plain_submodule_search_locations, tmp_assattr_value_3);
+if (tmp_result == false) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 1;
+
+    goto frame_exception_exit_1;
+}
+}
+{
+PyObject *tmp_assign_source_4;
+tmp_assign_source_4 = Py_None;
+UPDATE_STRING_DICT0(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_4);
+}
+{
+PyObject *tmp_assign_source_5;
+{
+    PyObject *hard_module = IMPORT_HARD___FUTURE__();
+    tmp_assign_source_5 = LOOKUP_ATTRIBUTE(tstate, hard_module, mod_consts.const_str_plain_annotations);
+}
+assert(!(tmp_assign_source_5 == NULL));
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_annotations, tmp_assign_source_5);
+}
+{
+PyObject *tmp_assign_source_6;
+PyObject *tmp_import_name_from_1;
+PyObject *tmp_name_value_1;
+PyObject *tmp_globals_arg_value_1;
+PyObject *tmp_locals_arg_value_1;
+PyObject *tmp_fromlist_value_1;
+PyObject *tmp_level_value_1;
+tmp_name_value_1 = mod_consts.const_str_plain_event_list_params;
+tmp_globals_arg_value_1 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_1 = Py_None;
+tmp_fromlist_value_1 = mod_consts.const_tuple_str_plain_EventListParams_tuple;
+tmp_level_value_1 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 5;
+tmp_import_name_from_1 = IMPORT_MODULE5(tstate, tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
+if (tmp_import_name_from_1 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 5;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_1)) {
+    tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_1,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_EventListParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_6 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_1, mod_consts.const_str_plain_EventListParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_1);
+Py_DECREF(tmp_import_name_from_1);
+if (tmp_assign_source_6 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 5;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_EventListParams, tmp_assign_source_6);
+}
+{
+PyObject *tmp_assign_source_7;
+PyObject *tmp_import_name_from_2;
+PyObject *tmp_name_value_2;
+PyObject *tmp_globals_arg_value_2;
+PyObject *tmp_locals_arg_value_2;
+PyObject *tmp_fromlist_value_2;
+PyObject *tmp_level_value_2;
+tmp_name_value_2 = mod_consts.const_str_plain_event_send_params;
+tmp_globals_arg_value_2 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_2 = Py_None;
+tmp_fromlist_value_2 = mod_consts.const_tuple_str_plain_EventSendParams_tuple;
+tmp_level_value_2 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 6;
+tmp_import_name_from_2 = IMPORT_MODULE5(tstate, tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
+if (tmp_import_name_from_2 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 6;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_2)) {
+    tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_2,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_EventSendParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_7 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_2, mod_consts.const_str_plain_EventSendParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_2);
+Py_DECREF(tmp_import_name_from_2);
+if (tmp_assign_source_7 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 6;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_EventSendParams, tmp_assign_source_7);
+}
+{
+PyObject *tmp_assign_source_8;
+PyObject *tmp_import_name_from_3;
+PyObject *tmp_name_value_3;
+PyObject *tmp_globals_arg_value_3;
+PyObject *tmp_locals_arg_value_3;
+PyObject *tmp_fromlist_value_3;
+PyObject *tmp_level_value_3;
+tmp_name_value_3 = mod_consts.const_str_plain_thread_list_params;
+tmp_globals_arg_value_3 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_3 = Py_None;
+tmp_fromlist_value_3 = mod_consts.const_tuple_str_plain_ThreadListParams_tuple;
+tmp_level_value_3 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 7;
+tmp_import_name_from_3 = IMPORT_MODULE5(tstate, tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
+if (tmp_import_name_from_3 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 7;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_3)) {
+    tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_3,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_ThreadListParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_8 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_3, mod_consts.const_str_plain_ThreadListParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_3);
+Py_DECREF(tmp_import_name_from_3);
+if (tmp_assign_source_8 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 7;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_ThreadListParams, tmp_assign_source_8);
+}
+{
+PyObject *tmp_assign_source_9;
+PyObject *tmp_import_name_from_4;
+PyObject *tmp_name_value_4;
+PyObject *tmp_globals_arg_value_4;
+PyObject *tmp_locals_arg_value_4;
+PyObject *tmp_fromlist_value_4;
+PyObject *tmp_level_value_4;
+tmp_name_value_4 = mod_consts.const_str_plain_resource_add_params;
+tmp_globals_arg_value_4 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_4 = Py_None;
+tmp_fromlist_value_4 = mod_consts.const_tuple_str_plain_ResourceAddParams_tuple;
+tmp_level_value_4 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 8;
+tmp_import_name_from_4 = IMPORT_MODULE5(tstate, tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
+if (tmp_import_name_from_4 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 8;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_4)) {
+    tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_4,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_ResourceAddParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_9 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_4, mod_consts.const_str_plain_ResourceAddParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_4);
+Py_DECREF(tmp_import_name_from_4);
+if (tmp_assign_source_9 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 8;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_ResourceAddParams, tmp_assign_source_9);
+}
+{
+PyObject *tmp_assign_source_10;
+PyObject *tmp_import_name_from_5;
+PyObject *tmp_name_value_5;
+PyObject *tmp_globals_arg_value_5;
+PyObject *tmp_locals_arg_value_5;
+PyObject *tmp_fromlist_value_5;
+PyObject *tmp_level_value_5;
+tmp_name_value_5 = mod_consts.const_str_plain_resource_list_params;
+tmp_globals_arg_value_5 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_5 = Py_None;
+tmp_fromlist_value_5 = mod_consts.const_tuple_str_plain_ResourceListParams_tuple;
+tmp_level_value_5 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 9;
+tmp_import_name_from_5 = IMPORT_MODULE5(tstate, tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
+if (tmp_import_name_from_5 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 9;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_5)) {
+    tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_5,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_ResourceListParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_10 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_5, mod_consts.const_str_plain_ResourceListParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_5);
+Py_DECREF(tmp_import_name_from_5);
+if (tmp_assign_source_10 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 9;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_ResourceListParams, tmp_assign_source_10);
+}
+{
+PyObject *tmp_assign_source_11;
+PyObject *tmp_import_name_from_6;
+PyObject *tmp_name_value_6;
+PyObject *tmp_globals_arg_value_6;
+PyObject *tmp_locals_arg_value_6;
+PyObject *tmp_fromlist_value_6;
+PyObject *tmp_level_value_6;
+tmp_name_value_6 = mod_consts.const_str_plain_resource_update_params;
+tmp_globals_arg_value_6 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_6 = Py_None;
+tmp_fromlist_value_6 = mod_consts.const_tuple_str_plain_ResourceUpdateParams_tuple;
+tmp_level_value_6 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 10;
+tmp_import_name_from_6 = IMPORT_MODULE5(tstate, tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
+if (tmp_import_name_from_6 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 10;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_6)) {
+    tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_6,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_ResourceUpdateParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_11 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_6, mod_consts.const_str_plain_ResourceUpdateParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_6);
+Py_DECREF(tmp_import_name_from_6);
+if (tmp_assign_source_11 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 10;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_ResourceUpdateParams, tmp_assign_source_11);
+}
+{
+PyObject *tmp_assign_source_12;
+PyObject *tmp_import_name_from_7;
+PyObject *tmp_name_value_7;
+PyObject *tmp_globals_arg_value_7;
+PyObject *tmp_locals_arg_value_7;
+PyObject *tmp_fromlist_value_7;
+PyObject *tmp_level_value_7;
+tmp_name_value_7 = mod_consts.const_str_plain_resource_update_response;
+tmp_globals_arg_value_7 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_7 = Py_None;
+tmp_fromlist_value_7 = mod_consts.const_tuple_str_plain_ResourceUpdateResponse_tuple;
+tmp_level_value_7 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 11;
+tmp_import_name_from_7 = IMPORT_MODULE5(tstate, tmp_name_value_7, tmp_globals_arg_value_7, tmp_locals_arg_value_7, tmp_fromlist_value_7, tmp_level_value_7);
+if (tmp_import_name_from_7 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 11;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_7)) {
+    tmp_assign_source_12 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_7,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_ResourceUpdateResponse,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_12 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_7, mod_consts.const_str_plain_ResourceUpdateResponse);
+}
+
+CHECK_OBJECT(tmp_import_name_from_7);
+Py_DECREF(tmp_import_name_from_7);
+if (tmp_assign_source_12 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 11;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_ResourceUpdateResponse, tmp_assign_source_12);
+}
+{
+PyObject *tmp_assign_source_13;
+PyObject *tmp_import_name_from_8;
+PyObject *tmp_name_value_8;
+PyObject *tmp_globals_arg_value_8;
+PyObject *tmp_locals_arg_value_8;
+PyObject *tmp_fromlist_value_8;
+PyObject *tmp_level_value_8;
+tmp_name_value_8 = mod_consts.const_str_plain_resource_retrieve_response;
+tmp_globals_arg_value_8 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_8 = Py_None;
+tmp_fromlist_value_8 = mod_consts.const_tuple_str_plain_ResourceRetrieveResponse_tuple;
+tmp_level_value_8 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 12;
+tmp_import_name_from_8 = IMPORT_MODULE5(tstate, tmp_name_value_8, tmp_globals_arg_value_8, tmp_locals_arg_value_8, tmp_fromlist_value_8, tmp_level_value_8);
+if (tmp_import_name_from_8 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 12;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_8)) {
+    tmp_assign_source_13 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_8,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_ResourceRetrieveResponse,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_13 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_8, mod_consts.const_str_plain_ResourceRetrieveResponse);
+}
+
+CHECK_OBJECT(tmp_import_name_from_8);
+Py_DECREF(tmp_import_name_from_8);
+if (tmp_assign_source_13 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 12;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_ResourceRetrieveResponse, tmp_assign_source_13);
+}
+{
+PyObject *tmp_assign_source_14;
+PyObject *tmp_import_name_from_9;
+PyObject *tmp_name_value_9;
+PyObject *tmp_globals_arg_value_9;
+PyObject *tmp_locals_arg_value_9;
+PyObject *tmp_fromlist_value_9;
+PyObject *tmp_level_value_9;
+tmp_name_value_9 = mod_consts.const_str_plain_beta_managed_agents_text_block;
+tmp_globals_arg_value_9 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_9 = Py_None;
+tmp_fromlist_value_9 = mod_consts.const_tuple_str_plain_BetaManagedAgentsTextBlock_tuple;
+tmp_level_value_9 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 13;
+tmp_import_name_from_9 = IMPORT_MODULE5(tstate, tmp_name_value_9, tmp_globals_arg_value_9, tmp_locals_arg_value_9, tmp_fromlist_value_9, tmp_level_value_9);
+if (tmp_import_name_from_9 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 13;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_9)) {
+    tmp_assign_source_14 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_9,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsTextBlock,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_14 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_9, mod_consts.const_str_plain_BetaManagedAgentsTextBlock);
+}
+
+CHECK_OBJECT(tmp_import_name_from_9);
+Py_DECREF(tmp_import_name_from_9);
+if (tmp_assign_source_14 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 13;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsTextBlock, tmp_assign_source_14);
+}
+{
+PyObject *tmp_assign_source_15;
+PyObject *tmp_import_name_from_10;
+PyObject *tmp_name_value_10;
+PyObject *tmp_globals_arg_value_10;
+PyObject *tmp_locals_arg_value_10;
+PyObject *tmp_fromlist_value_10;
+PyObject *tmp_level_value_10;
+tmp_name_value_10 = mod_consts.const_str_plain_beta_managed_agents_file_rubric;
+tmp_globals_arg_value_10 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_10 = Py_None;
+tmp_fromlist_value_10 = mod_consts.const_tuple_str_plain_BetaManagedAgentsFileRubric_tuple;
+tmp_level_value_10 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 14;
+tmp_import_name_from_10 = IMPORT_MODULE5(tstate, tmp_name_value_10, tmp_globals_arg_value_10, tmp_locals_arg_value_10, tmp_fromlist_value_10, tmp_level_value_10);
+if (tmp_import_name_from_10 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 14;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_10)) {
+    tmp_assign_source_15 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_10,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsFileRubric,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_15 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_10, mod_consts.const_str_plain_BetaManagedAgentsFileRubric);
+}
+
+CHECK_OBJECT(tmp_import_name_from_10);
+Py_DECREF(tmp_import_name_from_10);
+if (tmp_assign_source_15 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 14;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsFileRubric, tmp_assign_source_15);
+}
+{
+PyObject *tmp_assign_source_16;
+PyObject *tmp_import_name_from_11;
+PyObject *tmp_name_value_11;
+PyObject *tmp_globals_arg_value_11;
+PyObject *tmp_locals_arg_value_11;
+PyObject *tmp_fromlist_value_11;
+PyObject *tmp_level_value_11;
+tmp_name_value_11 = mod_consts.const_str_plain_beta_managed_agents_image_block;
+tmp_globals_arg_value_11 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_11 = Py_None;
+tmp_fromlist_value_11 = mod_consts.const_tuple_str_plain_BetaManagedAgentsImageBlock_tuple;
+tmp_level_value_11 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 15;
+tmp_import_name_from_11 = IMPORT_MODULE5(tstate, tmp_name_value_11, tmp_globals_arg_value_11, tmp_locals_arg_value_11, tmp_fromlist_value_11, tmp_level_value_11);
+if (tmp_import_name_from_11 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 15;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_11)) {
+    tmp_assign_source_16 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_11,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsImageBlock,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_16 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_11, mod_consts.const_str_plain_BetaManagedAgentsImageBlock);
+}
+
+CHECK_OBJECT(tmp_import_name_from_11);
+Py_DECREF(tmp_import_name_from_11);
+if (tmp_assign_source_16 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 15;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsImageBlock, tmp_assign_source_16);
+}
+{
+PyObject *tmp_assign_source_17;
+PyObject *tmp_import_name_from_12;
+PyObject *tmp_name_value_12;
+PyObject *tmp_globals_arg_value_12;
+PyObject *tmp_locals_arg_value_12;
+PyObject *tmp_fromlist_value_12;
+PyObject *tmp_level_value_12;
+tmp_name_value_12 = mod_consts.const_str_plain_beta_managed_agents_text_rubric;
+tmp_globals_arg_value_12 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_12 = Py_None;
+tmp_fromlist_value_12 = mod_consts.const_tuple_str_plain_BetaManagedAgentsTextRubric_tuple;
+tmp_level_value_12 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 16;
+tmp_import_name_from_12 = IMPORT_MODULE5(tstate, tmp_name_value_12, tmp_globals_arg_value_12, tmp_locals_arg_value_12, tmp_fromlist_value_12, tmp_level_value_12);
+if (tmp_import_name_from_12 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 16;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_12)) {
+    tmp_assign_source_17 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_12,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsTextRubric,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_17 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_12, mod_consts.const_str_plain_BetaManagedAgentsTextRubric);
+}
+
+CHECK_OBJECT(tmp_import_name_from_12);
+Py_DECREF(tmp_import_name_from_12);
+if (tmp_assign_source_17 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 16;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsTextRubric, tmp_assign_source_17);
+}
+{
+PyObject *tmp_assign_source_18;
+PyObject *tmp_import_name_from_13;
+PyObject *tmp_name_value_13;
+PyObject *tmp_globals_arg_value_13;
+PyObject *tmp_locals_arg_value_13;
+PyObject *tmp_fromlist_value_13;
+PyObject *tmp_level_value_13;
+tmp_name_value_13 = mod_consts.const_str_plain_beta_managed_agents_event_params;
+tmp_globals_arg_value_13 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_13 = Py_None;
+tmp_fromlist_value_13 = mod_consts.const_tuple_str_plain_BetaManagedAgentsEventParams_tuple;
+tmp_level_value_13 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 17;
+tmp_import_name_from_13 = IMPORT_MODULE5(tstate, tmp_name_value_13, tmp_globals_arg_value_13, tmp_locals_arg_value_13, tmp_fromlist_value_13, tmp_level_value_13);
+if (tmp_import_name_from_13 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 17;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_13)) {
+    tmp_assign_source_18 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_13,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsEventParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_18 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_13, mod_consts.const_str_plain_BetaManagedAgentsEventParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_13);
+Py_DECREF(tmp_import_name_from_13);
+if (tmp_assign_source_18 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 17;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsEventParams, tmp_assign_source_18);
+}
+{
+PyObject *tmp_assign_source_19;
+PyObject *tmp_import_name_from_14;
+PyObject *tmp_name_value_14;
+PyObject *tmp_globals_arg_value_14;
+PyObject *tmp_locals_arg_value_14;
+PyObject *tmp_fromlist_value_14;
+PyObject *tmp_level_value_14;
+tmp_name_value_14 = mod_consts.const_str_plain_beta_managed_agents_billing_error;
+tmp_globals_arg_value_14 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_14 = Py_None;
+tmp_fromlist_value_14 = mod_consts.const_tuple_str_plain_BetaManagedAgentsBillingError_tuple;
+tmp_level_value_14 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 18;
+tmp_import_name_from_14 = IMPORT_MODULE5(tstate, tmp_name_value_14, tmp_globals_arg_value_14, tmp_locals_arg_value_14, tmp_fromlist_value_14, tmp_level_value_14);
+if (tmp_import_name_from_14 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 18;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_14)) {
+    tmp_assign_source_19 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_14,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsBillingError,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_19 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_14, mod_consts.const_str_plain_BetaManagedAgentsBillingError);
+}
+
+CHECK_OBJECT(tmp_import_name_from_14);
+Py_DECREF(tmp_import_name_from_14);
+if (tmp_assign_source_19 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 18;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsBillingError, tmp_assign_source_19);
+}
+{
+PyObject *tmp_assign_source_20;
+PyObject *tmp_import_name_from_15;
+PyObject *tmp_name_value_15;
+PyObject *tmp_globals_arg_value_15;
+PyObject *tmp_locals_arg_value_15;
+PyObject *tmp_fromlist_value_15;
+PyObject *tmp_level_value_15;
+tmp_name_value_15 = mod_consts.const_str_plain_beta_managed_agents_file_resource;
+tmp_globals_arg_value_15 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_15 = Py_None;
+tmp_fromlist_value_15 = mod_consts.const_tuple_str_plain_BetaManagedAgentsFileResource_tuple;
+tmp_level_value_15 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 19;
+tmp_import_name_from_15 = IMPORT_MODULE5(tstate, tmp_name_value_15, tmp_globals_arg_value_15, tmp_locals_arg_value_15, tmp_fromlist_value_15, tmp_level_value_15);
+if (tmp_import_name_from_15 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 19;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_15)) {
+    tmp_assign_source_20 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_15,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsFileResource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_20 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_15, mod_consts.const_str_plain_BetaManagedAgentsFileResource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_15);
+Py_DECREF(tmp_import_name_from_15);
+if (tmp_assign_source_20 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 19;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsFileResource, tmp_assign_source_20);
+}
+{
+PyObject *tmp_assign_source_21;
+PyObject *tmp_import_name_from_16;
+PyObject *tmp_name_value_16;
+PyObject *tmp_globals_arg_value_16;
+PyObject *tmp_locals_arg_value_16;
+PyObject *tmp_fromlist_value_16;
+PyObject *tmp_level_value_16;
+tmp_name_value_16 = mod_consts.const_str_plain_beta_managed_agents_session_event;
+tmp_globals_arg_value_16 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_16 = Py_None;
+tmp_fromlist_value_16 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionEvent_tuple;
+tmp_level_value_16 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 20;
+tmp_import_name_from_16 = IMPORT_MODULE5(tstate, tmp_name_value_16, tmp_globals_arg_value_16, tmp_locals_arg_value_16, tmp_fromlist_value_16, tmp_level_value_16);
+if (tmp_import_name_from_16 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 20;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_16)) {
+    tmp_assign_source_21 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_16,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_21 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_16, mod_consts.const_str_plain_BetaManagedAgentsSessionEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_16);
+Py_DECREF(tmp_import_name_from_16);
+if (tmp_assign_source_21 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 20;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionEvent, tmp_assign_source_21);
+}
+{
+PyObject *tmp_assign_source_22;
+PyObject *tmp_import_name_from_17;
+PyObject *tmp_name_value_17;
+PyObject *tmp_globals_arg_value_17;
+PyObject *tmp_locals_arg_value_17;
+PyObject *tmp_fromlist_value_17;
+PyObject *tmp_level_value_17;
+tmp_name_value_17 = mod_consts.const_str_plain_beta_managed_agents_unknown_error;
+tmp_globals_arg_value_17 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_17 = Py_None;
+tmp_fromlist_value_17 = mod_consts.const_tuple_str_plain_BetaManagedAgentsUnknownError_tuple;
+tmp_level_value_17 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 21;
+tmp_import_name_from_17 = IMPORT_MODULE5(tstate, tmp_name_value_17, tmp_globals_arg_value_17, tmp_locals_arg_value_17, tmp_fromlist_value_17, tmp_level_value_17);
+if (tmp_import_name_from_17 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 21;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_17)) {
+    tmp_assign_source_22 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_17,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsUnknownError,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_22 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_17, mod_consts.const_str_plain_BetaManagedAgentsUnknownError);
+}
+
+CHECK_OBJECT(tmp_import_name_from_17);
+Py_DECREF(tmp_import_name_from_17);
+if (tmp_assign_source_22 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 21;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsUnknownError, tmp_assign_source_22);
+}
+{
+PyObject *tmp_assign_source_23;
+PyObject *tmp_import_name_from_18;
+PyObject *tmp_name_value_18;
+PyObject *tmp_globals_arg_value_18;
+PyObject *tmp_locals_arg_value_18;
+PyObject *tmp_fromlist_value_18;
+PyObject *tmp_level_value_18;
+tmp_name_value_18 = mod_consts.const_str_plain_beta_managed_agents_document_block;
+tmp_globals_arg_value_18 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_18 = Py_None;
+tmp_fromlist_value_18 = mod_consts.const_tuple_str_plain_BetaManagedAgentsDocumentBlock_tuple;
+tmp_level_value_18 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 22;
+tmp_import_name_from_18 = IMPORT_MODULE5(tstate, tmp_name_value_18, tmp_globals_arg_value_18, tmp_locals_arg_value_18, tmp_fromlist_value_18, tmp_level_value_18);
+if (tmp_import_name_from_18 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 22;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_18)) {
+    tmp_assign_source_23 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_18,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsDocumentBlock,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_23 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_18, mod_consts.const_str_plain_BetaManagedAgentsDocumentBlock);
+}
+
+CHECK_OBJECT(tmp_import_name_from_18);
+Py_DECREF(tmp_import_name_from_18);
+if (tmp_assign_source_23 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 22;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsDocumentBlock, tmp_assign_source_23);
+}
+{
+PyObject *tmp_assign_source_24;
+PyObject *tmp_import_name_from_19;
+PyObject *tmp_name_value_19;
+PyObject *tmp_globals_arg_value_19;
+PyObject *tmp_locals_arg_value_19;
+PyObject *tmp_fromlist_value_19;
+PyObject *tmp_level_value_19;
+tmp_name_value_19 = mod_consts.const_str_plain_beta_managed_agents_session_thread;
+tmp_globals_arg_value_19 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_19 = Py_None;
+tmp_fromlist_value_19 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThread_tuple;
+tmp_level_value_19 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 23;
+tmp_import_name_from_19 = IMPORT_MODULE5(tstate, tmp_name_value_19, tmp_globals_arg_value_19, tmp_locals_arg_value_19, tmp_fromlist_value_19, tmp_level_value_19);
+if (tmp_import_name_from_19 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 23;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_19)) {
+    tmp_assign_source_24 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_19,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionThread,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_24 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_19, mod_consts.const_str_plain_BetaManagedAgentsSessionThread);
+}
+
+CHECK_OBJECT(tmp_import_name_from_19);
+Py_DECREF(tmp_import_name_from_19);
+if (tmp_assign_source_24 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 23;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionThread, tmp_assign_source_24);
+}
+{
+PyObject *tmp_assign_source_25;
+PyObject *tmp_import_name_from_20;
+PyObject *tmp_name_value_20;
+PyObject *tmp_globals_arg_value_20;
+PyObject *tmp_locals_arg_value_20;
+PyObject *tmp_fromlist_value_20;
+PyObject *tmp_level_value_20;
+tmp_name_value_20 = mod_consts.const_str_plain_beta_managed_agents_session_end_turn;
+tmp_globals_arg_value_20 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_20 = Py_None;
+tmp_fromlist_value_20 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionEndTurn_tuple;
+tmp_level_value_20 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 24;
+tmp_import_name_from_20 = IMPORT_MODULE5(tstate, tmp_name_value_20, tmp_globals_arg_value_20, tmp_locals_arg_value_20, tmp_fromlist_value_20, tmp_level_value_20);
+if (tmp_import_name_from_20 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 24;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_20)) {
+    tmp_assign_source_25 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_20,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionEndTurn,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_25 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_20, mod_consts.const_str_plain_BetaManagedAgentsSessionEndTurn);
+}
+
+CHECK_OBJECT(tmp_import_name_from_20);
+Py_DECREF(tmp_import_name_from_20);
+if (tmp_assign_source_25 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 24;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionEndTurn, tmp_assign_source_25);
+}
+{
+PyObject *tmp_assign_source_26;
+PyObject *tmp_import_name_from_21;
+PyObject *tmp_name_value_21;
+PyObject *tmp_globals_arg_value_21;
+PyObject *tmp_locals_arg_value_21;
+PyObject *tmp_fromlist_value_21;
+PyObject *tmp_level_value_21;
+tmp_name_value_21 = mod_consts.const_str_plain_beta_managed_agents_session_resource;
+tmp_globals_arg_value_21 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_21 = Py_None;
+tmp_fromlist_value_21 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionResource_tuple;
+tmp_level_value_21 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 25;
+tmp_import_name_from_21 = IMPORT_MODULE5(tstate, tmp_name_value_21, tmp_globals_arg_value_21, tmp_locals_arg_value_21, tmp_fromlist_value_21, tmp_level_value_21);
+if (tmp_import_name_from_21 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 25;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_21)) {
+    tmp_assign_source_26 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_21,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionResource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_26 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_21, mod_consts.const_str_plain_BetaManagedAgentsSessionResource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_21);
+Py_DECREF(tmp_import_name_from_21);
+if (tmp_assign_source_26 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 25;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionResource, tmp_assign_source_26);
+}
+{
+PyObject *tmp_assign_source_27;
+PyObject *tmp_import_name_from_22;
+PyObject *tmp_name_value_22;
+PyObject *tmp_globals_arg_value_22;
+PyObject *tmp_locals_arg_value_22;
+PyObject *tmp_fromlist_value_22;
+PyObject *tmp_level_value_22;
+tmp_name_value_22 = mod_consts.const_str_plain_beta_managed_agents_span_model_usage;
+tmp_globals_arg_value_22 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_22 = Py_None;
+tmp_fromlist_value_22 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSpanModelUsage_tuple;
+tmp_level_value_22 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 26;
+tmp_import_name_from_22 = IMPORT_MODULE5(tstate, tmp_name_value_22, tmp_globals_arg_value_22, tmp_locals_arg_value_22, tmp_fromlist_value_22, tmp_level_value_22);
+if (tmp_import_name_from_22 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 26;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_22)) {
+    tmp_assign_source_27 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_22,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSpanModelUsage,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_27 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_22, mod_consts.const_str_plain_BetaManagedAgentsSpanModelUsage);
+}
+
+CHECK_OBJECT(tmp_import_name_from_22);
+Py_DECREF(tmp_import_name_from_22);
+if (tmp_assign_source_27 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 26;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSpanModelUsage, tmp_assign_source_27);
+}
+{
+PyObject *tmp_assign_source_28;
+PyObject *tmp_import_name_from_23;
+PyObject *tmp_name_value_23;
+PyObject *tmp_globals_arg_value_23;
+PyObject *tmp_locals_arg_value_23;
+PyObject *tmp_fromlist_value_23;
+PyObject *tmp_level_value_23;
+tmp_name_value_23 = mod_consts.const_str_plain_beta_managed_agents_text_block_param;
+tmp_globals_arg_value_23 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_23 = Py_None;
+tmp_fromlist_value_23 = mod_consts.const_tuple_str_plain_BetaManagedAgentsTextBlockParam_tuple;
+tmp_level_value_23 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 27;
+tmp_import_name_from_23 = IMPORT_MODULE5(tstate, tmp_name_value_23, tmp_globals_arg_value_23, tmp_locals_arg_value_23, tmp_fromlist_value_23, tmp_level_value_23);
+if (tmp_import_name_from_23 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 27;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_23)) {
+    tmp_assign_source_28 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_23,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsTextBlockParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_28 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_23, mod_consts.const_str_plain_BetaManagedAgentsTextBlockParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_23);
+Py_DECREF(tmp_import_name_from_23);
+if (tmp_assign_source_28 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 27;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsTextBlockParam, tmp_assign_source_28);
+}
+{
+PyObject *tmp_assign_source_29;
+PyObject *tmp_import_name_from_24;
+PyObject *tmp_name_value_24;
+PyObject *tmp_globals_arg_value_24;
+PyObject *tmp_locals_arg_value_24;
+PyObject *tmp_fromlist_value_24;
+PyObject *tmp_level_value_24;
+tmp_name_value_24 = mod_consts.const_str_plain_beta_managed_agents_url_image_source;
+tmp_globals_arg_value_24 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_24 = Py_None;
+tmp_fromlist_value_24 = mod_consts.const_tuple_str_plain_BetaManagedAgentsURLImageSource_tuple;
+tmp_level_value_24 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 28;
+tmp_import_name_from_24 = IMPORT_MODULE5(tstate, tmp_name_value_24, tmp_globals_arg_value_24, tmp_locals_arg_value_24, tmp_fromlist_value_24, tmp_level_value_24);
+if (tmp_import_name_from_24 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 28;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_24)) {
+    tmp_assign_source_29 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_24,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsURLImageSource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_29 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_24, mod_consts.const_str_plain_BetaManagedAgentsURLImageSource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_24);
+Py_DECREF(tmp_import_name_from_24);
+if (tmp_assign_source_29 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 28;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsURLImageSource, tmp_assign_source_29);
+}
+{
+PyObject *tmp_assign_source_30;
+PyObject *tmp_import_name_from_25;
+PyObject *tmp_name_value_25;
+PyObject *tmp_globals_arg_value_25;
+PyObject *tmp_locals_arg_value_25;
+PyObject *tmp_fromlist_value_25;
+PyObject *tmp_level_value_25;
+tmp_name_value_25 = mod_consts.const_str_plain_beta_managed_agents_file_image_source;
+tmp_globals_arg_value_25 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_25 = Py_None;
+tmp_fromlist_value_25 = mod_consts.const_tuple_str_plain_BetaManagedAgentsFileImageSource_tuple;
+tmp_level_value_25 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 29;
+tmp_import_name_from_25 = IMPORT_MODULE5(tstate, tmp_name_value_25, tmp_globals_arg_value_25, tmp_locals_arg_value_25, tmp_fromlist_value_25, tmp_level_value_25);
+if (tmp_import_name_from_25 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 29;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_25)) {
+    tmp_assign_source_30 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_25,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsFileImageSource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_30 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_25, mod_consts.const_str_plain_BetaManagedAgentsFileImageSource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_25);
+Py_DECREF(tmp_import_name_from_25);
+if (tmp_assign_source_30 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 29;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsFileImageSource, tmp_assign_source_30);
+}
+{
+PyObject *tmp_assign_source_31;
+PyObject *tmp_import_name_from_26;
+PyObject *tmp_name_value_26;
+PyObject *tmp_globals_arg_value_26;
+PyObject *tmp_locals_arg_value_26;
+PyObject *tmp_fromlist_value_26;
+PyObject *tmp_level_value_26;
+tmp_name_value_26 = mod_consts.const_str_plain_beta_managed_agents_image_block_param;
+tmp_globals_arg_value_26 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_26 = Py_None;
+tmp_fromlist_value_26 = mod_consts.const_tuple_str_plain_BetaManagedAgentsImageBlockParam_tuple;
+tmp_level_value_26 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 30;
+tmp_import_name_from_26 = IMPORT_MODULE5(tstate, tmp_name_value_26, tmp_globals_arg_value_26, tmp_locals_arg_value_26, tmp_fromlist_value_26, tmp_level_value_26);
+if (tmp_import_name_from_26 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 30;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_26)) {
+    tmp_assign_source_31 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_26,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsImageBlockParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_31 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_26, mod_consts.const_str_plain_BetaManagedAgentsImageBlockParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_26);
+Py_DECREF(tmp_import_name_from_26);
+if (tmp_assign_source_31 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 30;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsImageBlockParam, tmp_assign_source_31);
+}
+{
+PyObject *tmp_assign_source_32;
+PyObject *tmp_import_name_from_27;
+PyObject *tmp_name_value_27;
+PyObject *tmp_globals_arg_value_27;
+PyObject *tmp_locals_arg_value_27;
+PyObject *tmp_fromlist_value_27;
+PyObject *tmp_level_value_27;
+tmp_name_value_27 = mod_consts.const_str_plain_beta_managed_agents_file_rubric_params;
+tmp_globals_arg_value_27 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_27 = Py_None;
+tmp_fromlist_value_27 = mod_consts.const_tuple_str_plain_BetaManagedAgentsFileRubricParams_tuple;
+tmp_level_value_27 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 31;
+tmp_import_name_from_27 = IMPORT_MODULE5(tstate, tmp_name_value_27, tmp_globals_arg_value_27, tmp_locals_arg_value_27, tmp_fromlist_value_27, tmp_level_value_27);
+if (tmp_import_name_from_27 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 31;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_27)) {
+    tmp_assign_source_32 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_27,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsFileRubricParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_32 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_27, mod_consts.const_str_plain_BetaManagedAgentsFileRubricParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_27);
+Py_DECREF(tmp_import_name_from_27);
+if (tmp_assign_source_32 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 31;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsFileRubricParams, tmp_assign_source_32);
+}
+{
+PyObject *tmp_assign_source_33;
+PyObject *tmp_import_name_from_28;
+PyObject *tmp_name_value_28;
+PyObject *tmp_globals_arg_value_28;
+PyObject *tmp_locals_arg_value_28;
+PyObject *tmp_fromlist_value_28;
+PyObject *tmp_level_value_28;
+tmp_name_value_28 = mod_consts.const_str_plain_beta_managed_agents_text_rubric_params;
+tmp_globals_arg_value_28 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_28 = Py_None;
+tmp_fromlist_value_28 = mod_consts.const_tuple_str_plain_BetaManagedAgentsTextRubricParams_tuple;
+tmp_level_value_28 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 34;
+tmp_import_name_from_28 = IMPORT_MODULE5(tstate, tmp_name_value_28, tmp_globals_arg_value_28, tmp_locals_arg_value_28, tmp_fromlist_value_28, tmp_level_value_28);
+if (tmp_import_name_from_28 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 34;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_28)) {
+    tmp_assign_source_33 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_28,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsTextRubricParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_33 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_28, mod_consts.const_str_plain_BetaManagedAgentsTextRubricParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_28);
+Py_DECREF(tmp_import_name_from_28);
+if (tmp_assign_source_33 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 34;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsTextRubricParams, tmp_assign_source_33);
+}
+{
+PyObject *tmp_assign_source_34;
+PyObject *tmp_import_name_from_29;
+PyObject *tmp_name_value_29;
+PyObject *tmp_globals_arg_value_29;
+PyObject *tmp_locals_arg_value_29;
+PyObject *tmp_fromlist_value_29;
+PyObject *tmp_level_value_29;
+tmp_name_value_29 = mod_consts.const_str_plain_beta_managed_agents_user_message_event;
+tmp_globals_arg_value_29 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_29 = Py_None;
+tmp_fromlist_value_29 = mod_consts.const_tuple_str_plain_BetaManagedAgentsUserMessageEvent_tuple;
+tmp_level_value_29 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 37;
+tmp_import_name_from_29 = IMPORT_MODULE5(tstate, tmp_name_value_29, tmp_globals_arg_value_29, tmp_locals_arg_value_29, tmp_fromlist_value_29, tmp_level_value_29);
+if (tmp_import_name_from_29 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 37;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_29)) {
+    tmp_assign_source_34 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_29,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsUserMessageEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_34 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_29, mod_consts.const_str_plain_BetaManagedAgentsUserMessageEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_29);
+Py_DECREF(tmp_import_name_from_29);
+if (tmp_assign_source_34 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 37;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsUserMessageEvent, tmp_assign_source_34);
+}
+{
+PyObject *tmp_assign_source_35;
+PyObject *tmp_import_name_from_30;
+PyObject *tmp_name_value_30;
+PyObject *tmp_globals_arg_value_30;
+PyObject *tmp_locals_arg_value_30;
+PyObject *tmp_fromlist_value_30;
+PyObject *tmp_level_value_30;
+tmp_name_value_30 = mod_consts.const_str_plain_beta_managed_agents_agent_message_event;
+tmp_globals_arg_value_30 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_30 = Py_None;
+tmp_fromlist_value_30 = mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMessageEvent_tuple;
+tmp_level_value_30 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 40;
+tmp_import_name_from_30 = IMPORT_MODULE5(tstate, tmp_name_value_30, tmp_globals_arg_value_30, tmp_locals_arg_value_30, tmp_fromlist_value_30, tmp_level_value_30);
+if (tmp_import_name_from_30 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 40;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_30)) {
+    tmp_assign_source_35 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_30,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsAgentMessageEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_35 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_30, mod_consts.const_str_plain_BetaManagedAgentsAgentMessageEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_30);
+Py_DECREF(tmp_import_name_from_30);
+if (tmp_assign_source_35 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 40;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsAgentMessageEvent, tmp_assign_source_35);
+}
+{
+PyObject *tmp_assign_source_36;
+PyObject *tmp_import_name_from_31;
+PyObject *tmp_name_value_31;
+PyObject *tmp_globals_arg_value_31;
+PyObject *tmp_locals_arg_value_31;
+PyObject *tmp_fromlist_value_31;
+PyObject *tmp_level_value_31;
+tmp_name_value_31 = mod_consts.const_str_plain_beta_managed_agents_base64_image_source;
+tmp_globals_arg_value_31 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_31 = Py_None;
+tmp_fromlist_value_31 = mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64ImageSource_tuple;
+tmp_level_value_31 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 43;
+tmp_import_name_from_31 = IMPORT_MODULE5(tstate, tmp_name_value_31, tmp_globals_arg_value_31, tmp_locals_arg_value_31, tmp_fromlist_value_31, tmp_level_value_31);
+if (tmp_import_name_from_31 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 43;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_31)) {
+    tmp_assign_source_36 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_31,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_36 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_31, mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_31);
+Py_DECREF(tmp_import_name_from_31);
+if (tmp_assign_source_36 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 43;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSource, tmp_assign_source_36);
+}
+{
+PyObject *tmp_assign_source_37;
+PyObject *tmp_import_name_from_32;
+PyObject *tmp_name_value_32;
+PyObject *tmp_globals_arg_value_32;
+PyObject *tmp_locals_arg_value_32;
+PyObject *tmp_fromlist_value_32;
+PyObject *tmp_level_value_32;
+tmp_name_value_32 = mod_consts.const_str_plain_beta_managed_agents_search_result_block;
+tmp_globals_arg_value_32 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_32 = Py_None;
+tmp_fromlist_value_32 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultBlock_tuple;
+tmp_level_value_32 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 46;
+tmp_import_name_from_32 = IMPORT_MODULE5(tstate, tmp_name_value_32, tmp_globals_arg_value_32, tmp_locals_arg_value_32, tmp_fromlist_value_32, tmp_level_value_32);
+if (tmp_import_name_from_32 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 46;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_32)) {
+    tmp_assign_source_37 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_32,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlock,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_37 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_32, mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlock);
+}
+
+CHECK_OBJECT(tmp_import_name_from_32);
+Py_DECREF(tmp_import_name_from_32);
+if (tmp_assign_source_37 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 46;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlock, tmp_assign_source_37);
+}
+{
+PyObject *tmp_assign_source_38;
+PyObject *tmp_import_name_from_33;
+PyObject *tmp_name_value_33;
+PyObject *tmp_globals_arg_value_33;
+PyObject *tmp_locals_arg_value_33;
+PyObject *tmp_fromlist_value_33;
+PyObject *tmp_level_value_33;
+tmp_name_value_33 = mod_consts.const_str_plain_beta_managed_agents_send_session_events;
+tmp_globals_arg_value_33 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_33 = Py_None;
+tmp_fromlist_value_33 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSendSessionEvents_tuple;
+tmp_level_value_33 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 49;
+tmp_import_name_from_33 = IMPORT_MODULE5(tstate, tmp_name_value_33, tmp_globals_arg_value_33, tmp_locals_arg_value_33, tmp_fromlist_value_33, tmp_level_value_33);
+if (tmp_import_name_from_33 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 49;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_33)) {
+    tmp_assign_source_38 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_33,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSendSessionEvents,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_38 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_33, mod_consts.const_str_plain_BetaManagedAgentsSendSessionEvents);
+}
+
+CHECK_OBJECT(tmp_import_name_from_33);
+Py_DECREF(tmp_import_name_from_33);
+if (tmp_assign_source_38 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 49;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSendSessionEvents, tmp_assign_source_38);
+}
+{
+PyObject *tmp_assign_source_39;
+PyObject *tmp_import_name_from_34;
+PyObject *tmp_name_value_34;
+PyObject *tmp_globals_arg_value_34;
+PyObject *tmp_locals_arg_value_34;
+PyObject *tmp_fromlist_value_34;
+PyObject *tmp_level_value_34;
+tmp_name_value_34 = mod_consts.const_str_plain_beta_managed_agents_session_error_event;
+tmp_globals_arg_value_34 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_34 = Py_None;
+tmp_fromlist_value_34 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionErrorEvent_tuple;
+tmp_level_value_34 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 52;
+tmp_import_name_from_34 = IMPORT_MODULE5(tstate, tmp_name_value_34, tmp_globals_arg_value_34, tmp_locals_arg_value_34, tmp_fromlist_value_34, tmp_level_value_34);
+if (tmp_import_name_from_34 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 52;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_34)) {
+    tmp_assign_source_39 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_34,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionErrorEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_39 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_34, mod_consts.const_str_plain_BetaManagedAgentsSessionErrorEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_34);
+Py_DECREF(tmp_import_name_from_34);
+if (tmp_assign_source_39 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 52;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionErrorEvent, tmp_assign_source_39);
+}
+{
+PyObject *tmp_assign_source_40;
+PyObject *tmp_import_name_from_35;
+PyObject *tmp_name_value_35;
+PyObject *tmp_globals_arg_value_35;
+PyObject *tmp_locals_arg_value_35;
+PyObject *tmp_fromlist_value_35;
+PyObject *tmp_level_value_35;
+tmp_name_value_35 = mod_consts.const_str_plain_beta_managed_agents_url_document_source;
+tmp_globals_arg_value_35 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_35 = Py_None;
+tmp_fromlist_value_35 = mod_consts.const_tuple_str_plain_BetaManagedAgentsURLDocumentSource_tuple;
+tmp_level_value_35 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 55;
+tmp_import_name_from_35 = IMPORT_MODULE5(tstate, tmp_name_value_35, tmp_globals_arg_value_35, tmp_locals_arg_value_35, tmp_fromlist_value_35, tmp_level_value_35);
+if (tmp_import_name_from_35 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 55;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_35)) {
+    tmp_assign_source_40 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_35,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_40 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_35, mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_35);
+Py_DECREF(tmp_import_name_from_35);
+if (tmp_assign_source_40 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 55;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSource, tmp_assign_source_40);
+}
+{
+PyObject *tmp_assign_source_41;
+PyObject *tmp_import_name_from_36;
+PyObject *tmp_name_value_36;
+PyObject *tmp_globals_arg_value_36;
+PyObject *tmp_locals_arg_value_36;
+PyObject *tmp_fromlist_value_36;
+PyObject *tmp_level_value_36;
+tmp_name_value_36 = mod_consts.const_str_plain_beta_managed_agents_agent_thinking_event;
+tmp_globals_arg_value_36 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_36 = Py_None;
+tmp_fromlist_value_36 = mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentThinkingEvent_tuple;
+tmp_level_value_36 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 58;
+tmp_import_name_from_36 = IMPORT_MODULE5(tstate, tmp_name_value_36, tmp_globals_arg_value_36, tmp_locals_arg_value_36, tmp_fromlist_value_36, tmp_level_value_36);
+if (tmp_import_name_from_36 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 58;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_36)) {
+    tmp_assign_source_41 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_36,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsAgentThinkingEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_41 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_36, mod_consts.const_str_plain_BetaManagedAgentsAgentThinkingEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_36);
+Py_DECREF(tmp_import_name_from_36);
+if (tmp_assign_source_41 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 58;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsAgentThinkingEvent, tmp_assign_source_41);
+}
+{
+PyObject *tmp_assign_source_42;
+PyObject *tmp_import_name_from_37;
+PyObject *tmp_name_value_37;
+PyObject *tmp_globals_arg_value_37;
+PyObject *tmp_locals_arg_value_37;
+PyObject *tmp_fromlist_value_37;
+PyObject *tmp_level_value_37;
+tmp_name_value_37 = mod_consts.const_str_plain_beta_managed_agents_agent_tool_use_event;
+tmp_globals_arg_value_37 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_37 = Py_None;
+tmp_fromlist_value_37 = mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentToolUseEvent_tuple;
+tmp_level_value_37 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 61;
+tmp_import_name_from_37 = IMPORT_MODULE5(tstate, tmp_name_value_37, tmp_globals_arg_value_37, tmp_locals_arg_value_37, tmp_fromlist_value_37, tmp_level_value_37);
+if (tmp_import_name_from_37 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 61;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_37)) {
+    tmp_assign_source_42 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_37,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsAgentToolUseEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_42 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_37, mod_consts.const_str_plain_BetaManagedAgentsAgentToolUseEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_37);
+Py_DECREF(tmp_import_name_from_37);
+if (tmp_assign_source_42 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 61;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsAgentToolUseEvent, tmp_assign_source_42);
+}
+{
+PyObject *tmp_assign_source_43;
+PyObject *tmp_import_name_from_38;
+PyObject *tmp_name_value_38;
+PyObject *tmp_globals_arg_value_38;
+PyObject *tmp_locals_arg_value_38;
+PyObject *tmp_fromlist_value_38;
+PyObject *tmp_level_value_38;
+tmp_name_value_38 = mod_consts.const_str_plain_beta_managed_agents_document_block_param;
+tmp_globals_arg_value_38 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_38 = Py_None;
+tmp_fromlist_value_38 = mod_consts.const_tuple_str_plain_BetaManagedAgentsDocumentBlockParam_tuple;
+tmp_level_value_38 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 64;
+tmp_import_name_from_38 = IMPORT_MODULE5(tstate, tmp_name_value_38, tmp_globals_arg_value_38, tmp_locals_arg_value_38, tmp_fromlist_value_38, tmp_level_value_38);
+if (tmp_import_name_from_38 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 64;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_38)) {
+    tmp_assign_source_43 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_38,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsDocumentBlockParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_43 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_38, mod_consts.const_str_plain_BetaManagedAgentsDocumentBlockParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_38);
+Py_DECREF(tmp_import_name_from_38);
+if (tmp_assign_source_43 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 64;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsDocumentBlockParam, tmp_assign_source_43);
+}
+{
+PyObject *tmp_assign_source_44;
+PyObject *tmp_import_name_from_39;
+PyObject *tmp_name_value_39;
+PyObject *tmp_globals_arg_value_39;
+PyObject *tmp_locals_arg_value_39;
+PyObject *tmp_fromlist_value_39;
+PyObject *tmp_level_value_39;
+tmp_name_value_39 = mod_consts.const_str_plain_beta_managed_agents_file_document_source;
+tmp_globals_arg_value_39 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_39 = Py_None;
+tmp_fromlist_value_39 = mod_consts.const_tuple_str_plain_BetaManagedAgentsFileDocumentSource_tuple;
+tmp_level_value_39 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 67;
+tmp_import_name_from_39 = IMPORT_MODULE5(tstate, tmp_name_value_39, tmp_globals_arg_value_39, tmp_locals_arg_value_39, tmp_fromlist_value_39, tmp_level_value_39);
+if (tmp_import_name_from_39 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 67;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_39)) {
+    tmp_assign_source_44 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_39,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_44 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_39, mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_39);
+Py_DECREF(tmp_import_name_from_39);
+if (tmp_assign_source_44 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 67;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSource, tmp_assign_source_44);
+}
+{
+PyObject *tmp_assign_source_45;
+PyObject *tmp_import_name_from_40;
+PyObject *tmp_name_value_40;
+PyObject *tmp_globals_arg_value_40;
+PyObject *tmp_locals_arg_value_40;
+PyObject *tmp_fromlist_value_40;
+PyObject *tmp_level_value_40;
+tmp_name_value_40 = mod_consts.const_str_plain_beta_managed_agents_session_thread_stats;
+tmp_globals_arg_value_40 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_40 = Py_None;
+tmp_fromlist_value_40 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadStats_tuple;
+tmp_level_value_40 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 70;
+tmp_import_name_from_40 = IMPORT_MODULE5(tstate, tmp_name_value_40, tmp_globals_arg_value_40, tmp_locals_arg_value_40, tmp_fromlist_value_40, tmp_level_value_40);
+if (tmp_import_name_from_40 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 70;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_40)) {
+    tmp_assign_source_45 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_40,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStats,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_45 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_40, mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStats);
+}
+
+CHECK_OBJECT(tmp_import_name_from_40);
+Py_DECREF(tmp_import_name_from_40);
+if (tmp_assign_source_45 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 70;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStats, tmp_assign_source_45);
+}
+{
+PyObject *tmp_assign_source_46;
+PyObject *tmp_import_name_from_41;
+PyObject *tmp_name_value_41;
+PyObject *tmp_globals_arg_value_41;
+PyObject *tmp_locals_arg_value_41;
+PyObject *tmp_fromlist_value_41;
+PyObject *tmp_level_value_41;
+tmp_name_value_41 = mod_consts.const_str_plain_beta_managed_agents_session_thread_usage;
+tmp_globals_arg_value_41 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_41 = Py_None;
+tmp_fromlist_value_41 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadUsage_tuple;
+tmp_level_value_41 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 73;
+tmp_import_name_from_41 = IMPORT_MODULE5(tstate, tmp_name_value_41, tmp_globals_arg_value_41, tmp_locals_arg_value_41, tmp_fromlist_value_41, tmp_level_value_41);
+if (tmp_import_name_from_41 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 73;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_41)) {
+    tmp_assign_source_46 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_41,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionThreadUsage,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_46 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_41, mod_consts.const_str_plain_BetaManagedAgentsSessionThreadUsage);
+}
+
+CHECK_OBJECT(tmp_import_name_from_41);
+Py_DECREF(tmp_import_name_from_41);
+if (tmp_assign_source_46 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 73;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionThreadUsage, tmp_assign_source_46);
+}
+{
+PyObject *tmp_assign_source_47;
+PyObject *tmp_import_name_from_42;
+PyObject *tmp_name_value_42;
+PyObject *tmp_globals_arg_value_42;
+PyObject *tmp_locals_arg_value_42;
+PyObject *tmp_fromlist_value_42;
+PyObject *tmp_level_value_42;
+tmp_name_value_42 = mod_consts.const_str_plain_beta_managed_agents_user_interrupt_event;
+tmp_globals_arg_value_42 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_42 = Py_None;
+tmp_fromlist_value_42 = mod_consts.const_tuple_str_plain_BetaManagedAgentsUserInterruptEvent_tuple;
+tmp_level_value_42 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 76;
+tmp_import_name_from_42 = IMPORT_MODULE5(tstate, tmp_name_value_42, tmp_globals_arg_value_42, tmp_locals_arg_value_42, tmp_fromlist_value_42, tmp_level_value_42);
+if (tmp_import_name_from_42 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 76;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_42)) {
+    tmp_assign_source_47 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_42,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsUserInterruptEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_47 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_42, mod_consts.const_str_plain_BetaManagedAgentsUserInterruptEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_42);
+Py_DECREF(tmp_import_name_from_42);
+if (tmp_assign_source_47 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 76;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsUserInterruptEvent, tmp_assign_source_47);
+}
+{
+PyObject *tmp_assign_source_48;
+PyObject *tmp_import_name_from_43;
+PyObject *tmp_name_value_43;
+PyObject *tmp_globals_arg_value_43;
+PyObject *tmp_locals_arg_value_43;
+PyObject *tmp_fromlist_value_43;
+PyObject *tmp_level_value_43;
+tmp_name_value_43 = mod_consts.const_str_digest_4d5ff906fa46065bd576d488cf6644da;
+tmp_globals_arg_value_43 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_43 = Py_None;
+tmp_fromlist_value_43 = mod_consts.const_tuple_str_plain_BetaManagedAgentsMemoryStoreResource_tuple;
+tmp_level_value_43 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 79;
+tmp_import_name_from_43 = IMPORT_MODULE5(tstate, tmp_name_value_43, tmp_globals_arg_value_43, tmp_locals_arg_value_43, tmp_fromlist_value_43, tmp_level_value_43);
+if (tmp_import_name_from_43 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 79;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_43)) {
+    tmp_assign_source_48 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_43,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsMemoryStoreResource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_48 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_43, mod_consts.const_str_plain_BetaManagedAgentsMemoryStoreResource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_43);
+Py_DECREF(tmp_import_name_from_43);
+if (tmp_assign_source_48 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 79;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsMemoryStoreResource, tmp_assign_source_48);
+}
+{
+PyObject *tmp_assign_source_49;
+PyObject *tmp_import_name_from_44;
+PyObject *tmp_name_value_44;
+PyObject *tmp_globals_arg_value_44;
+PyObject *tmp_locals_arg_value_44;
+PyObject *tmp_fromlist_value_44;
+PyObject *tmp_level_value_44;
+tmp_name_value_44 = mod_consts.const_str_digest_e1188b2adac853d5f780269a175da474;
+tmp_globals_arg_value_44 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_44 = Py_None;
+tmp_fromlist_value_44 = mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusRetrying_tuple;
+tmp_level_value_44 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 82;
+tmp_import_name_from_44 = IMPORT_MODULE5(tstate, tmp_name_value_44, tmp_globals_arg_value_44, tmp_locals_arg_value_44, tmp_fromlist_value_44, tmp_level_value_44);
+if (tmp_import_name_from_44 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 82;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_44)) {
+    tmp_assign_source_49 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_44,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsRetryStatusRetrying,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_49 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_44, mod_consts.const_str_plain_BetaManagedAgentsRetryStatusRetrying);
+}
+
+CHECK_OBJECT(tmp_import_name_from_44);
+Py_DECREF(tmp_import_name_from_44);
+if (tmp_assign_source_49 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 82;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsRetryStatusRetrying, tmp_assign_source_49);
+}
+{
+PyObject *tmp_assign_source_50;
+PyObject *tmp_import_name_from_45;
+PyObject *tmp_name_value_45;
+PyObject *tmp_globals_arg_value_45;
+PyObject *tmp_locals_arg_value_45;
+PyObject *tmp_fromlist_value_45;
+PyObject *tmp_level_value_45;
+tmp_name_value_45 = mod_consts.const_str_digest_a3ba35c9f8c9fd464327064b5f3ef057;
+tmp_globals_arg_value_45 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_45 = Py_None;
+tmp_fromlist_value_45 = mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusTerminal_tuple;
+tmp_level_value_45 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 85;
+tmp_import_name_from_45 = IMPORT_MODULE5(tstate, tmp_name_value_45, tmp_globals_arg_value_45, tmp_locals_arg_value_45, tmp_fromlist_value_45, tmp_level_value_45);
+if (tmp_import_name_from_45 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 85;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_45)) {
+    tmp_assign_source_50 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_45,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsRetryStatusTerminal,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_50 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_45, mod_consts.const_str_plain_BetaManagedAgentsRetryStatusTerminal);
+}
+
+CHECK_OBJECT(tmp_import_name_from_45);
+Py_DECREF(tmp_import_name_from_45);
+if (tmp_assign_source_50 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 85;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsRetryStatusTerminal, tmp_assign_source_50);
+}
+{
+PyObject *tmp_assign_source_51;
+PyObject *tmp_import_name_from_46;
+PyObject *tmp_name_value_46;
+PyObject *tmp_globals_arg_value_46;
+PyObject *tmp_locals_arg_value_46;
+PyObject *tmp_fromlist_value_46;
+PyObject *tmp_level_value_46;
+tmp_name_value_46 = mod_consts.const_str_digest_0711530fd7fda92e4f2f52d0c181f057;
+tmp_globals_arg_value_46 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_46 = Py_None;
+tmp_fromlist_value_46 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultContent_tuple;
+tmp_level_value_46 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 88;
+tmp_import_name_from_46 = IMPORT_MODULE5(tstate, tmp_name_value_46, tmp_globals_arg_value_46, tmp_locals_arg_value_46, tmp_fromlist_value_46, tmp_level_value_46);
+if (tmp_import_name_from_46 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 88;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_46)) {
+    tmp_assign_source_51 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_46,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSearchResultContent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_51 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_46, mod_consts.const_str_plain_BetaManagedAgentsSearchResultContent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_46);
+Py_DECREF(tmp_import_name_from_46);
+if (tmp_assign_source_51 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 88;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSearchResultContent, tmp_assign_source_51);
+}
+{
+PyObject *tmp_assign_source_52;
+PyObject *tmp_import_name_from_47;
+PyObject *tmp_name_value_47;
+PyObject *tmp_globals_arg_value_47;
+PyObject *tmp_locals_arg_value_47;
+PyObject *tmp_fromlist_value_47;
+PyObject *tmp_level_value_47;
+tmp_name_value_47 = mod_consts.const_str_digest_230cf712991ca05edd3dcd967b1d4d87;
+tmp_globals_arg_value_47 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_47 = Py_None;
+tmp_fromlist_value_47 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionDeletedEvent_tuple;
+tmp_level_value_47 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 91;
+tmp_import_name_from_47 = IMPORT_MODULE5(tstate, tmp_name_value_47, tmp_globals_arg_value_47, tmp_locals_arg_value_47, tmp_fromlist_value_47, tmp_level_value_47);
+if (tmp_import_name_from_47 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 91;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_47)) {
+    tmp_assign_source_52 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_47,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionDeletedEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_52 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_47, mod_consts.const_str_plain_BetaManagedAgentsSessionDeletedEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_47);
+Py_DECREF(tmp_import_name_from_47);
+if (tmp_assign_source_52 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 91;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionDeletedEvent, tmp_assign_source_52);
+}
+{
+PyObject *tmp_assign_source_53;
+PyObject *tmp_import_name_from_48;
+PyObject *tmp_name_value_48;
+PyObject *tmp_globals_arg_value_48;
+PyObject *tmp_locals_arg_value_48;
+PyObject *tmp_fromlist_value_48;
+PyObject *tmp_level_value_48;
+tmp_name_value_48 = mod_consts.const_str_digest_560cbcfce43524d4443be33a534ac730;
+tmp_globals_arg_value_48 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_48 = Py_None;
+tmp_fromlist_value_48 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionThreadStatus_tuple;
+tmp_level_value_48 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 94;
+tmp_import_name_from_48 = IMPORT_MODULE5(tstate, tmp_name_value_48, tmp_globals_arg_value_48, tmp_locals_arg_value_48, tmp_fromlist_value_48, tmp_level_value_48);
+if (tmp_import_name_from_48 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 94;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_48)) {
+    tmp_assign_source_53 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_48,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStatus,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_53 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_48, mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStatus);
+}
+
+CHECK_OBJECT(tmp_import_name_from_48);
+Py_DECREF(tmp_import_name_from_48);
+if (tmp_assign_source_53 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 94;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionThreadStatus, tmp_assign_source_53);
+}
+{
+PyObject *tmp_assign_source_54;
+PyObject *tmp_import_name_from_49;
+PyObject *tmp_name_value_49;
+PyObject *tmp_globals_arg_value_49;
+PyObject *tmp_locals_arg_value_49;
+PyObject *tmp_fromlist_value_49;
+PyObject *tmp_level_value_49;
+tmp_name_value_49 = mod_consts.const_str_digest_f8194516717ada5da62a92b3eb63fc08;
+tmp_globals_arg_value_49 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_49 = Py_None;
+tmp_fromlist_value_49 = mod_consts.const_tuple_str_plain_BetaManagedAgentsStreamSessionEvents_tuple;
+tmp_level_value_49 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 97;
+tmp_import_name_from_49 = IMPORT_MODULE5(tstate, tmp_name_value_49, tmp_globals_arg_value_49, tmp_locals_arg_value_49, tmp_fromlist_value_49, tmp_level_value_49);
+if (tmp_import_name_from_49 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 97;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_49)) {
+    tmp_assign_source_54 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_49,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsStreamSessionEvents,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_54 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_49, mod_consts.const_str_plain_BetaManagedAgentsStreamSessionEvents);
+}
+
+CHECK_OBJECT(tmp_import_name_from_49);
+Py_DECREF(tmp_import_name_from_49);
+if (tmp_assign_source_54 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 97;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsStreamSessionEvents, tmp_assign_source_54);
+}
+{
+PyObject *tmp_assign_source_55;
+PyObject *tmp_import_name_from_50;
+PyObject *tmp_name_value_50;
+PyObject *tmp_globals_arg_value_50;
+PyObject *tmp_locals_arg_value_50;
+PyObject *tmp_fromlist_value_50;
+PyObject *tmp_level_value_50;
+tmp_name_value_50 = mod_consts.const_str_digest_97794e9119c4c8c04471d41f96263d7c;
+tmp_globals_arg_value_50 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_50 = Py_None;
+tmp_fromlist_value_50 = mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64DocumentSource_tuple;
+tmp_level_value_50 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 100;
+tmp_import_name_from_50 = IMPORT_MODULE5(tstate, tmp_name_value_50, tmp_globals_arg_value_50, tmp_locals_arg_value_50, tmp_fromlist_value_50, tmp_level_value_50);
+if (tmp_import_name_from_50 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 100;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_50)) {
+    tmp_assign_source_55 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_50,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsBase64DocumentSource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_55 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_50, mod_consts.const_str_plain_BetaManagedAgentsBase64DocumentSource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_50);
+Py_DECREF(tmp_import_name_from_50);
+if (tmp_assign_source_55 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 100;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsBase64DocumentSource, tmp_assign_source_55);
+}
+{
+PyObject *tmp_assign_source_56;
+PyObject *tmp_import_name_from_51;
+PyObject *tmp_name_value_51;
+PyObject *tmp_globals_arg_value_51;
+PyObject *tmp_locals_arg_value_51;
+PyObject *tmp_fromlist_value_51;
+PyObject *tmp_level_value_51;
+tmp_name_value_51 = mod_consts.const_str_digest_c8cda2d1f5f906aec1fead4089f7c19a;
+tmp_globals_arg_value_51 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_51 = Py_None;
+tmp_fromlist_value_51 = mod_consts.const_tuple_str_plain_BetaManagedAgentsModelOverloadedError_tuple;
+tmp_level_value_51 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 103;
+tmp_import_name_from_51 = IMPORT_MODULE5(tstate, tmp_name_value_51, tmp_globals_arg_value_51, tmp_locals_arg_value_51, tmp_fromlist_value_51, tmp_level_value_51);
+if (tmp_import_name_from_51 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 103;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_51)) {
+    tmp_assign_source_56 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_51,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsModelOverloadedError,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_56 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_51, mod_consts.const_str_plain_BetaManagedAgentsModelOverloadedError);
+}
+
+CHECK_OBJECT(tmp_import_name_from_51);
+Py_DECREF(tmp_import_name_from_51);
+if (tmp_assign_source_56 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 103;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsModelOverloadedError, tmp_assign_source_56);
+}
+{
+PyObject *tmp_assign_source_57;
+PyObject *tmp_import_name_from_52;
+PyObject *tmp_name_value_52;
+PyObject *tmp_globals_arg_value_52;
+PyObject *tmp_locals_arg_value_52;
+PyObject *tmp_fromlist_value_52;
+PyObject *tmp_level_value_52;
+tmp_name_value_52 = mod_consts.const_str_digest_46685a56077522eed81e810fe06cc744;
+tmp_globals_arg_value_52 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_52 = Py_None;
+tmp_fromlist_value_52 = mod_consts.const_tuple_str_plain_BetaManagedAgentsRetryStatusExhausted_tuple;
+tmp_level_value_52 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 106;
+tmp_import_name_from_52 = IMPORT_MODULE5(tstate, tmp_name_value_52, tmp_globals_arg_value_52, tmp_locals_arg_value_52, tmp_fromlist_value_52, tmp_level_value_52);
+if (tmp_import_name_from_52 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 106;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_52)) {
+    tmp_assign_source_57 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_52,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsRetryStatusExhausted,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_57 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_52, mod_consts.const_str_plain_BetaManagedAgentsRetryStatusExhausted);
+}
+
+CHECK_OBJECT(tmp_import_name_from_52);
+Py_DECREF(tmp_import_name_from_52);
+if (tmp_assign_source_57 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 106;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsRetryStatusExhausted, tmp_assign_source_57);
+}
+{
+PyObject *tmp_assign_source_58;
+PyObject *tmp_import_name_from_53;
+PyObject *tmp_name_value_53;
+PyObject *tmp_globals_arg_value_53;
+PyObject *tmp_locals_arg_value_53;
+PyObject *tmp_fromlist_value_53;
+PyObject *tmp_level_value_53;
+tmp_name_value_53 = mod_consts.const_str_digest_9c855d5412534f3193c5a5c0c5c2c231;
+tmp_globals_arg_value_53 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_53 = Py_None;
+tmp_fromlist_value_53 = mod_consts.const_tuple_str_plain_BetaManagedAgentsURLImageSourceParam_tuple;
+tmp_level_value_53 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 109;
+tmp_import_name_from_53 = IMPORT_MODULE5(tstate, tmp_name_value_53, tmp_globals_arg_value_53, tmp_locals_arg_value_53, tmp_fromlist_value_53, tmp_level_value_53);
+if (tmp_import_name_from_53 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 109;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_53)) {
+    tmp_assign_source_58 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_53,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsURLImageSourceParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_58 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_53, mod_consts.const_str_plain_BetaManagedAgentsURLImageSourceParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_53);
+Py_DECREF(tmp_import_name_from_53);
+if (tmp_assign_source_58 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 109;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsURLImageSourceParam, tmp_assign_source_58);
+}
+{
+PyObject *tmp_assign_source_59;
+PyObject *tmp_import_name_from_54;
+PyObject *tmp_name_value_54;
+PyObject *tmp_globals_arg_value_54;
+PyObject *tmp_locals_arg_value_54;
+PyObject *tmp_fromlist_value_54;
+PyObject *tmp_level_value_54;
+tmp_name_value_54 = mod_consts.const_str_digest_ff7a1785b84792891d1dbe7b070c47b4;
+tmp_globals_arg_value_54 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_54 = Py_None;
+tmp_fromlist_value_54 = mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentToolResultEvent_tuple;
+tmp_level_value_54 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 112;
+tmp_import_name_from_54 = IMPORT_MODULE5(tstate, tmp_name_value_54, tmp_globals_arg_value_54, tmp_locals_arg_value_54, tmp_fromlist_value_54, tmp_level_value_54);
+if (tmp_import_name_from_54 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 112;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_54)) {
+    tmp_assign_source_59 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_54,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsAgentToolResultEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_59 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_54, mod_consts.const_str_plain_BetaManagedAgentsAgentToolResultEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_54);
+Py_DECREF(tmp_import_name_from_54);
+if (tmp_assign_source_59 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 112;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsAgentToolResultEvent, tmp_assign_source_59);
+}
+{
+PyObject *tmp_assign_source_60;
+PyObject *tmp_import_name_from_55;
+PyObject *tmp_name_value_55;
+PyObject *tmp_globals_arg_value_55;
+PyObject *tmp_locals_arg_value_55;
+PyObject *tmp_fromlist_value_55;
+PyObject *tmp_level_value_55;
+tmp_name_value_55 = mod_consts.const_str_digest_223cca9ed6b87103eb9924b6dce13e0c;
+tmp_globals_arg_value_55 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_55 = Py_None;
+tmp_fromlist_value_55 = mod_consts.const_tuple_str_plain_BetaManagedAgentsDeleteSessionResource_tuple;
+tmp_level_value_55 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 115;
+tmp_import_name_from_55 = IMPORT_MODULE5(tstate, tmp_name_value_55, tmp_globals_arg_value_55, tmp_locals_arg_value_55, tmp_fromlist_value_55, tmp_level_value_55);
+if (tmp_import_name_from_55 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 115;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_55)) {
+    tmp_assign_source_60 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_55,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsDeleteSessionResource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_60 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_55, mod_consts.const_str_plain_BetaManagedAgentsDeleteSessionResource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_55);
+Py_DECREF(tmp_import_name_from_55);
+if (tmp_assign_source_60 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 115;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsDeleteSessionResource, tmp_assign_source_60);
+}
+{
+PyObject *tmp_assign_source_61;
+PyObject *tmp_import_name_from_56;
+PyObject *tmp_name_value_56;
+PyObject *tmp_globals_arg_value_56;
+PyObject *tmp_locals_arg_value_56;
+PyObject *tmp_fromlist_value_56;
+PyObject *tmp_level_value_56;
+tmp_name_value_56 = mod_consts.const_str_digest_61d12c11bf02539ceff8d4c7309b7fda;
+tmp_globals_arg_value_56 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_56 = Py_None;
+tmp_fromlist_value_56 = mod_consts.const_tuple_str_plain_BetaManagedAgentsFileImageSourceParam_tuple;
+tmp_level_value_56 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 118;
+tmp_import_name_from_56 = IMPORT_MODULE5(tstate, tmp_name_value_56, tmp_globals_arg_value_56, tmp_locals_arg_value_56, tmp_fromlist_value_56, tmp_level_value_56);
+if (tmp_import_name_from_56 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 118;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_56)) {
+    tmp_assign_source_61 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_56,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsFileImageSourceParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_61 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_56, mod_consts.const_str_plain_BetaManagedAgentsFileImageSourceParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_56);
+Py_DECREF(tmp_import_name_from_56);
+if (tmp_assign_source_61 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 118;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsFileImageSourceParam, tmp_assign_source_61);
+}
+{
+PyObject *tmp_assign_source_62;
+PyObject *tmp_import_name_from_57;
+PyObject *tmp_name_value_57;
+PyObject *tmp_globals_arg_value_57;
+PyObject *tmp_locals_arg_value_57;
+PyObject *tmp_fromlist_value_57;
+PyObject *tmp_level_value_57;
+tmp_name_value_57 = mod_consts.const_str_digest_6b8a3520a58d384fddb23ee7df11c3c4;
+tmp_globals_arg_value_57 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_57 = Py_None;
+tmp_fromlist_value_57 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultCitations_tuple;
+tmp_level_value_57 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 121;
+tmp_import_name_from_57 = IMPORT_MODULE5(tstate, tmp_name_value_57, tmp_globals_arg_value_57, tmp_locals_arg_value_57, tmp_fromlist_value_57, tmp_level_value_57);
+if (tmp_import_name_from_57 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 121;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_57)) {
+    tmp_assign_source_62 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_57,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSearchResultCitations,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_62 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_57, mod_consts.const_str_plain_BetaManagedAgentsSearchResultCitations);
+}
+
+CHECK_OBJECT(tmp_import_name_from_57);
+Py_DECREF(tmp_import_name_from_57);
+if (tmp_assign_source_62 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 121;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSearchResultCitations, tmp_assign_source_62);
+}
+{
+PyObject *tmp_assign_source_63;
+PyObject *tmp_import_name_from_58;
+PyObject *tmp_name_value_58;
+PyObject *tmp_globals_arg_value_58;
+PyObject *tmp_locals_arg_value_58;
+PyObject *tmp_fromlist_value_58;
+PyObject *tmp_level_value_58;
+tmp_name_value_58 = mod_consts.const_str_digest_aea22668ea0a349ffe774bc823f0348d;
+tmp_globals_arg_value_58 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_58 = Py_None;
+tmp_fromlist_value_58 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionRequiresAction_tuple;
+tmp_level_value_58 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 124;
+tmp_import_name_from_58 = IMPORT_MODULE5(tstate, tmp_name_value_58, tmp_globals_arg_value_58, tmp_locals_arg_value_58, tmp_fromlist_value_58, tmp_level_value_58);
+if (tmp_import_name_from_58 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 124;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_58)) {
+    tmp_assign_source_63 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_58,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionRequiresAction,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_63 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_58, mod_consts.const_str_plain_BetaManagedAgentsSessionRequiresAction);
+}
+
+CHECK_OBJECT(tmp_import_name_from_58);
+Py_DECREF(tmp_import_name_from_58);
+if (tmp_assign_source_63 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 124;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionRequiresAction, tmp_assign_source_63);
+}
+{
+PyObject *tmp_assign_source_64;
+PyObject *tmp_import_name_from_59;
+PyObject *tmp_name_value_59;
+PyObject *tmp_globals_arg_value_59;
+PyObject *tmp_locals_arg_value_59;
+PyObject *tmp_fromlist_value_59;
+PyObject *tmp_level_value_59;
+tmp_name_value_59 = mod_consts.const_str_digest_1a02886b578e6e83915e9e85830aa625;
+tmp_globals_arg_value_59 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_59 = Py_None;
+tmp_fromlist_value_59 = mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMCPToolUseEvent_tuple;
+tmp_level_value_59 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 127;
+tmp_import_name_from_59 = IMPORT_MODULE5(tstate, tmp_name_value_59, tmp_globals_arg_value_59, tmp_locals_arg_value_59, tmp_fromlist_value_59, tmp_level_value_59);
+if (tmp_import_name_from_59 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 127;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_59)) {
+    tmp_assign_source_64 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_59,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolUseEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_64 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_59, mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolUseEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_59);
+Py_DECREF(tmp_import_name_from_59);
+if (tmp_assign_source_64 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 127;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolUseEvent, tmp_assign_source_64);
+}
+{
+PyObject *tmp_assign_source_65;
+PyObject *tmp_import_name_from_60;
+PyObject *tmp_name_value_60;
+PyObject *tmp_globals_arg_value_60;
+PyObject *tmp_locals_arg_value_60;
+PyObject *tmp_fromlist_value_60;
+PyObject *tmp_level_value_60;
+tmp_name_value_60 = mod_consts.const_str_digest_e98ebba0d9c49841eaa6d7b9fdc28eae;
+tmp_globals_arg_value_60 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_60 = Py_None;
+tmp_fromlist_value_60 = mod_consts.const_tuple_str_plain_BetaManagedAgentsModelRateLimitedError_tuple;
+tmp_level_value_60 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 130;
+tmp_import_name_from_60 = IMPORT_MODULE5(tstate, tmp_name_value_60, tmp_globals_arg_value_60, tmp_locals_arg_value_60, tmp_fromlist_value_60, tmp_level_value_60);
+if (tmp_import_name_from_60 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 130;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_60)) {
+    tmp_assign_source_65 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_60,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsModelRateLimitedError,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_65 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_60, mod_consts.const_str_plain_BetaManagedAgentsModelRateLimitedError);
+}
+
+CHECK_OBJECT(tmp_import_name_from_60);
+Py_DECREF(tmp_import_name_from_60);
+if (tmp_assign_source_65 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 130;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsModelRateLimitedError, tmp_assign_source_65);
+}
+{
+PyObject *tmp_assign_source_66;
+PyObject *tmp_import_name_from_61;
+PyObject *tmp_name_value_61;
+PyObject *tmp_globals_arg_value_61;
+PyObject *tmp_locals_arg_value_61;
+PyObject *tmp_fromlist_value_61;
+PyObject *tmp_level_value_61;
+tmp_name_value_61 = mod_consts.const_str_digest_237d50500fabe51b25c23e842641dbb6;
+tmp_globals_arg_value_61 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_61 = Py_None;
+tmp_fromlist_value_61 = mod_consts.const_tuple_str_plain_BetaManagedAgentsBase64ImageSourceParam_tuple;
+tmp_level_value_61 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 133;
+tmp_import_name_from_61 = IMPORT_MODULE5(tstate, tmp_name_value_61, tmp_globals_arg_value_61, tmp_locals_arg_value_61, tmp_fromlist_value_61, tmp_level_value_61);
+if (tmp_import_name_from_61 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 133;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_61)) {
+    tmp_assign_source_66 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_61,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSourceParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_66 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_61, mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSourceParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_61);
+Py_DECREF(tmp_import_name_from_61);
+if (tmp_assign_source_66 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 133;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsBase64ImageSourceParam, tmp_assign_source_66);
+}
+{
+PyObject *tmp_assign_source_67;
+PyObject *tmp_import_name_from_62;
+PyObject *tmp_name_value_62;
+PyObject *tmp_globals_arg_value_62;
+PyObject *tmp_locals_arg_value_62;
+PyObject *tmp_fromlist_value_62;
+PyObject *tmp_level_value_62;
+tmp_name_value_62 = mod_consts.const_str_digest_1847b8fc3dbd5fc4758458bbcda6379c;
+tmp_globals_arg_value_62 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_62 = Py_None;
+tmp_fromlist_value_62 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSearchResultBlockParam_tuple;
+tmp_level_value_62 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 136;
+tmp_import_name_from_62 = IMPORT_MODULE5(tstate, tmp_name_value_62, tmp_globals_arg_value_62, tmp_locals_arg_value_62, tmp_fromlist_value_62, tmp_level_value_62);
+if (tmp_import_name_from_62 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 136;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_62)) {
+    tmp_assign_source_67 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_62,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlockParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_67 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_62, mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlockParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_62);
+Py_DECREF(tmp_import_name_from_62);
+if (tmp_assign_source_67 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 136;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSearchResultBlockParam, tmp_assign_source_67);
+}
+{
+PyObject *tmp_assign_source_68;
+PyObject *tmp_import_name_from_63;
+PyObject *tmp_name_value_63;
+PyObject *tmp_globals_arg_value_63;
+PyObject *tmp_locals_arg_value_63;
+PyObject *tmp_fromlist_value_63;
+PyObject *tmp_level_value_63;
+tmp_name_value_63 = mod_consts.const_str_digest_5b663ff13e7e4b866b0ae8cf9b9b865f;
+tmp_globals_arg_value_63 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_63 = Py_None;
+tmp_fromlist_value_63 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionRetriesExhausted_tuple;
+tmp_level_value_63 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 139;
+tmp_import_name_from_63 = IMPORT_MODULE5(tstate, tmp_name_value_63, tmp_globals_arg_value_63, tmp_locals_arg_value_63, tmp_fromlist_value_63, tmp_level_value_63);
+if (tmp_import_name_from_63 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 139;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_63)) {
+    tmp_assign_source_68 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_63,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionRetriesExhausted,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_68 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_63, mod_consts.const_str_plain_BetaManagedAgentsSessionRetriesExhausted);
+}
+
+CHECK_OBJECT(tmp_import_name_from_63);
+Py_DECREF(tmp_import_name_from_63);
+if (tmp_assign_source_68 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 139;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionRetriesExhausted, tmp_assign_source_68);
+}
+{
+PyObject *tmp_assign_source_69;
+PyObject *tmp_import_name_from_64;
+PyObject *tmp_name_value_64;
+PyObject *tmp_globals_arg_value_64;
+PyObject *tmp_locals_arg_value_64;
+PyObject *tmp_fromlist_value_64;
+PyObject *tmp_level_value_64;
+tmp_name_value_64 = mod_consts.const_str_digest_7ea9bd93674f086a4aaeca2d3e22c51b;
+tmp_globals_arg_value_64 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_64 = Py_None;
+tmp_fromlist_value_64 = mod_consts.const_tuple_str_plain_BetaManagedAgentsSessionStatusIdleEvent_tuple;
+tmp_level_value_64 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 142;
+tmp_import_name_from_64 = IMPORT_MODULE5(tstate, tmp_name_value_64, tmp_globals_arg_value_64, tmp_locals_arg_value_64, tmp_fromlist_value_64, tmp_level_value_64);
+if (tmp_import_name_from_64 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 142;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_64)) {
+    tmp_assign_source_69 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_64,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsSessionStatusIdleEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_69 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_64, mod_consts.const_str_plain_BetaManagedAgentsSessionStatusIdleEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_64);
+Py_DECREF(tmp_import_name_from_64);
+if (tmp_assign_source_69 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 142;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsSessionStatusIdleEvent, tmp_assign_source_69);
+}
+{
+PyObject *tmp_assign_source_70;
+PyObject *tmp_import_name_from_65;
+PyObject *tmp_name_value_65;
+PyObject *tmp_globals_arg_value_65;
+PyObject *tmp_locals_arg_value_65;
+PyObject *tmp_fromlist_value_65;
+PyObject *tmp_level_value_65;
+tmp_name_value_65 = mod_consts.const_str_digest_11eeaaf653ae468c5d548401bf0e638f;
+tmp_globals_arg_value_65 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_65 = Py_None;
+tmp_fromlist_value_65 = mod_consts.const_tuple_str_plain_BetaManagedAgentsURLDocumentSourceParam_tuple;
+tmp_level_value_65 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 145;
+tmp_import_name_from_65 = IMPORT_MODULE5(tstate, tmp_name_value_65, tmp_globals_arg_value_65, tmp_locals_arg_value_65, tmp_fromlist_value_65, tmp_level_value_65);
+if (tmp_import_name_from_65 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 145;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_65)) {
+    tmp_assign_source_70 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_65,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSourceParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_70 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_65, mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSourceParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_65);
+Py_DECREF(tmp_import_name_from_65);
+if (tmp_assign_source_70 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 145;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsURLDocumentSourceParam, tmp_assign_source_70);
+}
+{
+PyObject *tmp_assign_source_71;
+PyObject *tmp_import_name_from_66;
+PyObject *tmp_name_value_66;
+PyObject *tmp_globals_arg_value_66;
+PyObject *tmp_locals_arg_value_66;
+PyObject *tmp_fromlist_value_66;
+PyObject *tmp_level_value_66;
+tmp_name_value_66 = mod_consts.const_str_digest_26fe297ca4ea1d1e115a15748d0d72dc;
+tmp_globals_arg_value_66 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_66 = Py_None;
+tmp_fromlist_value_66 = mod_consts.const_tuple_str_plain_BetaManagedAgentsUserDefineOutcomeEvent_tuple;
+tmp_level_value_66 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 148;
+tmp_import_name_from_66 = IMPORT_MODULE5(tstate, tmp_name_value_66, tmp_globals_arg_value_66, tmp_locals_arg_value_66, tmp_fromlist_value_66, tmp_level_value_66);
+if (tmp_import_name_from_66 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 148;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_66)) {
+    tmp_assign_source_71 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_66,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsUserDefineOutcomeEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_71 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_66, mod_consts.const_str_plain_BetaManagedAgentsUserDefineOutcomeEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_66);
+Py_DECREF(tmp_import_name_from_66);
+if (tmp_assign_source_71 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 148;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsUserDefineOutcomeEvent, tmp_assign_source_71);
+}
+{
+PyObject *tmp_assign_source_72;
+PyObject *tmp_import_name_from_67;
+PyObject *tmp_name_value_67;
+PyObject *tmp_globals_arg_value_67;
+PyObject *tmp_locals_arg_value_67;
+PyObject *tmp_fromlist_value_67;
+PyObject *tmp_level_value_67;
+tmp_name_value_67 = mod_consts.const_str_digest_3bef3f5f068e73b6bbe434e8ab3907d2;
+tmp_globals_arg_value_67 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_67 = Py_None;
+tmp_fromlist_value_67 = mod_consts.const_tuple_str_plain_BetaManagedAgentsUserMessageEventParams_tuple;
+tmp_level_value_67 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 151;
+tmp_import_name_from_67 = IMPORT_MODULE5(tstate, tmp_name_value_67, tmp_globals_arg_value_67, tmp_locals_arg_value_67, tmp_fromlist_value_67, tmp_level_value_67);
+if (tmp_import_name_from_67 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 151;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_67)) {
+    tmp_assign_source_72 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_67,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsUserMessageEventParams,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_72 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_67, mod_consts.const_str_plain_BetaManagedAgentsUserMessageEventParams);
+}
+
+CHECK_OBJECT(tmp_import_name_from_67);
+Py_DECREF(tmp_import_name_from_67);
+if (tmp_assign_source_72 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 151;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsUserMessageEventParams, tmp_assign_source_72);
+}
+{
+PyObject *tmp_assign_source_73;
+PyObject *tmp_import_name_from_68;
+PyObject *tmp_name_value_68;
+PyObject *tmp_globals_arg_value_68;
+PyObject *tmp_locals_arg_value_68;
+PyObject *tmp_fromlist_value_68;
+PyObject *tmp_level_value_68;
+tmp_name_value_68 = mod_consts.const_str_digest_17c4c3e76f57665e8c37d3e8e05f4485;
+tmp_globals_arg_value_68 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_68 = Py_None;
+tmp_fromlist_value_68 = mod_consts.const_tuple_str_plain_BetaManagedAgentsFileDocumentSourceParam_tuple;
+tmp_level_value_68 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 154;
+tmp_import_name_from_68 = IMPORT_MODULE5(tstate, tmp_name_value_68, tmp_globals_arg_value_68, tmp_locals_arg_value_68, tmp_fromlist_value_68, tmp_level_value_68);
+if (tmp_import_name_from_68 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 154;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_68)) {
+    tmp_assign_source_73 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_68,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSourceParam,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_73 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_68, mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSourceParam);
+}
+
+CHECK_OBJECT(tmp_import_name_from_68);
+Py_DECREF(tmp_import_name_from_68);
+if (tmp_assign_source_73 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 154;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsFileDocumentSourceParam, tmp_assign_source_73);
+}
+{
+PyObject *tmp_assign_source_74;
+PyObject *tmp_import_name_from_69;
+PyObject *tmp_name_value_69;
+PyObject *tmp_globals_arg_value_69;
+PyObject *tmp_locals_arg_value_69;
+PyObject *tmp_fromlist_value_69;
+PyObject *tmp_level_value_69;
+tmp_name_value_69 = mod_consts.const_str_digest_8f3e1ddcf963a5d641b0c54bfd3f6f23;
+tmp_globals_arg_value_69 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_69 = Py_None;
+tmp_fromlist_value_69 = mod_consts.const_tuple_str_digest_c208f803a714c3fa632910db28470705_tuple;
+tmp_level_value_69 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 157;
+tmp_import_name_from_69 = IMPORT_MODULE5(tstate, tmp_name_value_69, tmp_globals_arg_value_69, tmp_locals_arg_value_69, tmp_fromlist_value_69, tmp_level_value_69);
+if (tmp_import_name_from_69 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 157;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_69)) {
+    tmp_assign_source_74 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_69,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_c208f803a714c3fa632910db28470705,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_74 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_69, mod_consts.const_str_digest_c208f803a714c3fa632910db28470705);
+}
+
+CHECK_OBJECT(tmp_import_name_from_69);
+Py_DECREF(tmp_import_name_from_69);
+if (tmp_assign_source_74 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 157;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_c208f803a714c3fa632910db28470705, tmp_assign_source_74);
+}
+{
+PyObject *tmp_assign_source_75;
+PyObject *tmp_import_name_from_70;
+PyObject *tmp_name_value_70;
+PyObject *tmp_globals_arg_value_70;
+PyObject *tmp_locals_arg_value_70;
+PyObject *tmp_fromlist_value_70;
+PyObject *tmp_level_value_70;
+tmp_name_value_70 = mod_consts.const_str_digest_acf6c8bd2b1df01d7b3913b3b4445847;
+tmp_globals_arg_value_70 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_70 = Py_None;
+tmp_fromlist_value_70 = mod_consts.const_tuple_str_plain_BetaManagedAgentsModelRequestFailedError_tuple;
+tmp_level_value_70 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 160;
+tmp_import_name_from_70 = IMPORT_MODULE5(tstate, tmp_name_value_70, tmp_globals_arg_value_70, tmp_locals_arg_value_70, tmp_fromlist_value_70, tmp_level_value_70);
+if (tmp_import_name_from_70 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 160;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_70)) {
+    tmp_assign_source_75 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_70,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsModelRequestFailedError,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_75 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_70, mod_consts.const_str_plain_BetaManagedAgentsModelRequestFailedError);
+}
+
+CHECK_OBJECT(tmp_import_name_from_70);
+Py_DECREF(tmp_import_name_from_70);
+if (tmp_assign_source_75 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 160;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsModelRequestFailedError, tmp_assign_source_75);
+}
+{
+PyObject *tmp_assign_source_76;
+PyObject *tmp_import_name_from_71;
+PyObject *tmp_name_value_71;
+PyObject *tmp_globals_arg_value_71;
+PyObject *tmp_locals_arg_value_71;
+PyObject *tmp_fromlist_value_71;
+PyObject *tmp_level_value_71;
+tmp_name_value_71 = mod_consts.const_str_digest_cd880bb52b89b3980aba14b2e1dea914;
+tmp_globals_arg_value_71 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_71 = Py_None;
+tmp_fromlist_value_71 = mod_consts.const_tuple_str_plain_BetaManagedAgentsPlainTextDocumentSource_tuple;
+tmp_level_value_71 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 163;
+tmp_import_name_from_71 = IMPORT_MODULE5(tstate, tmp_name_value_71, tmp_globals_arg_value_71, tmp_locals_arg_value_71, tmp_fromlist_value_71, tmp_level_value_71);
+if (tmp_import_name_from_71 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 163;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_71)) {
+    tmp_assign_source_76 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_71,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsPlainTextDocumentSource,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_76 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_71, mod_consts.const_str_plain_BetaManagedAgentsPlainTextDocumentSource);
+}
+
+CHECK_OBJECT(tmp_import_name_from_71);
+Py_DECREF(tmp_import_name_from_71);
+if (tmp_assign_source_76 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 163;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsPlainTextDocumentSource, tmp_assign_source_76);
+}
+{
+PyObject *tmp_assign_source_77;
+PyObject *tmp_import_name_from_72;
+PyObject *tmp_name_value_72;
+PyObject *tmp_globals_arg_value_72;
+PyObject *tmp_locals_arg_value_72;
+PyObject *tmp_fromlist_value_72;
+PyObject *tmp_level_value_72;
+tmp_name_value_72 = mod_consts.const_str_digest_8de9b38d69878d132f1d06943d71c118;
+tmp_globals_arg_value_72 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_72 = Py_None;
+tmp_fromlist_value_72 = mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentCustomToolUseEvent_tuple;
+tmp_level_value_72 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 166;
+tmp_import_name_from_72 = IMPORT_MODULE5(tstate, tmp_name_value_72, tmp_globals_arg_value_72, tmp_locals_arg_value_72, tmp_fromlist_value_72, tmp_level_value_72);
+if (tmp_import_name_from_72 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 166;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_72)) {
+    tmp_assign_source_77 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_72,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsAgentCustomToolUseEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_77 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_72, mod_consts.const_str_plain_BetaManagedAgentsAgentCustomToolUseEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_72);
+Py_DECREF(tmp_import_name_from_72);
+if (tmp_assign_source_77 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 166;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsAgentCustomToolUseEvent, tmp_assign_source_77);
+}
+{
+PyObject *tmp_assign_source_78;
+PyObject *tmp_import_name_from_73;
+PyObject *tmp_name_value_73;
+PyObject *tmp_globals_arg_value_73;
+PyObject *tmp_locals_arg_value_73;
+PyObject *tmp_fromlist_value_73;
+PyObject *tmp_level_value_73;
+tmp_name_value_73 = mod_consts.const_str_digest_9b86de5cb83fcd2792d0a25b2223ccb1;
+tmp_globals_arg_value_73 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_73 = Py_None;
+tmp_fromlist_value_73 = mod_consts.const_tuple_str_plain_BetaManagedAgentsAgentMCPToolResultEvent_tuple;
+tmp_level_value_73 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 169;
+tmp_import_name_from_73 = IMPORT_MODULE5(tstate, tmp_name_value_73, tmp_globals_arg_value_73, tmp_locals_arg_value_73, tmp_fromlist_value_73, tmp_level_value_73);
+if (tmp_import_name_from_73 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 169;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_73)) {
+    tmp_assign_source_78 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_73,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolResultEvent,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_78 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_73, mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolResultEvent);
+}
+
+CHECK_OBJECT(tmp_import_name_from_73);
+Py_DECREF(tmp_import_name_from_73);
+if (tmp_assign_source_78 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 169;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_plain_BetaManagedAgentsAgentMCPToolResultEvent, tmp_assign_source_78);
+}
+{
+PyObject *tmp_assign_source_79;
+PyObject *tmp_import_name_from_74;
+PyObject *tmp_name_value_74;
+PyObject *tmp_globals_arg_value_74;
+PyObject *tmp_locals_arg_value_74;
+PyObject *tmp_fromlist_value_74;
+PyObject *tmp_level_value_74;
+tmp_name_value_74 = mod_consts.const_str_digest_b1e4574a2d2798659bb173d1b4694ea4;
+tmp_globals_arg_value_74 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_74 = Py_None;
+tmp_fromlist_value_74 = mod_consts.const_tuple_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147_tuple;
+tmp_level_value_74 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 172;
+tmp_import_name_from_74 = IMPORT_MODULE5(tstate, tmp_name_value_74, tmp_globals_arg_value_74, tmp_locals_arg_value_74, tmp_fromlist_value_74, tmp_level_value_74);
+if (tmp_import_name_from_74 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 172;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_74)) {
+    tmp_assign_source_79 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_74,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_79 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_74, mod_consts.const_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147);
+}
+
+CHECK_OBJECT(tmp_import_name_from_74);
+Py_DECREF(tmp_import_name_from_74);
+if (tmp_assign_source_79 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 172;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_7fbc6a8bdc0a94098bfa9ca9cf9e7147, tmp_assign_source_79);
+}
+{
+PyObject *tmp_assign_source_80;
+PyObject *tmp_import_name_from_75;
+PyObject *tmp_name_value_75;
+PyObject *tmp_globals_arg_value_75;
+PyObject *tmp_locals_arg_value_75;
+PyObject *tmp_fromlist_value_75;
+PyObject *tmp_level_value_75;
+tmp_name_value_75 = mod_consts.const_str_digest_c52876987c535d76bc4fe24fafe78167;
+tmp_globals_arg_value_75 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_75 = Py_None;
+tmp_fromlist_value_75 = mod_consts.const_tuple_str_digest_6fe7353544f7f387cb0045c98890b3b7_tuple;
+tmp_level_value_75 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 175;
+tmp_import_name_from_75 = IMPORT_MODULE5(tstate, tmp_name_value_75, tmp_globals_arg_value_75, tmp_locals_arg_value_75, tmp_fromlist_value_75, tmp_level_value_75);
+if (tmp_import_name_from_75 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 175;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_75)) {
+    tmp_assign_source_80 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_75,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_6fe7353544f7f387cb0045c98890b3b7,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_80 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_75, mod_consts.const_str_digest_6fe7353544f7f387cb0045c98890b3b7);
+}
+
+CHECK_OBJECT(tmp_import_name_from_75);
+Py_DECREF(tmp_import_name_from_75);
+if (tmp_assign_source_80 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 175;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_6fe7353544f7f387cb0045c98890b3b7, tmp_assign_source_80);
+}
+{
+PyObject *tmp_assign_source_81;
+PyObject *tmp_import_name_from_76;
+PyObject *tmp_name_value_76;
+PyObject *tmp_globals_arg_value_76;
+PyObject *tmp_locals_arg_value_76;
+PyObject *tmp_fromlist_value_76;
+PyObject *tmp_level_value_76;
+tmp_name_value_76 = mod_consts.const_str_digest_e3bdbcce8f5e497f6a92e376257c0061;
+tmp_globals_arg_value_76 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_76 = Py_None;
+tmp_fromlist_value_76 = mod_consts.const_tuple_str_digest_d89f5443f324538af014bc954ea5d2b0_tuple;
+tmp_level_value_76 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 178;
+tmp_import_name_from_76 = IMPORT_MODULE5(tstate, tmp_name_value_76, tmp_globals_arg_value_76, tmp_locals_arg_value_76, tmp_fromlist_value_76, tmp_level_value_76);
+if (tmp_import_name_from_76 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 178;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_76)) {
+    tmp_assign_source_81 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_76,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_d89f5443f324538af014bc954ea5d2b0,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_81 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_76, mod_consts.const_str_digest_d89f5443f324538af014bc954ea5d2b0);
+}
+
+CHECK_OBJECT(tmp_import_name_from_76);
+Py_DECREF(tmp_import_name_from_76);
+if (tmp_assign_source_81 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 178;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_d89f5443f324538af014bc954ea5d2b0, tmp_assign_source_81);
+}
+{
+PyObject *tmp_assign_source_82;
+PyObject *tmp_import_name_from_77;
+PyObject *tmp_name_value_77;
+PyObject *tmp_globals_arg_value_77;
+PyObject *tmp_locals_arg_value_77;
+PyObject *tmp_fromlist_value_77;
+PyObject *tmp_level_value_77;
+tmp_name_value_77 = mod_consts.const_str_digest_d3aa71efb401174fba1c4133f7328ee0;
+tmp_globals_arg_value_77 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_77 = Py_None;
+tmp_fromlist_value_77 = mod_consts.const_tuple_str_digest_097b50026d50f058ff37fab2be627c5a_tuple;
+tmp_level_value_77 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 181;
+tmp_import_name_from_77 = IMPORT_MODULE5(tstate, tmp_name_value_77, tmp_globals_arg_value_77, tmp_locals_arg_value_77, tmp_fromlist_value_77, tmp_level_value_77);
+if (tmp_import_name_from_77 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 181;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_77)) {
+    tmp_assign_source_82 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_77,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_097b50026d50f058ff37fab2be627c5a,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_82 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_77, mod_consts.const_str_digest_097b50026d50f058ff37fab2be627c5a);
+}
+
+CHECK_OBJECT(tmp_import_name_from_77);
+Py_DECREF(tmp_import_name_from_77);
+if (tmp_assign_source_82 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 181;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_097b50026d50f058ff37fab2be627c5a, tmp_assign_source_82);
+}
+{
+PyObject *tmp_assign_source_83;
+PyObject *tmp_import_name_from_78;
+PyObject *tmp_name_value_78;
+PyObject *tmp_globals_arg_value_78;
+PyObject *tmp_locals_arg_value_78;
+PyObject *tmp_fromlist_value_78;
+PyObject *tmp_level_value_78;
+tmp_name_value_78 = mod_consts.const_str_digest_df4d2f0963c141f6f99904381d948245;
+tmp_globals_arg_value_78 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_78 = Py_None;
+tmp_fromlist_value_78 = mod_consts.const_tuple_str_digest_7bd78a3f07d54c8e773e97b2b33d4855_tuple;
+tmp_level_value_78 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 184;
+tmp_import_name_from_78 = IMPORT_MODULE5(tstate, tmp_name_value_78, tmp_globals_arg_value_78, tmp_locals_arg_value_78, tmp_fromlist_value_78, tmp_level_value_78);
+if (tmp_import_name_from_78 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 184;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_78)) {
+    tmp_assign_source_83 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_78,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_7bd78a3f07d54c8e773e97b2b33d4855,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_83 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_78, mod_consts.const_str_digest_7bd78a3f07d54c8e773e97b2b33d4855);
+}
+
+CHECK_OBJECT(tmp_import_name_from_78);
+Py_DECREF(tmp_import_name_from_78);
+if (tmp_assign_source_83 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 184;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_7bd78a3f07d54c8e773e97b2b33d4855, tmp_assign_source_83);
+}
+{
+PyObject *tmp_assign_source_84;
+PyObject *tmp_import_name_from_79;
+PyObject *tmp_name_value_79;
+PyObject *tmp_globals_arg_value_79;
+PyObject *tmp_locals_arg_value_79;
+PyObject *tmp_fromlist_value_79;
+PyObject *tmp_level_value_79;
+tmp_name_value_79 = mod_consts.const_str_digest_8bf6bbeecbb9b26c4bf9be3e428b8ee0;
+tmp_globals_arg_value_79 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_79 = Py_None;
+tmp_fromlist_value_79 = mod_consts.const_tuple_str_digest_680985bd76c009f9f484b2ca1ee7179b_tuple;
+tmp_level_value_79 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 187;
+tmp_import_name_from_79 = IMPORT_MODULE5(tstate, tmp_name_value_79, tmp_globals_arg_value_79, tmp_locals_arg_value_79, tmp_fromlist_value_79, tmp_level_value_79);
+if (tmp_import_name_from_79 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 187;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_79)) {
+    tmp_assign_source_84 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_79,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_680985bd76c009f9f484b2ca1ee7179b,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_84 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_79, mod_consts.const_str_digest_680985bd76c009f9f484b2ca1ee7179b);
+}
+
+CHECK_OBJECT(tmp_import_name_from_79);
+Py_DECREF(tmp_import_name_from_79);
+if (tmp_assign_source_84 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 187;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_680985bd76c009f9f484b2ca1ee7179b, tmp_assign_source_84);
+}
+{
+PyObject *tmp_assign_source_85;
+PyObject *tmp_import_name_from_80;
+PyObject *tmp_name_value_80;
+PyObject *tmp_globals_arg_value_80;
+PyObject *tmp_locals_arg_value_80;
+PyObject *tmp_fromlist_value_80;
+PyObject *tmp_level_value_80;
+tmp_name_value_80 = mod_consts.const_str_digest_69b94baa64a893477643a644d2b44ab5;
+tmp_globals_arg_value_80 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_80 = Py_None;
+tmp_fromlist_value_80 = mod_consts.const_tuple_str_digest_87fa0cb24f156084d751cb015c923d88_tuple;
+tmp_level_value_80 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 190;
+tmp_import_name_from_80 = IMPORT_MODULE5(tstate, tmp_name_value_80, tmp_globals_arg_value_80, tmp_locals_arg_value_80, tmp_fromlist_value_80, tmp_level_value_80);
+if (tmp_import_name_from_80 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 190;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_80)) {
+    tmp_assign_source_85 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_80,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_87fa0cb24f156084d751cb015c923d88,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_85 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_80, mod_consts.const_str_digest_87fa0cb24f156084d751cb015c923d88);
+}
+
+CHECK_OBJECT(tmp_import_name_from_80);
+Py_DECREF(tmp_import_name_from_80);
+if (tmp_assign_source_85 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 190;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_87fa0cb24f156084d751cb015c923d88, tmp_assign_source_85);
+}
+{
+PyObject *tmp_assign_source_86;
+PyObject *tmp_import_name_from_81;
+PyObject *tmp_name_value_81;
+PyObject *tmp_globals_arg_value_81;
+PyObject *tmp_locals_arg_value_81;
+PyObject *tmp_fromlist_value_81;
+PyObject *tmp_level_value_81;
+tmp_name_value_81 = mod_consts.const_str_digest_1669eb22806384dccf6274d7042e1858;
+tmp_globals_arg_value_81 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_81 = Py_None;
+tmp_fromlist_value_81 = mod_consts.const_tuple_str_digest_1c85da38dd09ccf517e65697df6a701b_tuple;
+tmp_level_value_81 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 193;
+tmp_import_name_from_81 = IMPORT_MODULE5(tstate, tmp_name_value_81, tmp_globals_arg_value_81, tmp_locals_arg_value_81, tmp_fromlist_value_81, tmp_level_value_81);
+if (tmp_import_name_from_81 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 193;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_81)) {
+    tmp_assign_source_86 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_81,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_1c85da38dd09ccf517e65697df6a701b,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_86 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_81, mod_consts.const_str_digest_1c85da38dd09ccf517e65697df6a701b);
+}
+
+CHECK_OBJECT(tmp_import_name_from_81);
+Py_DECREF(tmp_import_name_from_81);
+if (tmp_assign_source_86 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 193;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_1c85da38dd09ccf517e65697df6a701b, tmp_assign_source_86);
+}
+{
+PyObject *tmp_assign_source_87;
+PyObject *tmp_import_name_from_82;
+PyObject *tmp_name_value_82;
+PyObject *tmp_globals_arg_value_82;
+PyObject *tmp_locals_arg_value_82;
+PyObject *tmp_fromlist_value_82;
+PyObject *tmp_level_value_82;
+tmp_name_value_82 = mod_consts.const_str_digest_40d972d8062bd5d21699266ecbec1be1;
+tmp_globals_arg_value_82 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_82 = Py_None;
+tmp_fromlist_value_82 = mod_consts.const_tuple_str_digest_47a3d32085b8900d70eebcf91501a8ea_tuple;
+tmp_level_value_82 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 196;
+tmp_import_name_from_82 = IMPORT_MODULE5(tstate, tmp_name_value_82, tmp_globals_arg_value_82, tmp_locals_arg_value_82, tmp_fromlist_value_82, tmp_level_value_82);
+if (tmp_import_name_from_82 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 196;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_82)) {
+    tmp_assign_source_87 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_82,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_47a3d32085b8900d70eebcf91501a8ea,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_87 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_82, mod_consts.const_str_digest_47a3d32085b8900d70eebcf91501a8ea);
+}
+
+CHECK_OBJECT(tmp_import_name_from_82);
+Py_DECREF(tmp_import_name_from_82);
+if (tmp_assign_source_87 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 196;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_47a3d32085b8900d70eebcf91501a8ea, tmp_assign_source_87);
+}
+{
+PyObject *tmp_assign_source_88;
+PyObject *tmp_import_name_from_83;
+PyObject *tmp_name_value_83;
+PyObject *tmp_globals_arg_value_83;
+PyObject *tmp_locals_arg_value_83;
+PyObject *tmp_fromlist_value_83;
+PyObject *tmp_level_value_83;
+tmp_name_value_83 = mod_consts.const_str_digest_aea9a1a16508b16b31c2c6a58f9cc47d;
+tmp_globals_arg_value_83 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_83 = Py_None;
+tmp_fromlist_value_83 = mod_consts.const_tuple_str_digest_0890907e33afebe5186f7369782e72a8_tuple;
+tmp_level_value_83 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 199;
+tmp_import_name_from_83 = IMPORT_MODULE5(tstate, tmp_name_value_83, tmp_globals_arg_value_83, tmp_locals_arg_value_83, tmp_fromlist_value_83, tmp_level_value_83);
+if (tmp_import_name_from_83 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 199;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_83)) {
+    tmp_assign_source_88 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_83,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_0890907e33afebe5186f7369782e72a8,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_88 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_83, mod_consts.const_str_digest_0890907e33afebe5186f7369782e72a8);
+}
+
+CHECK_OBJECT(tmp_import_name_from_83);
+Py_DECREF(tmp_import_name_from_83);
+if (tmp_assign_source_88 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 199;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_0890907e33afebe5186f7369782e72a8, tmp_assign_source_88);
+}
+{
+PyObject *tmp_assign_source_89;
+PyObject *tmp_import_name_from_84;
+PyObject *tmp_name_value_84;
+PyObject *tmp_globals_arg_value_84;
+PyObject *tmp_locals_arg_value_84;
+PyObject *tmp_fromlist_value_84;
+PyObject *tmp_level_value_84;
+tmp_name_value_84 = mod_consts.const_str_digest_b057ace19175756317b43867257827a8;
+tmp_globals_arg_value_84 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_84 = Py_None;
+tmp_fromlist_value_84 = mod_consts.const_tuple_str_digest_be0c919b566c3ecfa243fcd814cb9d7c_tuple;
+tmp_level_value_84 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 202;
+tmp_import_name_from_84 = IMPORT_MODULE5(tstate, tmp_name_value_84, tmp_globals_arg_value_84, tmp_locals_arg_value_84, tmp_fromlist_value_84, tmp_level_value_84);
+if (tmp_import_name_from_84 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 202;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_84)) {
+    tmp_assign_source_89 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_84,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_be0c919b566c3ecfa243fcd814cb9d7c,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_89 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_84, mod_consts.const_str_digest_be0c919b566c3ecfa243fcd814cb9d7c);
+}
+
+CHECK_OBJECT(tmp_import_name_from_84);
+Py_DECREF(tmp_import_name_from_84);
+if (tmp_assign_source_89 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 202;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_be0c919b566c3ecfa243fcd814cb9d7c, tmp_assign_source_89);
+}
+{
+PyObject *tmp_assign_source_90;
+PyObject *tmp_import_name_from_85;
+PyObject *tmp_name_value_85;
+PyObject *tmp_globals_arg_value_85;
+PyObject *tmp_locals_arg_value_85;
+PyObject *tmp_fromlist_value_85;
+PyObject *tmp_level_value_85;
+tmp_name_value_85 = mod_consts.const_str_digest_051e583293111ff440e6b92cd3f28e3f;
+tmp_globals_arg_value_85 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_85 = Py_None;
+tmp_fromlist_value_85 = mod_consts.const_tuple_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063_tuple;
+tmp_level_value_85 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 205;
+tmp_import_name_from_85 = IMPORT_MODULE5(tstate, tmp_name_value_85, tmp_globals_arg_value_85, tmp_locals_arg_value_85, tmp_fromlist_value_85, tmp_level_value_85);
+if (tmp_import_name_from_85 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 205;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_85)) {
+    tmp_assign_source_90 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_85,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_90 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_85, mod_consts.const_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063);
+}
+
+CHECK_OBJECT(tmp_import_name_from_85);
+Py_DECREF(tmp_import_name_from_85);
+if (tmp_assign_source_90 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 205;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_9f9c8b92ffa4b88cdafdd3863b99f063, tmp_assign_source_90);
+}
+{
+PyObject *tmp_assign_source_91;
+PyObject *tmp_import_name_from_86;
+PyObject *tmp_name_value_86;
+PyObject *tmp_globals_arg_value_86;
+PyObject *tmp_locals_arg_value_86;
+PyObject *tmp_fromlist_value_86;
+PyObject *tmp_level_value_86;
+tmp_name_value_86 = mod_consts.const_str_digest_590fe6cd1c992a1fff94d3643dbdf1e4;
+tmp_globals_arg_value_86 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_86 = Py_None;
+tmp_fromlist_value_86 = mod_consts.const_tuple_str_digest_bbb81df83a566cf2814346e63f686900_tuple;
+tmp_level_value_86 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 208;
+tmp_import_name_from_86 = IMPORT_MODULE5(tstate, tmp_name_value_86, tmp_globals_arg_value_86, tmp_locals_arg_value_86, tmp_fromlist_value_86, tmp_level_value_86);
+if (tmp_import_name_from_86 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 208;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_86)) {
+    tmp_assign_source_91 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_86,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_bbb81df83a566cf2814346e63f686900,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_91 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_86, mod_consts.const_str_digest_bbb81df83a566cf2814346e63f686900);
+}
+
+CHECK_OBJECT(tmp_import_name_from_86);
+Py_DECREF(tmp_import_name_from_86);
+if (tmp_assign_source_91 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 208;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_bbb81df83a566cf2814346e63f686900, tmp_assign_source_91);
+}
+{
+PyObject *tmp_assign_source_92;
+PyObject *tmp_import_name_from_87;
+PyObject *tmp_name_value_87;
+PyObject *tmp_globals_arg_value_87;
+PyObject *tmp_locals_arg_value_87;
+PyObject *tmp_fromlist_value_87;
+PyObject *tmp_level_value_87;
+tmp_name_value_87 = mod_consts.const_str_digest_9dc1af1b57f64fa267f0908b6f5c4afb;
+tmp_globals_arg_value_87 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_87 = Py_None;
+tmp_fromlist_value_87 = mod_consts.const_tuple_str_digest_53b65cba1e561c6df7f51f1093dca70d_tuple;
+tmp_level_value_87 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 211;
+tmp_import_name_from_87 = IMPORT_MODULE5(tstate, tmp_name_value_87, tmp_globals_arg_value_87, tmp_locals_arg_value_87, tmp_fromlist_value_87, tmp_level_value_87);
+if (tmp_import_name_from_87 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 211;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_87)) {
+    tmp_assign_source_92 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_87,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_53b65cba1e561c6df7f51f1093dca70d,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_92 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_87, mod_consts.const_str_digest_53b65cba1e561c6df7f51f1093dca70d);
+}
+
+CHECK_OBJECT(tmp_import_name_from_87);
+Py_DECREF(tmp_import_name_from_87);
+if (tmp_assign_source_92 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 211;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_53b65cba1e561c6df7f51f1093dca70d, tmp_assign_source_92);
+}
+{
+PyObject *tmp_assign_source_93;
+PyObject *tmp_import_name_from_88;
+PyObject *tmp_name_value_88;
+PyObject *tmp_globals_arg_value_88;
+PyObject *tmp_locals_arg_value_88;
+PyObject *tmp_fromlist_value_88;
+PyObject *tmp_level_value_88;
+tmp_name_value_88 = mod_consts.const_str_digest_e2c6c3dabb6f518a0a6297ce1b09c3ca;
+tmp_globals_arg_value_88 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_88 = Py_None;
+tmp_fromlist_value_88 = mod_consts.const_tuple_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487_tuple;
+tmp_level_value_88 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 214;
+tmp_import_name_from_88 = IMPORT_MODULE5(tstate, tmp_name_value_88, tmp_globals_arg_value_88, tmp_locals_arg_value_88, tmp_fromlist_value_88, tmp_level_value_88);
+if (tmp_import_name_from_88 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 214;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_88)) {
+    tmp_assign_source_93 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_88,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_93 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_88, mod_consts.const_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487);
+}
+
+CHECK_OBJECT(tmp_import_name_from_88);
+Py_DECREF(tmp_import_name_from_88);
+if (tmp_assign_source_93 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 214;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_904ccebe3e75e7fb1a8bd2266dc4c487, tmp_assign_source_93);
+}
+{
+PyObject *tmp_assign_source_94;
+PyObject *tmp_import_name_from_89;
+PyObject *tmp_name_value_89;
+PyObject *tmp_globals_arg_value_89;
+PyObject *tmp_locals_arg_value_89;
+PyObject *tmp_fromlist_value_89;
+PyObject *tmp_level_value_89;
+tmp_name_value_89 = mod_consts.const_str_digest_11b40ac95fdb12964baf6c6c41b32b78;
+tmp_globals_arg_value_89 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_89 = Py_None;
+tmp_fromlist_value_89 = mod_consts.const_tuple_str_digest_a39975e914a6a86ba3153b197792b326_tuple;
+tmp_level_value_89 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 217;
+tmp_import_name_from_89 = IMPORT_MODULE5(tstate, tmp_name_value_89, tmp_globals_arg_value_89, tmp_locals_arg_value_89, tmp_fromlist_value_89, tmp_level_value_89);
+if (tmp_import_name_from_89 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 217;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_89)) {
+    tmp_assign_source_94 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_89,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_a39975e914a6a86ba3153b197792b326,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_94 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_89, mod_consts.const_str_digest_a39975e914a6a86ba3153b197792b326);
+}
+
+CHECK_OBJECT(tmp_import_name_from_89);
+Py_DECREF(tmp_import_name_from_89);
+if (tmp_assign_source_94 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 217;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_a39975e914a6a86ba3153b197792b326, tmp_assign_source_94);
+}
+{
+PyObject *tmp_assign_source_95;
+PyObject *tmp_import_name_from_90;
+PyObject *tmp_name_value_90;
+PyObject *tmp_globals_arg_value_90;
+PyObject *tmp_locals_arg_value_90;
+PyObject *tmp_fromlist_value_90;
+PyObject *tmp_level_value_90;
+tmp_name_value_90 = mod_consts.const_str_digest_54f946fcfe17e0cdab8c188cdbbc27f1;
+tmp_globals_arg_value_90 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_90 = Py_None;
+tmp_fromlist_value_90 = mod_consts.const_tuple_str_digest_e6071443bffad02c21354a5fd3f17994_tuple;
+tmp_level_value_90 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 220;
+tmp_import_name_from_90 = IMPORT_MODULE5(tstate, tmp_name_value_90, tmp_globals_arg_value_90, tmp_locals_arg_value_90, tmp_fromlist_value_90, tmp_level_value_90);
+if (tmp_import_name_from_90 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 220;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_90)) {
+    tmp_assign_source_95 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_90,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_e6071443bffad02c21354a5fd3f17994,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_95 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_90, mod_consts.const_str_digest_e6071443bffad02c21354a5fd3f17994);
+}
+
+CHECK_OBJECT(tmp_import_name_from_90);
+Py_DECREF(tmp_import_name_from_90);
+if (tmp_assign_source_95 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 220;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_e6071443bffad02c21354a5fd3f17994, tmp_assign_source_95);
+}
+{
+PyObject *tmp_assign_source_96;
+PyObject *tmp_import_name_from_91;
+PyObject *tmp_name_value_91;
+PyObject *tmp_globals_arg_value_91;
+PyObject *tmp_locals_arg_value_91;
+PyObject *tmp_fromlist_value_91;
+PyObject *tmp_level_value_91;
+tmp_name_value_91 = mod_consts.const_str_digest_f5f71707011d14e7134746d6f9a3fcca;
+tmp_globals_arg_value_91 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_91 = Py_None;
+tmp_fromlist_value_91 = mod_consts.const_tuple_str_digest_79208f99f42387dedaa503f910cf801e_tuple;
+tmp_level_value_91 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 223;
+tmp_import_name_from_91 = IMPORT_MODULE5(tstate, tmp_name_value_91, tmp_globals_arg_value_91, tmp_locals_arg_value_91, tmp_fromlist_value_91, tmp_level_value_91);
+if (tmp_import_name_from_91 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 223;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_91)) {
+    tmp_assign_source_96 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_91,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_79208f99f42387dedaa503f910cf801e,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_96 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_91, mod_consts.const_str_digest_79208f99f42387dedaa503f910cf801e);
+}
+
+CHECK_OBJECT(tmp_import_name_from_91);
+Py_DECREF(tmp_import_name_from_91);
+if (tmp_assign_source_96 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 223;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_79208f99f42387dedaa503f910cf801e, tmp_assign_source_96);
+}
+{
+PyObject *tmp_assign_source_97;
+PyObject *tmp_import_name_from_92;
+PyObject *tmp_name_value_92;
+PyObject *tmp_globals_arg_value_92;
+PyObject *tmp_locals_arg_value_92;
+PyObject *tmp_fromlist_value_92;
+PyObject *tmp_level_value_92;
+tmp_name_value_92 = mod_consts.const_str_digest_7fb08b4202f0695f1759c805e119dac8;
+tmp_globals_arg_value_92 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_92 = Py_None;
+tmp_fromlist_value_92 = mod_consts.const_tuple_str_digest_e0e15641e9785d45266c86e750f17f58_tuple;
+tmp_level_value_92 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 226;
+tmp_import_name_from_92 = IMPORT_MODULE5(tstate, tmp_name_value_92, tmp_globals_arg_value_92, tmp_locals_arg_value_92, tmp_fromlist_value_92, tmp_level_value_92);
+if (tmp_import_name_from_92 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 226;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_92)) {
+    tmp_assign_source_97 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_92,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_e0e15641e9785d45266c86e750f17f58,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_97 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_92, mod_consts.const_str_digest_e0e15641e9785d45266c86e750f17f58);
+}
+
+CHECK_OBJECT(tmp_import_name_from_92);
+Py_DECREF(tmp_import_name_from_92);
+if (tmp_assign_source_97 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 226;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_e0e15641e9785d45266c86e750f17f58, tmp_assign_source_97);
+}
+{
+PyObject *tmp_assign_source_98;
+PyObject *tmp_import_name_from_93;
+PyObject *tmp_name_value_93;
+PyObject *tmp_globals_arg_value_93;
+PyObject *tmp_locals_arg_value_93;
+PyObject *tmp_fromlist_value_93;
+PyObject *tmp_level_value_93;
+tmp_name_value_93 = mod_consts.const_str_digest_d103e12d900b8dc659f4cb8b6b2123c0;
+tmp_globals_arg_value_93 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_93 = Py_None;
+tmp_fromlist_value_93 = mod_consts.const_tuple_str_digest_0b022c66340cc7524b2f5f92a40cc1bd_tuple;
+tmp_level_value_93 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 229;
+tmp_import_name_from_93 = IMPORT_MODULE5(tstate, tmp_name_value_93, tmp_globals_arg_value_93, tmp_locals_arg_value_93, tmp_fromlist_value_93, tmp_level_value_93);
+if (tmp_import_name_from_93 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 229;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_93)) {
+    tmp_assign_source_98 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_93,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_0b022c66340cc7524b2f5f92a40cc1bd,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_98 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_93, mod_consts.const_str_digest_0b022c66340cc7524b2f5f92a40cc1bd);
+}
+
+CHECK_OBJECT(tmp_import_name_from_93);
+Py_DECREF(tmp_import_name_from_93);
+if (tmp_assign_source_98 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 229;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_0b022c66340cc7524b2f5f92a40cc1bd, tmp_assign_source_98);
+}
+{
+PyObject *tmp_assign_source_99;
+PyObject *tmp_import_name_from_94;
+PyObject *tmp_name_value_94;
+PyObject *tmp_globals_arg_value_94;
+PyObject *tmp_locals_arg_value_94;
+PyObject *tmp_fromlist_value_94;
+PyObject *tmp_level_value_94;
+tmp_name_value_94 = mod_consts.const_str_digest_936baf57ce758ebde4ee8bc4e9a3742a;
+tmp_globals_arg_value_94 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_94 = Py_None;
+tmp_fromlist_value_94 = mod_consts.const_tuple_str_digest_68b72308bf2917066fde4b492afa1489_tuple;
+tmp_level_value_94 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 232;
+tmp_import_name_from_94 = IMPORT_MODULE5(tstate, tmp_name_value_94, tmp_globals_arg_value_94, tmp_locals_arg_value_94, tmp_fromlist_value_94, tmp_level_value_94);
+if (tmp_import_name_from_94 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 232;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_94)) {
+    tmp_assign_source_99 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_94,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_68b72308bf2917066fde4b492afa1489,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_99 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_94, mod_consts.const_str_digest_68b72308bf2917066fde4b492afa1489);
+}
+
+CHECK_OBJECT(tmp_import_name_from_94);
+Py_DECREF(tmp_import_name_from_94);
+if (tmp_assign_source_99 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 232;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_68b72308bf2917066fde4b492afa1489, tmp_assign_source_99);
+}
+{
+PyObject *tmp_assign_source_100;
+PyObject *tmp_import_name_from_95;
+PyObject *tmp_name_value_95;
+PyObject *tmp_globals_arg_value_95;
+PyObject *tmp_locals_arg_value_95;
+PyObject *tmp_fromlist_value_95;
+PyObject *tmp_level_value_95;
+tmp_name_value_95 = mod_consts.const_str_digest_da236c84c2dbb31314d9e00436fc24e3;
+tmp_globals_arg_value_95 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_95 = Py_None;
+tmp_fromlist_value_95 = mod_consts.const_tuple_str_digest_8aa8484df48f880159babc856f073325_tuple;
+tmp_level_value_95 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 235;
+tmp_import_name_from_95 = IMPORT_MODULE5(tstate, tmp_name_value_95, tmp_globals_arg_value_95, tmp_locals_arg_value_95, tmp_fromlist_value_95, tmp_level_value_95);
+if (tmp_import_name_from_95 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 235;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_95)) {
+    tmp_assign_source_100 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_95,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_8aa8484df48f880159babc856f073325,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_100 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_95, mod_consts.const_str_digest_8aa8484df48f880159babc856f073325);
+}
+
+CHECK_OBJECT(tmp_import_name_from_95);
+Py_DECREF(tmp_import_name_from_95);
+if (tmp_assign_source_100 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 235;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_8aa8484df48f880159babc856f073325, tmp_assign_source_100);
+}
+{
+PyObject *tmp_assign_source_101;
+PyObject *tmp_import_name_from_96;
+PyObject *tmp_name_value_96;
+PyObject *tmp_globals_arg_value_96;
+PyObject *tmp_locals_arg_value_96;
+PyObject *tmp_fromlist_value_96;
+PyObject *tmp_level_value_96;
+tmp_name_value_96 = mod_consts.const_str_digest_374ffb61669f909eb3359f731d6c6fa0;
+tmp_globals_arg_value_96 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_96 = Py_None;
+tmp_fromlist_value_96 = mod_consts.const_tuple_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac_tuple;
+tmp_level_value_96 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 238;
+tmp_import_name_from_96 = IMPORT_MODULE5(tstate, tmp_name_value_96, tmp_globals_arg_value_96, tmp_locals_arg_value_96, tmp_fromlist_value_96, tmp_level_value_96);
+if (tmp_import_name_from_96 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 238;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_96)) {
+    tmp_assign_source_101 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_96,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_101 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_96, mod_consts.const_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac);
+}
+
+CHECK_OBJECT(tmp_import_name_from_96);
+Py_DECREF(tmp_import_name_from_96);
+if (tmp_assign_source_101 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 238;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_7c5e88ab7f33db0dd8ffb0cc94d6c2ac, tmp_assign_source_101);
+}
+{
+PyObject *tmp_assign_source_102;
+PyObject *tmp_import_name_from_97;
+PyObject *tmp_name_value_97;
+PyObject *tmp_globals_arg_value_97;
+PyObject *tmp_locals_arg_value_97;
+PyObject *tmp_fromlist_value_97;
+PyObject *tmp_level_value_97;
+tmp_name_value_97 = mod_consts.const_str_digest_b9bc0d714c8bd89d4149c6e3907b1de4;
+tmp_globals_arg_value_97 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_97 = Py_None;
+tmp_fromlist_value_97 = mod_consts.const_tuple_str_digest_b2ea6e7e043e35d36ec3c1599733882c_tuple;
+tmp_level_value_97 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 241;
+tmp_import_name_from_97 = IMPORT_MODULE5(tstate, tmp_name_value_97, tmp_globals_arg_value_97, tmp_locals_arg_value_97, tmp_fromlist_value_97, tmp_level_value_97);
+if (tmp_import_name_from_97 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 241;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_97)) {
+    tmp_assign_source_102 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_97,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_b2ea6e7e043e35d36ec3c1599733882c,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_102 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_97, mod_consts.const_str_digest_b2ea6e7e043e35d36ec3c1599733882c);
+}
+
+CHECK_OBJECT(tmp_import_name_from_97);
+Py_DECREF(tmp_import_name_from_97);
+if (tmp_assign_source_102 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 241;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_b2ea6e7e043e35d36ec3c1599733882c, tmp_assign_source_102);
+}
+{
+PyObject *tmp_assign_source_103;
+PyObject *tmp_import_name_from_98;
+PyObject *tmp_name_value_98;
+PyObject *tmp_globals_arg_value_98;
+PyObject *tmp_locals_arg_value_98;
+PyObject *tmp_fromlist_value_98;
+PyObject *tmp_level_value_98;
+tmp_name_value_98 = mod_consts.const_str_digest_2a1f97edc80a2d8bda40d1e34932fdfd;
+tmp_globals_arg_value_98 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_98 = Py_None;
+tmp_fromlist_value_98 = mod_consts.const_tuple_str_digest_0fb152346dd6fa9a4cf8f10654950779_tuple;
+tmp_level_value_98 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 244;
+tmp_import_name_from_98 = IMPORT_MODULE5(tstate, tmp_name_value_98, tmp_globals_arg_value_98, tmp_locals_arg_value_98, tmp_fromlist_value_98, tmp_level_value_98);
+if (tmp_import_name_from_98 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 244;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_98)) {
+    tmp_assign_source_103 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_98,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_0fb152346dd6fa9a4cf8f10654950779,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_103 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_98, mod_consts.const_str_digest_0fb152346dd6fa9a4cf8f10654950779);
+}
+
+CHECK_OBJECT(tmp_import_name_from_98);
+Py_DECREF(tmp_import_name_from_98);
+if (tmp_assign_source_103 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 244;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_0fb152346dd6fa9a4cf8f10654950779, tmp_assign_source_103);
+}
+{
+PyObject *tmp_assign_source_104;
+PyObject *tmp_import_name_from_99;
+PyObject *tmp_name_value_99;
+PyObject *tmp_globals_arg_value_99;
+PyObject *tmp_locals_arg_value_99;
+PyObject *tmp_fromlist_value_99;
+PyObject *tmp_level_value_99;
+tmp_name_value_99 = mod_consts.const_str_digest_2a790bc9daba1a9003a9515bb59feb21;
+tmp_globals_arg_value_99 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_99 = Py_None;
+tmp_fromlist_value_99 = mod_consts.const_tuple_str_digest_e328354439fe86c13e6c5cffe6a79707_tuple;
+tmp_level_value_99 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 247;
+tmp_import_name_from_99 = IMPORT_MODULE5(tstate, tmp_name_value_99, tmp_globals_arg_value_99, tmp_locals_arg_value_99, tmp_fromlist_value_99, tmp_level_value_99);
+if (tmp_import_name_from_99 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 247;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_99)) {
+    tmp_assign_source_104 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_99,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_e328354439fe86c13e6c5cffe6a79707,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_104 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_99, mod_consts.const_str_digest_e328354439fe86c13e6c5cffe6a79707);
+}
+
+CHECK_OBJECT(tmp_import_name_from_99);
+Py_DECREF(tmp_import_name_from_99);
+if (tmp_assign_source_104 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 247;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_e328354439fe86c13e6c5cffe6a79707, tmp_assign_source_104);
+}
+{
+PyObject *tmp_assign_source_105;
+PyObject *tmp_import_name_from_100;
+PyObject *tmp_name_value_100;
+PyObject *tmp_globals_arg_value_100;
+PyObject *tmp_locals_arg_value_100;
+PyObject *tmp_fromlist_value_100;
+PyObject *tmp_level_value_100;
+tmp_name_value_100 = mod_consts.const_str_digest_66286995c0043be401da32224d412da8;
+tmp_globals_arg_value_100 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_100 = Py_None;
+tmp_fromlist_value_100 = mod_consts.const_tuple_str_digest_91c05374584395232324d09dd05abad1_tuple;
+tmp_level_value_100 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 250;
+tmp_import_name_from_100 = IMPORT_MODULE5(tstate, tmp_name_value_100, tmp_globals_arg_value_100, tmp_locals_arg_value_100, tmp_fromlist_value_100, tmp_level_value_100);
+if (tmp_import_name_from_100 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 250;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_100)) {
+    tmp_assign_source_105 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_100,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_91c05374584395232324d09dd05abad1,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_105 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_100, mod_consts.const_str_digest_91c05374584395232324d09dd05abad1);
+}
+
+CHECK_OBJECT(tmp_import_name_from_100);
+Py_DECREF(tmp_import_name_from_100);
+if (tmp_assign_source_105 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 250;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_91c05374584395232324d09dd05abad1, tmp_assign_source_105);
+}
+{
+PyObject *tmp_assign_source_106;
+PyObject *tmp_import_name_from_101;
+PyObject *tmp_name_value_101;
+PyObject *tmp_globals_arg_value_101;
+PyObject *tmp_locals_arg_value_101;
+PyObject *tmp_fromlist_value_101;
+PyObject *tmp_level_value_101;
+tmp_name_value_101 = mod_consts.const_str_digest_42b7b03f5a1fe35a2a2a85378a38aac4;
+tmp_globals_arg_value_101 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_101 = Py_None;
+tmp_fromlist_value_101 = mod_consts.const_tuple_str_digest_eca874ca0aca92a60a9f3961c3eeca4a_tuple;
+tmp_level_value_101 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 253;
+tmp_import_name_from_101 = IMPORT_MODULE5(tstate, tmp_name_value_101, tmp_globals_arg_value_101, tmp_locals_arg_value_101, tmp_fromlist_value_101, tmp_level_value_101);
+if (tmp_import_name_from_101 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 253;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_101)) {
+    tmp_assign_source_106 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_101,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_eca874ca0aca92a60a9f3961c3eeca4a,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_106 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_101, mod_consts.const_str_digest_eca874ca0aca92a60a9f3961c3eeca4a);
+}
+
+CHECK_OBJECT(tmp_import_name_from_101);
+Py_DECREF(tmp_import_name_from_101);
+if (tmp_assign_source_106 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 253;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_eca874ca0aca92a60a9f3961c3eeca4a, tmp_assign_source_106);
+}
+{
+PyObject *tmp_assign_source_107;
+PyObject *tmp_import_name_from_102;
+PyObject *tmp_name_value_102;
+PyObject *tmp_globals_arg_value_102;
+PyObject *tmp_locals_arg_value_102;
+PyObject *tmp_fromlist_value_102;
+PyObject *tmp_level_value_102;
+tmp_name_value_102 = mod_consts.const_str_digest_2c6b0b64226c8987a8654e5faf02f5e6;
+tmp_globals_arg_value_102 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_102 = Py_None;
+tmp_fromlist_value_102 = mod_consts.const_tuple_str_digest_134a26556d1ccf879ef7b122beeef960_tuple;
+tmp_level_value_102 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 256;
+tmp_import_name_from_102 = IMPORT_MODULE5(tstate, tmp_name_value_102, tmp_globals_arg_value_102, tmp_locals_arg_value_102, tmp_fromlist_value_102, tmp_level_value_102);
+if (tmp_import_name_from_102 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 256;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_102)) {
+    tmp_assign_source_107 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_102,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_134a26556d1ccf879ef7b122beeef960,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_107 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_102, mod_consts.const_str_digest_134a26556d1ccf879ef7b122beeef960);
+}
+
+CHECK_OBJECT(tmp_import_name_from_102);
+Py_DECREF(tmp_import_name_from_102);
+if (tmp_assign_source_107 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 256;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_134a26556d1ccf879ef7b122beeef960, tmp_assign_source_107);
+}
+{
+PyObject *tmp_assign_source_108;
+PyObject *tmp_import_name_from_103;
+PyObject *tmp_name_value_103;
+PyObject *tmp_globals_arg_value_103;
+PyObject *tmp_locals_arg_value_103;
+PyObject *tmp_fromlist_value_103;
+PyObject *tmp_level_value_103;
+tmp_name_value_103 = mod_consts.const_str_digest_fb6bf8f58efa4f66ca6ef4ac71839ade;
+tmp_globals_arg_value_103 = (PyObject *)moduledict_anthropic$types$beta$sessions;
+tmp_locals_arg_value_103 = Py_None;
+tmp_fromlist_value_103 = mod_consts.const_tuple_str_digest_80411456df379e8767e34326f63b4233_tuple;
+tmp_level_value_103 = const_int_pos_1;
+frame_frame_anthropic$types$beta$sessions->m_frame.f_lineno = 259;
+tmp_import_name_from_103 = IMPORT_MODULE5(tstate, tmp_name_value_103, tmp_globals_arg_value_103, tmp_locals_arg_value_103, tmp_fromlist_value_103, tmp_level_value_103);
+if (tmp_import_name_from_103 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 259;
+
+    goto frame_exception_exit_1;
+}
+if (PyModule_Check(tmp_import_name_from_103)) {
+    tmp_assign_source_108 = IMPORT_NAME_OR_MODULE(
+        tstate,
+        tmp_import_name_from_103,
+        (PyObject *)moduledict_anthropic$types$beta$sessions,
+        mod_consts.const_str_digest_80411456df379e8767e34326f63b4233,
+        const_int_0
+    );
+} else {
+    tmp_assign_source_108 = IMPORT_NAME_FROM_MODULE(tstate, tmp_import_name_from_103, mod_consts.const_str_digest_80411456df379e8767e34326f63b4233);
+}
+
+CHECK_OBJECT(tmp_import_name_from_103);
+Py_DECREF(tmp_import_name_from_103);
+if (tmp_assign_source_108 == NULL) {
+    assert(HAS_ERROR_OCCURRED(tstate));
+
+    FETCH_ERROR_OCCURRED_STATE(tstate, &exception_state);
+
+
+exception_lineno = 259;
+
+    goto frame_exception_exit_1;
+}
+UPDATE_STRING_DICT1(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)mod_consts.const_str_digest_80411456df379e8767e34326f63b4233, tmp_assign_source_108);
+}
+
+
+// Put the previous frame back on top.
+popFrameStack(tstate);
+
+goto frame_no_exception_1;
+frame_exception_exit_1:
+
+
+{
+    PyTracebackObject *exception_tb = GET_EXCEPTION_STATE_TRACEBACK(&exception_state);
+    if (exception_tb == NULL) {
+        exception_tb = MAKE_TRACEBACK(frame_frame_anthropic$types$beta$sessions, exception_lineno);
+        SET_EXCEPTION_STATE_TRACEBACK(&exception_state, exception_tb);
+    } else if (exception_tb->tb_frame != &frame_frame_anthropic$types$beta$sessions->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_frame_anthropic$types$beta$sessions, exception_lineno);
+        SET_EXCEPTION_STATE_TRACEBACK(&exception_state, exception_tb);
+    }
+}
+
+
+
+assertFrameObject(frame_frame_anthropic$types$beta$sessions);
+
+// Put the previous frame back on top.
+popFrameStack(tstate);
+
+// Return the error.
+goto module_exception_exit;
+frame_no_exception_1:;
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("anthropic$types$beta$sessions", false);
+
+#if _NUITKA_MODULE_MODE && 0
+    {
+        PyObject *post_load = IMPORT_EMBEDDED_MODULE(tstate, "anthropic.types.beta.sessions" "-postLoad");
+        if (post_load == NULL) {
+            return NULL;
+        }
+    }
+#endif
+
+    Py_INCREF(module_anthropic$types$beta$sessions);
+    return module_anthropic$types$beta$sessions;
+    module_exception_exit:
+
+#if _NUITKA_MODULE_MODE && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_anthropic$types$beta$sessions, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(tstate, module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("anthropic$types$beta$sessions", false);
+
+    RESTORE_ERROR_OCCURRED_STATE(tstate, &exception_state);
+    return NULL;
+}
