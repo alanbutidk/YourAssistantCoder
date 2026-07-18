@@ -1,0 +1,8 @@
+Release
+*.exe
+src/__pycache__
+*.pyd
+*.pyc
+*.zip
+# We dont need YACNuitkaSrc/ as now PyCC is the compiler for it.
+YACNuitkaSrc
