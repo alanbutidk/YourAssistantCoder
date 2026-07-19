@@ -93,7 +93,13 @@ class PFPS:
         self.tracked_dir = self.pfps_dir / "tracked"
         self.ams_dir = self.pfps_dir / "ams"
 
-        for d in [self.pfps_dir, self.chunks_dir, self.tracked_dir, self.ams_dir, self.skills_dir]:
+        for d in [
+            self.pfps_dir,
+            self.chunks_dir,
+            self.tracked_dir,
+            self.ams_dir,
+            self.skills_dir,
+        ]:
             d.mkdir(parents=True, exist_ok=True)
 
         self.sandbox_json = self.pfps_dir / "sandbox.json"
@@ -246,9 +252,12 @@ class PFPS:
         falling back to the bundled src/SKILLS/DEFAULT.md if the project
         copy is missing for any reason (e.g. project created before this
         feature existed)."""
-        project_skill = self.skills_dir / "DEFAULT.md"
-        if project_skill.exists():
-            return project_skill.read_text(encoding="utf-8")
+        project_skill = list(self.skills_dir.glob("*.md"))
+
+        if project_skill and all(skill.exists() for skill in project_skill):
+            return "\n\n".join(
+                skill.read_text(encoding="utf-8") for skill in project_skill
+            )
 
         bundled_skill = Path(__file__).resolve().parent / "SKILLS" / "DEFAULT.md"
         if bundled_skill.exists():
@@ -786,4 +795,3 @@ class PFPS:
                 return True
 
         raise ValueError(f"No snapshot found to roll back {filename}")
-

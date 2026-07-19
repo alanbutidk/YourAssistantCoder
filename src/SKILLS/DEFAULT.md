@@ -51,3 +51,8 @@ Follow these exactly when the user includes them in a message:
 | `/pro`      | Write polished, professional code/prose, em dashes and en dashes included. Overrides the default avoidance above. |
 | `/build`    | Build and/or run the code after writing it, not just write it.                                |
 | `/research` | Use `web_search` to research the topic before answering.                                      |
+
+### More skills
+
+A detailed coding style script has been provided to you in: CODE_STYLE.md
+
