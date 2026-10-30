@@ -1,0 +1,34 @@
+# This file is ran by autobuild, a make like build system.
+# Needs PyCC to build (YAC).
+# this expects PyCC to be in PATH, if it isnt, place it in PATH.
+
+
+get OS
+
+if OS==Windows_NT then
+  let executable = .exe
+  let RM = rd /s /q
+elif OS==linux then
+  let executable = 
+  let RM = rm -rf
+else then
+  let executable =
+  let RM = rm -rf
+done
+
+let PYCC_NAME = PyCC
+let VERSION = v1.2.0
+let APP = yac(executable)
+let SRC = src/yac.py
+
+recipe build
+recipe clean
+
+build:
+  (PYCC_NAME) -o (APP) (SRC) -runtime -npdb -no
+  echo Build finished! Executable at (APP)...
+clean:
+  (RM) (APP) *.pdb *.o *.asm
+  echo Cleaned (APP) and any leftover artifacts with it.
+
+

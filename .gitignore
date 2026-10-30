@@ -1,0 +1,8 @@
+Release
+*.exe
+src/__pycache__
+*.pyd
+*.pyc
+*.zip
+*.so
+
