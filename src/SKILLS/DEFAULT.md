@@ -1,4 +1,4 @@
-	# Default Skill
+# Default Skill
 
 This is the baseline skill loaded for every project. It defines what you
 (the agent) know you're capable of, how to write code, and how to interpret
