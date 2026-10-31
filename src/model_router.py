@@ -227,12 +227,18 @@ class BaseAdapter(ABC):
 
         key = keyring.get_password(KEYRING_SERVICE, key_name)
         if not key:
-            import pwinput
             from rich.console import Console
 
             c = Console()
             c.print(f"[bold cyan]Enter your {self.name} API key:[/bold cyan] ", end="")
-            key = pwinput.pwinput(prompt="", mask="*").strip()
+            try:
+                import pwinput
+
+                key = pwinput.pwinput(prompt="", mask="*").strip()
+            except ImportError:
+                import getpass
+
+                key = getpass.getpass(prompt="").strip()
             if not key:
                 raise ValueError(f"No API key provided for {self.name}.")
             keyring.set_password(KEYRING_SERVICE, key_name, key)
@@ -438,7 +444,7 @@ class GeminiAdapter(BaseAdapter):
         from google.genai import types
 
         history = []
-        for m in messages[:-1]:
+        for m in messages:
             role = "user" if m["role"] == "user" else "model"
             if isinstance(m["content"], str):
                 history.append(
@@ -485,13 +491,10 @@ class GeminiAdapter(BaseAdapter):
 
         client = genai.Client(api_key=self.get_key("gemini_key"))
         gemini_tools = self._convert_tools(tools)
-        history = self._build_history(messages)
-        last_msg = messages[-1]["content"] if messages else ""
-        last_text = last_msg if isinstance(last_msg, str) else str(last_msg)
-
-        contents = history + [
-            types.Content(role="user", parts=[types.Part.from_text(text=last_text)])
-        ]
+        # The whole history, including the newest message. The newest one used
+        # to be sent as str(content), so after every tool call Gemini received
+        # the tool results as a Python repr instead of a function response.
+        contents = self._build_history(messages)
 
         resp = client.models.generate_content(
             model=self.MODEL,
@@ -807,14 +810,23 @@ class OpenRouterFreeAdapter(BaseAdapter):
     _last_fetched = 0
     CACHE_TTL = 300
 
-    def _get_active_free_models(self, client) -> list:
+    PRIMARY_MODEL = "poolside/laguna-s-2.1:free"
+
+    def _get_active_free_models(self, client=None) -> list:
         now = time.time()
         if self._cached_free_models and (now - self._last_fetched < self.CACHE_TTL):
             return self._cached_free_models
 
         try:
-            response = client.get("https://openrouter.ai/api/v1/models")
-            data = response.json()
+            # OpenAI().get() is the SDK's internal request method (it needs
+            # cast_to), so this call always raised and the fallback list below
+            # was the only list ever used. Plain HTTP is enough here.
+            import urllib.request
+
+            with urllib.request.urlopen(
+                "https://openrouter.ai/api/v1/models", timeout=10
+            ) as resp:
+                data = json.loads(resp.read().decode())
 
             free_models = [
                 m["id"]
@@ -823,7 +835,7 @@ class OpenRouterFreeAdapter(BaseAdapter):
             ]
 
             if free_models:
-                primary = "poolside/laguna-s-2.1:free"
+                primary = self.PRIMARY_MODEL
                 if primary in free_models:
                     free_models.remove(primary)
                     free_models.insert(0, primary)
@@ -832,9 +844,11 @@ class OpenRouterFreeAdapter(BaseAdapter):
                 self._last_fetched = now
 
         except Exception:
-            return ["poolside/laguna-s-2.1:free"]
+            pass
 
-        return self._cached_free_models
+        # Never return an empty list: complete() would then have no model to
+        # try and fail on message=None.
+        return self._cached_free_models or [self.PRIMARY_MODEL]
 
     def _convert_tools(self, tools: list) -> list:
         return oai_chat_tools(tools)
@@ -918,8 +932,13 @@ ADAPTERS = {
 }
 
 
+# Older TUI versions saved OpenRouter as "openrouter_gpt"; the adapter has
+# always been registered as "openrouter_free", so those projects could not run.
+MODEL_ALIASES = {"openrouter_gpt": "openrouter_free"}
+
+
 def get_adapter(model: str) -> BaseAdapter:
-    key = model.lower()
+    key = MODEL_ALIASES.get(model.lower(), model.lower())
     if key.startswith("ollama:"):
         model_name = key.split(":", 1)[1]
         return OllamaAdapter(model=model_name)

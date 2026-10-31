@@ -26,7 +26,7 @@ class Permissions:
     SpecialUse      = "SpecialUse"
 
 
-WRITE_TOOLS  = {"write_chunk", "append_chunk", "create_file"}
+WRITE_TOOLS  = {"write_chunk", "append_chunk", "create_file", "write_file"}
 DELETE_TOOLS = {"delete_file"}
 READ_TOOLS   = {"read_chunk", "list_files"}
 

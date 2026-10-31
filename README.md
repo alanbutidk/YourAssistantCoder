@@ -106,6 +106,9 @@ Like git, PFPS tracks every insert and delete on every file. You can roll back a
 | `GIT_WORKFLOW.md` | Commit message style, safe shell usage for git operations. |
 | `BUILD_TOOLCHAIN.md` | How to detect a project's build system and invoke it correctly. |
 
+### Prompt injection
+Files, web results, shell output, saved memory and other agents' reports are wrapped in `<<untrusted:...>>` markers with a random per-session id, and every system prompt tells the agent that text inside them is data and never instructions. Shell approval prompts escape the command and show control and invisible characters, so what you approve is what runs. Notes saved with `remember` are capped to one short line. `.YAC` (skills, memory, history, config) is not reachable by the agent. None of this makes injection impossible, so keep approving shell commands only when you recognise them.
+
 ### Team mode (orchestrator)
 `yac run "..." --team`, or `/team <prompt>` in the TUI and `yac chat`, runs the request with several agents instead of one.
 
@@ -116,12 +119,17 @@ Like git, PFPS tracks every insert and delete on every file. You can roll back a
 | Role | Can do |
 |---|---|
 | `researcher` | read files, web search. Writes nothing. |
+| `architect` | read files, web search. Settles file layout, interfaces and signatures before coding starts. Writes nothing. |
 | `coder` | read, write and create files inside its file scope, shell, web search. |
+| `debugger` | like `coder`, but reproduces the bug first, fixes the root cause and proves the fix. |
+| `optimizer` | like `coder`, but measures before and after and reports the numbers. |
+| `documenter` | read files, write docs inside its file scope. No shell. |
 | `tester` | read files, shell. Writes nothing. |
 | `reviewer` | read files. Writes nothing. |
+| `security` | read files. Looks for injection, unsafe paths, secrets and dangerous defaults. Writes nothing. |
 
 4. Agents hand work on through their `report()`, which the next tasks receive, and through a **shared board** (`note()` / `board()`) for things like signatures and decisions.
-5. If a tester or reviewer reports `changes_requested`, the orchestrator runs one **fix round**: a coder with the scope of the work being checked fixes exactly the findings, then the check runs again.
+5. If a tester, reviewer or security agent reports `changes_requested`, the orchestrator runs one **fix round**: a coder with the scope of the work being checked fixes exactly the findings, then the check runs again.
 
 Writes outside a coder's scope are refused, shell commands still go through the usual approval prompt (one at a time), and a task that crashes is retried once before its dependents are skipped. Every worker gets the project's `.YAC/.SKILLS`, so your code style rules apply to all of them.
 

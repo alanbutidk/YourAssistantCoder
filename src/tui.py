@@ -54,8 +54,20 @@ KEY_MAP = {
     "gemini": "gemini_key",
     "deepseek": "deepseek_key",
     "mistral": "mistral_key",
-    "openrouter_gpt": "openrouter_key",
+    "openrouter_free": "openrouter_key",
+    "openrouter_gpt": "openrouter_key",  # saved by older versions
 }
+
+
+def picker_value(model: str) -> str:
+    """Map a saved model name onto one of the Select options. A value that is
+    not an option makes Textual's Select raise, which crashed the Edit Role
+    popup for anyone on an Ollama model (saved as "ollama:<name>") or on the
+    old OpenRouter key."""
+    m = model or "gpt"
+    if m.lower().startswith("ollama:"):
+        return "ollama"
+    return "openrouter_free" if m == "openrouter_gpt" else m
 
 
 def key_name(model: str) -> Optional[str]:
@@ -261,12 +273,17 @@ class ShellConfirmScreen(ModalScreen):
     def compose(self) -> ComposeResult:
         with Container(id="confirm-box"):
             yield Label("  Shell Command Requested", classes="modal-title yellow")
+            from shell_exec import display_text
+
             if self._reason:
-                yield Label(f"Reason: [dim]{self._reason}[/dim]", classes="modal-msg")
+                yield Label(
+                    f"Reason: [dim]{display_text(self._reason)}[/dim]",
+                    classes="modal-msg",
+                )
             yield Label(
                 f"""[bold]Command:[/bold]
 
-  [cyan]{self._cmd}[/cyan]
+  [cyan]{display_text(self._cmd)}[/cyan]
 
 Allow execution in project root?""",
                 classes="modal-msg",
@@ -537,7 +554,7 @@ class InitScreen(ModalScreen):
                     ("Ollama (Local)", "ollama"),
                     ("DeepSeek (Coder V3)", "deepseek"),
                     ("Mistral (Codestral)", "mistral"),
-                    ("Openrouter (GPT)", "openrouter_gpt"),
+                    ("OpenRouter (free models)", "openrouter_free"),
                 ],
                 value="gpt",
                 id="init-model",
@@ -915,7 +932,16 @@ class ChatView(Widget):
         import io
 
         buf = io.StringIO()
-        c = Console(file=buf, highlight=False, markup=False, width=100)
+        # force_terminal: a StringIO is not a terminal, so Rich dropped all
+        # styling and the markdown arrived as plain text.
+        c = Console(
+            file=buf,
+            highlight=False,
+            markup=False,
+            width=100,
+            force_terminal=True,
+            color_system="truecolor",
+        )
         c.print(RichMD(md_text))
         rendered = buf.getvalue()
         log = self.query_one("#chat-log", RichLog)
@@ -1137,9 +1163,9 @@ class EditRoleScreen(ModalScreen):
                     ("Ollama (Local)", "ollama"),
                     ("DeepSeek (Coder V3)", "deepseek"),
                     ("Mistral (Codestral)", "mistral"),
-                    ("Openrouter (GPT)", "openrouter_gpt"),
+                    ("OpenRouter (free models)", "openrouter_free"),
                 ],
-                value=self._config.get("model", "gpt"),
+                value=picker_value(self._config.get("model", "gpt")),
                 id="er-model",
             )
             yield Label("Role:", classes="modal-label")

@@ -37,6 +37,7 @@ class AMS:
         "read_chunk",
         "write_chunk",
         "append_chunk",
+        "write_file",
         "create_file",
         "delete_file",
         "list_files",
@@ -50,6 +51,13 @@ class AMS:
         self._working = False
         self._stop_event = threading.Event()
         self._current_token: Optional[AllowToken] = None
+
+    ROLE_RANK = {"Viewer": 0, "Editor": 1, "Owner": 2}
+
+    def _role_cap(self) -> str:
+        config = getattr(self.pfps, "config", None)
+        role = config.get("role", "Editor") if isinstance(config, dict) else "Editor"
+        return role if role in self.ROLE_RANK else "Editor"
 
     # --- CheckOut ------------------------------------------------------------
 
@@ -65,6 +73,17 @@ class AMS:
             Permissions.SpecialUse: "Owner",
         }
         role = role_map.get(permission_level, "Viewer")
+
+        # The project's role is a ceiling. It used to be display-only: the
+        # agent could ask checkout for "delete" and get an Owner token even in
+        # a Viewer project.
+        cap = self._role_cap()
+        if self.ROLE_RANK[role] > self.ROLE_RANK[cap]:
+            self.logger.write(
+                "CHECKOUT", f"{permission_level!r} capped to {cap} by project role"
+            )
+            role = cap
+
         token = issue_token(role, self.session_id, files)
         self._current_token = token
         self.logger.write("CHECKOUT", f"{permission_level!r} -> (role={role})")
@@ -86,7 +105,13 @@ class AMS:
             self.logger.write("BLOCKED", f"Expired token attempted {toolname!r}")
             raise PermissionError(f"Token expired - cannot use {toolname!r}")
 
-        self.logger.write("USETOOL", f"{toolname} | {kwargs}")
+        # Log what was asked for, not whole files: write_file/create_file
+        # content used to be copied into session.log on every call.
+        shown = {
+            k: (f"<{len(v)} chars>" if k == "content" and isinstance(v, str) else v)
+            for k, v in kwargs.items()
+        }
+        self.logger.write("USETOOL", f"{toolname} | {shown}")
 
         # Dispatch to PFPS
         dispatch = {
@@ -97,6 +122,9 @@ class AMS:
                 token, kwargs["filename"], kwargs["chunk_key"], kwargs["content"]
             ),
             "append_chunk": lambda: self.pfps.AppendChunk(
+                token, kwargs["filename"], kwargs["content"]
+            ),
+            "write_file": lambda: self.pfps.WriteFile(
                 token, kwargs["filename"], kwargs["content"]
             ),
             "create_file": lambda: self.pfps.CreateFile(
@@ -120,7 +148,7 @@ class AMS:
 
     # --- SpecialUse ----------------------------------------------------------
 
-    def SpecialUse(self, String: str, ask_confirm: bool = False) -> str:
+    def SpecialUse(self, String: str, ask_confirm: bool = True) -> str:
         """
         For ops outside normal tools - edge cases, risky operations.
         ask_confirm=True → prompts user before executing.
@@ -190,7 +218,11 @@ class AMS:
         self._working = True
         self._stop_event.clear()
         self.logger.write("WORKING", message)
-        self.console.print(f"\n[bold green]⟳[/bold green]  [italic]{message}[/italic]")
+        from rich.markup import escape
+
+        self.console.print(
+            f"\n[bold green]⟳[/bold green]  [italic]{escape(message)}[/italic]"
+        )
 
     def WorkingStop(self, Yes: bool = True):
         if not Yes:
@@ -211,14 +243,24 @@ class AMS:
         Claude's only Rich stdout pipe. Logged by AMS.
         Max 2000 chars to prevent spam.
         """
-        # Strip raw ANSI escape codes to prevent injection
+        # Strip raw terminal escape codes to prevent injection. The old
+        # pattern only caught colour codes (ESC [ ... m), so cursor moves,
+        # title changes and OSC sequences got through.
         import re
+        from rich.errors import MarkupError
+        from rich.markup import escape
 
-        clean = re.sub(r"\x1b\[[0-9;]*m", "", message)
+        clean = re.sub(r"\x1b\][^\x07\x1b]*(?:\x07|\x1b\\)", "", message)
+        clean = re.sub(r"\x1b\[[0-?]*[ -/]*[@-~]|\x1b[@-Z\\-_]", "", clean)
+        clean = clean.replace("\x1b", "")
         clean = clean[:2000]  # output size cap
 
         self.logger.write("CONSOLE", clean[:80])
-        self.console.print(clean)
+        try:
+            self.console.print(clean)
+        except MarkupError:
+            # Stray [/tag] in the agent's text must not lose the message.
+            self.console.print(escape(clean))
 
     # --- Build Claude's globals ----------------------------------------------
 

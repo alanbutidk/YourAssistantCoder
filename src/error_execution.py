@@ -28,6 +28,7 @@ class ErrorExecution:
         self.consecutive_failures = 0
         self.last_error          = ""
         self._agent_ref          = None   # set by agent.py after init
+        self._user_cmd_retries   = 0
 
     def bind_agent(self, agent):
         self._agent_ref = agent
@@ -44,6 +45,7 @@ class ErrorExecution:
 
             output = stdout_buf.getvalue() + stderr_buf.getvalue()
             self.consecutive_failures = 0
+            self._user_cmd_retries = 0
             self.ams.logger.write("EXEC_OK", output[:80] or "(no output)")
             return output or "OK"
 
@@ -59,9 +61,11 @@ class ErrorExecution:
 
             # Check if user needs to run something
             user_cmd = self._detect_user_cmd(e)
-            if user_cmd:
+            if user_cmd and self._user_cmd_retries < self.MAX_FAILURES:
+                self._user_cmd_retries += 1
                 self._prompt_user_cmd(user_cmd, reason=str(e))
-                # Retry once after user acts
+                # Retry after the user acts. Bounded: a command that does not
+                # fix the error used to recurse until RecursionError.
                 return self.Run(code, __globals__)
 
             if self.consecutive_failures >= self.MAX_FAILURES:
@@ -74,9 +78,14 @@ class ErrorExecution:
     def _detect_user_cmd(self, e: Exception) -> str | None:
         err_type = type(e).__name__
 
-        if err_type in ("ImportError", "ModuleNotFoundError"):
-            pkg = str(e).split("'")[1] if "'" in str(e) else str(e).split()[-1]
-            return f"pip install {pkg}"
+        if err_type == "ModuleNotFoundError":
+            # e.name is the module that was missing ("yaml", "a.b" -> "a").
+            # A plain ImportError ("cannot import name X from Y") is a code
+            # problem, and pip-installing X would be wrong.
+            pkg = getattr(e, "name", None)
+            if not pkg:
+                return None
+            return f"pip install {pkg.split('.')[0]}"
 
         if err_type == "PermissionError":
             return f"sudo chmod +x {e.filename}" if hasattr(e, "filename") else None

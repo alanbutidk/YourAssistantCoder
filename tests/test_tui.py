@@ -123,6 +123,33 @@ class ChatViewTests(unittest.TestCase):
 
         self.run_app(body)
 
+    def test_edit_role_opens_for_every_saved_model(self):
+        # Select raised InvalidSelectValueError for "ollama:<name>" and for the
+        # old "openrouter_gpt" value, so Ctrl+E crashed for those users.
+        async def body(app, pilot, tui):
+            for model in ("ollama:qwen2.5-coder:7b", "openrouter_gpt", "claude"):
+                app.push_screen(
+                    tui.EditRoleScreen({"model": model, "role": "Editor"}, lambda m, r: None)
+                )
+                await pilot.pause()
+                self.assertIn(app.screen.query_one("#er-model").value,
+                              ("ollama", "openrouter_free", "claude"))
+                app.pop_screen()
+                await pilot.pause()
+
+        self.run_app(body)
+
+    def test_markdown_reply_keeps_its_styling(self):
+        async def body(app, pilot, tui):
+            chat = app.query_one(tui.ChatView)
+            chat._log_md("# Title\n\nsome **bold** text")
+            await pilot.pause()
+            log = app.query_one("#chat-log")
+            styles = [seg.style for line in log.lines for seg in line if seg.style]
+            self.assertTrue(any(s.bold for s in styles))
+
+        self.run_app(body)
+
 
 if __name__ == "__main__":
     unittest.main()

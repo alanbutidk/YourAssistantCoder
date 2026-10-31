@@ -4,9 +4,11 @@ Python File Protection System.
 Sandbox, chunking, git-like tracking, write locks.
 """
 
+import fnmatch
 import hashlib
 import json
 import os
+import re
 import time
 import threading
 from pathlib import Path
@@ -68,6 +70,7 @@ class Delta:
     lines: Optional[int] = None
     snapshot: Optional[str] = None
     chunk_ref: Optional[str] = None
+    full: bool = False  # snapshot is the whole file as it was before this op
 
 
 # --- PFPS Core ---------------------------------------------------------------
@@ -289,11 +292,13 @@ class PFPS:
 
     @classmethod
     def LoadProject(cls, root: str) -> "PFPS":
-        instance = cls(root)
-        if not instance.sandbox_json.exists():
+        # Check before constructing: PFPS.__init__ creates the .YAC folders,
+        # and a failed load must not leave them behind in a random directory.
+        if not (Path(root).resolve() / ".YAC" / ".PFPS" / "sandbox.json").exists():
             raise FileNotFoundError(
                 f"No PFPS project found at {root}. Run 'yac init' first."
             )
+        instance = cls(root)
         with open(instance.sandbox_json, encoding="utf-8") as f:
             instance.config = json.load(f)
 
@@ -363,12 +368,38 @@ class PFPS:
                 f"[SANDBOX] Escape attempt blocked: {path!r} resolves outside sandbox"
             )
         # Only block explicitly ignored paths, never block normal files
-        ignore = self.config.get("ignore", [])
         rel = str(resolved.relative_to(self.root))
-        for ig in ignore:
-            if ig in rel:
-                raise SandboxViolation(f"[SANDBOX] Access to ignored path: {path!r}")
+        if self._is_ignored(rel):
+            raise SandboxViolation(f"[SANDBOX] Access to ignored path: {path!r}")
         return resolved
+
+    def _is_ignored(self, rel: str) -> bool:
+        """True for yac's own .YAC folder (never reachable by the agent) and for
+        anything matching the project's `ignore` list.
+
+        Entries match whole path components, not substrings. The old substring
+        test made ".git" hide .gitignore and .github, and ".env" hide any file
+        with "environment" in its name. Dotted entries still cover their usual
+        variants (.env.local, prod.env, .git.bak)."""
+        parts = [p for p in rel.replace("\\", "/").split("/") if p and p != "."]
+        if ".YAC" in parts:
+            return True
+        joined = "/".join(parts)
+        for ig in self.config.get("ignore", []):
+            entry = str(ig).replace("\\", "/").strip("/")
+            if not entry:
+                continue
+            if "/" in entry:
+                if joined == entry or joined.startswith(entry + "/"):
+                    return True
+                continue
+            dotted = entry.startswith(".") and len(entry) > 1
+            for part in parts:
+                if part == entry or fnmatch.fnmatch(part, entry):
+                    return True
+                if dotted and (part.startswith(entry + ".") or part.endswith(entry)):
+                    return True
+        return False
 
     def AMSLocation(self, subdir: str = ".ams") -> Path:
         return self.pfps_dir / subdir
@@ -541,6 +572,42 @@ class PFPS:
 
         return chunks
 
+    def _var_path(self, filename: str) -> Path:
+        """Where a file's chunk (.var) file lives. Both separators are
+        flattened: a Windows-style "src\\a.py" used to point into a
+        sub-folder that never exists."""
+        name = filename.replace("\\", "/")
+        while name.startswith("./"):
+            name = name[2:]
+        return self.chunks_dir / f"_{name.replace('/', '_')}.var"
+
+    @staticmethod
+    def _read_exact(path: Path) -> str:
+        """Read a file without newline translation, so snapshots restore
+        byte-for-byte (CRLF stays CRLF)."""
+        with open(path, "r", encoding="utf-8", errors="replace", newline="") as f:
+            return f.read()
+
+    @staticmethod
+    def _write_exact(path: Path, text: str):
+        with open(path, "w", encoding="utf-8", newline="") as f:
+            f.write(text)
+
+    @staticmethod
+    def _match_newlines(text: str, reference: Optional[str]) -> str:
+        """Give `text` the line endings of the file it is going into: CRLF if
+        most of `reference` is CRLF, LF if it is LF, the platform's for a new
+        file. Text mode did this implicitly and wrongly (LF files became CRLF
+        on Windows, CRLF files became LF elsewhere)."""
+        text = text.replace("\r\n", "\n")
+        if reference:
+            if reference.count("\r\n") * 2 > reference.count("\n"):
+                return text.replace("\n", "\r\n")
+            return text
+        if reference is None and os.linesep != "\n":
+            return text.replace("\n", os.linesep)
+        return text
+
     def BuildVarFile(self, filename: str):
         """Create/refresh the .var file for a tracked file."""
         with self._var_lock:
@@ -549,7 +616,7 @@ class PFPS:
     def _build_var_file(self, filename: str):
         filepath = self.SandboxPath(filename)
         chunks = self._compute_chunks(filepath)
-        var_path = self.chunks_dir / f"_{filename.replace('/', '_')}.var"
+        var_path = self._var_path(filename)
 
         lines = [
             f"# YAC ReadableChunks - {filename}\n",
@@ -564,31 +631,59 @@ class PFPS:
             # .var file a SyntaxError for virtually any real multi-line
             # chunk - breaking exec() in ReadChunkVar and, with it, every
             # read_chunk/write_chunk tool call.
-            safe_label = json.dumps(label)
-            safe_content = json.dumps(content)
-            lines.append(f"CHUNK_{i} = ({safe_label}, {safe_content})\n")
+            # A JSON array is also a valid Python literal, so the file stays
+            # readable, but ReadChunkVar parses it as JSON and never exec()s it.
+            lines.append(f"CHUNK_{i} = {json.dumps([label, content])}\n")
 
         with open(var_path, "w", encoding="utf-8") as f:
             f.writelines(lines)
 
         return var_path
 
+    _CHUNK_LINE = re.compile(r"^(CHUNK_\d+) = (.*)$")
+
+    @classmethod
+    def _parse_var_source(cls, source: str) -> dict:
+        result = {}
+        for line in source.split("\n"):
+            m = cls._CHUNK_LINE.match(line)
+            if not m:
+                continue
+            raw = m.group(2).strip()
+            if raw.startswith("(") and raw.endswith(")"):
+                raw = "[" + raw[1:-1] + "]"  # older files wrote a tuple
+            label, content = json.loads(raw)
+            result[m.group(1)] = (label, content)
+        return result
+
     def ReadChunkVar(self, filename: str) -> dict[str, tuple]:
-        """Load chunk vars for a file into a dict: {'CHUNK_1': (label, content), ...}"""
-        var_path = self.chunks_dir / f"_{filename.replace('/', '_')}.var"
+        """Load chunk vars for a file into a dict: {'CHUNK_1': (label, content), ...}
+
+        The .var file is plain data and is parsed as JSON. It used to be
+        exec()'d, which meant anything able to write into .YAC (including the
+        agent, before .YAC was off limits) could run code on the next read, and
+        it turned emoji and other non-BMP characters into lone surrogates."""
+        var_path = self._var_path(filename)
         if not var_path.exists():
             self.BuildVarFile(filename)
 
+        for attempt in (1, 2):
+            with self._var_lock:
+                with open(var_path, encoding="utf-8") as f:
+                    source = f.read()
+            try:
+                parsed = self._parse_var_source(source)
+                break
+            except (ValueError, TypeError):
+                if attempt == 2:
+                    raise
+                self.BuildVarFile(filename)  # damaged or hand-edited: regenerate
+
         result = {}
-        namespace = {}
-        with self._var_lock:
-            with open(var_path, encoding="utf-8") as f:
-                source = f.read()
-        exec(source, namespace)
         for i in range(1, self.MAX_CHUNKS + 1):
             key = f"CHUNK_{i}"
-            if key in namespace:
-                result[key] = namespace[key]
+            if key in parsed:
+                result[key] = parsed[key]
         return result
 
     # --- Git-like tracking ---------------------------------------------------
@@ -608,19 +703,23 @@ class PFPS:
         d.mkdir(parents=True, exist_ok=True)
         return d
 
-    def _snapshot_all(self):
-        import fnmatch
+    def _iter_files(self, top: Path):
+        """Every non-ignored file under `top`, as Paths in sorted order.
+        Ignored folders are pruned instead of walked, so a huge node_modules
+        or .git no longer costs a full traversal on every call."""
+        found = []
+        for cur, dirs, files in os.walk(top):
+            rel_dir = os.path.relpath(cur, self.root)
+            dirs[:] = [d for d in dirs if not self._is_ignored(os.path.join(rel_dir, d))]
+            for name in files:
+                if not self._is_ignored(os.path.join(rel_dir, name)):
+                    found.append(Path(cur) / name)
+        return sorted(found)
 
+    def _snapshot_all(self):
         patterns = self.config.get("track_files", ["*"])
-        ignore = self.config.get("ignore", ["__pycache__", ".git"])
-        for f in self.root.rglob("*"):
-            if not f.is_file():
-                continue
+        for f in self._iter_files(self.root):
             rel = str(f.relative_to(self.root))
-            if ".YAC" in rel:
-                continue
-            if any(ig in rel for ig in ignore):
-                continue
             track_all = "*" in patterns
             if track_all or any(fnmatch.fnmatch(f.name, p) for p in patterns):
                 self._write_head(rel, f)
@@ -646,8 +745,8 @@ class PFPS:
         track_dir = self._file_track_dir(filename)
         deltas_dir = track_dir / "deltas"
         deltas_dir.mkdir(exist_ok=True)
-        existing = sorted(deltas_dir.glob("*.delta"))
-        index = len(existing) + 1
+        existing = [int(p.stem) for p in deltas_dir.glob("*.delta") if p.stem.isdigit()]
+        index = (max(existing) if existing else 0) + 1
         delta_path = deltas_dir / f"{index:04d}.delta"
         with open(delta_path, "w", encoding="utf-8") as f:
             json.dump(asdict(delta), f, indent=2)
@@ -807,10 +906,7 @@ class PFPS:
         self._record_op(filename, "READ")
 
         # Auto-build var file if missing
-        var_path = (
-            self.chunks_dir / f"_{filename.replace('/', '_').replace(chr(92), '_')}.var"
-        )
-        if not var_path.exists():
+        if not self._var_path(filename).exists():
             self.BuildVarFile(filename)
 
         chunks = self.ReadChunkVar(filename)
@@ -855,14 +951,18 @@ class PFPS:
             start_line = int(parts[0]) - 1
             end_line = int(parts[1])
 
-            with open(filepath, "r", errors="replace", encoding="utf-8") as f:
-                all_lines = f.readlines()
+            # Rollback restores whole files, so the snapshot must be the whole
+            # file. It used to be just the old chunk, which made `yac rollback`
+            # replace the entire file with that one chunk.
+            before = self._read_exact(filepath)
+            all_lines = before.splitlines(keepends=True)
 
-            new_lines = new_content.splitlines(keepends=True)
+            new_lines = self._match_newlines(new_content, before).splitlines(
+                keepends=True
+            )
             all_lines[start_line:end_line] = new_lines
 
-            with open(filepath, "w", encoding="utf-8") as f:
-                f.writelines(all_lines)
+            self._write_exact(filepath, "".join(all_lines))
 
             # Rebuild var file
             self.BuildVarFile(filename)
@@ -876,7 +976,8 @@ class PFPS:
                     timestamp=time.strftime("%Y-%m-%dT%H:%M:%S"),
                     at_line=start_line + 1,
                     chunk_ref=chunk_key,
-                    snapshot=old_content,
+                    snapshot=before,
+                    full=True,
                 ),
             )
             return ok  # False = suspicious chain detected
@@ -894,10 +995,12 @@ class PFPS:
         self._acquire_lock(filename, LockState.AgentHolds, token)
 
         try:
-            with open(filepath, "r", errors="replace", encoding="utf-8") as f:
-                before_lines = len(f.readlines())
-            with open(filepath, "a", encoding="utf-8") as f:
-                f.write(content)
+            before = self._read_exact(filepath)
+            before_lines = before.count("\n") + (
+                0 if not before or before.endswith("\n") else 1
+            )
+            with open(filepath, "a", encoding="utf-8", newline="") as f:
+                f.write(self._match_newlines(content, before))
 
             self.BuildVarFile(filename)
             ok = self._record_op(filename, "WRITE")
@@ -909,6 +1012,8 @@ class PFPS:
                     timestamp=time.strftime("%Y-%m-%dT%H:%M:%S"),
                     at_line=before_lines + 1,
                     content=content,
+                    snapshot=before,
+                    full=True,
                 ),
             )
             return ok
@@ -937,6 +1042,48 @@ class PFPS:
                 session=self._session_id,
                 timestamp=time.strftime("%Y-%m-%dT%H:%M:%S"),
                 content=content,
+                full=True,
+            ),
+        )
+        return ok
+
+    def WriteFile(self, token: AllowToken, filename: str, content: str):
+        """Replace (or create) a whole file: the agent's write_file tool.
+
+        write_file used to open the file itself in agent.py, which skipped the
+        token check (a Viewer project could still write), the file scope, the
+        op limit and the snapshot, so `yac rollback` could not undo it."""
+        self._validate_token(token, "write_file", filename)
+        if not self._increment_ops(token):
+            raise RuntimeError("Session op limit reached")
+        self._wait_if_sleeping(filename)
+
+        filepath = self.SandboxPath(filename)
+        if filepath.is_dir():
+            raise IsADirectoryError(f"{filename} is a directory")
+
+        existed = filepath.exists()
+        before = self._read_exact(filepath) if existed else None
+
+        # Keep the file's own line endings. Opening in text mode converted
+        # every LF file to CRLF on Windows and CRLF files to LF elsewhere,
+        # turning a small edit into a whole-file diff.
+        text = self._match_newlines(content, before)
+
+        filepath.parent.mkdir(parents=True, exist_ok=True)
+        self._write_exact(filepath, text)
+        self.BuildVarFile(filename)
+        # Feed the suspicious-chain monitor like the chunk tools do. False
+        # makes AMS.UseTool ask the user whether to terminate the agent.
+        ok = self._record_op(filename, "WRITE" if existed else "CREATE")
+        self._record_delta(
+            filename,
+            Delta(
+                op="WRITE" if existed else "CREATE",
+                session=self._session_id,
+                timestamp=time.strftime("%Y-%m-%dT%H:%M:%S"),
+                snapshot=before,
+                full=True,
             ),
         )
         return ok
@@ -953,13 +1100,12 @@ class PFPS:
             raise FileNotFoundError(f"{filename} does not exist")
 
         # Snapshot before delete for rollback
-        with open(filepath, "r", errors="replace", encoding="utf-8") as f:
-            snapshot = f.read()
+        snapshot = self._read_exact(filepath)
 
         filepath.unlink()
 
         # Remove var file
-        var_path = self.chunks_dir / f"_{filename.replace('/', '_')}.var"
+        var_path = self._var_path(filename)
         if var_path.exists():
             var_path.unlink()
 
@@ -972,6 +1118,7 @@ class PFPS:
                 timestamp=time.strftime("%Y-%m-%dT%H:%M:%S"),
                 chunk_ref=chunk_key,
                 snapshot=snapshot,
+                full=True,
             ),
         )
         return ok
@@ -980,22 +1127,19 @@ class PFPS:
         self._validate_token(token, "list_files", "*")
         dirpath = self.SandboxPath(subpath)
         result = []
-        ignore = self.config.get("ignore", [])
         track = self.config.get("track_files", ["*.py"])
-        import fnmatch
 
-        for f in sorted(dirpath.rglob("*")):
-            if not f.is_file():
-                continue
+        for f in self._iter_files(dirpath):
             rel = str(f.relative_to(self.root))
-            if any(ig in rel for ig in ignore):
-                continue
-            if ".YAC" in rel:
-                continue
             result.append(rel)
-            # Auto-build var file so agent can read chunks immediately
+            # Auto-build var file so agent can read chunks immediately. Skip
+            # it when the existing one is newer than the file: this runs at the
+            # start of every agent, and rebuilding every file each time is slow.
             if any(fnmatch.fnmatch(f.name, p) for p in track):
                 try:
+                    var = self._var_path(rel)
+                    if var.exists() and var.stat().st_mtime >= f.stat().st_mtime:
+                        continue
                     self.BuildVarFile(rel)
                 except Exception:
                     pass
@@ -1006,7 +1150,9 @@ class PFPS:
     def Rollback(self, filename: str, to_session: str = None):
         """
         Roll back a file to before a given session touched it.
-        If to_session is None, rolls back the last delta.
+        If to_session is None, rolls back the last change. Each call undoes one
+        change: the delta it used is retired, so calling it again steps back
+        further instead of re-applying the same snapshot.
         """
         track_dir = self._file_track_dir(filename)
         deltas_dir = track_dir / "deltas"
@@ -1015,18 +1161,43 @@ class PFPS:
         if not deltas:
             raise ValueError(f"No deltas recorded for {filename}")
 
-        # Find the snapshot in the last DELETE or WRITE delta
         for delta_path in reversed(deltas):
             with open(delta_path, encoding="utf-8") as f:
                 d = json.load(f)
+            if d["op"] == "READ":
+                continue
             if to_session and d["session"] != to_session:
                 continue
-            if d.get("snapshot"):
-                filepath = self.SandboxPath(filename)
-                with open(filepath, "w", encoding="utf-8") as f:
-                    f.write(d["snapshot"])
-                self.BuildVarFile(filename)
-                return True
 
-        raise ValueError(f"No snapshot found to roll back {filename}")
+            filepath = self.SandboxPath(filename)
+            snapshot = d.get("snapshot")
+            exact = bool(d.get("full"))
+
+            if d["op"] == "CREATE" and snapshot is None:
+                # The change created the file, so undoing it removes it.
+                if filepath.exists():
+                    filepath.unlink()
+                var = self._var_path(filename)
+                if var.exists():
+                    var.unlink()
+            elif snapshot is not None and (exact or d["op"] == "DELETE"):
+                filepath.parent.mkdir(parents=True, exist_ok=True)
+                if exact:
+                    self._write_exact(filepath, snapshot)
+                else:
+                    with open(filepath, "w", encoding="utf-8") as f:
+                        f.write(snapshot)
+                self.BuildVarFile(filename)
+            else:
+                # Written by an older yac that stored only the touched chunk;
+                # restoring it would overwrite the whole file with that chunk.
+                raise ValueError(
+                    f"Cannot roll back {filename}: the last change "
+                    f"({d['op']}) was recorded without a full-file snapshot."
+                )
+
+            delta_path.rename(str(delta_path) + ".rolled")
+            return True
+
+        raise ValueError(f"No change to roll back for {filename}")
 

@@ -21,7 +21,7 @@ def search(query: str, max_results: int = 5) -> str:
         req     = urllib.request.Request(url, headers={"User-Agent": "YourAssistantCoder/1.0"})
 
         with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read().decode())
+            data = json.loads(resp.read(1_000_000).decode())
 
         results = []
 
@@ -65,7 +65,7 @@ def _ddg_html_search(query: str, max_results: int = 5) -> str:
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
         })
         with urllib.request.urlopen(req, timeout=10) as resp:
-            html = resp.read().decode("utf-8", errors="replace")
+            html = resp.read(2_000_000).decode("utf-8", errors="replace")
 
         # Extract result snippets
         snippets = re.findall(r'class="result__snippet"[^>]*>(.*?)</a>', html, re.DOTALL)

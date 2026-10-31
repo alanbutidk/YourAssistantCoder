@@ -41,7 +41,11 @@ def _notify_linux(title: str, message: str, urgency: str = "normal"):
     except (FileNotFoundError, subprocess.TimeoutExpired):
         pass
 
-    # System broadcast to ALL terminals (works headless/SSH too)
+    # System broadcast to ALL terminals (works headless/SSH too). Only for
+    # critical events: it writes to every user's terminal on the machine, and
+    # the message contains file names.
+    if urgency != "critical":
+        return
     try:
         broadcast = f"[YourAssistantCoder] {title}: {message}"
         subprocess.run(["wall", broadcast], check=False, timeout=3)
@@ -49,9 +53,20 @@ def _notify_linux(title: str, message: str, urgency: str = "normal"):
         pass
 
 
+def _applescript_str(text: str) -> str:
+    """Escape text for use inside an AppleScript string literal. File names
+    end up in these messages, and a name containing a double quote could
+    otherwise break out of the string and run `do shell script`."""
+    text = str(text).replace("\\", "\\\\").replace('"', '\\"')
+    return text.replace("\r", " ").replace("\n", " ")
+
+
 def _notify_macos(title: str, message: str, urgency: str = "normal"):
     try:
-        script = f'display notification "{message}" with title "{title}"'
+        script = (
+            f'display notification "{_applescript_str(message)}" '
+            f'with title "{_applescript_str(title)}"'
+        )
         if urgency == "critical":
             script += ' sound name "Basso"'
         subprocess.run(["osascript", "-e", script], check=False, timeout=3)

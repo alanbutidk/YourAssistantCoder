@@ -4,9 +4,32 @@ Shell command execution with user confirmation.
 Works in both CLI (rich prompt) and TUI (popup via callback).
 """
 
+import re
 import subprocess
 import threading
 from pathlib import Path
+
+from rich.markup import escape
+
+_CONTROL = re.compile(
+    r"\x1b\[[0-?]*[ -/]*[@-~]|\x1b\][^\x07\x1b]*(?:\x07|\x1b\\)|[\x00-\x09\x0b-\x1f\x7f]"
+)
+# Zero-width and bidi-override characters can make a command read differently
+# from what it does (Trojan Source), so they are shown as \uXXXX instead.
+_INVISIBLE = re.compile("[\u200b-\u200f\u202a-\u202e\u2060-\u2069\ufeff]")
+
+
+def display_text(text: str) -> str:
+    """Make agent-supplied text safe to show in an approval prompt.
+
+    The prompts render Rich markup, and the command was interpolated raw, so a
+    command could contain [conceal]...[/conceal] (or a fake [/cyan]) and the
+    user would approve something other than what would run. This escapes the
+    markup, drops terminal control codes, shows newlines as \\n (a newline
+    runs a second command) and makes invisible characters visible."""
+    text = _CONTROL.sub("", str(text))
+    text = _INVISIBLE.sub(lambda m: f"\\u{ord(m.group()):04x}", text)
+    return escape(text.replace("\n", "\\n"))
 
 
 # Dangerous command patterns that always require confirmation
@@ -18,7 +41,14 @@ ALWAYS_CONFIRM = {
 }
 
 def _is_dangerous(cmd: str) -> bool:
-    first = cmd.strip().split()[0].lower().rstrip(".exe")
+    parts = cmd.strip().split()
+    if not parts:
+        return False
+    # Compare the program name only: "/bin/rm" and "RM.EXE" are both rm.
+    # (rstrip(".exe") stripped characters, not the suffix.)
+    first = parts[0].lower().replace("\\", "/").rsplit("/", 1)[-1]
+    if first.endswith(".exe"):
+        first = first[:-4]
     return first in ALWAYS_CONFIRM
 
 
@@ -42,7 +72,7 @@ class ShellExecutor:
         from rich.panel import Panel
         c = Console()
         c.print(Panel(
-            f"[bold]Shell command requested:[/bold]\n\n  [cyan]{cmd}[/cyan]",
+            f"[bold]Shell command requested:[/bold]\n\n  [cyan]{display_text(cmd)}[/cyan]",
             title="[yellow]YAC: Confirm Shell Command[/yellow]",
             border_style="yellow",
         ))

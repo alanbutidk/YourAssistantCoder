@@ -28,7 +28,7 @@ MODELS = [
     ("ollama",   "Ollama (Local)"),
     ("deepseek", "DeepSeek (Coder V3)"),
     ("mistral",  "Mistral (Codestral)"),
-    ("openrouter_gpt", "OpenRouter (GPT)"),
+    ("openrouter_free", "OpenRouter (free models)"),
 ]
 
 
@@ -72,7 +72,7 @@ COMMANDS: list[SlashCommand] = [
     SlashCommand("diagnose", "prompt", "Scan the whole codebase for common bugs.", "/diagnose"),
     SlashCommand("optimize", "prompt", "Find and apply safe speedups, with before/after numbers.", "/optimize [path]"),
     SlashCommand("model",    "meta",   "Show/switch which model you're talking to.", "/model"),
-    SlashCommand("team",     "meta",   "Run the prompt with a team of agents (planner, coders, tester, reviewer).", "/team <prompt>"),
+    SlashCommand("team",     "meta",   "Run the prompt with a team of agents (planner, architect, coders, debugger, tester, reviewer, security...).", "/team <prompt>"),
     SlashCommand("yes-run",  "shell",  "Run a shell command now, no confirmation popup.", "/yes-run <cmd>"),
     SlashCommand("git push", "shell",  "git push", "/git push"),
     SlashCommand("git pull", "shell",  "git pull", "/git pull"),

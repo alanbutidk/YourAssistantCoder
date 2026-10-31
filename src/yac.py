@@ -175,7 +175,7 @@ def cmd_chat(args):
 
             executor = ShellExecutor(str(pfps.root))
             result = executor.run(git_cmd, reason=f"user requested: {prompt}")
-            console.print(result)
+            console.print(escape(result))  # git prints "[main abc123] ..."
             pfps.AppendHistory("shell", git_cmd, result[:300])
             continue
 
@@ -238,7 +238,9 @@ def cmd_log(args):
     if not log_path.exists():
         console.print("[dim]No session log yet.[/dim]")
         return
-    console.print(log_path.read_text(encoding="utf-8"))
+    # The log holds arbitrary text (code, brackets). As Rich markup, a stray
+    # [/x] raised MarkupError and anything like [main] silently vanished.
+    console.print(log_path.read_text(encoding="utf-8"), markup=False, highlight=False)
 
 
 def cmd_status(args):
